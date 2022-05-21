@@ -1,0 +1,25 @@
+/**
+@mainpage TT Language
+
+@section intro Introduction
+
+@subpage tt_tech
+
+*/
+
+
+
+/**
+@page tt_tech TT Technical Details
+
+
+@section features Main Features
+
+@section Technical Details
+
+@subpage memory
+
+@subpage syntax
+
+@subpage implementation
+*/

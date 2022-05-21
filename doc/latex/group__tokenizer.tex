@@ -1,0 +1,345 @@
+\hypertarget{group__tokenizer}{}\doxysection{Tokenizer}
+\label{group__tokenizer}\index{Tokenizer@{Tokenizer}}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \mbox{\hyperlink{group__tokenizer_gac0bb8a0baa2e72a8039d67dce7e1f932}{is\+\_\+ident\+\_\+char}} (int c)
+\begin{DoxyCompactList}\small\item\em check if character is part of an identifier. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__tokenizer_gac14b69463fdf48ba3a5b30ee34da28c7}\label{group__tokenizer_gac14b69463fdf48ba3a5b30ee34da28c7}} 
+bool {\bfseries is\+\_\+binary\+\_\+char} (int c)
+\item 
+bool \mbox{\hyperlink{group__tokenizer_ga986d1e4dee1be06e31a781ce4b847fe0}{read\+Line}} ()
+\begin{DoxyCompactList}\small\item\em read one line from stdin stores the result into {\ttfamily }\{gd.\+line\}. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{read\+Char}} (char $\ast$t)
+\begin{DoxyCompactList}\small\item\em read one character from input and store it somewhere. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__tokenizer_gaca69499fef7287dfec40541fe204f94c}{read\+String\+Token}} (void)
+\begin{DoxyCompactList}\small\item\em read string token. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}{next\+Token}} (void)
+\begin{DoxyCompactList}\small\item\em read next token. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+convert stdin into tokens. each token is returned by the call to \begin{DoxySeeAlso}{See also}
+\mbox{\hyperlink{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}{next\+Token}}. 
+\end{DoxySeeAlso}
+
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__tokenizer_gac0bb8a0baa2e72a8039d67dce7e1f932}\label{group__tokenizer_gac0bb8a0baa2e72a8039d67dce7e1f932}} 
+\index{Tokenizer@{Tokenizer}!is\_ident\_char@{is\_ident\_char}}
+\index{is\_ident\_char@{is\_ident\_char}!Tokenizer@{Tokenizer}}
+\doxysubsubsection{\texorpdfstring{is\_ident\_char()}{is\_ident\_char()}}
+{\footnotesize\ttfamily bool is\+\_\+ident\+\_\+char (\begin{DoxyParamCaption}\item[{int}]{c }\end{DoxyParamCaption})}
+
+
+
+check if character is part of an identifier. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em c} & character to classify. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if if c is an identifier character. 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00308                             \{}
+\DoxyCodeLine{00309     \textcolor{keywordflow}{return} isalpha( c ) || isdigit( c ) || c == \textcolor{charliteral}{'\_'};}
+\DoxyCodeLine{00310 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}{next\+Token()}}.
+
+\mbox{\Hypertarget{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}\label{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}} 
+\index{Tokenizer@{Tokenizer}!nextToken@{nextToken}}
+\index{nextToken@{nextToken}!Tokenizer@{Tokenizer}}
+\doxysubsubsection{\texorpdfstring{nextToken()}{nextToken()}}
+{\footnotesize\ttfamily bool next\+Token (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read next token. 
+
+This is a more detailed description.
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00403                    \{}
+\DoxyCodeLine{00404     \textcolor{keywordtype}{char} c;}
+\DoxyCodeLine{00405     \textcolor{keywordtype}{bool} result = \textcolor{keyword}{false};}
+\DoxyCodeLine{00406     \textcolor{keywordflow}{while}( \textcolor{keyword}{true} ) \{}
+\DoxyCodeLine{00407         \textcolor{keywordflow}{while}( \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c ) \&\& isspace( c ) );}
+\DoxyCodeLine{00408         \textcolor{keywordflow}{if}( c == \textcolor{charliteral}{'"{}'} ) \{}
+\DoxyCodeLine{00409             \textcolor{keywordflow}{while}( \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c ) \&\& c != \textcolor{charliteral}{'"{}'} );}
+\DoxyCodeLine{00410         \}}
+\DoxyCodeLine{00411         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00412             \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00413     \}}
+\DoxyCodeLine{00414     \textcolor{keywordflow}{if}( \mbox{\hyperlink{structgd}{gd}}.state == 1 ) \{}
+\DoxyCodeLine{00415         \textcolor{keywordflow}{if}( isalpha( c ) ) \{}
+\DoxyCodeLine{00416             \textcolor{keywordtype}{int} idx = 0;}
+\DoxyCodeLine{00417             \textcolor{keywordflow}{for}( ;; ) \{}
+\DoxyCodeLine{00418                 \mbox{\hyperlink{structgd}{gd}}.buf[idx++] = c;}
+\DoxyCodeLine{00419                 \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00420                 \textcolor{keywordflow}{if}( !\mbox{\hyperlink{group__tokenizer_gac0bb8a0baa2e72a8039d67dce7e1f932}{is\_ident\_char}}( c ) )}
+\DoxyCodeLine{00421                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00422             \}}
+\DoxyCodeLine{00423             \textcolor{keywordflow}{if}( c == \textcolor{charliteral}{':'} ) \{}
+\DoxyCodeLine{00424                 \mbox{\hyperlink{structgd}{gd}}.buf[idx++] = c;}
+\DoxyCodeLine{00425                 \mbox{\hyperlink{structgd}{gd}}.token = TK\_KEYWORD;}
+\DoxyCodeLine{00426             \}}
+\DoxyCodeLine{00427             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00428                 \mbox{\hyperlink{structgd}{gd}}.pos-\/-\/;}
+\DoxyCodeLine{00429                 \mbox{\hyperlink{structgd}{gd}}.token = TK\_IDENT;}
+\DoxyCodeLine{00430             \}}
+\DoxyCodeLine{00431             \mbox{\hyperlink{structgd}{gd}}.buf[idx] = 0;}
+\DoxyCodeLine{00432             result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00433         \}}
+\DoxyCodeLine{00434         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( is\_binary\_char( c ) ) \{}
+\DoxyCodeLine{00435             \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} idx = 0; is\_binary\_char( c ); idx++ ) \{}
+\DoxyCodeLine{00436                 \mbox{\hyperlink{structgd}{gd}}.buf[idx] = c;}
+\DoxyCodeLine{00437                 \mbox{\hyperlink{structgd}{gd}}.buf[idx + 1] = 0;}
+\DoxyCodeLine{00438                 \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00439             \}}
+\DoxyCodeLine{00440             \mbox{\hyperlink{structgd}{gd}}.pos-\/-\/;}
+\DoxyCodeLine{00441             \mbox{\hyperlink{structgd}{gd}}.token = 0;}
+\DoxyCodeLine{00442             \mbox{\hyperlink{structgd}{gd}}.token = TK\_BINOP;}
+\DoxyCodeLine{00443             result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00444             \textcolor{keywordflow}{if}( strcmp( \textcolor{stringliteral}{"{}<-\/"{}}, \mbox{\hyperlink{structgd}{gd}}.buf ) == 0 ) \{}
+\DoxyCodeLine{00445                 \mbox{\hyperlink{structgd}{gd}}.token = TK\_LARROW;}
+\DoxyCodeLine{00446                 result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00447             \}}
+\DoxyCodeLine{00448             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( strcmp( \textcolor{stringliteral}{"{}|"{}}, \mbox{\hyperlink{structgd}{gd}}.buf ) == 0 ) \{}
+\DoxyCodeLine{00449                 \mbox{\hyperlink{structgd}{gd}}.token = TK\_BAR;}
+\DoxyCodeLine{00450                 result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00451             \}}
+\DoxyCodeLine{00452             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( 0 == strcmp( \textcolor{stringliteral}{"{}<"{}}, \mbox{\hyperlink{structgd}{gd}}.buf ) ) \{}
+\DoxyCodeLine{00453                 \mbox{\hyperlink{structgd}{gd}}.token = TK\_LT;}
+\DoxyCodeLine{00454                 result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00455             \}}
+\DoxyCodeLine{00456             \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( 0 == strcmp( \textcolor{stringliteral}{"{}>"{}}, \mbox{\hyperlink{structgd}{gd}}.buf ) ) \{}
+\DoxyCodeLine{00457                 \mbox{\hyperlink{structgd}{gd}}.token = TK\_GT;}
+\DoxyCodeLine{00458                 result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00459             \}}
+\DoxyCodeLine{00460         \}}
+\DoxyCodeLine{00461         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}( isdigit( c ) ) \{}
+\DoxyCodeLine{00462             \textcolor{keywordtype}{int} idx = 1;}
+\DoxyCodeLine{00463             \textcolor{keywordflow}{while}( isdigit( c ) ) \{}
+\DoxyCodeLine{00464                 \mbox{\hyperlink{structgd}{gd}}.buf[idx -\/ 1] = c;}
+\DoxyCodeLine{00465                 \mbox{\hyperlink{structgd}{gd}}.buf[idx] = 0;}
+\DoxyCodeLine{00466                 \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00467             \}}
+\DoxyCodeLine{00468             \mbox{\hyperlink{structgd}{gd}}.pos-\/-\/;}
+\DoxyCodeLine{00469             \mbox{\hyperlink{structgd}{gd}}.token = TK\_NUMBER;}
+\DoxyCodeLine{00470             result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00471         \}}
+\DoxyCodeLine{00472         \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00473             \textcolor{keywordflow}{switch} ( c ) \{}
+\DoxyCodeLine{00474                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\(\backslash\)''}:}
+\DoxyCodeLine{00475                     result = \mbox{\hyperlink{group__tokenizer_gaca69499fef7287dfec40541fe204f94c}{readStringToken}}(  );}
+\DoxyCodeLine{00476                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00477                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'.'}:}
+\DoxyCodeLine{00478                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00479                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_DOT;}
+\DoxyCodeLine{00480                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00481                 \textcolor{keywordflow}{case} \textcolor{charliteral}{';'}:}
+\DoxyCodeLine{00482                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00483                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_SEMICOLON;}
+\DoxyCodeLine{00484                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00485                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'('}:}
+\DoxyCodeLine{00486                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00487                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_LBRACE;}
+\DoxyCodeLine{00488                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00489                 \textcolor{keywordflow}{case} \textcolor{charliteral}{')'}:}
+\DoxyCodeLine{00490                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00491                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_RBRACE;}
+\DoxyCodeLine{00492                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00493                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'['}:}
+\DoxyCodeLine{00494                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00495                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_LBRACK;}
+\DoxyCodeLine{00496                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00497                 \textcolor{keywordflow}{case} \textcolor{charliteral}{']'}:}
+\DoxyCodeLine{00498                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00499                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_RBRACK;}
+\DoxyCodeLine{00500                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00501                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\{'}:}
+\DoxyCodeLine{00502                     \{}
+\DoxyCodeLine{00503                         \textcolor{keywordtype}{int} i = 0;}
+\DoxyCodeLine{00504                         \mbox{\hyperlink{structgd}{gd}}.buf[i] = 0;}
+\DoxyCodeLine{00505                         \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00506                         \textcolor{keywordflow}{while}( c != \textcolor{charliteral}{'\}'} ) \{}
+\DoxyCodeLine{00507                             \mbox{\hyperlink{structgd}{gd}}.buf[i++] = c;}
+\DoxyCodeLine{00508                             \mbox{\hyperlink{structgd}{gd}}.buf[i] = 0;}
+\DoxyCodeLine{00509                             \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00510                         \}}
+\DoxyCodeLine{00511                         \mbox{\hyperlink{structgd}{gd}}.token = TK\_VERBATIM;}
+\DoxyCodeLine{00512                     \}}
+\DoxyCodeLine{00513                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00514                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00515                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\#'}:}
+\DoxyCodeLine{00516                     \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00517                     \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} idx = 0; \mbox{\hyperlink{group__tokenizer_gac0bb8a0baa2e72a8039d67dce7e1f932}{is\_ident\_char}}( c ) || c == \textcolor{charliteral}{':'}; idx++ ) \{}
+\DoxyCodeLine{00518                         \mbox{\hyperlink{structgd}{gd}}.buf[idx] = c;}
+\DoxyCodeLine{00519                         \mbox{\hyperlink{structgd}{gd}}.buf[idx + 1] = 0;}
+\DoxyCodeLine{00520                         \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00521                     \}}
+\DoxyCodeLine{00522                     \mbox{\hyperlink{structgd}{gd}}.pos-\/-\/;}
+\DoxyCodeLine{00523                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_SYMBOL;}
+\DoxyCodeLine{00524                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00525                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00526                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\string^'}:}
+\DoxyCodeLine{00527                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00528                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_UARROW;}
+\DoxyCodeLine{00529                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00530                 \textcolor{keywordflow}{case} \textcolor{charliteral}{':'}:}
+\DoxyCodeLine{00531                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00532                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_COLON;}
+\DoxyCodeLine{00533                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00534                 \textcolor{keywordflow}{case} \textcolor{charliteral}{'\$'}:}
+\DoxyCodeLine{00535                     result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00536                     \mbox{\hyperlink{structgd}{gd}}.token = TK\_CHAR;}
+\DoxyCodeLine{00537                     \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00538                     \mbox{\hyperlink{structgd}{gd}}.buf[0] = c;}
+\DoxyCodeLine{00539                     \mbox{\hyperlink{structgd}{gd}}.buf[1] = 0;}
+\DoxyCodeLine{00540                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00541                 \textcolor{keywordflow}{default}:}
+\DoxyCodeLine{00542                     \mbox{\hyperlink{structgd}{gd}}.pos-\/-\/;}
+\DoxyCodeLine{00543                     \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00544             \}}
+\DoxyCodeLine{00545         \}}
+\DoxyCodeLine{00546     \}}
+\DoxyCodeLine{00547     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00548 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{group__tokenizer_gac0bb8a0baa2e72a8039d67dce7e1f932}{is\+\_\+ident\+\_\+char()}}, and \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{read\+Char()}}.
+
+\mbox{\Hypertarget{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}\label{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}} 
+\index{Tokenizer@{Tokenizer}!readChar@{readChar}}
+\index{readChar@{readChar}!Tokenizer@{Tokenizer}}
+\doxysubsubsection{\texorpdfstring{readChar()}{readChar()}}
+{\footnotesize\ttfamily bool read\+Char (\begin{DoxyParamCaption}\item[{char $\ast$}]{t }\end{DoxyParamCaption})}
+
+
+
+read one character from input and store it somewhere. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em t} & c-\/string of some sort. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00367                          \{}
+\DoxyCodeLine{00368     \textcolor{keywordtype}{bool} result = \textcolor{keyword}{true};}
+\DoxyCodeLine{00369     \textcolor{keywordflow}{if}( \mbox{\hyperlink{structgd}{gd}}.state == 0 ) \{}
+\DoxyCodeLine{00370         result = \mbox{\hyperlink{group__tokenizer_ga986d1e4dee1be06e31a781ce4b847fe0}{readLine}}(  );}
+\DoxyCodeLine{00371     \}}
+\DoxyCodeLine{00372     \textcolor{keywordflow}{if}( result ) \{}
+\DoxyCodeLine{00373         *t = \mbox{\hyperlink{structgd}{gd}}.line[\mbox{\hyperlink{structgd}{gd}}.pos++];}
+\DoxyCodeLine{00374         \textcolor{keywordflow}{while}( *t == 0 ) \{}
+\DoxyCodeLine{00375             \textcolor{keywordflow}{if}( \mbox{\hyperlink{group__tokenizer_ga986d1e4dee1be06e31a781ce4b847fe0}{readLine}}(  ) ) \{}
+\DoxyCodeLine{00376                 *t = \mbox{\hyperlink{structgd}{gd}}.line[\mbox{\hyperlink{structgd}{gd}}.pos++];}
+\DoxyCodeLine{00377             \}}
+\DoxyCodeLine{00378             \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00379                 result = \textcolor{keyword}{false};}
+\DoxyCodeLine{00380                 \textcolor{keywordflow}{break};}
+\DoxyCodeLine{00381             \}}
+\DoxyCodeLine{00382         \}}
+\DoxyCodeLine{00383     \}}
+\DoxyCodeLine{00384     \textcolor{keywordflow}{return} result;}
+\DoxyCodeLine{00385 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{group__tokenizer_ga986d1e4dee1be06e31a781ce4b847fe0}{read\+Line()}}.
+
+
+
+Referenced by \mbox{\hyperlink{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}{next\+Token()}}, and \mbox{\hyperlink{group__tokenizer_gaca69499fef7287dfec40541fe204f94c}{read\+String\+Token()}}.
+
+\mbox{\Hypertarget{group__tokenizer_ga986d1e4dee1be06e31a781ce4b847fe0}\label{group__tokenizer_ga986d1e4dee1be06e31a781ce4b847fe0}} 
+\index{Tokenizer@{Tokenizer}!readLine@{readLine}}
+\index{readLine@{readLine}!Tokenizer@{Tokenizer}}
+\doxysubsubsection{\texorpdfstring{readLine()}{readLine()}}
+{\footnotesize\ttfamily bool read\+Line (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+read one line from stdin stores the result into {\ttfamily }\{gd.\+line\}. 
+
+trailing blanks are removed. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00345                   \{}
+\DoxyCodeLine{00346     \textcolor{keyword}{static} \textcolor{keywordtype}{int} line\_count = 0;}
+\DoxyCodeLine{00347 }
+\DoxyCodeLine{00348     \textcolor{keywordtype}{char} *line = fgets( \mbox{\hyperlink{structgd}{gd}}.line, \textcolor{keyword}{sizeof}( \mbox{\hyperlink{structgd}{gd}}.line ), stdin );}
+\DoxyCodeLine{00349     line\_count++;}
+\DoxyCodeLine{00350     printf( \textcolor{stringliteral}{"{}\%2d:\%s"{}}, line\_count, line );}
+\DoxyCodeLine{00351     \textcolor{keywordflow}{if}( line ) \{}
+\DoxyCodeLine{00352         \textcolor{keywordtype}{size\_t} len = strlen( line );}
+\DoxyCodeLine{00353         \textcolor{keywordflow}{while}( len >= 0 \&\& line[len] <= 32 )}
+\DoxyCodeLine{00354             line[len-\/-\/] = 0;}
+\DoxyCodeLine{00355         \mbox{\hyperlink{structgd}{gd}}.pos = 0;}
+\DoxyCodeLine{00356         \mbox{\hyperlink{structgd}{gd}}.state = 1;}
+\DoxyCodeLine{00357         \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00358     \}}
+\DoxyCodeLine{00359     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{00360         \mbox{\hyperlink{structgd}{gd}}.line[0] = 0;}
+\DoxyCodeLine{00361         \mbox{\hyperlink{structgd}{gd}}.state = 2;}
+\DoxyCodeLine{00362         \textcolor{keywordflow}{return} \textcolor{keyword}{false};}
+\DoxyCodeLine{00363     \}}
+\DoxyCodeLine{00364 \}}
+
+\end{DoxyCode}
+
+
+Referenced by \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{read\+Char()}}.
+
+\mbox{\Hypertarget{group__tokenizer_gaca69499fef7287dfec40541fe204f94c}\label{group__tokenizer_gaca69499fef7287dfec40541fe204f94c}} 
+\index{Tokenizer@{Tokenizer}!readStringToken@{readStringToken}}
+\index{readStringToken@{readStringToken}!Tokenizer@{Tokenizer}}
+\doxysubsubsection{\texorpdfstring{readStringToken()}{readStringToken()}}
+{\footnotesize\ttfamily bool read\+String\+Token (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+
+
+read string token. 
+
+\begin{DoxyReturn}{Returns}
+true if successful 
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00387                          \{}
+\DoxyCodeLine{00388     \textcolor{keywordtype}{int} idx = 0;}
+\DoxyCodeLine{00389     \textcolor{keywordtype}{char} c;}
+\DoxyCodeLine{00390     \textcolor{keywordflow}{while}( \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c ) \&\& \textcolor{charliteral}{'\(\backslash\)''} != c ) \{}
+\DoxyCodeLine{00391         \textcolor{keywordflow}{if}( c == \textcolor{charliteral}{'\(\backslash\)\(\backslash\)'} )}
+\DoxyCodeLine{00392             \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \&c );}
+\DoxyCodeLine{00393         \mbox{\hyperlink{structgd}{gd}}.buf[idx++] = c;}
+\DoxyCodeLine{00394     \}}
+\DoxyCodeLine{00395     \mbox{\hyperlink{structgd}{gd}}.buf[idx] = 0;}
+\DoxyCodeLine{00396     \mbox{\hyperlink{structgd}{gd}}.token = TK\_STRING;}
+\DoxyCodeLine{00397     \textcolor{keywordflow}{return} \textcolor{keyword}{true};}
+\DoxyCodeLine{00398 \}}
+
+\end{DoxyCode}
+
+
+References \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{read\+Char()}}.
+

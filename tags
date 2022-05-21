@@ -1,0 +1,328 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
+<tagfile doxygen_version="1.9.1">
+  <compound kind="struct">
+    <name>_Assign</name>
+    <filename>struct__Assign.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>_Assigns</name>
+    <filename>struct__Assigns.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>ast</name>
+    <filename>structast.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>tag</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>a80c0bb9ad48afd7f459230031f0f1fae</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>v</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>aa91a4fd8269fd6c1a7d5deeb292a3677</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct ast::@0::@1</type>
+      <name>str</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>a860f9139dd74c340bc89910d1ce383cf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct ast::@0::@2</type>
+      <name>id</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>a5a3ad4d2372352140895945e4873d783</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct ast *</type>
+      <name>o</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>a45ff45dd7e8be23c04b27934fa021837</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>sel</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>ae399b59f6d2853f7fa4b2f437ff4b766</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct ast *</type>
+      <name>arg</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>a3eae750c61cd4c78503beda75fc331c5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct ast::@0::@3</type>
+      <name>unary</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>aa84bb1bc9643258bf7d01e26762e5161</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct ast *</type>
+      <name>v</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>a2ae9ea6c4e18fdedbb969e2d69ec7015</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct ast *</type>
+      <name>next</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>aa38374563dfcc20bd961acd0bbcb9dbe</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>key</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>ad81da7b17e74012ad629cf28d0e02664</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>name</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>a71451c114bf2387e3a3fd53da26e8540</anchor>
+      <arglist></arglist>
+    </member>
+  </compound>
+  <compound kind="struct">
+    <name>classinfo</name>
+    <filename>structclassinfo.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>context</name>
+    <filename>structcontext.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>contextdef</name>
+    <filename>structcontextdef.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>gd</name>
+    <filename>structgd.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>itab</name>
+    <filename>structitab.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>itab_entry</name>
+    <filename>structitab__entry.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>itab_iter</name>
+    <filename>structitab__iter.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>meth</name>
+    <filename>structmeth.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>methodinfo</name>
+    <filename>structmethodinfo.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>s_names</name>
+    <filename>structs__names.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>s_pattern</name>
+    <filename>structs__pattern.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>stringinfo</name>
+    <filename>structstringinfo.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>varinfo</name>
+    <filename>structvarinfo.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>yyParser</name>
+    <filename>structyyParser.html</filename>
+  </compound>
+  <compound kind="struct">
+    <name>yyStackEntry</name>
+    <filename>structyyStackEntry.html</filename>
+  </compound>
+  <compound kind="group">
+    <name>itab</name>
+    <title>ITab</title>
+    <filename>group__itab.html</filename>
+    <class kind="struct">itab_entry</class>
+    <class kind="struct">itab</class>
+    <class kind="struct">itab_iter</class>
+    <member kind="function">
+      <type>struct itab *</type>
+      <name>itab_new</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>gad9917bb373045636deee31d01936f67d</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>int</type>
+      <name>itab_entry_cmp</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>gaa32bbe2ddff2b617359acf569723d908</anchor>
+      <arglist>(const void *aptr, const void *bptr)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>runtime-context</name>
+    <title>Runtime Context</title>
+    <filename>group__runtime-context.html</filename>
+  </compound>
+  <compound kind="group">
+    <name>tokenizer</name>
+    <title>Tokenizer</title>
+    <filename>group__tokenizer.html</filename>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_ident_char</name>
+      <anchorfile>group__tokenizer.html</anchorfile>
+      <anchor>gac0bb8a0baa2e72a8039d67dce7e1f932</anchor>
+      <arglist>(int c)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>readLine</name>
+      <anchorfile>group__tokenizer.html</anchorfile>
+      <anchor>ga986d1e4dee1be06e31a781ce4b847fe0</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>readChar</name>
+      <anchorfile>group__tokenizer.html</anchorfile>
+      <anchor>ga4f2be419c946530de61fcc5bd922b961</anchor>
+      <arglist>(char *t)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>readStringToken</name>
+      <anchorfile>group__tokenizer.html</anchorfile>
+      <anchor>gaca69499fef7287dfec40541fe204f94c</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>nextToken</name>
+      <anchorfile>group__tokenizer.html</anchorfile>
+      <anchor>gacb8666cde3ece1af4829c28d0f7c5022</anchor>
+      <arglist>(void)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>internal_structures</name>
+    <title>Internal Representation</title>
+    <filename>group__internal__structures.html</filename>
+    <subgroup>c_code_generator</subgroup>
+    <class kind="struct">s_names</class>
+    <class kind="struct">s_pattern</class>
+  </compound>
+  <compound kind="group">
+    <name>c_code_generator</name>
+    <title>C Code Generator</title>
+    <filename>group__c__code__generator.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>c_generate</name>
+      <anchorfile>group__c__code__generator.html</anchorfile>
+      <anchor>ga08df7e79ef0c7d55950d0cbb113235b3</anchor>
+      <arglist>(FILE *out)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
+    <name>assign</name>
+    <title>Assign</title>
+    <filename>group__assign.html</filename>
+    <member kind="function">
+      <type>Assign</type>
+      <name>Assign_new</name>
+      <anchorfile>group__assign.html</anchorfile>
+      <anchor>gae4833e366aa8bd30319d4379a1e0d4eb</anchor>
+      <arglist>(char *name, char *value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Assigns</type>
+      <name>Assigns_new</name>
+      <anchorfile>group__assign.html</anchorfile>
+      <anchor>ga3b5976cb809bed0c56ad6c8cfd7ad81d</anchor>
+      <arglist>(Assign assign, Assigns next)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Assign_add</name>
+      <anchorfile>group__assign.html</anchorfile>
+      <anchor>gadcbdaa9caef1850f13afca8a6238ae51</anchor>
+      <arglist>(char *name, char *value)</arglist>
+    </member>
+    <member kind="function">
+      <type>Assign</type>
+      <name>Assign_find</name>
+      <anchorfile>group__assign.html</anchorfile>
+      <anchor>ga7c04ed2cf50f9811c74fbda03f17714d</anchor>
+      <arglist>(char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>Assign_value</name>
+      <anchorfile>group__assign.html</anchorfile>
+      <anchor>gae23ffbcef22a344ae726e264e1a20d2c</anchor>
+      <arglist>(Assign a)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>Assign_name</name>
+      <anchorfile>group__assign.html</anchorfile>
+      <anchor>ga27e2e005c8a256e5ddea6ae1b3d5da41</anchor>
+      <arglist>(Assign a)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>Assigns_dump</name>
+      <anchorfile>group__assign.html</anchorfile>
+      <anchor>gad651d4db6b8a59bf911844d830272da8</anchor>
+      <arglist>(Assigns as)</arglist>
+    </member>
+  </compound>
+  <compound kind="page">
+    <name>tt_tech</name>
+    <title>TT Technical Details</title>
+    <filename>tt_tech.html</filename>
+    <docanchor file="tt_tech.html" title="Main Features">features</docanchor>
+    <docanchor file="tt_tech.html" title="Details">Technical</docanchor>
+  </compound>
+  <compound kind="page">
+    <name>syntax</name>
+    <title>Syntax</title>
+    <filename>syntax.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>implementation</name>
+    <title>Chapter 3: Implementation</title>
+    <filename>implementation.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>memory</name>
+    <title>Chapter 1: Memory Management</title>
+    <filename>memory.html</filename>
+  </compound>
+  <compound kind="page">
+    <name>index</name>
+    <title>TT Language</title>
+    <filename>index.html</filename>
+    <docanchor file="index.html" title="Introduction">intro</docanchor>
+  </compound>
+</tagfile>

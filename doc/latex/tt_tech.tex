@@ -1,0 +1,78 @@
+\hypertarget{tt_tech_features}{}\doxysection{Main Features}\label{tt_tech_features}
+\hypertarget{tt_tech_Technical}{}\doxysection{Details}\label{tt_tech_Technical}
+\mbox{\hyperlink{memory}{Chapter 1\+: Memory Management}}
+
+\mbox{\hyperlink{syntax}{Syntax}}
+
+\mbox{\hyperlink{implementation}{Chapter 3\+: Implementation}} \hypertarget{memory}{}\doxysection{Chapter 1\+: Memory Management}\label{memory}
+\hypertarget{syntax}{}\doxysection{Syntax}\label{syntax}
+\begin{DoxyVerb}  object_ident ::= IDENT.
+  object_ident ::= IDENT IDENT.
+  unary_pattern ::= IDENT.
+  binary_pattern ::= BINOP IDENT.
+  keyword_pattern ::= KEYWORD IDENT.
+  keyword_pattern ::= keyword_pattern KEYWORD IDENT.
+  all ::= object_defs.
+  object_defs ::=.
+  object_defs ::= object_defs object_ident LBRACK var_list method_defs RBRACK.
+  object_defs ::= object_defs object_ident LARROW IDENT LBRACK var_list method_defs RBRACK.
+  var_list ::=.
+  var_list ::= BAR idents BAR.
+  idents ::= IDENT.
+  idents ::= idents IDENT.
+  method_defs ::=.
+  method_defs ::= method_defs msg_pattern LBRACK var_list statements RBRACK.
+  method_defs ::= method_defs msg_pattern VERBATIM.
+  msg_pattern ::= unary_pattern.
+  msg_pattern ::= binary_pattern.
+  msg_pattern ::= keyword_pattern.
+  statements ::= return_statement.
+  statements ::= return_statement DOT.
+  statements ::= expression DOT statements.
+  statements ::= expression.
+  statements ::= expression DOT.
+  return_statement ::= UARROW expression.
+  expression ::= IDENT LARROW expr.
+  expression ::= basic_expression.
+  basic_expression ::= primary.
+  basic_expression ::= primary messages cascaded_messages.
+  basic_expression ::= primary cascaded_messages.
+  basic_expression ::= primary messages.
+  primary ::= IDENT.
+  primary ::= STRING.
+  primary ::= LBRACK block_body RBRACK.
+  primary ::= LBRACE expression RBRACE.
+  block_body ::= block_arguments BAR var_list statements.
+  block_body ::= var_list statements.
+  block_body ::= var_list.
+  block_arguments ::= COLON IDENT.
+  block_arguments ::= block_arguments COLON IDENT.
+  messages ::= unary_messages.
+  messages ::= unary_messages keyword_message.
+  messages ::= unary_messages binary_messages.
+  messages ::= unary_messages binary_messages keyword_message.
+  messages ::= binary_messages.
+  messages ::= binary_messages keyword_message.
+  messages ::= keyword_message.
+  unary_messages ::= IDENT.
+  binary_messages ::= binary_message.
+  binary_messages ::= binary_message binary_messages.
+  binary_message ::= BINOP binary_argument.
+  binary_argument ::= primary unary_messages.
+  binary_argument ::= primary.
+  keyword_message ::= KEYWORD keyword_argument.
+  keyword_message ::= keyword_message KEYWORD keyword_argument.
+  keyword_argument ::= primary.
+  keyword_argument ::= primary unary_messages.
+  keyword_argument ::= primary unary_messages binary_messages.
+  cascaded_messages ::= SEMICOLON messages.
+  cascaded_messages ::= cascaded_messages SEMICOLON messages.
+  atom ::= IDENT.
+  atom ::= STRING.
+  unary_call ::= unary_call IDENT.
+  binary_call ::= binary_call BINOP unary_call.
+  unary_call ::= atom.
+  binary_call ::= unary_call.
+  expr ::= binary_call.
+\end{DoxyVerb}
+ \hypertarget{implementation}{}\doxysection{Chapter 3\+: Implementation}\label{implementation}

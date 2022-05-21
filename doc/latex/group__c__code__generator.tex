@@ -1,0 +1,50 @@
+\hypertarget{group__c__code__generator}{}\doxysection{C Code Generator}
+\label{group__c__code__generator}\index{C Code Generator@{C Code Generator}}
+Collaboration diagram for C Code Generator\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__c__code__generator}
+\end{center}
+\end{figure}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{group__c__code__generator_ga08df7e79ef0c7d55950d0cbb113235b3}{c\+\_\+generate}} (FILE $\ast$out)
+\begin{DoxyCompactList}\small\item\em generate the C-\/\+Code into the file stream. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+$\vert$\} 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__c__code__generator_ga08df7e79ef0c7d55950d0cbb113235b3}\label{group__c__code__generator_ga08df7e79ef0c7d55950d0cbb113235b3}} 
+\index{C Code Generator@{C Code Generator}!c\_generate@{c\_generate}}
+\index{c\_generate@{c\_generate}!C Code Generator@{C Code Generator}}
+\doxysubsubsection{\texorpdfstring{c\_generate()}{c\_generate()}}
+{\footnotesize\ttfamily void c\+\_\+generate (\begin{DoxyParamCaption}\item[{FILE $\ast$}]{out }\end{DoxyParamCaption})}
+
+
+
+generate the C-\/\+Code into the file stream. 
+
+
+\begin{DoxyParams}[1]{Parameters}
+\mbox{\texttt{ in}}  & {\em FILE$\ast$} & out \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{01003                               \{}
+\DoxyCodeLine{01004 }
+\DoxyCodeLine{01005     itab\_dump( variables );}
+\DoxyCodeLine{01006     c\_generate\_structs( out );}
+\DoxyCodeLine{01007     c\_generate\_protos( out );}
+\DoxyCodeLine{01008     c\_generate\_strings( out );}
+\DoxyCodeLine{01009     c\_generate\_blocks( out );}
+\DoxyCodeLine{01010     c\_generate\_dispatchers( out );}
+\DoxyCodeLine{01011 }
+\DoxyCodeLine{01012 \}}
+
+\end{DoxyCode}

@@ -1,0 +1,12 @@
+System [
+    init [
+        nilObject <- Nil new.
+        trueObject <- True new.
+        falseObject <- False new.
+    ]
+    class: aSym [
+        classes at: aSym  ifAbsent: [ | newClass |
+            newClass <- ClassDef new.
+            ^newClass ]
+    ]
+]

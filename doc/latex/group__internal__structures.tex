@@ -1,0 +1,112 @@
+\hypertarget{group__internal__structures}{}\doxysection{Internal Representation}
+\label{group__internal__structures}\index{Internal Representation@{Internal Representation}}
+Collaboration diagram for Internal Representation\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{group__internal__structures}
+\end{center}
+\end{figure}
+\doxysubsection*{Modules}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{group__c__code__generator}{C Code Generator}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structs__names}{s\+\_\+names}}
+\item 
+struct \mbox{\hyperlink{structs__pattern}{s\+\_\+pattern}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Typedefs}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga1d38929abd2544ae021e25b03b5c4a63}\label{group__internal__structures_ga1d38929abd2544ae021e25b03b5c4a63}} 
+typedef struct \mbox{\hyperlink{structs__names}{s\+\_\+names}} $\ast$ {\bfseries t\+\_\+names}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga45f6337bd397fa7b072a6066bcae0b9d}\label{group__internal__structures_ga45f6337bd397fa7b072a6066bcae0b9d}} 
+typedef struct \mbox{\hyperlink{structs__pattern}{s\+\_\+pattern}} $\ast$ {\bfseries t\+\_\+pattern}
+\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga4e4dc87f9495427bfc8e7223a6356f92}\label{group__internal__structures_ga4e4dc87f9495427bfc8e7223a6356f92}} 
+void {\bfseries method\+\_\+def} (\mbox{\hyperlink{structs__pattern}{t\+\_\+pattern}} pattern, void $\ast$locals, void $\ast$directive, void $\ast$statements)
+\item 
+\mbox{\Hypertarget{group__internal__structures_gabd15ba4777936322a7d78f888e39c3c8}\label{group__internal__structures_gabd15ba4777936322a7d78f888e39c3c8}} 
+void {\bfseries method\+\_\+def\+\_\+verb} (\mbox{\hyperlink{structs__pattern}{t\+\_\+pattern}} pattern, void $\ast$coding)
+\end{DoxyCompactItemize}
+\doxysubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{group__internal__structures_gacf47d9b50c97c76b41a54126e70780d6}\label{group__internal__structures_gacf47d9b50c97c76b41a54126e70780d6}} 
+bool {\bfseries classinfo\+::meta}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga030ef50f3e17f9032b16dddff0640515}\label{group__internal__structures_ga030ef50f3e17f9032b16dddff0640515}} 
+char $\ast$ {\bfseries classinfo\+::name}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga2dd5685fcaafb0663bd2f161c42e1bc5}\label{group__internal__structures_ga2dd5685fcaafb0663bd2f161c42e1bc5}} 
+char $\ast$ {\bfseries classinfo\+::super}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga0c558b58e6ef9a01ea93c7ca2874bee9}\label{group__internal__structures_ga0c558b58e6ef9a01ea93c7ca2874bee9}} 
+int {\bfseries classinfo\+::num}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga60b3c71f3ac17dc88a762fe2c1eb8357}\label{group__internal__structures_ga60b3c71f3ac17dc88a762fe2c1eb8357}} 
+char $\ast$ {\bfseries methodinfo\+::classname}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga86c9f58678f7dba8a19b73d5a9fba1cc}\label{group__internal__structures_ga86c9f58678f7dba8a19b73d5a9fba1cc}} 
+char $\ast$ {\bfseries methodinfo\+::name}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga481f89cdf92c1a3fb177adac31d41e59}\label{group__internal__structures_ga481f89cdf92c1a3fb177adac31d41e59}} 
+char $\ast$ {\bfseries varinfo\+::classname}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga58340798530db5d82a975b29f5b2d329}\label{group__internal__structures_ga58340798530db5d82a975b29f5b2d329}} 
+char $\ast$ {\bfseries varinfo\+::name}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga7add94dc0bd7bf790a6b4cdca9a32ada}\label{group__internal__structures_ga7add94dc0bd7bf790a6b4cdca9a32ada}} 
+int {\bfseries stringinfo\+::num}
+\item 
+\mbox{\Hypertarget{group__internal__structures_gac6e5ac87c5da46786335fc5bc39d5220}\label{group__internal__structures_gac6e5ac87c5da46786335fc5bc39d5220}} 
+char $\ast$ {\bfseries \+\_\+\+Assign\+::name}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga39885dbb7baab7f9a3283765f608cadc}\label{group__internal__structures_ga39885dbb7baab7f9a3283765f608cadc}} 
+char $\ast$ {\bfseries \+\_\+\+Assign\+::value}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga0797fedfd3eab4a8bc11403094a9f257}\label{group__internal__structures_ga0797fedfd3eab4a8bc11403094a9f257}} 
+\mbox{\hyperlink{struct__Assign}{Assign}} {\bfseries \+\_\+\+Assigns\+::assign}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga9df3612f98b67ae955981109b2322753}\label{group__internal__structures_ga9df3612f98b67ae955981109b2322753}} 
+\mbox{\hyperlink{struct__Assigns}{Assigns}} {\bfseries \+\_\+\+Assigns\+::next}
+\item 
+\mbox{\Hypertarget{group__internal__structures_gab9bd2f3812dbeb1e76763059ff824c8d}\label{group__internal__structures_gab9bd2f3812dbeb1e76763059ff824c8d}} 
+const char $\ast$ {\bfseries itab\+\_\+entry\+::key}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga4ec5cea10051ae66025f37f705b90632}\label{group__internal__structures_ga4ec5cea10051ae66025f37f705b90632}} 
+void $\ast$ {\bfseries itab\+\_\+entry\+::value}
+\item 
+\mbox{\Hypertarget{group__internal__structures_gad85724770db52e913ee83f37eb623c8d}\label{group__internal__structures_gad85724770db52e913ee83f37eb623c8d}} 
+int {\bfseries itab\+::total}
+\item 
+\mbox{\Hypertarget{group__internal__structures_gadb2d8f70edbcdd149b74f7e5420e55b6}\label{group__internal__structures_gadb2d8f70edbcdd149b74f7e5420e55b6}} 
+int {\bfseries itab\+::used}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga40ec1b9a808e1a643f4c7134f103cc0f}\label{group__internal__structures_ga40ec1b9a808e1a643f4c7134f103cc0f}} 
+struct \mbox{\hyperlink{structitab__entry}{itab\+\_\+entry}} $\ast$ {\bfseries itab\+::rows}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga1ac040645faa1d3488d15dd9e3bc8bf7}\label{group__internal__structures_ga1ac040645faa1d3488d15dd9e3bc8bf7}} 
+struct \mbox{\hyperlink{structitab}{itab}} $\ast$ {\bfseries itab\+\_\+iter\+::tab}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga6373358634106975c4d238a82e79b780}\label{group__internal__structures_ga6373358634106975c4d238a82e79b780}} 
+int {\bfseries itab\+\_\+iter\+::pos}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga90a2993c03bdd30cd9eceb0305963206}\label{group__internal__structures_ga90a2993c03bdd30cd9eceb0305963206}} 
+char $\ast$ {\bfseries meth\+::name}
+\item 
+\mbox{\Hypertarget{group__internal__structures_ga9866545f16c05b265c15cb68853b7618}\label{group__internal__structures_ga9866545f16c05b265c15cb68853b7618}} 
+struct \mbox{\hyperlink{structmeth}{meth}} $\ast$ {\bfseries meth\+::next}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}

@@ -1,0 +1,91 @@
+\hypertarget{global_8h_source}{}\doxysection{global.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001 \textcolor{preprocessor}{\#include <stdbool.h>}}
+\DoxyCodeLine{00002 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}{nextToken}}(  );}
+\DoxyCodeLine{00003 }
+\DoxyCodeLine{00004 \textcolor{preprocessor}{\#define AST\_STRING          1}}
+\DoxyCodeLine{00005 \textcolor{preprocessor}{\#define AST\_IDENT           2}}
+\DoxyCodeLine{00006 \textcolor{preprocessor}{\#define AST\_UNARY\_CALL      3}}
+\DoxyCodeLine{00007 \textcolor{preprocessor}{\#define AST\_STMT            4}}
+\DoxyCodeLine{00008 \textcolor{preprocessor}{\#define AST\_ASSIGN          5}}
+\DoxyCodeLine{00009 \textcolor{preprocessor}{\#define AST\_UNARY           6}}
+\DoxyCodeLine{00010 \textcolor{preprocessor}{\#define AST\_NAMES           7}}
+\DoxyCodeLine{00011 \textcolor{preprocessor}{\#define AST\_CLASS           8}}
+\DoxyCodeLine{00012 \textcolor{preprocessor}{\#define AST\_METHOD          9}}
+\DoxyCodeLine{00013 \textcolor{preprocessor}{\#define AST\_META            10}}
+\DoxyCodeLine{00014 \textcolor{preprocessor}{\#define AST\_ARG             11}}
+\DoxyCodeLine{00015 \textcolor{preprocessor}{\#define AST\_ARGDEF          12}}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00017}\mbox{\hyperlink{structast}{00017}} \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} \{}
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00018}\mbox{\hyperlink{structast_a80c0bb9ad48afd7f459230031f0f1fae}{00018}}     \textcolor{keywordtype}{int} \mbox{\hyperlink{structast_a80c0bb9ad48afd7f459230031f0f1fae}{tag}};                    }
+\DoxyCodeLine{00019     \textcolor{keyword}{union }\{}
+\DoxyCodeLine{00020         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00021}\mbox{\hyperlink{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}{00021}}             \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}{v}};            }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00022}\mbox{\hyperlink{structast_a860f9139dd74c340bc89910d1ce383cf}{00022}}         \} \mbox{\hyperlink{structast_a860f9139dd74c340bc89910d1ce383cf}{str}};                  }
+\DoxyCodeLine{00023         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{00024             \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}{v}};            }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00025}\mbox{\hyperlink{structast_a5a3ad4d2372352140895945e4873d783}{00025}}         \} \mbox{\hyperlink{structast_a5a3ad4d2372352140895945e4873d783}{id}};                   }
+\DoxyCodeLine{00026         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00027}\mbox{\hyperlink{structast_a45ff45dd7e8be23c04b27934fa021837}{00027}}             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_a45ff45dd7e8be23c04b27934fa021837}{o}};      }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00028}\mbox{\hyperlink{structast_ae399b59f6d2853f7fa4b2f437ff4b766}{00028}}             \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_ae399b59f6d2853f7fa4b2f437ff4b766}{sel}};          }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00029}\mbox{\hyperlink{structast_a3eae750c61cd4c78503beda75fc331c5}{00029}}             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_a3eae750c61cd4c78503beda75fc331c5}{arg}};    }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00030}\mbox{\hyperlink{structast_aa84bb1bc9643258bf7d01e26762e5161}{00030}}         \} \mbox{\hyperlink{structast_aa84bb1bc9643258bf7d01e26762e5161}{unary}};                }
+\DoxyCodeLine{00031         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00032}\mbox{\hyperlink{structast_a2ae9ea6c4e18fdedbb969e2d69ec7015}{00032}}             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_a2ae9ea6c4e18fdedbb969e2d69ec7015}{v}};      }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00033}\mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{00033}}             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{next}};   }
+\DoxyCodeLine{00034         \} \mbox{\hyperlink{structast_a3eae750c61cd4c78503beda75fc331c5}{arg}};                  }
+\DoxyCodeLine{00035         \textcolor{keyword}{struct }argdef \{}
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00036}\mbox{\hyperlink{structast_ad81da7b17e74012ad629cf28d0e02664}{00036}}             \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_ad81da7b17e74012ad629cf28d0e02664}{key}};    }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00038}\mbox{\hyperlink{structast_a71451c114bf2387e3a3fd53da26e8540}{00038}}             \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_a71451c114bf2387e3a3fd53da26e8540}{name}};   }
+\DoxyCodeLine{00039             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{next}};   }
+\DoxyCodeLine{00040         \} argdef;}
+\DoxyCodeLine{00041         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{00042             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}{v}};}
+\DoxyCodeLine{00043             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{next}};}
+\DoxyCodeLine{00044         \} stmt;}
+\DoxyCodeLine{00045         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{00046             \textcolor{keywordtype}{char} *var;}
+\DoxyCodeLine{00047             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *expr;}
+\DoxyCodeLine{00048         \} asgn;}
+\DoxyCodeLine{00049         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{00050             \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_a71451c114bf2387e3a3fd53da26e8540}{name}};}
+\DoxyCodeLine{00051             \textcolor{keywordtype}{char} *super;}
+\DoxyCodeLine{00052             \textcolor{keywordtype}{int} num;}
+\DoxyCodeLine{00053             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *vars;}
+\DoxyCodeLine{00054             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{next}};}
+\DoxyCodeLine{00055         \} cls;}
+\DoxyCodeLine{00056         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{00057             \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}{v}};}
+\DoxyCodeLine{00058             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{next}};}
+\DoxyCodeLine{00059         \} names;}
+\DoxyCodeLine{00060         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{00061             \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_a71451c114bf2387e3a3fd53da26e8540}{name}};}
+\DoxyCodeLine{00062             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *args;}
+\DoxyCodeLine{00063             \textcolor{keywordtype}{char} *classname;}
+\DoxyCodeLine{00064             \textcolor{keywordtype}{char} *src;}
+\DoxyCodeLine{00065             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *body;}
+\DoxyCodeLine{00066             \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{next}};}
+\DoxyCodeLine{00067         \} methods;}
+\DoxyCodeLine{00068     \} u;}
+\DoxyCodeLine{00069 \};}
+\DoxyCodeLine{00070 }
+\DoxyCodeLine{00071 \textcolor{preprocessor}{\#define meth\_name   u.methods.name}}
+\DoxyCodeLine{00072 \textcolor{preprocessor}{\#define meth\_class  u.methods.classname}}
+\DoxyCodeLine{00073 \textcolor{preprocessor}{\#define meth\_body   u.methods.body}}
+\DoxyCodeLine{00074 \textcolor{preprocessor}{\#define meth\_next   u.methods.next}}
+\DoxyCodeLine{00075 }
+\DoxyCodeLine{\Hypertarget{global_8h_source_l00076}\mbox{\hyperlink{structgd}{00076}} \textcolor{keyword}{struct }\mbox{\hyperlink{structgd}{gd}} \{}
+\DoxyCodeLine{00077     \textcolor{keywordtype}{int} state;                  \textcolor{comment}{// 0 -\/ init, 1 -\/ running, 2 -\/ end}}
+\DoxyCodeLine{00078     \textcolor{keywordtype}{int} paridx;}
+\DoxyCodeLine{00079     \textcolor{keywordtype}{int} token;}
+\DoxyCodeLine{00080     \textcolor{keywordtype}{int} pos;}
+\DoxyCodeLine{00081     \textcolor{keywordtype}{char} buf[50];}
+\DoxyCodeLine{00082     \textcolor{keywordtype}{char} line[2000];}
+\DoxyCodeLine{00083     \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast}{ast}};}
+\DoxyCodeLine{00084     \textcolor{keywordtype}{int} classnum;}
+\DoxyCodeLine{00085 \};}
+\DoxyCodeLine{00086 }
+\DoxyCodeLine{00087 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{structgd}{gd}} \mbox{\hyperlink{structgd}{gd}};}
+
+\end{DoxyCode}

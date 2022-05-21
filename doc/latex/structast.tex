@@ -1,0 +1,117 @@
+\hypertarget{structast}{}\doxysection{ast Struct Reference}
+\label{structast}\index{ast@{ast}}
+
+
+Collaboration diagram for ast\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=155pt]{structast__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{Data Fields}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{structast_a80c0bb9ad48afd7f459230031f0f1fae}\label{structast_a80c0bb9ad48afd7f459230031f0f1fae}} 
+int \mbox{\hyperlink{structast_a80c0bb9ad48afd7f459230031f0f1fae}{tag}}
+\begin{DoxyCompactList}\small\item\em descriminator for the union, tags start with AST\+\_\+ \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{structast_a3ed5bc71a976be32b56b7a36fcea69f2}\label{structast_a3ed5bc71a976be32b56b7a36fcea69f2}} 
+\begin{tabbing}
+xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
+union \{\\
+\>struct \{\\
+\>\>char $\ast$ \mbox{\hyperlink{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}{v}}\\
+\>\>\>{\em string value owned by the syntax tree }\\
+\>\} \mbox{\hyperlink{structast_a860f9139dd74c340bc89910d1ce383cf}{str}}\\
+\>\>\>{\em string node }\\
+\>struct \{\\
+\>\>char $\ast$ \mbox{\hyperlink{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}{v}}\\
+\>\>\>{\em id value owned by the syntax tree }\\
+\>\} \mbox{\hyperlink{structast_a5a3ad4d2372352140895945e4873d783}{id}}\\
+\>\>\>{\em id node }\\
+\>struct \{\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ \mbox{\hyperlink{structast_a45ff45dd7e8be23c04b27934fa021837}{o}}\\
+\>\>\>{\em method target }\\
+\>\>char $\ast$ \mbox{\hyperlink{structast_ae399b59f6d2853f7fa4b2f437ff4b766}{sel}}\\
+\>\>\>{\em selector }\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ \mbox{\hyperlink{structast_a3eae750c61cd4c78503beda75fc331c5}{arg}}\\
+\>\>\>{\em list of arguments }\\
+\>\} \mbox{\hyperlink{structast_aa84bb1bc9643258bf7d01e26762e5161}{unary}}\\
+\>\>\>{\em unary method call node }\\
+\>struct \{\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ \mbox{\hyperlink{structast_a2ae9ea6c4e18fdedbb969e2d69ec7015}{v}}\\
+\>\>\>{\em argument value node }\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ \mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{next}}\\
+\>\>\>{\em next argument }\\
+\>\} {\bfseries arg}\\
+\>struct {\bfseries argdef} \{\\
+\>\>const char $\ast$ \mbox{\hyperlink{structast_ad81da7b17e74012ad629cf28d0e02664}{key}}\\
+\>\>const char $\ast$ \mbox{\hyperlink{structast_a71451c114bf2387e3a3fd53da26e8540}{name}}\\
+\>\>\>{\em parameter name }\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ \mbox{\hyperlink{structast_aa38374563dfcc20bd961acd0bbcb9dbe}{next}}\\
+\>\>\>{\em next keyword in the list }\\
+\>\} {\bfseries argdef}\\
+\>struct \{\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries v}\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries next}\\
+\>\} {\bfseries stmt}\\
+\>struct \{\\
+\>\>char $\ast$ {\bfseries var}\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries expr}\\
+\>\} {\bfseries asgn}\\
+\>struct \{\\
+\>\>char $\ast$ {\bfseries name}\\
+\>\>char $\ast$ {\bfseries super}\\
+\>\>int {\bfseries num}\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries vars}\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries next}\\
+\>\} {\bfseries cls}\\
+\>struct \{\\
+\>\>char $\ast$ {\bfseries v}\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries next}\\
+\>\} {\bfseries names}\\
+\>struct \{\\
+\>\>const char $\ast$ {\bfseries name}\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries args}\\
+\>\>char $\ast$ {\bfseries classname}\\
+\>\>char $\ast$ {\bfseries src}\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries body}\\
+\>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries next}\\
+\>\} {\bfseries methods}\\
+\} {\bfseries u}\\
+
+\end{tabbing}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Field Documentation}
+\mbox{\Hypertarget{structast_ad81da7b17e74012ad629cf28d0e02664}\label{structast_ad81da7b17e74012ad629cf28d0e02664}} 
+\index{ast@{ast}!key@{key}}
+\index{key@{key}!ast@{ast}}
+\doxysubsubsection{\texorpdfstring{key}{key}}
+{\footnotesize\ttfamily const char$\ast$ ast\+::key}
+
+Keyword including the colon at the end if it is no keyword then the plain unary or binary name is here. \mbox{\Hypertarget{structast_aa38374563dfcc20bd961acd0bbcb9dbe}\label{structast_aa38374563dfcc20bd961acd0bbcb9dbe}} 
+\index{ast@{ast}!next@{next}}
+\index{next@{next}!ast@{ast}}
+\doxysubsubsection{\texorpdfstring{next}{next}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structast}{ast}}$\ast$ ast\+::next}
+
+
+
+next argument 
+
+next keyword in the list \mbox{\Hypertarget{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}\label{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}} 
+\index{ast@{ast}!v@{v}}
+\index{v@{v}!ast@{ast}}
+\doxysubsubsection{\texorpdfstring{v}{v}}
+{\footnotesize\ttfamily char$\ast$ ast\+::v}
+
+
+
+string value owned by the syntax tree 
+
+id value owned by the syntax tree 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+global.\+h\end{DoxyCompactItemize}

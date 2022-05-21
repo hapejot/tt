@@ -1,0 +1,93 @@
+\hypertarget{group__itab}{}\doxysection{ITab}
+\label{group__itab}\index{ITab@{ITab}}
+\doxysubsection*{Data Structures}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structitab__entry}{itab\+\_\+entry}}
+\begin{DoxyCompactList}\small\item\em structure of an entry in the itab. \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structitab}{itab}}
+\begin{DoxyCompactList}\small\item\em structure of itab \end{DoxyCompactList}\item 
+struct \mbox{\hyperlink{structitab__iter}{itab\+\_\+iter}}
+\begin{DoxyCompactList}\small\item\em iterator over elements of an itab. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{structitab}{itab}} $\ast$ \mbox{\hyperlink{group__itab_gad9917bb373045636deee31d01936f67d}{itab\+\_\+new}} ()
+\begin{DoxyCompactList}\small\item\em create a new itab with default parameters. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{group__itab_gaa32bbe2ddff2b617359acf569723d908}{itab\+\_\+entry\+\_\+cmp}} (const void $\ast$aptr, const void $\ast$bptr)
+\begin{DoxyCompactList}\small\item\em compares the keys of two entries \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{group__itab_ga6e08d3097fed299b2f6ed15a8fbff427}\label{group__itab_ga6e08d3097fed299b2f6ed15a8fbff427}} 
+void {\bfseries itab\+\_\+append} (struct \mbox{\hyperlink{structitab}{itab}} $\ast$\mbox{\hyperlink{structitab}{itab}}, const char $\ast$key, void $\ast$value)
+\item 
+\mbox{\Hypertarget{group__itab_ga86a69c8f5254f1be831ebd3b97373bdb}\label{group__itab_ga86a69c8f5254f1be831ebd3b97373bdb}} 
+void $\ast$ {\bfseries itab\+\_\+read} (struct \mbox{\hyperlink{structitab}{itab}} $\ast$\mbox{\hyperlink{structitab}{itab}}, const char $\ast$key)
+\item 
+\mbox{\Hypertarget{group__itab_ga55760d926fc3e03e072c3ca892b8efb0}\label{group__itab_ga55760d926fc3e03e072c3ca892b8efb0}} 
+void {\bfseries itab\+\_\+dump} (struct \mbox{\hyperlink{structitab}{itab}} $\ast$\mbox{\hyperlink{structitab}{itab}})
+\item 
+\mbox{\Hypertarget{group__itab_ga6d574c39e4af2c7fb1ea7117ce91221c}\label{group__itab_ga6d574c39e4af2c7fb1ea7117ce91221c}} 
+struct \mbox{\hyperlink{structitab__iter}{itab\+\_\+iter}} $\ast$ {\bfseries itab\+\_\+foreach} (struct \mbox{\hyperlink{structitab}{itab}} $\ast$tab)
+\item 
+\mbox{\Hypertarget{group__itab_ga1acc6b232745d0b353c374c27f6f3f45}\label{group__itab_ga1acc6b232745d0b353c374c27f6f3f45}} 
+struct \mbox{\hyperlink{structitab__iter}{itab\+\_\+iter}} $\ast$ {\bfseries itab\+\_\+next} (struct \mbox{\hyperlink{structitab__iter}{itab\+\_\+iter}} $\ast$iter)
+\item 
+\mbox{\Hypertarget{group__itab_ga1d8e2014b1dd65d8e76016c2ba01355b}\label{group__itab_ga1d8e2014b1dd65d8e76016c2ba01355b}} 
+void $\ast$ {\bfseries itab\+\_\+value} (struct \mbox{\hyperlink{structitab__iter}{itab\+\_\+iter}} $\ast$iter)
+\item 
+\mbox{\Hypertarget{group__itab_ga8e2b1dc446a2cea41566e7ce14b3932a}\label{group__itab_ga8e2b1dc446a2cea41566e7ce14b3932a}} 
+const char $\ast$ {\bfseries itab\+\_\+key} (struct \mbox{\hyperlink{structitab__iter}{itab\+\_\+iter}} $\ast$iter)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+sorted list of structures -\/$>$ tables with primary index 
+
+\doxysubsection{Function Documentation}
+\mbox{\Hypertarget{group__itab_gaa32bbe2ddff2b617359acf569723d908}\label{group__itab_gaa32bbe2ddff2b617359acf569723d908}} 
+\index{ITab@{ITab}!itab\_entry\_cmp@{itab\_entry\_cmp}}
+\index{itab\_entry\_cmp@{itab\_entry\_cmp}!ITab@{ITab}}
+\doxysubsubsection{\texorpdfstring{itab\_entry\_cmp()}{itab\_entry\_cmp()}}
+{\footnotesize\ttfamily int itab\+\_\+entry\+\_\+cmp (\begin{DoxyParamCaption}\item[{const void $\ast$}]{aptr,  }\item[{const void $\ast$}]{bptr }\end{DoxyParamCaption})}
+
+
+
+compares the keys of two entries 
+
+\begin{DoxyReturn}{Returns}
+\begin{DoxyItemize}
+\item $<$ 0, when first key is lower \item == 0, when both keys are equal \item $>$ 0, when second key is lower \end{DoxyItemize}
+
+\end{DoxyReturn}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00180                                                          \{}
+\DoxyCodeLine{00181     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *a = aptr;}
+\DoxyCodeLine{00182     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *b = bptr;}
+\DoxyCodeLine{00183     \textcolor{keywordflow}{return} strcmp( a-\/>key, b-\/>key );}
+\DoxyCodeLine{00184 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__itab_gad9917bb373045636deee31d01936f67d}\label{group__itab_gad9917bb373045636deee31d01936f67d}} 
+\index{ITab@{ITab}!itab\_new@{itab\_new}}
+\index{itab\_new@{itab\_new}!ITab@{ITab}}
+\doxysubsubsection{\texorpdfstring{itab\_new()}{itab\_new()}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{structitab}{itab}}$\ast$ itab\+\_\+new (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+create a new itab with default parameters. 
+
+\begin{DoxyReturn}{Returns}
+reference to an itab structure.
+\end{DoxyReturn}
+Detailed description follows here. 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00166                           \{}
+\DoxyCodeLine{00167     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab}{itab}} *r = talloc( NULL, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab}{itab}} );}
+\DoxyCodeLine{00168     r-\/>total = 10;}
+\DoxyCodeLine{00169     r-\/>used = 0;}
+\DoxyCodeLine{00170     r-\/>rows = talloc\_array( r, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}}, r-\/>total );}
+\DoxyCodeLine{00171     \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{00172 \}}
+
+\end{DoxyCode}
