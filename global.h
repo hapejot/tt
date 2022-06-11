@@ -79,9 +79,14 @@ struct gd {
     int token;
     int pos;
     char buf[50];
-    char line[2000];
+    char *line;
+    int line_count;
     struct ast *ast;
     int classnum;
+    struct itab *src;
+    struct itab_iter *src_iter;
 };
 
 extern struct gd gd;
+
+extern void parse();

@@ -147,12 +147,17 @@ $(function() {
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keywordtype">int</span> token;</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keywordtype">int</span> pos;</div>
 <div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <span class="keywordtype">char</span> buf[50];</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">char</span> line[2000];</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">struct </span><a class="code" href="structast.html">ast</a> *<a class="code" href="structast.html">ast</a>;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keywordtype">int</span> classnum;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;};</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="structgd.html">gd</a> <a class="code" href="structgd.html">gd</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keywordtype">char</span> *line;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordtype">int</span> line_count;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    <span class="keyword">struct </span><a class="code" href="structast.html">ast</a> *<a class="code" href="structast.html">ast</a>;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keywordtype">int</span> classnum;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">struct </span><a class="code" href="structitab.html">itab</a> *src;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <span class="keyword">struct </span><a class="code" href="structitab__iter.html">itab_iter</a> *src_iter;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;};</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;<span class="keyword">extern</span> <span class="keyword">struct </span><a class="code" href="structgd.html">gd</a> <a class="code" href="structgd.html">gd</a>;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;<span class="keyword">extern</span> <span class="keywordtype">void</span> parse();</div>
 <div class="ttc" id="agroup__tokenizer_html_gacb8666cde3ece1af4829c28d0f7c5022"><div class="ttname"><a href="group__tokenizer.html#gacb8666cde3ece1af4829c28d0f7c5022">nextToken</a></div><div class="ttdeci">bool nextToken()</div><div class="ttdoc">read next token.</div><div class="ttdef"><b>Definition:</b> lib.c:403</div></div>
 <div class="ttc" id="astructast_html"><div class="ttname"><a href="structast.html">ast</a></div><div class="ttdef"><b>Definition:</b> global.h:17</div></div>
 <div class="ttc" id="astructast_html_a2ae9ea6c4e18fdedbb969e2d69ec7015"><div class="ttname"><a href="structast.html#a2ae9ea6c4e18fdedbb969e2d69ec7015">ast::v</a></div><div class="ttdeci">struct ast * v</div><div class="ttdoc">argument value node</div><div class="ttdef"><b>Definition:</b> global.h:32</div></div>
@@ -168,6 +173,8 @@ $(function() {
 <div class="ttc" id="astructast_html_ad81da7b17e74012ad629cf28d0e02664"><div class="ttname"><a href="structast.html#ad81da7b17e74012ad629cf28d0e02664">ast::key</a></div><div class="ttdeci">const char * key</div><div class="ttdef"><b>Definition:</b> global.h:36</div></div>
 <div class="ttc" id="astructast_html_ae399b59f6d2853f7fa4b2f437ff4b766"><div class="ttname"><a href="structast.html#ae399b59f6d2853f7fa4b2f437ff4b766">ast::sel</a></div><div class="ttdeci">char * sel</div><div class="ttdoc">selector</div><div class="ttdef"><b>Definition:</b> global.h:28</div></div>
 <div class="ttc" id="astructgd_html"><div class="ttname"><a href="structgd.html">gd</a></div><div class="ttdef"><b>Definition:</b> global.h:76</div></div>
+<div class="ttc" id="astructitab__iter_html"><div class="ttname"><a href="structitab__iter.html">itab_iter</a></div><div class="ttdoc">iterator over elements of an itab.</div><div class="ttdef"><b>Definition:</b> lib.c:134</div></div>
+<div class="ttc" id="astructitab_html"><div class="ttname"><a href="structitab.html">itab</a></div><div class="ttdoc">structure of itab</div><div class="ttdef"><b>Definition:</b> lib.c:117</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->

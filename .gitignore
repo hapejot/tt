@@ -2,3 +2,6 @@ tmp
 out
 log
 *.log
+doc/latex/
+doc/html/
+.*

@@ -15,9 +15,22 @@ set(PARSER ${PROJECT_SOURCE_DIR}/tt.y)
 
 add_compile_options( -g -save-temps )
 
-add_executable(ttc  tt.c talloc/talloc.c lib.c)
+add_library(ttl     class_enter.c
+                    lib.c
+                    tt.c
+                    talloc/talloc.c
+                    method_enter.c
+                    method_name.c
+                    method_stmts.c
+                    require_classes.c
+                    require_current_class.c )
+
+add_executable(ttc  ttc.c)
+target_link_libraries(ttc ttl)
+
 add_custom_command( OUTPUT tt.c
     COMMAND lemon -d${CMAKE_CURRENT_BINARY_DIR} -T${PROJECT_SOURCE_DIR}/lempar.c ${PARSER} 
     DEPENDS ${PARSER} )
 
-
+add_executable(tt_test tt_test.c)
+target_link_libraries(tt_test ttl)

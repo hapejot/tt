@@ -81,11 +81,16 @@
 \DoxyCodeLine{00079     \textcolor{keywordtype}{int} token;}
 \DoxyCodeLine{00080     \textcolor{keywordtype}{int} pos;}
 \DoxyCodeLine{00081     \textcolor{keywordtype}{char} buf[50];}
-\DoxyCodeLine{00082     \textcolor{keywordtype}{char} line[2000];}
-\DoxyCodeLine{00083     \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast}{ast}};}
-\DoxyCodeLine{00084     \textcolor{keywordtype}{int} classnum;}
-\DoxyCodeLine{00085 \};}
-\DoxyCodeLine{00086 }
-\DoxyCodeLine{00087 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{structgd}{gd}} \mbox{\hyperlink{structgd}{gd}};}
+\DoxyCodeLine{00082     \textcolor{keywordtype}{char} *line;}
+\DoxyCodeLine{00083     \textcolor{keywordtype}{int} line\_count;}
+\DoxyCodeLine{00084     \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast}{ast}};}
+\DoxyCodeLine{00085     \textcolor{keywordtype}{int} classnum;}
+\DoxyCodeLine{00086     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab}{itab}} *src;}
+\DoxyCodeLine{00087     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__iter}{itab\_iter}} *src\_iter;}
+\DoxyCodeLine{00088 \};}
+\DoxyCodeLine{00089 }
+\DoxyCodeLine{00090 \textcolor{keyword}{extern} \textcolor{keyword}{struct }\mbox{\hyperlink{structgd}{gd}} \mbox{\hyperlink{structgd}{gd}};}
+\DoxyCodeLine{00091 }
+\DoxyCodeLine{00092 \textcolor{keyword}{extern} \textcolor{keywordtype}{void} parse();}
 
 \end{DoxyCode}

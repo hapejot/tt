@@ -1,0 +1,8 @@
+1 to: 9 do: [ :i |
+    1 to: i do: [ :j |
+        Transcript
+            show: ('{1} * {2} = {3}' format: {j. i. j * i});
+            show: ' '
+    ].
+    Transcript show: ' '; cr.
+].

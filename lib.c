@@ -6,6 +6,7 @@
 #include <error.h>
 #include <string.h>
 #include <ctype.h>
+#include <stdarg.h>
 
 #include "lib.h"
 
@@ -20,6 +21,13 @@ typedef struct _Assigns *Assigns;
 
 /** all classes */
 struct itab *classes = NULL;
+
+/** current class
+defined with *class_enter*. the next call of *class_enter* will
+set a new class.
+*/
+t_classdef *current_class;
+t_methoddef *current_method;
 
 /** all methods */
 struct itab *methods = NULL;
@@ -64,68 +72,32 @@ struct stringinfo {
     int num;
 };
 
-/** single assignment of a value to string */
-struct _Assign {
-    char *name;
-    char *value;
-};
 
-/** list of assignment of a value to string */
-struct _Assigns {
-    Assign assign;
-    Assigns next;
-};
+/**
+* @defgroup name list
+* @{
+*/
 
-/** global assignments */
-Assigns global_assigns = NULL;
-
-/** create new assignment pair */
-Assign Assign_new( char *name, char *value ) {
-    Assign result = malloc( sizeof( *result ) );
-    result->name = strdup( name );
-    result->value = strdup( value );
-    return result;
+void namelist_init( t_namelist * nl ) {
+    nl->count = 0;
+    nl->names = NULL;
 }
 
-/** return the value of the assignment pair */
-char *Assign_value( Assign a ) {
-    return a->value;
-}
-/** return the name of the assignment pair */
-char *Assign_name( Assign a ) {
-    return a->name;
+void namelist_add( t_namelist * nl, const char *name ) {
+    nl->count++;
+    nl->names = talloc_realloc( NULL, nl->names, char *, nl->count );
+    nl->names[nl->count - 1] = talloc_strdup( nl->names, name );
 }
 
-/** create a new assignment list */
-Assigns Assigns_new( Assign assign, Assigns next ) {
-    Assigns result = malloc( sizeof( *result ) );
-    result->assign = assign;
-    result->next = next;
-    return result;
-}
-
-/** add an assignment pair to the global list. No additional checks are done. */
-void Assign_add( char *name, char *value ) {
-    Assign a = Assign_new( name, value );
-    global_assigns = Assigns_new( a, global_assigns );
-}
-
-/** find a pair in the global assignment list with the given name */
-Assign Assign_find( char *name ) {
-    for( Assigns as = global_assigns; as; as = as->next ) {
-        if( strcmp( name, as->assign->name ) == 0 ) {
-            return as->assign;
-        }
-    }
-    return NULL;
-}
-
-/** dump the contents of the global assignment list */
-void Assigns_dump( Assigns as ) {
-    for( ; as; as = as->next ) {
-        printf( "%s <- %s\n", as->assign->name, as->assign->value );
+void namelist_copy( t_namelist * to, t_namelist * from ) {
+    to->count = from->count;
+    to->names = talloc_array( NULL, char *, to->count );
+    for( int i = 0; i < to->count; i++ ) {
+        to->names[i] = talloc_strdup( to->names, from->names[i] );
     }
 }
+
+/** @} */
 
 /**
 * @defgroup itab ITab
@@ -148,6 +120,13 @@ struct itab {
     struct itab_entry *rows;
 };
 
+/** returns the number of lines in the table 
+*/
+int itab_lines( struct itab *itab ) {
+    assert( itab );
+    return itab->used;
+}
+
 /**
  @brief iterator over elements of an itab.
  */
@@ -164,7 +143,7 @@ struct itab_iter {
  Detailed description follows here.
  */
 struct itab *itab_new(  ) {
-    struct itab *r = talloc( NULL, struct itab );
+    struct itab *r = talloc_zero( NULL, struct itab );
     r->total = 10;
     r->used = 0;
     r->rows = talloc_array( r, struct itab_entry, r->total );
@@ -196,12 +175,10 @@ void itab_append( struct itab *itab, const char *key, void *value ) {
     row->value = value;
     itab->used++;
 
-
     qsort( itab->rows,                 // base
            itab->used,                 // nmemb
            sizeof( struct itab_entry ), // size
            itab_entry_cmp );
-
 }
 
 void *itab_read( struct itab *itab, const char *key ) {
@@ -258,43 +235,6 @@ const char *itab_key( struct itab_iter *iter ) {
 
 /*! @} */
 
-/**
- @defgroup runtime-context Runtime Context
-
- @{
-*/
-
-struct context *context_new( struct context *super ) {
-    struct context *r = talloc_zero( NULL, struct context );
-    r->super = super;
-    return r;
-}
-
-struct contextdef context_global_def = {.global = true};
-struct contextdef context_class_def = {.instance = true };
-
-struct contextdef *context_lookup( struct context *ctx, const char *name ) {
-    fprintf( stderr, "lookup %s %p %s\n", name, ctx, ctx->name );
-
-    if( ctx->name ) {
-        char *lookup = talloc_strdup( NULL, ctx->name );
-        lookup = talloc_strdup_append( lookup, "$" );
-        lookup = talloc_strdup_append( lookup, name );
-        struct varinfo *vref = itab_read( variables, lookup );
-        fprintf( stderr, "lookup var: %s %p\n", lookup, vref );
-        if( vref )
-            return &context_class_def;
-    }
-
-    if( ctx->super )
-        return context_lookup( ctx->super, name );
-    else {
-        fprintf( stderr, "-----\n" );
-        return &context_global_def;
-    }
-}
-
-/** @} */
 
 /**
 @defgroup tokenizer Tokenizer
@@ -335,6 +275,54 @@ bool is_binary_char( int c ) {
     }
 }
 
+bool src_clear(  ) {
+    if( gd.src ) {
+        talloc_free( gd.src );
+    }
+    gd.src = itab_new(  );
+    if( gd.src_iter ) {
+        talloc_free( gd.src_iter );
+    }
+    gd.src_iter = NULL;
+}
+
+bool src_add( const char *line ) {
+    int n = itab_lines( gd.src );
+    char buf[10];
+    sprintf( buf, "%09d", n + 1 );
+    itab_append( gd.src, buf, talloc_strdup( gd.src, line ) );
+}
+
+/**
+read file into itab.
+*/
+bool src_read( const char *name ) {
+    FILE *f = fopen( name, "r" );
+    char buf[1000];
+    char *line;
+    int line_no = 1;
+    src_clear(  );
+    for( ;; ) {
+        line = fgets( buf, sizeof( buf ), f );
+        if( line == NULL )
+            break;
+        int n = strlen( line );
+        while( n > 0 && isspace( line[--n] ) )
+            line[n] = 0;
+        char line_number[10];
+        sprintf( line_number, "%09d", line_no );
+        itab_append( gd.src, line_number, talloc_strdup( gd.src, line ) );
+        line_no++;
+    }
+    fclose( f );
+}
+
+bool src_dump(  ) {
+    for( struct itab_iter * x = itab_foreach( gd.src );
+         x; x = itab_next( x ) ) {
+        printf( "%s:%s\n", itab_key( x ), itab_value( x ) );
+    }
+}
 
 /**
 @brief read one line from stdin
@@ -343,21 +331,22 @@ stores the result into @c{gd.line}.
 trailing blanks are removed.
 */
 bool readLine(  ) {
-    static int line_count = 0;
-
-    char *line = fgets( gd.line, sizeof( gd.line ), stdin );
-    line_count++;
-    printf( "%2d:%s", line_count, line );
-    if( line ) {
-        size_t len = strlen( line );
-        while( len >= 0 && line[len] <= 32 )
-            line[len--] = 0;
+    if( gd.src_iter == NULL ) {
+        gd.src_iter = itab_foreach( gd.src );
+    }
+    else {
+        gd.src_iter = itab_next( gd.src_iter );
+    }
+    if( gd.src_iter ) {
+        gd.line = itab_value( gd.src_iter );
+        gd.line_count++;
+        printf( "%2d:%s\n", gd.line_count, gd.line );
         gd.pos = 0;
         gd.state = 1;
         return true;
     }
     else {
-        gd.line[0] = 0;
+        gd.line = "";
         gd.state = 2;
         return false;
     }
@@ -395,6 +384,17 @@ bool readStringToken(  ) {
     gd.buf[idx] = 0;
     gd.token = TK_STRING;
     return true;
+}
+void parse_verbatim( char c ) {
+    int i = 0;
+    gd.buf[i] = 0;
+    readChar( &c );
+    while( c != '}' ) {
+        gd.buf[i++] = c;
+        gd.buf[i] = 0;
+        readChar( &c );
+    }
+    gd.token = TK_VERBATIM;
 }
 
 /**
@@ -441,7 +441,11 @@ bool nextToken(  ) {
             gd.token = 0;
             gd.token = TK_BINOP;
             result = true;
-            if( strcmp( "<-", gd.buf ) == 0 ) {
+            if( strcmp( ":=", gd.buf ) == 0 ) {
+                gd.token = TK_ASSIGN;
+                result = true;
+            }
+            else if( strcmp( "<-", gd.buf ) == 0 ) {
                 gd.token = TK_LARROW;
                 result = true;
             }
@@ -459,9 +463,10 @@ bool nextToken(  ) {
             }
         }
         else if( isdigit( c ) ) {
-            int idx = 1;
+            int idx = 0;
             while( isdigit( c ) ) {
-                gd.buf[idx - 1] = c;
+                printf("### digit %c\n", c);
+                gd.buf[idx++] = c;
                 gd.buf[idx] = 0;
                 readChar( &c );
             }
@@ -484,11 +489,11 @@ bool nextToken(  ) {
                     break;
                 case '(':
                     result = true;
-                    gd.token = TK_LBRACE;
+                    gd.token = TK_LPAREN;
                     break;
                 case ')':
                     result = true;
-                    gd.token = TK_RBRACE;
+                    gd.token = TK_RPAREN;
                     break;
                 case '[':
                     result = true;
@@ -499,18 +504,12 @@ bool nextToken(  ) {
                     gd.token = TK_RBRACK;
                     break;
                 case '{':
-                    {
-                        int i = 0;
-                        gd.buf[i] = 0;
-                        readChar( &c );
-                        while( c != '}' ) {
-                            gd.buf[i++] = c;
-                            gd.buf[i] = 0;
-                            readChar( &c );
-                        }
-                        gd.token = TK_VERBATIM;
-                    }
                     result = true;
+                    gd.token = TK_LBRACE;
+                    break;
+                case '}':
+                    result = true;
+                    gd.token = TK_RBRACE;
                     break;
                 case '#':
                     readChar( &c );
@@ -530,6 +529,12 @@ bool nextToken(  ) {
                 case ':':
                     result = true;
                     gd.token = TK_COLON;
+                    readChar( &c );
+                    if( c == '=' ) {
+                        gd.token = TK_ASSIGN;
+                    }
+                    else
+                        gd.pos--;
                     break;
                 case '$':
                     result = true;
@@ -549,466 +554,61 @@ bool nextToken(  ) {
 
 /** @} */
 
-void ast_vars_to_c( FILE * out, struct ast *cls, char *super,
-                    struct ast *vars ) {
-    for( struct ast * c = cls; c; c = c->u.cls.next ) {
-        if( super && strcmp( super, c->u.cls.name ) == 0 ) {
-            ast_vars_to_c( out, cls, c->u.cls.super, c->u.cls.vars );
-            break;
-        }
-    }
-    for( struct ast * v = vars; v; v = v->u.names.next ) {
-        fprintf( out, "  void * %s;\n", v->u.names.v );
-    }
-}
-
-struct meth {
-    char *name;
-    struct meth *next;
-};
 
 
-struct ast *super_class_of( struct ast *main, struct ast *class ) {
-    const char *super_name = class->u.cls.super;
-    for( struct ast * cls = main; cls; cls = cls->u.cls.next ) {
-        if( strcmp( super_name, cls->u.cls.name ) == 0 ) {
-            return cls;
-        }
-    }
-    return NULL;
-}
-
-
-void ast_methods_to_c( FILE * out, struct ast *ast ) {
-}
-
-
-
-
-
-void ast_to_c( FILE * out, struct ast *ast, struct context *context ) {
-    assert( ast );
-    switch ( ast->tag ) {
-        case AST_UNARY:
-            fprintf( out, "%s(-1, (struct Object*)", ast->u.unary.sel );
-            ast_to_c( out, ast->u.unary.o, context );
-            fprintf( out, ")" );
-            break;
-        case AST_ASSIGN:
-            fprintf( out, "self->%s = ", ast->u.asgn.var );
-            ast_to_c( out, ast->u.asgn.expr, context );
-            break;
-        case AST_IDENT:
-            {
-                struct contextdef *d = context_lookup( context, ast->u.id.v );
-                if( d->instance )
-                    fprintf( out, "self->%s", ast->u.id.v );
-                else if( d->local )
-                    fprintf( out, "%s", ast->u.id.v );
-                else if( d->global )
-                    fprintf( out, "((struct Object*)&v_%s$Meta)",
-                             ast->u.id.v );
-            }
-            break;
-
-        case AST_STRING:
-            {
-                struct stringinfo *si = itab_read( strings, ast->u.str.v );
-                assert( si );
-                fprintf( out, "&v_string%d", si->num );
-            }
-            break;
-        case AST_STMT:
-            ast_to_c( out, ast->u.stmt.v, context );
-            fprintf( out, ";\n" );
-            if( ast->u.stmt.next )
-                ast_to_c( out, ast->u.stmt.next, context );
-            break;
-        case AST_CLASS:
-        case AST_META:
-            assert( false );
-            break;
-        default:
-            fprintf( out, "/* AST: %d */\n", ast->tag );
-            break;
-    }
-}
-
-void ast_dump( int level, struct ast *ast ) {
-    assert( ast );
-    printf( "%d ", level );
-    for( int i = 0; i < level; i++ ) {
-        printf( "    " );
-    }
-    switch ( ast->tag ) {
-        case AST_UNARY:
-            printf( "unary call: %s\n", ast->u.unary.sel );
-            ast_dump( level + 1, ast->u.unary.o );
-            break;
-        case AST_ASSIGN:
-            printf( "assign: %s\n", ast->u.asgn.var );
-            ast_dump( level + 1, ast->u.asgn.expr );
-            break;
-        case AST_IDENT:
-            printf( "ident: %s\n", ast->u.id.v );
-            break;
-        case AST_STRING:
-            printf( "string: %s\n", ast->u.str.v );
-            break;
-        case AST_STMT:
-            printf( ">\n" );
-            ast_dump( level + 1, ast->u.stmt.v );
-            if( ast->u.stmt.next )
-                ast_dump( level, ast->u.stmt.next );
-            break;
-        case AST_CLASS:
-        case AST_META:
-            if( ast->tag == AST_CLASS )
-                printf( "class: %s > %s\n", ast->u.cls.name,
-                        ast->u.cls.super );
-            else
-                printf( "meta %s\n", ast->u.cls.name );
-            if( ast->u.cls.vars )
-                ast_dump( level + 1, ast->u.cls.vars );
-            if( ast->u.cls.next )
-                ast_dump( level, ast->u.cls.next );
-            break;
-        case AST_METHOD:
-            printf( "method: %s\n", ast->u.methods.name );
-            if( ast->u.methods.body )
-                ast_dump( level + 1, ast->u.methods.body );
-            if( ast->u.methods.next )
-                ast_dump( level, ast->u.methods.next );
-            break;
-        case AST_NAMES:
-            printf( "::%s\n", ast->u.names.v );
-            if( ast->u.names.next )
-                ast_dump( level, ast->u.names.next );
-            break;
-        default:
-            printf( "AST: %d\n", ast->tag );
-            break;
-    }
-}
-
-struct ast *ast_new( int tag ) {
-    struct ast *r;
-    r = talloc( NULL, struct ast );
-    r->tag = tag;
-    return r;
-}
-
-
-void require_classes(  ) {
-    if( !classes ) {
-        classes = itab_new(  );
-        methods = itab_new(  );
-        method_names = itab_new(  );
-        variables = itab_new(  );
-        strings = itab_new(  );
-
-        gd.classnum = 1;
-
-// class_add_def( METACLASS, "Object", NULL, NULL );
-        class_add_def( "Class", "Object", NULL, NULL );
-        class_add_def( "Object", NULL, NULL, NULL );
-        class_add_def( "String", "Object", NULL, NULL );
-        string_class_num = gd.classnum - 1;
-
-        gd.classnum = 100;
-    }
-}
-
-void clean_method_name( char *mname ) {
-    for( int i = strlen( mname ) - 1; i >= 0; i-- ) {
-        if( mname[i] == ':' )
-            mname[i] = '$';
-    }
-}
-
-
-/**
-@brief fills the method table from all methods of a class.
-*/
-void ast_fill_methods( const char *p_clsname, struct ast *p_methods ) {
-    char mname[500];
-
-    for( struct ast * m = p_methods; m; m = m->u.methods.next ) {
-        strcpy( mname, p_clsname );
-        strcat( mname, "$" );
-        if( m->u.methods.name )
-            strcat( mname, m->u.methods.name );
-        else {
-        }
-        clean_method_name( mname );
-        itab_append( methods, mname, m );
-        m->u.methods.classname = talloc_strdup( methods, p_clsname );
-        printf( "new method: %s\n", mname );
-
-        char *selector = talloc_strdup( method_names, m->meth_name );
-        clean_method_name( selector );
-        const char *n = itab_read( method_names, selector );
-        if( n == NULL )
-            itab_append( method_names, m->meth_name, selector );
-    }
-}
-
-void ast_dump_classes(  ) {
-    for( struct itab_iter * cls_iter = itab_foreach( classes );
-         cls_iter; cls_iter = itab_next( cls_iter ) ) {
-        struct ast *cls = itab_value( cls_iter );
-        printf( "%d %s\n", cls->u.cls.num, cls->u.cls.name );
-    }
-}
-
-void class_add_def( const char *name, const char *super,
-                    struct ast *vars, struct ast *methods ) {
-    require_classes(  );
-    printf( "add def for %s : %s\n", name, super );
-    struct ast *odef = itab_read( classes, name );
-// Class might exist because its a predefined class.
-    if( odef == NULL ) {
-        printf( "new class\n" );
-        class_add_meta( name, super, NULL, NULL );
-        struct classinfo *def = talloc_zero( classes, struct classinfo );
-        def->num = gd.classnum++;
-        def->name = talloc_strdup( def, name );
-        itab_append( classes, name, def );
-    }
-    ast_fill_methods( name, methods );
-    for( struct ast * v = vars; v; v = v->u.names.next ) {
-        struct varinfo *vi = talloc_zero( variables, struct varinfo );
-        vi->name = talloc_strdup( vi, v->u.names.v );
-        vi->classname = talloc_strdup( vi, name );
-        char name[1000];
-        sprintf( name, "%s$%s", vi->classname, vi->name );
-        itab_append( variables, name, vi );
-    }
-}
-
-void class_add_meta( const char *name, const char *super,
-                     struct ast *vars, struct ast *methods ) {
-    require_classes(  );
-    char metaname[1000];
-    sprintf( metaname, "%s$Meta", name );
-    char supermeta[1000];
-    sprintf( supermeta, "%s$Meta", super );
-    printf( "add meta for %s : %s\n", name, super );
-
-    struct classinfo *def;
-    def = itab_read( classes, metaname );
-    if( !def ) {
-        def = talloc_zero( classes, struct classinfo );
-        def->meta = true;
-        def->num = gd.classnum++;
-        def->name = talloc_strdup( def, metaname );
-        itab_append( classes, metaname, def );
-    }
-
-    ast_fill_methods( metaname, methods );
-
-    for( struct ast * v = vars; v; v = v->u.names.next ) {
-        struct varinfo *vi = talloc_zero( variables, struct varinfo );
-        vi->name = talloc_strdup( vi, v->u.names.v );
-        vi->classname = talloc_strdup( vi, metaname );
-        char name[1000];
-        sprintf( name, "%s$%s", vi->classname, vi->name );
-        itab_append( variables, name, vi );
-    }
-}
-
-void c_generate_structs( FILE * out ) {
-    fprintf( out, "#include \"tt-base.h\"\n" );
-    for( struct itab_iter * cls_iter = itab_foreach( classes );
-         cls_iter; cls_iter = itab_next( cls_iter ) ) {
-        struct classinfo *cls = itab_value( cls_iter );
-        fprintf( out, "struct /* %d */ %s ", cls->num, cls->name );
-        fprintf( out, "{\n  int tag;\n" "     char *data;\n" );
-// ast_vars_to_c( out, cls, cls->u.cls.super, cls->u.cls.vars );
-        for( struct itab_iter * var_iter = itab_foreach( variables );
-             var_iter; var_iter = itab_next( var_iter ) ) {
-            struct varinfo *v = itab_value( var_iter );
-            if( strcmp( v->classname, cls->name ) == 0 ) {
-                fprintf( out, "  struct Object * %s;\n", v->name );
-            }
-        }
-        fprintf( out, "};\n" );
-        if( cls->meta ) {
-            fprintf( out, "struct %s v_%s = { .tag = %d }; \n", cls->name,
-                     cls->name, cls->num );
-        }
-    }
-}
-
-/**
-count all occurences of the given char in the string.
-
-@return number of chars with value c.
-*/
-int count_char( const char *str, char c ) {
-    int result = 0;
-    for( int i = 0; str[i] != 0; i++ ) {
-        if( str[i] == c )
-            result++;
-    }
-    return result;
-}
-
-void c_generate_protos( FILE * out ) {
-    for( struct itab_iter * iter = itab_foreach( method_names );
-         iter; iter = itab_next( iter ) ) {
-        char *name = itab_value( iter );
-        const char *key = itab_key( iter );
-        int len = count_char( key, ':' );
-        fprintf( out, "void %s(int, struct Object*", name );
-        for( int i = 0; i < len; i++ )
-            fprintf( out, ", struct Object* arg%d", i );
-        fprintf( out, "); /* %s */\n", key );
-    }
-}
-
-void string_register( const char *str ) {
-    struct stringinfo *si = itab_read( strings, str );
-    if( !si ) {
-        si = talloc_zero( strings, struct stringinfo );
-        si->num = ++string_count;
-        itab_append( strings, str, si );
-    }
-    assert( si );
-}
-void c_generate_strings( FILE * out ) {
-    for( struct itab_iter * iter = itab_foreach( strings );
-         iter; iter = itab_next( iter ) ) {
-        struct stringinfo *info = itab_value( iter );
-        const char *str = itab_key( iter );
-
-        fprintf( out,
-                 "struct String v_string%d = {.tag = %d, .data = \"%s\"};\n",
-                 info->num, string_class_num, str );
-    }
-}
-
-/**
-generate all blocks that are defined with method implementations.
-
-these blocks are later on called by the dispatcher.
-*/
-void c_generate_blocks( FILE * out ) {
-    struct context *root = context_new( NULL );
-    for( struct itab_iter * iter = itab_foreach( methods );
-         iter; iter = itab_next( iter ) ) {
-        struct ast *m = itab_value( iter );
-        assert( m->tag == AST_METHOD );
-        fprintf( out, "void %s(struct Object* obj", itab_key( iter ) );
-        if( m->u.methods.args ) {
-            for( struct ast * arg = m->u.methods.args;
-                 arg; arg = arg->u.argdef.next )
-                fprintf( out, ", struct Object* %s", arg->u.argdef.name );
-        }
-        fprintf( out, "){\n" );
-        fprintf( out, "struct %s * self = (struct %s*)obj;",
-                 m->u.methods.classname, m->u.methods.classname );
-        if( m->u.methods.src ) {
-            fprintf( out, "   %s\n", m->u.methods.src );
-        }
-        struct context *meta_context = context_new( root );
-        meta_context->ctx_class = true;
-        char *ctx_name =
-                talloc_strdup( meta_context, m->u.methods.classname );
-        ctx_name = talloc_strdup_append( ctx_name, "$Meta" );
-        meta_context->name = ctx_name;
-        struct context *class_context = context_new( meta_context );
-        class_context->ctx_class = true;
-        class_context->name = m->u.methods.classname;
-        if( m->u.methods.body )
-            ast_to_c( out, m->u.methods.body, class_context );
-        fprintf( out, "}\n" );
-    }
-}
-
-void c_generate_dispatchers( FILE * out ) {
-    for( struct itab_iter * iter = itab_foreach( method_names );
-         iter; iter = itab_next( iter ) ) {
-        const char *current_method = itab_value( iter );
-        const char *orig_method = itab_key( iter );
-        int len = count_char( orig_method, ':' );
-// start function
-        fprintf( out, "void %s(int tag, struct Object* self",
-                 current_method );
-        for( int i = 0; i < len; i++ )
-            fprintf( out, ", struct Object* arg%d", i );
-        fprintf( out, "){\n"
-                 "   if(tag == -1) tag = self->tag;\n" "   switch(tag) {\n" );
-// loop over all classes
-        for( struct itab_iter * cls_iter = itab_foreach( classes );
-             cls_iter; cls_iter = itab_next( cls_iter ) ) {
-            struct ast *cls = itab_value( cls_iter );
-            char nm[1000];
-            sprintf( nm, "%s$%s", cls->u.cls.name, current_method );
-            struct ast *impl = itab_read( methods, nm );
-            fprintf( out, "      case %d:\n", cls->u.cls.num );
-            if( impl ) {
-                fprintf( out, "        %s(self", nm );
-                for( int i = 0; i < len; i++ )
-                    fprintf( out, ", arg%d", i );
-                fprintf( out, ");\n" );
-            }
-            else {
-                if( cls->u.cls.super ) {
-                    struct ast *super =
-                            itab_read( classes, cls->u.cls.super );
-                    if( !super )
-                        fprintf( stderr, "class %s not defined.\n",
-                                 cls->u.cls.super );
-                    assert( super );
-                    fprintf( out, "        %s(%d, self);\n", current_method,
-                             super->u.cls.num );
-                }
-                else {
-                    fprintf( out,
-                             "        error( 1, 1, \"Method unkown\" );\n" );
-
-                }
-            }
-            fprintf( out, "        break;\n" );
-        }
-        fprintf( out, "  }\n" "}\n" );
-    }
-}
-
-
-/**
-@defgroup internal_structures Internal Representation
+/** @defgroup msg Messages 
 @{
 */
-void method_def(t_pattern pattern, void* locals, void* directive, void* statements){
+typedef char t_msg[200];
+#define MSG_LOG_LEN 200
+static struct s_msgs {
+    int size;
+    int pos;
+    t_msg msgs[MSG_LOG_LEN];
+} msgs;
+
+void msg_init(  ) {
+    if( msgs.size != MSG_LOG_LEN ) {
+        msgs.size = MSG_LOG_LEN;
+        msgs.pos = 0;
+    }
+}
+void msg_add( const char *msg, ... ) {
+    va_list ap;
+    msg_init(  );
+    va_start( ap, msg );
+
+    vsnprintf( msgs.msgs[msgs.pos], 199, msg, ap );
+    msgs.pos = ( msgs.pos + 1 ) % msgs.size;
+    va_end( ap );
 }
 
-void method_def_verb(t_pattern pattern, void* coding){
-}
-
-/**
-|}
-*/
-
-/**
-@defgroup c_code_generator C Code Generator
-@{
-*/
-
-/**
-@brief generate the C-Code into the file stream.
-@param[in] FILE* out
-*/
-void c_generate( FILE * out ) {
-
-    itab_dump( variables );
-    c_generate_structs( out );
-    c_generate_protos( out );
-    c_generate_strings( out );
-    c_generate_blocks( out );
-    c_generate_dispatchers( out );
-
+void msg_print_last(  ) {
+    printf("-------------------------------------\n");
+    const char*fmt = "%03d --- %s\n";
+    int n = 1;
+    for( int i = msgs.pos; i < msgs.size; i++ ) {
+        if( msgs.msgs[i][0] )
+            printf( fmt, n++, msgs.msgs[i] );
+        msgs.msgs[i][0] = 0;
+    }
+    for( int i = 0; i < msgs.pos; i++ ) {
+        if( msgs.msgs[i][0] )
+            printf( fmt,n++, msgs.msgs[i] );
+        msgs.msgs[i][0] = 0;
+    }
 }
 
 /** @} */
+
+
+
+/** @defgroup messages Syntax Messages 
+@{
+*/
+void message_add_msg(t_messages *ms, t_messages *m){
+    while(ms->next) ms = ms->next;
+    ms->next = m;
+}
+
+/** |} */

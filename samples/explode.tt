@@ -1,0 +1,31 @@
+Collection >> explode: aDelimiter
+	"explode the collection into a collection of collections broken by aDelimiter"
+	"(#(#(1 2) #(3 4)) mergeDelimited: Character tab ) explode: Character tab = an OrderedCollection(#(1 2) #(3 4))
+	'abcdef' explode: 'cd' = an OrderedCollection('ab' 'ef')"
+	| resultCollection starting aDelimiterPosition aDelimiterSize |
+	self ifEmpty: [^self].
+	resultCollection := OrderedCollection new.
+	aDelimiterSize := aDelimiter isCollection ifTrue: [aDelimiter size] ifFalse: [1].
+	starting := 1.
+	[aDelimiterPosition := aDelimiter isCollection ifTrue: [self indexOfSubCollection: aDelimiter startingAt: starting] ifFalse: [self indexOf: aDelimiter startingAt: starting ifAbsent: [0]].
+	aDelimiterPosition > 0] whileTrue: [
+		resultCollection add: (self copyFrom: starting to: aDelimiterPosition - 1).
+		starting := aDelimiterPosition + aDelimiterSize.
+	].
+	resultCollection add: (self copyFrom: starting to: self size).
+	^resultCollection
+
+Collection >> mergeDelimited: anObject
+	"return to reciever a collection with each element concatenated to remove imbeded collections"
+	"#(#(1 2) #(3 4)) mergeDelimited: Character tab = #(1 2 Character tab 3 4),  #('ab' 'cd') mergeDelimited: Character cr = 'ab
+cd' "
+	| returnCollection aSeperator |
+	self ifEmpty: [^self].
+	aSeperator := anObject isCollection ifTrue: [anObject] ifFalse: [Array with: anObject].  
+	returnCollection := self first species new.
+	self copy from: 1 to: self size -1 do: [:a |
+		a ifNotNil: [
+			returnCollection := returnCollection, a, aSeperator
+		].
+	].
+	^returnCollection, self last

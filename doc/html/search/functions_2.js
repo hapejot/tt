@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['is_5fident_5fchar_81',['is_ident_char',['../group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932',1,'lib.c']]],
-  ['itab_5fentry_5fcmp_82',['itab_entry_cmp',['../group__itab.html#gaa32bbe2ddff2b617359acf569723d908',1,'lib.c']]],
-  ['itab_5fnew_83',['itab_new',['../group__itab.html#gad9917bb373045636deee31d01936f67d',1,'lib.c']]]
+  ['readchar_91',['readChar',['../group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961',1,'readChar(char *t):&#160;lib.c'],['../group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961',1,'readChar(char *t):&#160;lib.c'],['../group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961',1,'readChar(char *t):&#160;lib.c']]],
+  ['readline_92',['readLine',['../group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0',1,'readLine(void):&#160;lib.c'],['../group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0',1,'readLine():&#160;lib.c'],['../group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0',1,'readLine(void):&#160;lib.c']]],
+  ['readstringtoken_93',['readStringToken',['../group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c',1,'readStringToken(void):&#160;lib.c'],['../group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c',1,'readStringToken(void):&#160;lib.c'],['../group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c',1,'readStringToken(void):&#160;lib.c']]]
 ];

@@ -78,6 +78,14 @@ Functions</h2></td></tr>
 <tr class="memitem:gac14b69463fdf48ba3a5b30ee34da28c7"><td class="memItemLeft" align="right" valign="top"><a id="gac14b69463fdf48ba3a5b30ee34da28c7"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_binary_char</b> (int c)</td></tr>
 <tr class="separator:gac14b69463fdf48ba3a5b30ee34da28c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga4bf03a3ab8e415fcfac82f43bc854320"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear</a> ()</td></tr>
+<tr class="separator:ga4bf03a3ab8e415fcfac82f43bc854320"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gaaff46ce87fa716bfd3c55495d26cef23"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23">src_add</a> (const char *line)</td></tr>
+<tr class="separator:gaaff46ce87fa716bfd3c55495d26cef23"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga84a9f5c743eb6a718086ec1a385ed8f7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7">src_read</a> (const char *name)</td></tr>
+<tr class="separator:ga84a9f5c743eb6a718086ec1a385ed8f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9f6e95f5f532bca8482e2bd5d309df94"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tokenizer.html#ga9f6e95f5f532bca8482e2bd5d309df94">src_dump</a> ()</td></tr>
+<tr class="separator:ga9f6e95f5f532bca8482e2bd5d309df94"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga986d1e4dee1be06e31a781ce4b847fe0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a> ()</td></tr>
 <tr class="memdesc:ga986d1e4dee1be06e31a781ce4b847fe0"><td class="mdescLeft">&#160;</td><td class="mdescRight">read one line from stdin stores the result into <code></code>{gd.line}.  <a href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">More...</a><br /></td></tr>
 <tr class="separator:ga986d1e4dee1be06e31a781ce4b847fe0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -87,6 +95,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_binary_char</b> (i
 <tr class="memitem:gaca69499fef7287dfec40541fe204f94c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a> (void)</td></tr>
 <tr class="memdesc:gaca69499fef7287dfec40541fe204f94c"><td class="mdescLeft">&#160;</td><td class="mdescRight">read string token.  <a href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">More...</a><br /></td></tr>
 <tr class="separator:gaca69499fef7287dfec40541fe204f94c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3caa61bb0b2f9335f48d911a85bb493f"><td class="memItemLeft" align="right" valign="top"><a id="ga3caa61bb0b2f9335f48d911a85bb493f"></a>
+void&#160;</td><td class="memItemRight" valign="bottom"><b>parse_verbatim</b> (char c)</td></tr>
+<tr class="separator:ga3caa61bb0b2f9335f48d911a85bb493f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gacb8666cde3ece1af4829c28d0f7c5022"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__tokenizer.html#gacb8666cde3ece1af4829c28d0f7c5022">nextToken</a> (void)</td></tr>
 <tr class="memdesc:gacb8666cde3ece1af4829c28d0f7c5022"><td class="mdescLeft">&#160;</td><td class="mdescRight">read next token.  <a href="group__tokenizer.html#gacb8666cde3ece1af4829c28d0f7c5022">More...</a><br /></td></tr>
 <tr class="separator:gacb8666cde3ece1af4829c28d0f7c5022"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -118,9 +129,9 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_binary_char</b> (i
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if if c is an identifier character. </dd></dl>
-<div class="fragment"><div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;                            {</div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;    <span class="keywordflow">return</span> isalpha( c ) || isdigit( c ) || c == <span class="charliteral">&#39;_&#39;</span>;</div>
-<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                            {</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;    <span class="keywordflow">return</span> isalpha( c ) || isdigit( c ) || c == <span class="charliteral">&#39;_&#39;</span>;</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="group__tokenizer.html#gacb8666cde3ece1af4829c28d0f7c5022">nextToken()</a>.</p>
 
@@ -185,114 +196,118 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_binary_char</b> (i
 <div class="line"><a name="l00441"></a><span class="lineno">  441</span>&#160;            <a class="code" href="structgd.html">gd</a>.token = 0;</div>
 <div class="line"><a name="l00442"></a><span class="lineno">  442</span>&#160;            <a class="code" href="structgd.html">gd</a>.token = TK_BINOP;</div>
 <div class="line"><a name="l00443"></a><span class="lineno">  443</span>&#160;            result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            <span class="keywordflow">if</span>( strcmp( <span class="stringliteral">&quot;&lt;-&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) == 0 ) {</div>
-<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_LARROW;</div>
+<div class="line"><a name="l00444"></a><span class="lineno">  444</span>&#160;            <span class="keywordflow">if</span>( strcmp( <span class="stringliteral">&quot;:=&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) == 0 ) {</div>
+<div class="line"><a name="l00445"></a><span class="lineno">  445</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_ASSIGN;</div>
 <div class="line"><a name="l00446"></a><span class="lineno">  446</span>&#160;                result = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00447"></a><span class="lineno">  447</span>&#160;            }</div>
-<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( strcmp( <span class="stringliteral">&quot;|&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) == 0 ) {</div>
-<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_BAR;</div>
+<div class="line"><a name="l00448"></a><span class="lineno">  448</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( strcmp( <span class="stringliteral">&quot;&lt;-&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) == 0 ) {</div>
+<div class="line"><a name="l00449"></a><span class="lineno">  449</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_LARROW;</div>
 <div class="line"><a name="l00450"></a><span class="lineno">  450</span>&#160;                result = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00451"></a><span class="lineno">  451</span>&#160;            }</div>
-<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( 0 == strcmp( <span class="stringliteral">&quot;&lt;&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) ) {</div>
-<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_LT;</div>
+<div class="line"><a name="l00452"></a><span class="lineno">  452</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( strcmp( <span class="stringliteral">&quot;|&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) == 0 ) {</div>
+<div class="line"><a name="l00453"></a><span class="lineno">  453</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_BAR;</div>
 <div class="line"><a name="l00454"></a><span class="lineno">  454</span>&#160;                result = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00455"></a><span class="lineno">  455</span>&#160;            }</div>
-<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( 0 == strcmp( <span class="stringliteral">&quot;&gt;&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) ) {</div>
-<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_GT;</div>
+<div class="line"><a name="l00456"></a><span class="lineno">  456</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( 0 == strcmp( <span class="stringliteral">&quot;&lt;&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) ) {</div>
+<div class="line"><a name="l00457"></a><span class="lineno">  457</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_LT;</div>
 <div class="line"><a name="l00458"></a><span class="lineno">  458</span>&#160;                result = <span class="keyword">true</span>;</div>
 <div class="line"><a name="l00459"></a><span class="lineno">  459</span>&#160;            }</div>
-<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;        }</div>
-<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( isdigit( c ) ) {</div>
-<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;            <span class="keywordtype">int</span> idx = 1;</div>
-<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            <span class="keywordflow">while</span>( isdigit( c ) ) {</div>
-<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;                <a class="code" href="structgd.html">gd</a>.buf[idx - 1] = c;</div>
-<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;                <a class="code" href="structgd.html">gd</a>.buf[idx] = 0;</div>
-<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;                <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
-<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            }</div>
-<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;            <a class="code" href="structgd.html">gd</a>.pos--;</div>
-<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;            <a class="code" href="structgd.html">gd</a>.token = TK_NUMBER;</div>
-<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;            result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;        }</div>
-<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;        <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            <span class="keywordflow">switch</span> ( c ) {</div>
-<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;\&#39;&#39;</span>:</div>
-<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;                    result = <a class="code" href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a>(  );</div>
-<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;.&#39;</span>:</div>
-<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_DOT;</div>
+<div class="line"><a name="l00460"></a><span class="lineno">  460</span>&#160;            <span class="keywordflow">else</span> <span class="keywordflow">if</span>( 0 == strcmp( <span class="stringliteral">&quot;&gt;&quot;</span>, <a class="code" href="structgd.html">gd</a>.buf ) ) {</div>
+<div class="line"><a name="l00461"></a><span class="lineno">  461</span>&#160;                <a class="code" href="structgd.html">gd</a>.token = TK_GT;</div>
+<div class="line"><a name="l00462"></a><span class="lineno">  462</span>&#160;                result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00463"></a><span class="lineno">  463</span>&#160;            }</div>
+<div class="line"><a name="l00464"></a><span class="lineno">  464</span>&#160;        }</div>
+<div class="line"><a name="l00465"></a><span class="lineno">  465</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span>( isdigit( c ) ) {</div>
+<div class="line"><a name="l00466"></a><span class="lineno">  466</span>&#160;            <span class="keywordtype">int</span> idx = 1;</div>
+<div class="line"><a name="l00467"></a><span class="lineno">  467</span>&#160;            <span class="keywordflow">while</span>( isdigit( c ) ) {</div>
+<div class="line"><a name="l00468"></a><span class="lineno">  468</span>&#160;                <a class="code" href="structgd.html">gd</a>.buf[idx - 1] = c;</div>
+<div class="line"><a name="l00469"></a><span class="lineno">  469</span>&#160;                <a class="code" href="structgd.html">gd</a>.buf[idx] = 0;</div>
+<div class="line"><a name="l00470"></a><span class="lineno">  470</span>&#160;                <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
+<div class="line"><a name="l00471"></a><span class="lineno">  471</span>&#160;            }</div>
+<div class="line"><a name="l00472"></a><span class="lineno">  472</span>&#160;            <a class="code" href="structgd.html">gd</a>.pos--;</div>
+<div class="line"><a name="l00473"></a><span class="lineno">  473</span>&#160;            <a class="code" href="structgd.html">gd</a>.token = TK_NUMBER;</div>
+<div class="line"><a name="l00474"></a><span class="lineno">  474</span>&#160;            result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00475"></a><span class="lineno">  475</span>&#160;        }</div>
+<div class="line"><a name="l00476"></a><span class="lineno">  476</span>&#160;        <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00477"></a><span class="lineno">  477</span>&#160;            <span class="keywordflow">switch</span> ( c ) {</div>
+<div class="line"><a name="l00478"></a><span class="lineno">  478</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;\&#39;&#39;</span>:</div>
+<div class="line"><a name="l00479"></a><span class="lineno">  479</span>&#160;                    result = <a class="code" href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a>(  );</div>
 <div class="line"><a name="l00480"></a><span class="lineno">  480</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;;&#39;</span>:</div>
+<div class="line"><a name="l00481"></a><span class="lineno">  481</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;.&#39;</span>:</div>
 <div class="line"><a name="l00482"></a><span class="lineno">  482</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_SEMICOLON;</div>
+<div class="line"><a name="l00483"></a><span class="lineno">  483</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_DOT;</div>
 <div class="line"><a name="l00484"></a><span class="lineno">  484</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
+<div class="line"><a name="l00485"></a><span class="lineno">  485</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;;&#39;</span>:</div>
 <div class="line"><a name="l00486"></a><span class="lineno">  486</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_LBRACE;</div>
+<div class="line"><a name="l00487"></a><span class="lineno">  487</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_SEMICOLON;</div>
 <div class="line"><a name="l00488"></a><span class="lineno">  488</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:</div>
+<div class="line"><a name="l00489"></a><span class="lineno">  489</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;(&#39;</span>:</div>
 <div class="line"><a name="l00490"></a><span class="lineno">  490</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_RBRACE;</div>
+<div class="line"><a name="l00491"></a><span class="lineno">  491</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_LPAREN;</div>
 <div class="line"><a name="l00492"></a><span class="lineno">  492</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;[&#39;</span>:</div>
+<div class="line"><a name="l00493"></a><span class="lineno">  493</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;)&#39;</span>:</div>
 <div class="line"><a name="l00494"></a><span class="lineno">  494</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_LBRACK;</div>
+<div class="line"><a name="l00495"></a><span class="lineno">  495</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_RPAREN;</div>
 <div class="line"><a name="l00496"></a><span class="lineno">  496</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;]&#39;</span>:</div>
+<div class="line"><a name="l00497"></a><span class="lineno">  497</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;[&#39;</span>:</div>
 <div class="line"><a name="l00498"></a><span class="lineno">  498</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_RBRACK;</div>
+<div class="line"><a name="l00499"></a><span class="lineno">  499</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_LBRACK;</div>
 <div class="line"><a name="l00500"></a><span class="lineno">  500</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;{&#39;</span>:</div>
-<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;                    {</div>
-<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;                        <span class="keywordtype">int</span> i = 0;</div>
-<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;                        <a class="code" href="structgd.html">gd</a>.buf[i] = 0;</div>
-<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                        <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
-<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                        <span class="keywordflow">while</span>( c != <span class="charliteral">&#39;}&#39;</span> ) {</div>
-<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                            <a class="code" href="structgd.html">gd</a>.buf[i++] = c;</div>
-<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                            <a class="code" href="structgd.html">gd</a>.buf[i] = 0;</div>
-<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                            <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
-<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                        }</div>
-<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                        <a class="code" href="structgd.html">gd</a>.token = TK_VERBATIM;</div>
-<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;                    }</div>
-<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
-<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                    <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
-<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> idx = 0; <a class="code" href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char</a>( c ) || c == <span class="charliteral">&#39;:&#39;</span>; idx++ ) {</div>
-<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                        <a class="code" href="structgd.html">gd</a>.buf[idx] = c;</div>
-<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                        <a class="code" href="structgd.html">gd</a>.buf[idx + 1] = 0;</div>
-<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                        <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
-<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                    }</div>
-<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                    <a class="code" href="structgd.html">gd</a>.pos--;</div>
-<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_SYMBOL;</div>
-<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;^&#39;</span>:</div>
-<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_UARROW;</div>
-<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;:&#39;</span>:</div>
-<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_COLON;</div>
-<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;$&#39;</span>:</div>
-<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                    result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_CHAR;</div>
-<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                    <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
-<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                    <a class="code" href="structgd.html">gd</a>.buf[0] = c;</div>
-<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                    <a class="code" href="structgd.html">gd</a>.buf[1] = 0;</div>
-<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                <span class="keywordflow">default</span>:</div>
-<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                    <a class="code" href="structgd.html">gd</a>.pos--;</div>
-<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                    <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;            }</div>
-<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;        }</div>
-<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;    }</div>
-<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;}</div>
-<div class="ttc" id="agroup__tokenizer_html_ga4f2be419c946530de61fcc5bd922b961"><div class="ttname"><a href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a></div><div class="ttdeci">bool readChar(char *t)</div><div class="ttdoc">read one character from input and store it somewhere.</div><div class="ttdef"><b>Definition:</b> lib.c:367</div></div>
-<div class="ttc" id="agroup__tokenizer_html_gac0bb8a0baa2e72a8039d67dce7e1f932"><div class="ttname"><a href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char</a></div><div class="ttdeci">bool is_ident_char(int c)</div><div class="ttdoc">check if character is part of an identifier.</div><div class="ttdef"><b>Definition:</b> lib.c:308</div></div>
-<div class="ttc" id="agroup__tokenizer_html_gaca69499fef7287dfec40541fe204f94c"><div class="ttname"><a href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a></div><div class="ttdeci">bool readStringToken()</div><div class="ttdoc">read string token.</div><div class="ttdef"><b>Definition:</b> lib.c:387</div></div>
+<div class="line"><a name="l00501"></a><span class="lineno">  501</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;]&#39;</span>:</div>
+<div class="line"><a name="l00502"></a><span class="lineno">  502</span>&#160;                    result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00503"></a><span class="lineno">  503</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_RBRACK;</div>
+<div class="line"><a name="l00504"></a><span class="lineno">  504</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00505"></a><span class="lineno">  505</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;{&#39;</span>:</div>
+<div class="line"><a name="l00506"></a><span class="lineno">  506</span>&#160;                    result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00507"></a><span class="lineno">  507</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_LBRACE;</div>
+<div class="line"><a name="l00508"></a><span class="lineno">  508</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00509"></a><span class="lineno">  509</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;}&#39;</span>:</div>
+<div class="line"><a name="l00510"></a><span class="lineno">  510</span>&#160;                    result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00511"></a><span class="lineno">  511</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_RBRACE;</div>
+<div class="line"><a name="l00512"></a><span class="lineno">  512</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00513"></a><span class="lineno">  513</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;#&#39;</span>:</div>
+<div class="line"><a name="l00514"></a><span class="lineno">  514</span>&#160;                    <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
+<div class="line"><a name="l00515"></a><span class="lineno">  515</span>&#160;                    <span class="keywordflow">for</span>( <span class="keywordtype">int</span> idx = 0; <a class="code" href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char</a>( c ) || c == <span class="charliteral">&#39;:&#39;</span>; idx++ ) {</div>
+<div class="line"><a name="l00516"></a><span class="lineno">  516</span>&#160;                        <a class="code" href="structgd.html">gd</a>.buf[idx] = c;</div>
+<div class="line"><a name="l00517"></a><span class="lineno">  517</span>&#160;                        <a class="code" href="structgd.html">gd</a>.buf[idx + 1] = 0;</div>
+<div class="line"><a name="l00518"></a><span class="lineno">  518</span>&#160;                        <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
+<div class="line"><a name="l00519"></a><span class="lineno">  519</span>&#160;                    }</div>
+<div class="line"><a name="l00520"></a><span class="lineno">  520</span>&#160;                    <a class="code" href="structgd.html">gd</a>.pos--;</div>
+<div class="line"><a name="l00521"></a><span class="lineno">  521</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_SYMBOL;</div>
+<div class="line"><a name="l00522"></a><span class="lineno">  522</span>&#160;                    result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00523"></a><span class="lineno">  523</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00524"></a><span class="lineno">  524</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;^&#39;</span>:</div>
+<div class="line"><a name="l00525"></a><span class="lineno">  525</span>&#160;                    result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00526"></a><span class="lineno">  526</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_UARROW;</div>
+<div class="line"><a name="l00527"></a><span class="lineno">  527</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00528"></a><span class="lineno">  528</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;:&#39;</span>:</div>
+<div class="line"><a name="l00529"></a><span class="lineno">  529</span>&#160;                    result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00530"></a><span class="lineno">  530</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_COLON;</div>
+<div class="line"><a name="l00531"></a><span class="lineno">  531</span>&#160;                    <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
+<div class="line"><a name="l00532"></a><span class="lineno">  532</span>&#160;                    <span class="keywordflow">if</span>( c == <span class="charliteral">&#39;=&#39;</span> ) {</div>
+<div class="line"><a name="l00533"></a><span class="lineno">  533</span>&#160;                        <a class="code" href="structgd.html">gd</a>.token = TK_ASSIGN;</div>
+<div class="line"><a name="l00534"></a><span class="lineno">  534</span>&#160;                    }</div>
+<div class="line"><a name="l00535"></a><span class="lineno">  535</span>&#160;                    <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00536"></a><span class="lineno">  536</span>&#160;                        <a class="code" href="structgd.html">gd</a>.pos--;</div>
+<div class="line"><a name="l00537"></a><span class="lineno">  537</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00538"></a><span class="lineno">  538</span>&#160;                <span class="keywordflow">case</span> <span class="charliteral">&#39;$&#39;</span>:</div>
+<div class="line"><a name="l00539"></a><span class="lineno">  539</span>&#160;                    result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00540"></a><span class="lineno">  540</span>&#160;                    <a class="code" href="structgd.html">gd</a>.token = TK_CHAR;</div>
+<div class="line"><a name="l00541"></a><span class="lineno">  541</span>&#160;                    <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
+<div class="line"><a name="l00542"></a><span class="lineno">  542</span>&#160;                    <a class="code" href="structgd.html">gd</a>.buf[0] = c;</div>
+<div class="line"><a name="l00543"></a><span class="lineno">  543</span>&#160;                    <a class="code" href="structgd.html">gd</a>.buf[1] = 0;</div>
+<div class="line"><a name="l00544"></a><span class="lineno">  544</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00545"></a><span class="lineno">  545</span>&#160;                <span class="keywordflow">default</span>:</div>
+<div class="line"><a name="l00546"></a><span class="lineno">  546</span>&#160;                    <a class="code" href="structgd.html">gd</a>.pos--;</div>
+<div class="line"><a name="l00547"></a><span class="lineno">  547</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00548"></a><span class="lineno">  548</span>&#160;            }</div>
+<div class="line"><a name="l00549"></a><span class="lineno">  549</span>&#160;        }</div>
+<div class="line"><a name="l00550"></a><span class="lineno">  550</span>&#160;    }</div>
+<div class="line"><a name="l00551"></a><span class="lineno">  551</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00552"></a><span class="lineno">  552</span>&#160;}</div>
+<div class="ttc" id="agroup__tokenizer_html_ga4f2be419c946530de61fcc5bd922b961"><div class="ttname"><a href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a></div><div class="ttdeci">bool readChar(char *t)</div><div class="ttdoc">read one character from input and store it somewhere.</div><div class="ttdef"><b>Definition:</b> lib.c:356</div></div>
+<div class="ttc" id="agroup__tokenizer_html_gac0bb8a0baa2e72a8039d67dce7e1f932"><div class="ttname"><a href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char</a></div><div class="ttdeci">bool is_ident_char(int c)</div><div class="ttdoc">check if character is part of an identifier.</div><div class="ttdef"><b>Definition:</b> lib.c:248</div></div>
+<div class="ttc" id="agroup__tokenizer_html_gaca69499fef7287dfec40541fe204f94c"><div class="ttname"><a href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a></div><div class="ttdeci">bool readStringToken()</div><div class="ttdoc">read string token.</div><div class="ttdef"><b>Definition:</b> lib.c:376</div></div>
 <div class="ttc" id="astructgd_html"><div class="ttname"><a href="structgd.html">gd</a></div><div class="ttdef"><b>Definition:</b> global.h:76</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char()</a>, and <a class="el" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar()</a>.</p>
@@ -323,26 +338,26 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_binary_char</b> (i
   </dd>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>true if successful </dd></dl>
-<div class="fragment"><div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                         {</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;    <span class="keywordtype">bool</span> result = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="structgd.html">gd</a>.state == 0 ) {</div>
-<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;        result = <a class="code" href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a>(  );</div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;    }</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    <span class="keywordflow">if</span>( result ) {</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;        *t = <a class="code" href="structgd.html">gd</a>.line[<a class="code" href="structgd.html">gd</a>.pos++];</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        <span class="keywordflow">while</span>( *t == 0 ) {</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a>(  ) ) {</div>
-<div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                *t = <a class="code" href="structgd.html">gd</a>.line[<a class="code" href="structgd.html">gd</a>.pos++];</div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            }</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;            <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;                result = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;                <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            }</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        }</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <span class="keywordflow">return</span> result;</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;}</div>
-<div class="ttc" id="agroup__tokenizer_html_ga986d1e4dee1be06e31a781ce4b847fe0"><div class="ttname"><a href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a></div><div class="ttdeci">bool readLine()</div><div class="ttdoc">read one line from stdin stores the result into {gd.line}.</div><div class="ttdef"><b>Definition:</b> lib.c:345</div></div>
+<div class="fragment"><div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                         {</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    <span class="keywordtype">bool</span> result = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="structgd.html">gd</a>.state == 0 ) {</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        result = <a class="code" href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a>(  );</div>
+<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;    }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;    <span class="keywordflow">if</span>( result ) {</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        *t = <a class="code" href="structgd.html">gd</a>.line[<a class="code" href="structgd.html">gd</a>.pos++];</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;        <span class="keywordflow">while</span>( *t == 0 ) {</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;            <span class="keywordflow">if</span>( <a class="code" href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a>(  ) ) {</div>
+<div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160;                *t = <a class="code" href="structgd.html">gd</a>.line[<a class="code" href="structgd.html">gd</a>.pos++];</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;            }</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;            <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                result = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160;            }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        }</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;    }</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;    <span class="keywordflow">return</span> result;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;}</div>
+<div class="ttc" id="agroup__tokenizer_html_ga986d1e4dee1be06e31a781ce4b847fe0"><div class="ttname"><a href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a></div><div class="ttdeci">bool readLine()</div><div class="ttdoc">read one line from stdin stores the result into {gd.line}.</div><div class="ttdef"><b>Definition:</b> lib.c:333</div></div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine()</a>.</p>
 
@@ -367,26 +382,27 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_binary_char</b> (i
 
 <p>read one line from stdin stores the result into <code></code>{gd.line}. </p>
 <p>trailing blanks are removed. </p>
-<div class="fragment"><div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;                  {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> line_count = 0;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160; </div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordtype">char</span> *line = fgets( <a class="code" href="structgd.html">gd</a>.line, <span class="keyword">sizeof</span>( <a class="code" href="structgd.html">gd</a>.line ), stdin );</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;    line_count++;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    printf( <span class="stringliteral">&quot;%2d:%s&quot;</span>, line_count, line );</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;    <span class="keywordflow">if</span>( line ) {</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;        <span class="keywordtype">size_t</span> len = strlen( line );</div>
-<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;        <span class="keywordflow">while</span>( len &gt;= 0 &amp;&amp; line[len] &lt;= 32 )</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            line[len--] = 0;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;        <a class="code" href="structgd.html">gd</a>.pos = 0;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <a class="code" href="structgd.html">gd</a>.state = 1;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;    }</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;    <span class="keywordflow">else</span> {</div>
-<div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160;        <a class="code" href="structgd.html">gd</a>.line[0] = 0;</div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <a class="code" href="structgd.html">gd</a>.state = 2;</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;    }</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;                  {</div>
+<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="structgd.html">gd</a>.src_iter == NULL ) {</div>
+<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;        <a class="code" href="structgd.html">gd</a>.src_iter = itab_foreach( <a class="code" href="structgd.html">gd</a>.src );</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    }</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;        <a class="code" href="structgd.html">gd</a>.src_iter = itab_next( <a class="code" href="structgd.html">gd</a>.src_iter );</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;    }</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="structgd.html">gd</a>.src_iter ) {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        <a class="code" href="structgd.html">gd</a>.line = itab_value( <a class="code" href="structgd.html">gd</a>.src_iter );</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;        <a class="code" href="structgd.html">gd</a>.line_count++;</div>
+<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;        printf( <span class="stringliteral">&quot;%2d:%s\n&quot;</span>, <a class="code" href="structgd.html">gd</a>.line_count, <a class="code" href="structgd.html">gd</a>.line );</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;        <a class="code" href="structgd.html">gd</a>.pos = 0;</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;        <a class="code" href="structgd.html">gd</a>.state = 1;</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;    }</div>
+<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;    <span class="keywordflow">else</span> {</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;        <a class="code" href="structgd.html">gd</a>.line = <span class="stringliteral">&quot;&quot;</span>;</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;        <a class="code" href="structgd.html">gd</a>.state = 2;</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;    }</div>
+<div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar()</a>.</p>
 
@@ -410,20 +426,150 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>is_binary_char</b> (i
 
 <p>read string token. </p>
 <dl class="section return"><dt>Returns</dt><dd>true if successful </dd></dl>
-<div class="fragment"><div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                         {</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;    <span class="keywordtype">int</span> idx = 0;</div>
-<div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160;    <span class="keywordtype">char</span> c;</div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;    <span class="keywordflow">while</span>( <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c ) &amp;&amp; <span class="charliteral">&#39;\&#39;&#39;</span> != c ) {</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;        <span class="keywordflow">if</span>( c == <span class="charliteral">&#39;\\&#39;</span> )</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;            <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;        <a class="code" href="structgd.html">gd</a>.buf[idx++] = c;</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;    }</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;    <a class="code" href="structgd.html">gd</a>.buf[idx] = 0;</div>
-<div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160;    <a class="code" href="structgd.html">gd</a>.token = TK_STRING;</div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160;                         {</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;    <span class="keywordtype">int</span> idx = 0;</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    <span class="keywordtype">char</span> c;</div>
+<div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160;    <span class="keywordflow">while</span>( <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c ) &amp;&amp; <span class="charliteral">&#39;\&#39;&#39;</span> != c ) {</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keywordflow">if</span>( c == <span class="charliteral">&#39;\\&#39;</span> )</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;            <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( &amp;c );</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;        <a class="code" href="structgd.html">gd</a>.buf[idx++] = c;</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;    }</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;    <a class="code" href="structgd.html">gd</a>.buf[idx] = 0;</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;    <a class="code" href="structgd.html">gd</a>.token = TK_STRING;</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">References <a class="el" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar()</a>.</p>
+
+</div>
+</div>
+<a id="gaaff46ce87fa716bfd3c55495d26cef23"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gaaff46ce87fa716bfd3c55495d26cef23">&#9670;&nbsp;</a></span>src_add()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool src_add </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>adding one line to the source that will be parsed. </p>
+<div class="fragment"><div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                                 {</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    <span class="keywordtype">int</span> n = <a class="code" href="group__itab.html#ga174bc92d89b1242a5f1b572d75a8816b">itab_lines</a>( <a class="code" href="structgd.html">gd</a>.src );</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;    <span class="keywordtype">char</span> buf[10];</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;    sprintf( buf, <span class="stringliteral">&quot;%09d&quot;</span>, n + 1 );</div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;    itab_append( <a class="code" href="structgd.html">gd</a>.src, buf, talloc_strdup( <a class="code" href="structgd.html">gd</a>.src, line ) );</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;}</div>
+<div class="ttc" id="agroup__itab_html_ga174bc92d89b1242a5f1b572d75a8816b"><div class="ttname"><a href="group__itab.html#ga174bc92d89b1242a5f1b572d75a8816b">itab_lines</a></div><div class="ttdeci">int itab_lines(struct itab *itab)</div><div class="ttdef"><b>Definition:</b> lib.c:125</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__itab.html#ga174bc92d89b1242a5f1b572d75a8816b">itab_lines()</a>.</p>
+
+</div>
+</div>
+<a id="ga4bf03a3ab8e415fcfac82f43bc854320"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga4bf03a3ab8e415fcfac82f43bc854320">&#9670;&nbsp;</a></span>src_clear()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool src_clear </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>clear and initialize the source that will alter be parsed.</p>
+<p>needs to be called before using <em>src_add</em>. <em>src_read</em> will do it automatically. </p>
+<div class="fragment"><div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;                   {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="structgd.html">gd</a>.src ) {</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        talloc_free( <a class="code" href="structgd.html">gd</a>.src );</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;    }</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;    <a class="code" href="structgd.html">gd</a>.src = <a class="code" href="group__itab.html#gad9917bb373045636deee31d01936f67d">itab_new</a>(  );</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;    <span class="keywordflow">if</span>( <a class="code" href="structgd.html">gd</a>.src_iter ) {</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        talloc_free( <a class="code" href="structgd.html">gd</a>.src_iter );</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;    }</div>
+<div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160;    <a class="code" href="structgd.html">gd</a>.src_iter = NULL;</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;}</div>
+<div class="ttc" id="agroup__itab_html_gad9917bb373045636deee31d01936f67d"><div class="ttname"><a href="group__itab.html#gad9917bb373045636deee31d01936f67d">itab_new</a></div><div class="ttdeci">struct itab * itab_new()</div><div class="ttdoc">create a new itab with default parameters.</div><div class="ttdef"><b>Definition:</b> lib.c:145</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__itab.html#gad9917bb373045636deee31d01936f67d">itab_new()</a>.</p>
+
+<p class="reference">Referenced by <a class="el" href="group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7">src_read()</a>.</p>
+
+</div>
+</div>
+<a id="ga9f6e95f5f532bca8482e2bd5d309df94"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga9f6e95f5f532bca8482e2bd5d309df94">&#9670;&nbsp;</a></span>src_dump()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool src_dump </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>dumps all the lines of the current source. </p>
+<div class="fragment"><div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                  {</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;    <span class="keywordflow">for</span>( <span class="keyword">struct</span> <a class="code" href="structitab__iter.html">itab_iter</a> * x = itab_foreach( <a class="code" href="structgd.html">gd</a>.src );</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;         x; x = itab_next( x ) ) {</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;        printf( <span class="stringliteral">&quot;%s:%s\n&quot;</span>, itab_key( x ), itab_value( x ) );</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;    }</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;}</div>
+<div class="ttc" id="astructitab__iter_html"><div class="ttname"><a href="structitab__iter.html">itab_iter</a></div><div class="ttdoc">iterator over elements of an itab.</div><div class="ttdef"><b>Definition:</b> lib.c:134</div></div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="ga84a9f5c743eb6a718086ec1a385ed8f7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga84a9f5c743eb6a718086ec1a385ed8f7">&#9670;&nbsp;</a></span>src_read()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool src_read </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>read file into itab.</p>
+<p>read a file into src itab. </p>
+<div class="fragment"><div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;                                  {</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;    FILE *f = fopen( name, <span class="stringliteral">&quot;r&quot;</span> );</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;    <span class="keywordtype">char</span> buf[1000];</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160;    <span class="keywordtype">char</span> *line;</div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;    <span class="keywordtype">int</span> line_no = 1;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    <a class="code" href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear</a>(  );</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;    <span class="keywordflow">for</span>( ;; ) {</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;        line = fgets( buf, <span class="keyword">sizeof</span>( buf ), f );</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;        <span class="keywordflow">if</span>( line == NULL )</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;        <span class="keywordtype">int</span> n = strlen( line );</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;        <span class="keywordflow">while</span>( n &gt; 0 &amp;&amp; isspace( line[--n] ) )</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            line[n] = 0;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;        <span class="keywordtype">char</span> line_number[10];</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        sprintf( line_number, <span class="stringliteral">&quot;%09d&quot;</span>, line_no );</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;        itab_append( <a class="code" href="structgd.html">gd</a>.src, line_number, talloc_strdup( <a class="code" href="structgd.html">gd</a>.src, line ) );</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        line_no++;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;    }</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;    fclose( f );</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;}</div>
+<div class="ttc" id="agroup__tokenizer_html_ga4bf03a3ab8e415fcfac82f43bc854320"><div class="ttname"><a href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear</a></div><div class="ttdeci">bool src_clear()</div><div class="ttdef"><b>Definition:</b> lib.c:278</div></div>
+</div><!-- fragment -->
+<p class="reference">References <a class="el" href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear()</a>.</p>
 
 </div>
 </div>
