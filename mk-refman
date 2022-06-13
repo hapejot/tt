@@ -1,0 +1,6 @@
+cd $1/doc/latex
+
+echo "===== $PWD"
+
+latex refman
+latex refman

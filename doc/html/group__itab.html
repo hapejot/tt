@@ -151,12 +151,12 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>itab_key</b> 
 <li>&gt; 0, when second key is lower </li>
 </ul>
 </dd></dl>
-<div class="fragment"><div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;                                                         {</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structitab__entry.html">itab_entry</a> *a = aptr;</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structitab__entry.html">itab_entry</a> *b = bptr;</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;    <span class="keywordflow">return</span> strcmp( a-&gt;key, b-&gt;key );</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;}</div>
-<div class="ttc" id="astructitab__entry_html"><div class="ttname"><a href="structitab__entry.html">itab_entry</a></div><div class="ttdoc">structure of an entry in the itab.</div><div class="ttdef"><b>Definition:</b> lib.c:110</div></div>
+<div class="fragment"><div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;                                                         {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structitab__entry.html">itab_entry</a> *a = aptr;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;    <span class="keyword">const</span> <span class="keyword">struct </span><a class="code" href="structitab__entry.html">itab_entry</a> *b = bptr;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keywordflow">return</span> strcmp( a-&gt;key, b-&gt;key );</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;}</div>
+<div class="ttc" id="astructitab__entry_html"><div class="ttname"><a href="structitab__entry.html">itab_entry</a></div><div class="ttdoc">structure of an entry in the itab.</div><div class="ttdef"><b>Definition:</b> lib.c:85</div></div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -176,11 +176,11 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>itab_key</b> 
       </table>
 </div><div class="memdoc">
 <p>returns the number of lines in the table </p>
-<div class="fragment"><div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;                                    {</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    assert( <a class="code" href="structitab.html">itab</a> );</div>
-<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structitab.html">itab</a>-&gt;used;</div>
-<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;}</div>
-<div class="ttc" id="astructitab_html"><div class="ttname"><a href="structitab.html">itab</a></div><div class="ttdoc">structure of itab</div><div class="ttdef"><b>Definition:</b> lib.c:117</div></div>
+<div class="fragment"><div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;                                    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    assert( <a class="code" href="structitab.html">itab</a> );</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="structitab.html">itab</a>-&gt;used;</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;}</div>
+<div class="ttc" id="astructitab_html"><div class="ttname"><a href="structitab.html">itab</a></div><div class="ttdoc">structure of itab</div><div class="ttdef"><b>Definition:</b> lib.c:92</div></div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23">src_add()</a>.</p>
 
@@ -205,13 +205,13 @@ const char *&#160;</td><td class="memItemRight" valign="bottom"><b>itab_key</b> 
 <p>create a new itab with default parameters. </p>
 <dl class="section return"><dt>Returns</dt><dd>reference to an itab structure.</dd></dl>
 <p>Detailed description follows here. </p>
-<div class="fragment"><div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                          {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;    <span class="keyword">struct </span><a class="code" href="structitab.html">itab</a> *r = talloc_zero( NULL, <span class="keyword">struct</span> <a class="code" href="structitab.html">itab</a> );</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;    r-&gt;total = 10;</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;    r-&gt;used = 0;</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;    r-&gt;rows = talloc_array( r, <span class="keyword">struct</span> <a class="code" href="structitab__entry.html">itab_entry</a>, r-&gt;total );</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;    <span class="keywordflow">return</span> r;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;}</div>
+<div class="fragment"><div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                          {</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">struct </span><a class="code" href="structitab.html">itab</a> *r = talloc_zero( NULL, <span class="keyword">struct</span> <a class="code" href="structitab.html">itab</a> );</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    r-&gt;total = 10;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;    r-&gt;used = 0;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    r-&gt;rows = talloc_array( r, <span class="keyword">struct</span> <a class="code" href="structitab__entry.html">itab_entry</a>, r-&gt;total );</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;    <span class="keywordflow">return</span> r;</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
 </div><!-- fragment -->
 <p class="reference">Referenced by <a class="el" href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear()</a>.</p>
 

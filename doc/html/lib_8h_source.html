@@ -126,149 +126,180 @@ $(function() {
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;<span class="keyword">typedef</span> <span class="keyword">enum</span> e_expression_tag {</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    tag_string,</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    tag_message,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    tag_number,</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    tag_ident,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    tag_block,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    tag_array</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;} t_expression_tag;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="structs__block.html">   71</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__block.html">s_block</a> {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <a class="code" href="structs__namelist.html">t_namelist</a> params;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <a class="code" href="structs__namelist.html">t_namelist</a> locals;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <a class="code" href="structs__statements.html">t_statements</a> *statements;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;} <a class="code" href="structs__block.html">t_block</a>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160; </div>
-<div class="line"><a name="l00077"></a><span class="lineno"><a class="line" href="structs__expression.html">   77</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__expression.html">s_expression</a> {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    t_expression_tag tag;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">union </span>{</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordtype">int</span> intvalue;</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *strvalue;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *ident;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <a class="code" href="structs__expression__list.html">t_expression_list</a> exprs;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        <span class="keyword">struct </span>msg {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            <span class="keyword">struct </span><a class="code" href="structs__expression.html">s_expression</a> *target;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <span class="keyword">struct </span><a class="code" href="structs__messages.html">s_messages</a> *m;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        } msg;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <a class="code" href="structs__block.html">t_block</a> block;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    } u;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;} <a class="code" href="structs__expression.html">t_expression</a>;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno"><a class="line" href="structs__messages.html">   92</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__messages.html">s_messages</a> {</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    <span class="keywordtype">char</span> *sel;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    <span class="keywordtype">int</span> argc;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    <a class="code" href="structs__expression.html">t_expression</a> **args;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__messages.html">s_messages</a> *next;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;} <a class="code" href="structs__messages.html">t_messages</a>;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
-<div class="line"><a name="l00099"></a><span class="lineno"><a class="line" href="structs__message__cascade.html">   99</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__message__cascade.html">s_message_cascade</a> {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <a class="code" href="structs__messages.html">t_messages</a>  *msgs;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__message__cascade.html">s_message_cascade</a> *next;</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;} <a class="code" href="structs__message__cascade.html">t_message_cascade</a>;</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160; </div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> *( *t_message_handler ) ( <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> *,</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                                                  <span class="keyword">const</span> <span class="keywordtype">char</span> *sel,</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;                                                  <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> ** args );</div>
-<div class="line"><a name="l00108"></a><span class="lineno"><a class="line" href="structs__object.html">  108</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    t_message_handler handler;</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;    <span class="keywordtype">void</span> *data;</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__env.html">s_env</a> *env;</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;} <a class="code" href="structs__object.html">t_object</a>;</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160; </div>
-<div class="line"><a name="l00114"></a><span class="lineno"><a class="line" href="structs__env.html">  114</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__env.html">s_env</a> {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *name;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;    <a class="code" href="structs__object.html">t_object</a> *val;</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__env.html">s_env</a> *next;</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;} <a class="code" href="structs__env.html">t_env</a>;</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160; </div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char</a>( <span class="keywordtype">int</span> c );</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear</a>(  );</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160; </div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga9f6e95f5f532bca8482e2bd5d309df94">src_dump</a>(  );</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    tag_char,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    tag_message,</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    tag_number,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    tag_ident,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    tag_block,</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    tag_array,</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    tag_assignment</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;} t_expression_tag;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="structs__assignment.html">   73</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__assignment.html">s_assignment</a> {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *target;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__expression.html">s_expression</a> *value;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;} <a class="code" href="structs__assignment.html">t_assignment</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno"><a class="line" href="structs__block.html">   78</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__block.html">s_block</a> {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <a class="code" href="structs__namelist.html">t_namelist</a> params;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <a class="code" href="structs__namelist.html">t_namelist</a> locals;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    <a class="code" href="structs__statements.html">t_statements</a> *statements;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;} <a class="code" href="structs__block.html">t_block</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno"><a class="line" href="structs__expression.html">   84</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__expression.html">s_expression</a> {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    t_expression_tag tag;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        <span class="keywordtype">int</span> intvalue;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *strvalue;</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">char</span> *ident;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        <a class="code" href="structs__expression__list.html">t_expression_list</a> exprs;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        <span class="keyword">struct </span>msg {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="keyword">struct </span><a class="code" href="structs__expression.html">s_expression</a> *target;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <span class="keyword">struct </span><a class="code" href="structs__messages.html">s_messages</a> *m;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        } msg;</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <a class="code" href="structs__assignment.html">t_assignment</a> assignment;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        <a class="code" href="structs__block.html">t_block</a> block;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    } u;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;} <a class="code" href="structs__expression.html">t_expression</a>;</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
+<div class="line"><a name="l00100"></a><span class="lineno"><a class="line" href="structs__messages.html">  100</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__messages.html">s_messages</a> {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;    <span class="keywordtype">bool</span> cascaded;              <span class="comment">// either it&#39;s cascaded or nested </span></div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;<span class="comment">// nested means the result of the previous method invokation is used as the target for the next invokation</span></div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;<span class="comment">// cascaded means that all methods are invoked on the same first target.</span></div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keywordtype">char</span> *sel;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    <span class="keywordtype">int</span> argc;</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    <a class="code" href="structs__expression.html">t_expression</a> **args;</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__messages.html">s_messages</a> *next;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;} <a class="code" href="structs__messages.html">t_messages</a>;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160; </div>
+<div class="line"><a name="l00110"></a><span class="lineno"><a class="line" href="structs__message__cascade.html">  110</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__message__cascade.html">s_message_cascade</a> {</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <a class="code" href="structs__messages.html">t_messages</a> *msgs;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__message__cascade.html">s_message_cascade</a> *next;</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;} <a class="code" href="structs__message__cascade.html">t_message_cascade</a>;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160; </div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> *( *t_message_handler ) ( <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> *,</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;                                                  <span class="keyword">const</span> <span class="keywordtype">char</span> *sel,</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;                                                  <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> ** args );</div>
+<div class="line"><a name="l00119"></a><span class="lineno"><a class="line" href="structs__object.html">  119</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;    t_message_handler handler;</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    <span class="keyword">union </span>{</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;        <span class="keywordtype">void</span> *data;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;        <span class="keywordtype">int</span> intval;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            <span class="keywordtype">int</span> i[10];</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;            <span class="keywordtype">void</span> *p[10];</div>
+<div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160;        } vals;</div>
+<div class="line"><a name="l00128"></a><span class="lineno">  128</span>&#160;        <span class="keyword">struct </span>{</div>
+<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;        <span class="keyword">struct </span><a class="code" href="structs__object.html">s_object</a> **vs;</div>
+<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;        <span class="keywordtype">int</span> cnt;</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;        } vars;</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    } u;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__env.html">s_env</a> *env;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;} <a class="code" href="structs__object.html">t_object</a>;</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00136"></a><span class="lineno"><a class="line" href="structs__slot.html">  136</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__slot.html">s_slot</a> {</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *name;</div>
+<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    <a class="code" href="structs__object.html">t_object</a> *val;</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__slot.html">s_slot</a> *next;</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;} <a class="code" href="structs__slot.html">t_slot</a>;</div>
+<div class="line"><a name="l00141"></a><span class="lineno"><a class="line" href="structs__env.html">  141</a></span>&#160;<span class="keyword">typedef</span> <span class="keyword">struct </span><a class="code" href="structs__env.html">s_env</a> {</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <a class="code" href="structs__slot.html">t_slot</a> * slots;</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    <span class="keyword">struct </span><a class="code" href="structs__env.html">s_env</a> * next;</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;} <a class="code" href="structs__env.html">t_env</a>;</div>
 <div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160; </div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23">src_add</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * );</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7">src_read</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * );</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160; </div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;<span class="comment">/* @brief read a line from input and store it somewhere.</span></div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;<span class="comment">   @return true if successful</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;<span class="comment"> */</span></div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160; </div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( <span class="keywordtype">char</span> *t );</div>
-<div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160; </div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160; </div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#gacb8666cde3ece1af4829c28d0f7c5022">nextToken</a>( <span class="keywordtype">void</span> );</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160; </div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;<span class="keywordtype">void</span> ast_dump( <span class="keywordtype">int</span> level, <span class="keyword">struct</span> <a class="code" href="structast.html">ast</a> *<a class="code" href="structast.html">ast</a> );</div>
-<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="keywordtype">void</span> ast_fill_classes( <span class="keyword">struct</span> <a class="code" href="structast.html">ast</a> *<a class="code" href="structast.html">ast</a> );</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="keywordtype">void</span> ast_fill_methods(  );</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="keywordtype">void</span> ast_generate_methods(  );</div>
-<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;<span class="keyword">struct </span><a class="code" href="structast.html">ast</a> *ast_new( <span class="keywordtype">int</span> <a class="code" href="structast.html#a80c0bb9ad48afd7f459230031f0f1fae">tag</a> );</div>
-<div class="line"><a name="l00184"></a><span class="lineno">  184</span>&#160; </div>
-<div class="line"><a name="l00185"></a><span class="lineno">  185</span>&#160;<span class="comment">//void class_add_def(const char* name, const char* super, struct ast * vars, struct ast* methods);</span></div>
-<div class="line"><a name="l00186"></a><span class="lineno">  186</span>&#160;<span class="comment">//void class_add_meta(const char* name, const char* super, struct ast * vars, struct ast* methods);</span></div>
-<div class="line"><a name="l00187"></a><span class="lineno">  187</span>&#160;<span class="keywordtype">void</span> class_enter( <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structast.html#a71451c114bf2387e3a3fd53da26e8540">name</a> );</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;<span class="keywordtype">void</span> class_dump_all(  );</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160; </div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;<a class="code" href="structs__methoddef.html">t_methoddef</a> *method_read( <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">class</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *selector );</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;<span class="keywordtype">void</span> method_enter( <a class="code" href="structs__message__pattern.html">t_message_pattern</a> * );</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;<span class="keywordtype">void</span> method_stmts( <a class="code" href="structs__statements.html">t_statements</a> * );</div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160; </div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keywordtype">void</span> string_register( <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structast.html#a860f9139dd74c340bc89910d1ce383cf">str</a> );</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char</a>( <span class="keywordtype">int</span> c );</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160; </div>
+<div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear</a>(  );</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160; </div>
+<div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga9f6e95f5f532bca8482e2bd5d309df94">src_dump</a>(  );</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160; </div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23">src_add</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7">src_read</a>( <span class="keyword">const</span> <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160; </div>
+<div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;<span class="comment">/* @brief read a line from input and store it somewhere.</span></div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;<span class="comment">   @return true if successful</span></div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;<span class="comment"> */</span></div>
+<div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160; </div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a>( <span class="keywordtype">char</span> *t );</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160; </div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a>( <span class="keywordtype">void</span> );</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;<span class="keywordtype">void</span> c_generate( FILE * );</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;<span class="keywordtype">void</span> method_def( <a class="code" href="structs__pattern.html">t_pattern</a> pattern, <span class="keywordtype">void</span> *locals, <span class="keywordtype">void</span> *directive,</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;                 <span class="keywordtype">void</span> *statements );</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;<span class="keywordtype">void</span> method_def_verb( <a class="code" href="structs__pattern.html">t_pattern</a> pattern, <span class="keywordtype">void</span> *coding );</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160; </div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;<span class="keywordtype">int</span> parser_main( <span class="keywordtype">int</span>, <span class="keywordtype">char</span> ** );</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160; </div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keywordtype">void</span> namelist_init( <a class="code" href="structs__namelist.html">t_namelist</a> * );</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keywordtype">void</span> namelist_add( <a class="code" href="structs__namelist.html">t_namelist</a> *, <span class="keyword">const</span> <span class="keywordtype">char</span> * );</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keywordtype">void</span> namelist_copy( <a class="code" href="structs__namelist.html">t_namelist</a> * to, <a class="code" href="structs__namelist.html">t_namelist</a> * from );</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160; </div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;<span class="keywordtype">bool</span> <a class="code" href="group__tokenizer.html#gacb8666cde3ece1af4829c28d0f7c5022">nextToken</a>( <span class="keywordtype">void</span> );</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160; </div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;<span class="keywordtype">void</span> ast_dump( <span class="keywordtype">int</span> level, <span class="keyword">struct</span> <a class="code" href="structast.html">ast</a> *<a class="code" href="structast.html">ast</a> );</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;<span class="keywordtype">void</span> ast_fill_classes( <span class="keyword">struct</span> <a class="code" href="structast.html">ast</a> *<a class="code" href="structast.html">ast</a> );</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;<span class="keywordtype">void</span> ast_fill_methods(  );</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;<span class="keywordtype">void</span> ast_generate_methods(  );</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keywordtype">void</span> *itab_read( <span class="keyword">struct</span> <a class="code" href="structitab.html">itab</a> *, <span class="keyword">const</span> <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;<span class="keyword">struct </span><a class="code" href="structast.html">ast</a> *ast_new( <span class="keywordtype">int</span> <a class="code" href="structast.html#a80c0bb9ad48afd7f459230031f0f1fae">tag</a> );</div>
 <div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="keywordtype">void</span> msg_add( <span class="keyword">const</span> <span class="keywordtype">char</span> *msg, ... );</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="keywordtype">void</span> msg_print_last(  );</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160; </div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keywordtype">void</span> message_add_msg(<a class="code" href="structs__messages.html">t_messages</a> *ms, <a class="code" href="structs__messages.html">t_messages</a> *m);</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;<span class="keywordtype">void</span> message_add_arg(<a class="code" href="structs__messages.html">t_messages</a> *m, <a class="code" href="structs__expression.html">t_expression</a> *x);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160; </div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="preprocessor">#endif</span></div>
-<div class="ttc" id="agroup__tokenizer_html_ga4bf03a3ab8e415fcfac82f43bc854320"><div class="ttname"><a href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear</a></div><div class="ttdeci">bool src_clear(void)</div><div class="ttdef"><b>Definition:</b> lib.c:278</div></div>
-<div class="ttc" id="agroup__tokenizer_html_ga4f2be419c946530de61fcc5bd922b961"><div class="ttname"><a href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a></div><div class="ttdeci">bool readChar(char *t)</div><div class="ttdoc">read one character from input and store it somewhere.</div><div class="ttdef"><b>Definition:</b> lib.c:356</div></div>
-<div class="ttc" id="agroup__tokenizer_html_ga84a9f5c743eb6a718086ec1a385ed8f7"><div class="ttname"><a href="group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7">src_read</a></div><div class="ttdeci">bool src_read(const char *name)</div><div class="ttdef"><b>Definition:</b> lib.c:299</div></div>
-<div class="ttc" id="agroup__tokenizer_html_ga986d1e4dee1be06e31a781ce4b847fe0"><div class="ttname"><a href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a></div><div class="ttdeci">bool readLine(void)</div><div class="ttdoc">read one line from stdin stores the result into {gd.line}.</div><div class="ttdef"><b>Definition:</b> lib.c:333</div></div>
-<div class="ttc" id="agroup__tokenizer_html_ga9f6e95f5f532bca8482e2bd5d309df94"><div class="ttname"><a href="group__tokenizer.html#ga9f6e95f5f532bca8482e2bd5d309df94">src_dump</a></div><div class="ttdeci">bool src_dump(void)</div><div class="ttdef"><b>Definition:</b> lib.c:320</div></div>
-<div class="ttc" id="agroup__tokenizer_html_gaaff46ce87fa716bfd3c55495d26cef23"><div class="ttname"><a href="group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23">src_add</a></div><div class="ttdeci">bool src_add(const char *line)</div><div class="ttdef"><b>Definition:</b> lib.c:289</div></div>
-<div class="ttc" id="agroup__tokenizer_html_gac0bb8a0baa2e72a8039d67dce7e1f932"><div class="ttname"><a href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char</a></div><div class="ttdeci">bool is_ident_char(int c)</div><div class="ttdoc">check if character is part of an identifier.</div><div class="ttdef"><b>Definition:</b> lib.c:248</div></div>
-<div class="ttc" id="agroup__tokenizer_html_gaca69499fef7287dfec40541fe204f94c"><div class="ttname"><a href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a></div><div class="ttdeci">bool readStringToken(void)</div><div class="ttdoc">read string token.</div><div class="ttdef"><b>Definition:</b> lib.c:376</div></div>
-<div class="ttc" id="agroup__tokenizer_html_gacb8666cde3ece1af4829c28d0f7c5022"><div class="ttname"><a href="group__tokenizer.html#gacb8666cde3ece1af4829c28d0f7c5022">nextToken</a></div><div class="ttdeci">bool nextToken()</div><div class="ttdoc">read next token.</div><div class="ttdef"><b>Definition:</b> lib.c:403</div></div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;<span class="comment">//void class_add_def(const char* name, const char* super, struct ast * vars, struct ast* methods);</span></div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;<span class="comment">//void class_add_meta(const char* name, const char* super, struct ast * vars, struct ast* methods);</span></div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;<span class="keywordtype">void</span> class_enter( <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structast.html#a71451c114bf2387e3a3fd53da26e8540">name</a> );</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;<span class="keywordtype">void</span> class_dump_all(  );</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;<a class="code" href="structs__methoddef.html">t_methoddef</a> *method_read( <span class="keyword">const</span> <span class="keywordtype">char</span> *<span class="keyword">class</span>, <span class="keyword">const</span> <span class="keywordtype">char</span> *selector );</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;<span class="keywordtype">void</span> method_enter( <a class="code" href="structs__message__pattern.html">t_message_pattern</a> * );</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;<span class="keywordtype">void</span> method_stmts( <a class="code" href="structs__statements.html">t_statements</a> * );</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160; </div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;<span class="keywordtype">void</span> string_register( <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="structast.html#a860f9139dd74c340bc89910d1ce383cf">str</a> );</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160; </div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;<span class="keywordtype">void</span> c_generate( FILE * );</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;<span class="keywordtype">void</span> method_def( <a class="code" href="structs__pattern.html">t_pattern</a> pattern, <span class="keywordtype">void</span> *locals, <span class="keywordtype">void</span> *directive,</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                 <span class="keywordtype">void</span> *statements );</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;<span class="keywordtype">void</span> method_def_verb( <a class="code" href="structs__pattern.html">t_pattern</a> pattern, <span class="keywordtype">void</span> *coding );</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160; </div>
+<div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160;<span class="keywordtype">int</span> parser_main( <span class="keywordtype">int</span>, <span class="keywordtype">char</span> ** );</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160; </div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__namelist.html#ga04a7aa8c09b9a6de2e379068ea8610da">namelist_init</a>( <a class="code" href="structs__namelist.html">t_namelist</a> * );</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__namelist.html#ga329e5e8e74a3e0f0fcf8a85f57c08717">namelist_add</a>( <a class="code" href="structs__namelist.html">t_namelist</a> *, <span class="keyword">const</span> <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;<span class="keywordtype">void</span> <a class="code" href="group__namelist.html#ga30ab06c5ec95ab65f95e396c3490b9b0">namelist_copy</a>( <a class="code" href="structs__namelist.html">t_namelist</a> * to, <a class="code" href="structs__namelist.html">t_namelist</a> * from );</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160; </div>
+<div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;<span class="keywordtype">void</span> *itab_read( <span class="keyword">struct</span> <a class="code" href="structitab.html">itab</a> *, <span class="keyword">const</span> <span class="keywordtype">char</span> * );</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160; </div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;<span class="keywordtype">void</span> msg_add( <span class="keyword">const</span> <span class="keywordtype">char</span> *msg, ... );</div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;<span class="keywordtype">void</span> msg_print_last(  );</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160; </div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;<span class="keywordtype">void</span> message_add_msg( <a class="code" href="structs__messages.html">t_messages</a> * ms, <a class="code" href="structs__messages.html">t_messages</a> * m );</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;<span class="keywordtype">void</span> message_add_arg( <a class="code" href="structs__messages.html">t_messages</a> * m, <a class="code" href="structs__expression.html">t_expression</a> * x );</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160; </div>
+<div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160;<span class="preprocessor">#endif</span></div>
+<div class="ttc" id="agroup__namelist_html_ga04a7aa8c09b9a6de2e379068ea8610da"><div class="ttname"><a href="group__namelist.html#ga04a7aa8c09b9a6de2e379068ea8610da">namelist_init</a></div><div class="ttdeci">void namelist_init(t_namelist *)</div><div class="ttdoc">clear the structure for further usage.</div><div class="ttdef"><b>Definition:</b> namelist.c:13</div></div>
+<div class="ttc" id="agroup__namelist_html_ga30ab06c5ec95ab65f95e396c3490b9b0"><div class="ttname"><a href="group__namelist.html#ga30ab06c5ec95ab65f95e396c3490b9b0">namelist_copy</a></div><div class="ttdeci">void namelist_copy(t_namelist *to, t_namelist *from)</div><div class="ttdef"><b>Definition:</b> namelist.c:32</div></div>
+<div class="ttc" id="agroup__namelist_html_ga329e5e8e74a3e0f0fcf8a85f57c08717"><div class="ttname"><a href="group__namelist.html#ga329e5e8e74a3e0f0fcf8a85f57c08717">namelist_add</a></div><div class="ttdeci">void namelist_add(t_namelist *, const char *)</div><div class="ttdef"><b>Definition:</b> namelist.c:23</div></div>
+<div class="ttc" id="agroup__tokenizer_html_ga4bf03a3ab8e415fcfac82f43bc854320"><div class="ttname"><a href="group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320">src_clear</a></div><div class="ttdeci">bool src_clear(void)</div><div class="ttdef"><b>Definition:</b> lib.c:253</div></div>
+<div class="ttc" id="agroup__tokenizer_html_ga4f2be419c946530de61fcc5bd922b961"><div class="ttname"><a href="group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961">readChar</a></div><div class="ttdeci">bool readChar(char *t)</div><div class="ttdoc">read one character from input and store it somewhere.</div><div class="ttdef"><b>Definition:</b> lib.c:331</div></div>
+<div class="ttc" id="agroup__tokenizer_html_ga84a9f5c743eb6a718086ec1a385ed8f7"><div class="ttname"><a href="group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7">src_read</a></div><div class="ttdeci">bool src_read(const char *name)</div><div class="ttdef"><b>Definition:</b> lib.c:274</div></div>
+<div class="ttc" id="agroup__tokenizer_html_ga986d1e4dee1be06e31a781ce4b847fe0"><div class="ttname"><a href="group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0">readLine</a></div><div class="ttdeci">bool readLine(void)</div><div class="ttdoc">read one line from stdin stores the result into {gd.line}.</div><div class="ttdef"><b>Definition:</b> lib.c:308</div></div>
+<div class="ttc" id="agroup__tokenizer_html_ga9f6e95f5f532bca8482e2bd5d309df94"><div class="ttname"><a href="group__tokenizer.html#ga9f6e95f5f532bca8482e2bd5d309df94">src_dump</a></div><div class="ttdeci">bool src_dump(void)</div><div class="ttdef"><b>Definition:</b> lib.c:295</div></div>
+<div class="ttc" id="agroup__tokenizer_html_gaaff46ce87fa716bfd3c55495d26cef23"><div class="ttname"><a href="group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23">src_add</a></div><div class="ttdeci">bool src_add(const char *line)</div><div class="ttdef"><b>Definition:</b> lib.c:264</div></div>
+<div class="ttc" id="agroup__tokenizer_html_gac0bb8a0baa2e72a8039d67dce7e1f932"><div class="ttname"><a href="group__tokenizer.html#gac0bb8a0baa2e72a8039d67dce7e1f932">is_ident_char</a></div><div class="ttdeci">bool is_ident_char(int c)</div><div class="ttdoc">check if character is part of an identifier.</div><div class="ttdef"><b>Definition:</b> lib.c:223</div></div>
+<div class="ttc" id="agroup__tokenizer_html_gaca69499fef7287dfec40541fe204f94c"><div class="ttname"><a href="group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c">readStringToken</a></div><div class="ttdeci">bool readStringToken(void)</div><div class="ttdoc">read string token.</div><div class="ttdef"><b>Definition:</b> lib.c:351</div></div>
+<div class="ttc" id="agroup__tokenizer_html_gacb8666cde3ece1af4829c28d0f7c5022"><div class="ttname"><a href="group__tokenizer.html#gacb8666cde3ece1af4829c28d0f7c5022">nextToken</a></div><div class="ttdeci">bool nextToken()</div><div class="ttdoc">read next token.</div><div class="ttdef"><b>Definition:</b> lib.c:378</div></div>
 <div class="ttc" id="astructast_html"><div class="ttname"><a href="structast.html">ast</a></div><div class="ttdef"><b>Definition:</b> global.h:17</div></div>
 <div class="ttc" id="astructast_html_a71451c114bf2387e3a3fd53da26e8540"><div class="ttname"><a href="structast.html#a71451c114bf2387e3a3fd53da26e8540">ast::name</a></div><div class="ttdeci">const char * name</div><div class="ttdoc">parameter name</div><div class="ttdef"><b>Definition:</b> global.h:38</div></div>
 <div class="ttc" id="astructast_html_a80c0bb9ad48afd7f459230031f0f1fae"><div class="ttname"><a href="structast.html#a80c0bb9ad48afd7f459230031f0f1fae">ast::tag</a></div><div class="ttdeci">int tag</div><div class="ttdoc">descriminator for the union, tags start with AST_</div><div class="ttdef"><b>Definition:</b> global.h:18</div></div>
 <div class="ttc" id="astructast_html_a860f9139dd74c340bc89910d1ce383cf"><div class="ttname"><a href="structast.html#a860f9139dd74c340bc89910d1ce383cf">ast::str</a></div><div class="ttdeci">struct ast::@0::@1 str</div><div class="ttdoc">string node</div></div>
-<div class="ttc" id="astructitab_html"><div class="ttname"><a href="structitab.html">itab</a></div><div class="ttdoc">structure of itab</div><div class="ttdef"><b>Definition:</b> lib.c:117</div></div>
-<div class="ttc" id="astructs__block_html"><div class="ttname"><a href="structs__block.html">s_block</a></div><div class="ttdef"><b>Definition:</b> lib.h:71</div></div>
+<div class="ttc" id="astructitab_html"><div class="ttname"><a href="structitab.html">itab</a></div><div class="ttdoc">structure of itab</div><div class="ttdef"><b>Definition:</b> lib.c:92</div></div>
+<div class="ttc" id="astructs__assignment_html"><div class="ttname"><a href="structs__assignment.html">s_assignment</a></div><div class="ttdef"><b>Definition:</b> lib.h:73</div></div>
+<div class="ttc" id="astructs__block_html"><div class="ttname"><a href="structs__block.html">s_block</a></div><div class="ttdef"><b>Definition:</b> lib.h:78</div></div>
 <div class="ttc" id="astructs__classdef_html"><div class="ttname"><a href="structs__classdef.html">s_classdef</a></div><div class="ttdef"><b>Definition:</b> lib.h:31</div></div>
-<div class="ttc" id="astructs__env_html"><div class="ttname"><a href="structs__env.html">s_env</a></div><div class="ttdef"><b>Definition:</b> lib.h:114</div></div>
+<div class="ttc" id="astructs__env_html"><div class="ttname"><a href="structs__env.html">s_env</a></div><div class="ttdef"><b>Definition:</b> lib.h:141</div></div>
 <div class="ttc" id="astructs__expression__list_html"><div class="ttname"><a href="structs__expression__list.html">s_expression_list</a></div><div class="ttdef"><b>Definition:</b> lib.h:14</div></div>
-<div class="ttc" id="astructs__expression_html"><div class="ttname"><a href="structs__expression.html">s_expression</a></div><div class="ttdef"><b>Definition:</b> lib.h:77</div></div>
-<div class="ttc" id="astructs__message__cascade_html"><div class="ttname"><a href="structs__message__cascade.html">s_message_cascade</a></div><div class="ttdef"><b>Definition:</b> lib.h:99</div></div>
+<div class="ttc" id="astructs__expression_html"><div class="ttname"><a href="structs__expression.html">s_expression</a></div><div class="ttdef"><b>Definition:</b> lib.h:84</div></div>
+<div class="ttc" id="astructs__message__cascade_html"><div class="ttname"><a href="structs__message__cascade.html">s_message_cascade</a></div><div class="ttdef"><b>Definition:</b> lib.h:110</div></div>
 <div class="ttc" id="astructs__message__pattern_html"><div class="ttname"><a href="structs__message__pattern.html">s_message_pattern</a></div><div class="ttdef"><b>Definition:</b> lib.h:57</div></div>
-<div class="ttc" id="astructs__messages_html"><div class="ttname"><a href="structs__messages.html">s_messages</a></div><div class="ttdef"><b>Definition:</b> lib.h:92</div></div>
+<div class="ttc" id="astructs__messages_html"><div class="ttname"><a href="structs__messages.html">s_messages</a></div><div class="ttdef"><b>Definition:</b> lib.h:100</div></div>
 <div class="ttc" id="astructs__methoddef_html"><div class="ttname"><a href="structs__methoddef.html">s_methoddef</a></div><div class="ttdef"><b>Definition:</b> lib.h:50</div></div>
 <div class="ttc" id="astructs__namelist_html"><div class="ttname"><a href="structs__namelist.html">s_namelist</a></div><div class="ttdef"><b>Definition:</b> lib.h:8</div></div>
 <div class="ttc" id="astructs__names_html"><div class="ttname"><a href="structs__names.html">s_names</a></div><div class="ttdef"><b>Definition:</b> lib.h:19</div></div>
-<div class="ttc" id="astructs__object_html"><div class="ttname"><a href="structs__object.html">s_object</a></div><div class="ttdef"><b>Definition:</b> lib.h:108</div></div>
+<div class="ttc" id="astructs__object_html"><div class="ttname"><a href="structs__object.html">s_object</a></div><div class="ttdef"><b>Definition:</b> lib.h:119</div></div>
 <div class="ttc" id="astructs__pattern_html"><div class="ttname"><a href="structs__pattern.html">s_pattern</a></div><div class="ttdef"><b>Definition:</b> lib.h:24</div></div>
+<div class="ttc" id="astructs__slot_html"><div class="ttname"><a href="structs__slot.html">s_slot</a></div><div class="ttdef"><b>Definition:</b> lib.h:136</div></div>
 <div class="ttc" id="astructs__statements_html"><div class="ttname"><a href="structs__statements.html">s_statements</a></div><div class="ttdef"><b>Definition:</b> lib.h:44</div></div>
 </div><!-- fragment --></div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.1-->

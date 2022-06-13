@@ -1,7 +1,6 @@
-\indexentry{list@{list}|hyperpage}{9}
 \indexentry{ITab@{ITab}|hyperpage}{9}
-\indexentry{ITab@{ITab}!itab\_entry\_cmp@{itab\_entry\_cmp}|hyperpage}{10}
-\indexentry{itab\_entry\_cmp@{itab\_entry\_cmp}!ITab@{ITab}|hyperpage}{10}
+\indexentry{ITab@{ITab}!itab\_entry\_cmp@{itab\_entry\_cmp}|hyperpage}{9}
+\indexentry{itab\_entry\_cmp@{itab\_entry\_cmp}!ITab@{ITab}|hyperpage}{9}
 \indexentry{ITab@{ITab}!itab\_lines@{itab\_lines}|hyperpage}{10}
 \indexentry{itab\_lines@{itab\_lines}!ITab@{ITab}|hyperpage}{10}
 \indexentry{ITab@{ITab}!itab\_new@{itab\_new}|hyperpage}{10}
@@ -27,36 +26,45 @@
 \indexentry{src\_read@{src\_read}!Tokenizer@{Tokenizer}|hyperpage}{16}
 \indexentry{Messages@{Messages}|hyperpage}{17}
 \indexentry{Syntax Messages@{Syntax Messages}|hyperpage}{17}
-\indexentry{Internal\_structures@{Internal\_structures}|hyperpage}{18}
-\indexentry{ast@{ast}|hyperpage}{19}
-\indexentry{ast@{ast}!key@{key}|hyperpage}{20}
-\indexentry{key@{key}!ast@{ast}|hyperpage}{20}
-\indexentry{ast@{ast}!next@{next}|hyperpage}{21}
-\indexentry{next@{next}!ast@{ast}|hyperpage}{21}
-\indexentry{ast@{ast}!v@{v}|hyperpage}{21}
-\indexentry{v@{v}!ast@{ast}|hyperpage}{21}
-\indexentry{classinfo@{classinfo}|hyperpage}{21}
-\indexentry{gd@{gd}|hyperpage}{22}
-\indexentry{itab@{itab}|hyperpage}{23}
-\indexentry{itab\_entry@{itab\_entry}|hyperpage}{23}
-\indexentry{itab\_iter@{itab\_iter}|hyperpage}{24}
-\indexentry{methodinfo@{methodinfo}|hyperpage}{25}
-\indexentry{s\_block@{s\_block}|hyperpage}{25}
-\indexentry{s\_classdef@{s\_classdef}|hyperpage}{26}
-\indexentry{s\_env@{s\_env}|hyperpage}{26}
-\indexentry{s\_expression@{s\_expression}|hyperpage}{27}
-\indexentry{s\_expression\_list@{s\_expression\_list}|hyperpage}{28}
-\indexentry{s\_globals@{s\_globals}|hyperpage}{28}
-\indexentry{s\_message\_cascade@{s\_message\_cascade}|hyperpage}{29}
-\indexentry{s\_message\_pattern@{s\_message\_pattern}|hyperpage}{30}
-\indexentry{s\_messages@{s\_messages}|hyperpage}{30}
-\indexentry{s\_methoddef@{s\_methoddef}|hyperpage}{31}
-\indexentry{s\_namelist@{s\_namelist}|hyperpage}{32}
-\indexentry{s\_names@{s\_names}|hyperpage}{32}
-\indexentry{s\_object@{s\_object}|hyperpage}{32}
-\indexentry{s\_pattern@{s\_pattern}|hyperpage}{33}
-\indexentry{s\_statements@{s\_statements}|hyperpage}{34}
-\indexentry{stringinfo@{stringinfo}|hyperpage}{34}
-\indexentry{varinfo@{varinfo}|hyperpage}{35}
-\indexentry{yyParser@{yyParser}|hyperpage}{35}
-\indexentry{yyStackEntry@{yyStackEntry}|hyperpage}{36}
+\indexentry{Name List@{Name List}|hyperpage}{18}
+\indexentry{Name List@{Name List}!namelist\_add@{namelist\_add}|hyperpage}{18}
+\indexentry{namelist\_add@{namelist\_add}!Name List@{Name List}|hyperpage}{18}
+\indexentry{Name List@{Name List}!namelist\_copy@{namelist\_copy}|hyperpage}{18}
+\indexentry{namelist\_copy@{namelist\_copy}!Name List@{Name List}|hyperpage}{18}
+\indexentry{Name List@{Name List}!namelist\_init@{namelist\_init}|hyperpage}{19}
+\indexentry{namelist\_init@{namelist\_init}!Name List@{Name List}|hyperpage}{19}
+\indexentry{Internal\_structures@{Internal\_structures}|hyperpage}{19}
+\indexentry{ast@{ast}|hyperpage}{21}
+\indexentry{ast@{ast}!key@{key}|hyperpage}{22}
+\indexentry{key@{key}!ast@{ast}|hyperpage}{22}
+\indexentry{ast@{ast}!next@{next}|hyperpage}{23}
+\indexentry{next@{next}!ast@{ast}|hyperpage}{23}
+\indexentry{ast@{ast}!v@{v}|hyperpage}{23}
+\indexentry{v@{v}!ast@{ast}|hyperpage}{23}
+\indexentry{classinfo@{classinfo}|hyperpage}{23}
+\indexentry{gd@{gd}|hyperpage}{24}
+\indexentry{itab@{itab}|hyperpage}{25}
+\indexentry{itab\_entry@{itab\_entry}|hyperpage}{25}
+\indexentry{itab\_iter@{itab\_iter}|hyperpage}{26}
+\indexentry{methodinfo@{methodinfo}|hyperpage}{27}
+\indexentry{s\_assignment@{s\_assignment}|hyperpage}{27}
+\indexentry{s\_block@{s\_block}|hyperpage}{28}
+\indexentry{s\_classdef@{s\_classdef}|hyperpage}{28}
+\indexentry{s\_env@{s\_env}|hyperpage}{29}
+\indexentry{s\_expression@{s\_expression}|hyperpage}{29}
+\indexentry{s\_expression\_list@{s\_expression\_list}|hyperpage}{30}
+\indexentry{s\_globals@{s\_globals}|hyperpage}{31}
+\indexentry{s\_message\_cascade@{s\_message\_cascade}|hyperpage}{32}
+\indexentry{s\_message\_pattern@{s\_message\_pattern}|hyperpage}{32}
+\indexentry{s\_messages@{s\_messages}|hyperpage}{33}
+\indexentry{s\_methoddef@{s\_methoddef}|hyperpage}{34}
+\indexentry{s\_namelist@{s\_namelist}|hyperpage}{34}
+\indexentry{s\_names@{s\_names}|hyperpage}{35}
+\indexentry{s\_object@{s\_object}|hyperpage}{35}
+\indexentry{s\_pattern@{s\_pattern}|hyperpage}{36}
+\indexentry{s\_slot@{s\_slot}|hyperpage}{37}
+\indexentry{s\_statements@{s\_statements}|hyperpage}{38}
+\indexentry{stringinfo@{stringinfo}|hyperpage}{38}
+\indexentry{varinfo@{varinfo}|hyperpage}{39}
+\indexentry{yyParser@{yyParser}|hyperpage}{39}
+\indexentry{yyStackEntry@{yyStackEntry}|hyperpage}{40}

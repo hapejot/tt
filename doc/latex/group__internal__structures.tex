@@ -19,6 +19,8 @@ struct \mbox{\hyperlink{structs__methoddef}{s\+\_\+methoddef}}
 \item 
 struct \mbox{\hyperlink{structs__message__pattern}{s\+\_\+message\+\_\+pattern}}
 \item 
+struct \mbox{\hyperlink{structs__assignment}{s\+\_\+assignment}}
+\item 
 struct \mbox{\hyperlink{structs__block}{s\+\_\+block}}
 \item 
 struct \mbox{\hyperlink{structs__expression}{s\+\_\+expression}}
@@ -28,6 +30,8 @@ struct \mbox{\hyperlink{structs__messages}{s\+\_\+messages}}
 struct \mbox{\hyperlink{structs__message__cascade}{s\+\_\+message\+\_\+cascade}}
 \item 
 struct \mbox{\hyperlink{structs__object}{s\+\_\+object}}
+\item 
+struct \mbox{\hyperlink{structs__slot}{s\+\_\+slot}}
 \item 
 struct \mbox{\hyperlink{structs__env}{s\+\_\+env}}
 \end{DoxyCompactItemize}
@@ -64,6 +68,9 @@ typedef struct \mbox{\hyperlink{structs__message__pattern}{s\+\_\+message\+\_\+p
 \mbox{\Hypertarget{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}\label{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}} 
 typedef enum e\+\_\+expression\+\_\+tag {\bfseries t\+\_\+expression\+\_\+tag}
 \item 
+\mbox{\Hypertarget{group__internal__structures_ga2d4196fd52b9a4956984c42aed6d0712}\label{group__internal__structures_ga2d4196fd52b9a4956984c42aed6d0712}} 
+typedef struct \mbox{\hyperlink{structs__assignment}{s\+\_\+assignment}} {\bfseries t\+\_\+assignment}
+\item 
 \mbox{\Hypertarget{group__internal__structures_ga70ed1bd7b71e35b2384f0d91ac9fc112}\label{group__internal__structures_ga70ed1bd7b71e35b2384f0d91ac9fc112}} 
 typedef struct \mbox{\hyperlink{structs__block}{s\+\_\+block}} {\bfseries t\+\_\+block}
 \item 
@@ -82,6 +89,9 @@ typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$($\ast$ {
 \mbox{\Hypertarget{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}\label{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}} 
 typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} {\bfseries t\+\_\+object}
 \item 
+\mbox{\Hypertarget{group__internal__structures_gae8ddccf0077669747fcd0c7da32e7de1}\label{group__internal__structures_gae8ddccf0077669747fcd0c7da32e7de1}} 
+typedef struct \mbox{\hyperlink{structs__slot}{s\+\_\+slot}} {\bfseries t\+\_\+slot}
+\item 
 \mbox{\Hypertarget{group__internal__structures_gaa3d21e1567b21e23ec928b1eb405fe4b}\label{group__internal__structures_gaa3d21e1567b21e23ec928b1eb405fe4b}} 
 typedef struct \mbox{\hyperlink{structs__env}{s\+\_\+env}} {\bfseries t\+\_\+env}
 \end{DoxyCompactItemize}
@@ -97,12 +107,14 @@ enum {\bfseries e\+\_\+statement\+\_\+type} \{ {\bfseries stmt\+\_\+return} = 10
 \mbox{\Hypertarget{group__internal__structures_ga483470fc733e625f119227f948dad913}\label{group__internal__structures_ga483470fc733e625f119227f948dad913}} 
 enum {\bfseries e\+\_\+expression\+\_\+tag} \{ \newline
 {\bfseries tag\+\_\+string}
+, {\bfseries tag\+\_\+char}
 , {\bfseries tag\+\_\+message}
 , {\bfseries tag\+\_\+number}
-, {\bfseries tag\+\_\+ident}
 , \newline
-{\bfseries tag\+\_\+block}
+{\bfseries tag\+\_\+ident}
+, {\bfseries tag\+\_\+block}
 , {\bfseries tag\+\_\+array}
+, {\bfseries tag\+\_\+assignment}
  \}
 \end{DoxyCompactItemize}
 

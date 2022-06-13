@@ -8,6 +8,12 @@
 #include "global.h"
 #include "lib.h"
 
+extern struct itab *methods;
+extern struct itab *strings;
+extern struct itab *variables;
+extern struct itab *method_names;
+extern struct itab *classes;
+
 #define MSG_DUMP "dump"
 
 #define tt_assert(x)                                                 \
@@ -20,6 +26,8 @@
 
 extern struct gd gd;
 ///////////////   Prototypes   //////////////
+extern char *method_name( const char *, const char * );
+
 t_object *simulate( t_env * env, t_statements * stmts );
 t_object *eval( t_env * env, t_expression * expr );
 t_env *env_add( t_env * env, const char *name, t_object * val );
@@ -204,6 +212,7 @@ t_object *int_handler( t_object * self, const char *sel, t_object ** args ) {
             par[0]->u.intval = i;
 
             args[1]->handler( args[1], "value:", par );
+            talloc_free( par[0] );
         }
     }
     else if( 0 == strcmp( sel, MSG_DUMP ) ) {
@@ -232,8 +241,10 @@ t_object *string_meta_handler( t_object * self, const char *sel,
 
         args[1]->handler( args[1], "value:", par );
         msg_add( "move stream data to string data now." );
+        talloc_free( par[0] );
         result = object_new( string_handler );
         result->u.data = talloc_strdup( result, "<string from stream>" );
+
     }
     else
         result = method_exec( self, "StringMeta", sel, args );
@@ -255,7 +266,7 @@ t_object *method_exec( t_object * self, const char *clsname, const char *sel,
         }
         result = simulate( env, m->statements );
         msg_add( "done simulation of method %s", sel );
-        talloc_free(env);
+        talloc_free( env );
     }
     else {
         msg_add( "%s %s not found.", clsname, sel );
@@ -280,6 +291,7 @@ t_object *string_handler( t_object * self, const char *sel, t_object ** args ) {
             t_object *r = object_new( char_handler );
             r->u.intval = self_data[i];
             args[0]->handler( args[0], "value:", &r );
+            talloc_free( r );
         }
     }
     else if( 0 == strcmp( sel, "readStream" ) ) {
@@ -350,7 +362,7 @@ t_object *block_handler( t_object * self, const char *sel, t_object ** args ) {
     }
     else
         result = method_exec( self, "Block", sel, args );
-    talloc_free(env);
+    talloc_free( env );
     return result;
 }
 
@@ -376,10 +388,12 @@ t_object *eval_messages( t_env * env, t_expression * expr ) {
             for( int i = 0; i < m->argc; i++ ) {
                 args[i] = eval( env, m->args[i] );
                 assert( args[i] );
+// talloc_steal( args, args[i] );
                 msg_add( "..... arg %d evaluated.", i + 1 );
 // args[i]->handler( args[i], MSG_DUMP, NULL );
             }
             result = target->handler( target, m->sel, args );
+            talloc_free( args );
         }
         else
             result = target->handler( target, m->sel, NULL );
@@ -489,6 +503,8 @@ t_object *simulate( t_env * env, t_statements * stmts ) {
         switch ( stmts->type ) {
             case stmt_message:
                 msg_add( "message stmt" );
+                if( result )
+                    talloc_free( result );
                 result = eval( env, stmts->expr );
                 break;
             case stmt_return:
@@ -511,8 +527,6 @@ t_object *simulate( t_env * env, t_statements * stmts ) {
     return result;
 }
 
-extern struct itab *methods;
-extern char *method_name( const char *, const char * );
 
 t_methoddef *method_read( const char *class, const char *selector ) {
     char *nm = method_name( class, selector );
@@ -588,11 +602,21 @@ void test1(  ) {
     t_methoddef *m = method_read( "OrderedCollection", "main:" );
     assert( m );
     assert( m->args.count == 1 );
+    assert( talloc_get_type( m->args.names, char * ) );
     assert( 0 == strcmp( m->args.names[0], "args" ) );
     assert( m->statements != NULL );
     simulate( e, m->statements );
     msg_print_last(  );
-    talloc_free(e);
+    talloc_free( e );
+    talloc_free( classes );
+
+    talloc_report_depth_file( methods, 0, 99, stderr );
+
+    talloc_free( methods );
+    talloc_free( method_names );
+    talloc_free( variables );
+    talloc_free( strings );
+    src_clear(  );
 }
 
 int main( int argc, char **argv ) {

@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['list_17',['list',['../group__name.html',1,'']]]
+  ['messages_17',['Messages',['../group__msg.html',1,'']]],
+  ['methodinfo_18',['methodinfo',['../structmethodinfo.html',1,'']]]
 ];

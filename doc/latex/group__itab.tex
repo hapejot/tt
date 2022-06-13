@@ -62,11 +62,11 @@ compares the keys of two entries
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00159                                                          \{}
-\DoxyCodeLine{00160     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *a = aptr;}
-\DoxyCodeLine{00161     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *b = bptr;}
-\DoxyCodeLine{00162     \textcolor{keywordflow}{return} strcmp( a-\/>key, b-\/>key );}
-\DoxyCodeLine{00163 \}}
+\DoxyCodeLine{00134                                                          \{}
+\DoxyCodeLine{00135     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *a = aptr;}
+\DoxyCodeLine{00136     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *b = bptr;}
+\DoxyCodeLine{00137     \textcolor{keywordflow}{return} strcmp( a-\/>key, b-\/>key );}
+\DoxyCodeLine{00138 \}}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group__itab_ga174bc92d89b1242a5f1b572d75a8816b}\label{group__itab_ga174bc92d89b1242a5f1b572d75a8816b}} 
@@ -77,10 +77,10 @@ compares the keys of two entries
 
 returns the number of lines in the table 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00125                                     \{}
-\DoxyCodeLine{00126     assert( \mbox{\hyperlink{structitab}{itab}} );}
-\DoxyCodeLine{00127     \textcolor{keywordflow}{return} \mbox{\hyperlink{structitab}{itab}}-\/>used;}
-\DoxyCodeLine{00128 \}}
+\DoxyCodeLine{00100                                     \{}
+\DoxyCodeLine{00101     assert( \mbox{\hyperlink{structitab}{itab}} );}
+\DoxyCodeLine{00102     \textcolor{keywordflow}{return} \mbox{\hyperlink{structitab}{itab}}-\/>used;}
+\DoxyCodeLine{00103 \}}
 
 \end{DoxyCode}
 
@@ -102,13 +102,13 @@ reference to an itab structure.
 \end{DoxyReturn}
 Detailed description follows here. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00145                           \{}
-\DoxyCodeLine{00146     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab}{itab}} *r = talloc\_zero( NULL, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab}{itab}} );}
-\DoxyCodeLine{00147     r-\/>total = 10;}
-\DoxyCodeLine{00148     r-\/>used = 0;}
-\DoxyCodeLine{00149     r-\/>rows = talloc\_array( r, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}}, r-\/>total );}
-\DoxyCodeLine{00150     \textcolor{keywordflow}{return} r;}
-\DoxyCodeLine{00151 \}}
+\DoxyCodeLine{00120                           \{}
+\DoxyCodeLine{00121     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab}{itab}} *r = talloc\_zero( NULL, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab}{itab}} );}
+\DoxyCodeLine{00122     r-\/>total = 10;}
+\DoxyCodeLine{00123     r-\/>used = 0;}
+\DoxyCodeLine{00124     r-\/>rows = talloc\_array( r, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}}, r-\/>total );}
+\DoxyCodeLine{00125     \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{00126 \}}
 
 \end{DoxyCode}
 

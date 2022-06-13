@@ -113,6 +113,10 @@
     <filename>structmethodinfo.html</filename>
   </compound>
   <compound kind="struct">
+    <name>s_assignment</name>
+    <filename>structs__assignment.html</filename>
+  </compound>
+  <compound kind="struct">
     <name>s_block</name>
     <filename>structs__block.html</filename>
   </compound>
@@ -169,6 +173,10 @@
     <filename>structs__pattern.html</filename>
   </compound>
   <compound kind="struct">
+    <name>s_slot</name>
+    <filename>structs__slot.html</filename>
+  </compound>
+  <compound kind="struct">
     <name>s_statements</name>
     <filename>structs__statements.html</filename>
   </compound>
@@ -187,11 +195,6 @@
   <compound kind="struct">
     <name>yyStackEntry</name>
     <filename>structyyStackEntry.html</filename>
-  </compound>
-  <compound kind="group">
-    <name>name</name>
-    <title>list</title>
-    <filename>group__name.html</filename>
   </compound>
   <compound kind="group">
     <name>itab</name>
@@ -301,6 +304,32 @@
     <filename>group__messages.html</filename>
   </compound>
   <compound kind="group">
+    <name>namelist</name>
+    <title>Name List</title>
+    <filename>group__namelist.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>namelist_init</name>
+      <anchorfile>group__namelist.html</anchorfile>
+      <anchor>ga04a7aa8c09b9a6de2e379068ea8610da</anchor>
+      <arglist>(t_namelist *nl)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>namelist_add</name>
+      <anchorfile>group__namelist.html</anchorfile>
+      <anchor>ga329e5e8e74a3e0f0fcf8a85f57c08717</anchor>
+      <arglist>(t_namelist *nl, const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>namelist_copy</name>
+      <anchorfile>group__namelist.html</anchorfile>
+      <anchor>ga30ab06c5ec95ab65f95e396c3490b9b0</anchor>
+      <arglist>(t_namelist *to, t_namelist *from)</arglist>
+    </member>
+  </compound>
+  <compound kind="group">
     <name>internal_structures</name>
     <title>Internal_structures</title>
     <filename>group__internal__structures.html</filename>
@@ -312,11 +341,13 @@
     <class kind="struct">s_statements</class>
     <class kind="struct">s_methoddef</class>
     <class kind="struct">s_message_pattern</class>
+    <class kind="struct">s_assignment</class>
     <class kind="struct">s_block</class>
     <class kind="struct">s_expression</class>
     <class kind="struct">s_messages</class>
     <class kind="struct">s_message_cascade</class>
     <class kind="struct">s_object</class>
+    <class kind="struct">s_slot</class>
     <class kind="struct">s_env</class>
   </compound>
   <compound kind="page">

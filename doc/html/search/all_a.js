@@ -1,27 +1,7 @@
 var searchData=
 [
-  ['s_5fblock_27',['s_block',['../structs__block.html',1,'']]],
-  ['s_5fclassdef_28',['s_classdef',['../structs__classdef.html',1,'']]],
-  ['s_5fenv_29',['s_env',['../structs__env.html',1,'']]],
-  ['s_5fexpression_30',['s_expression',['../structs__expression.html',1,'']]],
-  ['s_5fexpression_5flist_31',['s_expression_list',['../structs__expression__list.html',1,'']]],
-  ['s_5fglobals_32',['s_globals',['../structs__globals.html',1,'']]],
-  ['s_5fmessage_5fcascade_33',['s_message_cascade',['../structs__message__cascade.html',1,'']]],
-  ['s_5fmessage_5fpattern_34',['s_message_pattern',['../structs__message__pattern.html',1,'']]],
-  ['s_5fmessages_35',['s_messages',['../structs__messages.html',1,'']]],
-  ['s_5fmethoddef_36',['s_methoddef',['../structs__methoddef.html',1,'']]],
-  ['s_5fnamelist_37',['s_namelist',['../structs__namelist.html',1,'']]],
-  ['s_5fnames_38',['s_names',['../structs__names.html',1,'']]],
-  ['s_5fobject_39',['s_object',['../structs__object.html',1,'']]],
-  ['s_5fpattern_40',['s_pattern',['../structs__pattern.html',1,'']]],
-  ['s_5fstatements_41',['s_statements',['../structs__statements.html',1,'']]],
-  ['sel_42',['sel',['../structast.html#ae399b59f6d2853f7fa4b2f437ff4b766',1,'ast']]],
-  ['src_5fadd_43',['src_add',['../group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23',1,'src_add(const char *line):&#160;lib.c'],['../group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23',1,'src_add(const char *line):&#160;lib.c'],['../group__tokenizer.html#gaaff46ce87fa716bfd3c55495d26cef23',1,'src_add(const char *line):&#160;lib.c']]],
-  ['src_5fclear_44',['src_clear',['../group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320',1,'src_clear(void):&#160;lib.c'],['../group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320',1,'src_clear():&#160;lib.c'],['../group__tokenizer.html#ga4bf03a3ab8e415fcfac82f43bc854320',1,'src_clear(void):&#160;lib.c']]],
-  ['src_5fdump_45',['src_dump',['../group__tokenizer.html#ga9f6e95f5f532bca8482e2bd5d309df94',1,'src_dump(void):&#160;lib.c'],['../group__tokenizer.html#ga9f6e95f5f532bca8482e2bd5d309df94',1,'src_dump():&#160;lib.c'],['../group__tokenizer.html#ga9f6e95f5f532bca8482e2bd5d309df94',1,'src_dump(void):&#160;lib.c']]],
-  ['src_5fread_46',['src_read',['../group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7',1,'src_read(const char *name):&#160;lib.c'],['../group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7',1,'src_read(const char *name):&#160;lib.c'],['../group__tokenizer.html#ga84a9f5c743eb6a718086ec1a385ed8f7',1,'src_read(const char *name):&#160;lib.c']]],
-  ['str_47',['str',['../structast.html#a860f9139dd74c340bc89910d1ce383cf',1,'ast']]],
-  ['stringinfo_48',['stringinfo',['../structstringinfo.html',1,'']]],
-  ['syntax_49',['Syntax',['../syntax.html',1,'tt_tech']]],
-  ['syntax_20messages_50',['Syntax Messages',['../group__messages.html',1,'']]]
+  ['tag_56',['tag',['../structast.html#a80c0bb9ad48afd7f459230031f0f1fae',1,'ast']]],
+  ['tokenizer_57',['Tokenizer',['../group__tokenizer.html',1,'']]],
+  ['tt_20language_58',['TT Language',['../index.html',1,'']]],
+  ['tt_20technical_20details_59',['TT Technical Details',['../tt_tech.html',1,'index']]]
 ];

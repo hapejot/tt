@@ -60,121 +60,147 @@
 \DoxyCodeLine{00061 }
 \DoxyCodeLine{00062 \textcolor{keyword}{typedef} \textcolor{keyword}{enum} e\_expression\_tag \{}
 \DoxyCodeLine{00063     tag\_string,}
-\DoxyCodeLine{00064     tag\_message,}
-\DoxyCodeLine{00065     tag\_number,}
-\DoxyCodeLine{00066     tag\_ident,}
-\DoxyCodeLine{00067     tag\_block,}
-\DoxyCodeLine{00068     tag\_array}
-\DoxyCodeLine{00069 \} t\_expression\_tag;}
-\DoxyCodeLine{00070 }
-\DoxyCodeLine{\Hypertarget{lib_8h_source_l00071}\mbox{\hyperlink{structs__block}{00071}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__block}{s\_block}} \{}
-\DoxyCodeLine{00072     \mbox{\hyperlink{structs__namelist}{t\_namelist}} params;}
-\DoxyCodeLine{00073     \mbox{\hyperlink{structs__namelist}{t\_namelist}} locals;}
-\DoxyCodeLine{00074     \mbox{\hyperlink{structs__statements}{t\_statements}} *statements;}
-\DoxyCodeLine{00075 \} \mbox{\hyperlink{structs__block}{t\_block}};}
-\DoxyCodeLine{00076 }
-\DoxyCodeLine{\Hypertarget{lib_8h_source_l00077}\mbox{\hyperlink{structs__expression}{00077}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__expression}{s\_expression}} \{}
-\DoxyCodeLine{00078     t\_expression\_tag tag;}
-\DoxyCodeLine{00079     \textcolor{keyword}{union }\{}
-\DoxyCodeLine{00080         \textcolor{keywordtype}{int} intvalue;}
-\DoxyCodeLine{00081         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *strvalue;}
-\DoxyCodeLine{00082         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *ident;}
-\DoxyCodeLine{00083         \mbox{\hyperlink{structs__expression__list}{t\_expression\_list}} exprs;}
-\DoxyCodeLine{00084         \textcolor{keyword}{struct }msg \{}
-\DoxyCodeLine{00085             \textcolor{keyword}{struct }\mbox{\hyperlink{structs__expression}{s\_expression}} *target;}
-\DoxyCodeLine{00086             \textcolor{keyword}{struct }\mbox{\hyperlink{structs__messages}{s\_messages}} *m;}
-\DoxyCodeLine{00087         \} msg;}
-\DoxyCodeLine{00088         \mbox{\hyperlink{structs__block}{t\_block}} block;}
-\DoxyCodeLine{00089     \} u;}
-\DoxyCodeLine{00090 \} \mbox{\hyperlink{structs__expression}{t\_expression}};}
-\DoxyCodeLine{00091 }
-\DoxyCodeLine{\Hypertarget{lib_8h_source_l00092}\mbox{\hyperlink{structs__messages}{00092}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__messages}{s\_messages}} \{}
-\DoxyCodeLine{00093     \textcolor{keywordtype}{char} *sel;}
-\DoxyCodeLine{00094     \textcolor{keywordtype}{int} argc;}
-\DoxyCodeLine{00095     \mbox{\hyperlink{structs__expression}{t\_expression}} **args;}
-\DoxyCodeLine{00096     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__messages}{s\_messages}} *next;}
-\DoxyCodeLine{00097 \} \mbox{\hyperlink{structs__messages}{t\_messages}};}
-\DoxyCodeLine{00098 }
-\DoxyCodeLine{\Hypertarget{lib_8h_source_l00099}\mbox{\hyperlink{structs__message__cascade}{00099}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__message__cascade}{s\_message\_cascade}} \{}
-\DoxyCodeLine{00100     \mbox{\hyperlink{structs__messages}{t\_messages}}  *msgs;}
-\DoxyCodeLine{00101     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__message__cascade}{s\_message\_cascade}} *next;}
-\DoxyCodeLine{00102 \} \mbox{\hyperlink{structs__message__cascade}{t\_message\_cascade}};}
-\DoxyCodeLine{00103 }
-\DoxyCodeLine{00104 }
-\DoxyCodeLine{00105 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} *( *t\_message\_handler ) ( \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} *,}
-\DoxyCodeLine{00106                                                   \textcolor{keyword}{const} \textcolor{keywordtype}{char} *sel,}
-\DoxyCodeLine{00107                                                   \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} ** args );}
-\DoxyCodeLine{\Hypertarget{lib_8h_source_l00108}\mbox{\hyperlink{structs__object}{00108}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} \{}
-\DoxyCodeLine{00109     t\_message\_handler handler;}
-\DoxyCodeLine{00110     \textcolor{keywordtype}{void} *data;}
-\DoxyCodeLine{00111     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__env}{s\_env}} *env;}
-\DoxyCodeLine{00112 \} \mbox{\hyperlink{structs__object}{t\_object}};}
-\DoxyCodeLine{00113 }
-\DoxyCodeLine{\Hypertarget{lib_8h_source_l00114}\mbox{\hyperlink{structs__env}{00114}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__env}{s\_env}} \{}
-\DoxyCodeLine{00115     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *name;}
-\DoxyCodeLine{00116     \mbox{\hyperlink{structs__object}{t\_object}} *val;}
-\DoxyCodeLine{00117     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__env}{s\_env}} *next;}
-\DoxyCodeLine{00118 \} \mbox{\hyperlink{structs__env}{t\_env}};}
-\DoxyCodeLine{00119 }
-\DoxyCodeLine{00131 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gac0bb8a0baa2e72a8039d67dce7e1f932}{is\_ident\_char}}( \textcolor{keywordtype}{int} c );}
-\DoxyCodeLine{00132 }
-\DoxyCodeLine{00139 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga4bf03a3ab8e415fcfac82f43bc854320}{src\_clear}}(  );}
-\DoxyCodeLine{00140 }
-\DoxyCodeLine{00144 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga9f6e95f5f532bca8482e2bd5d309df94}{src\_dump}}(  );}
+\DoxyCodeLine{00064     tag\_char,}
+\DoxyCodeLine{00065     tag\_message,}
+\DoxyCodeLine{00066     tag\_number,}
+\DoxyCodeLine{00067     tag\_ident,}
+\DoxyCodeLine{00068     tag\_block,}
+\DoxyCodeLine{00069     tag\_array,}
+\DoxyCodeLine{00070     tag\_assignment}
+\DoxyCodeLine{00071 \} t\_expression\_tag;}
+\DoxyCodeLine{00072 }
+\DoxyCodeLine{\Hypertarget{lib_8h_source_l00073}\mbox{\hyperlink{structs__assignment}{00073}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__assignment}{s\_assignment}} \{}
+\DoxyCodeLine{00074     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *target;}
+\DoxyCodeLine{00075     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__expression}{s\_expression}} *value;}
+\DoxyCodeLine{00076 \} \mbox{\hyperlink{structs__assignment}{t\_assignment}};}
+\DoxyCodeLine{00077 }
+\DoxyCodeLine{\Hypertarget{lib_8h_source_l00078}\mbox{\hyperlink{structs__block}{00078}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__block}{s\_block}} \{}
+\DoxyCodeLine{00079     \mbox{\hyperlink{structs__namelist}{t\_namelist}} params;}
+\DoxyCodeLine{00080     \mbox{\hyperlink{structs__namelist}{t\_namelist}} locals;}
+\DoxyCodeLine{00081     \mbox{\hyperlink{structs__statements}{t\_statements}} *statements;}
+\DoxyCodeLine{00082 \} \mbox{\hyperlink{structs__block}{t\_block}};}
+\DoxyCodeLine{00083 }
+\DoxyCodeLine{\Hypertarget{lib_8h_source_l00084}\mbox{\hyperlink{structs__expression}{00084}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__expression}{s\_expression}} \{}
+\DoxyCodeLine{00085     t\_expression\_tag tag;}
+\DoxyCodeLine{00086     \textcolor{keyword}{union }\{}
+\DoxyCodeLine{00087         \textcolor{keywordtype}{int} intvalue;}
+\DoxyCodeLine{00088         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *strvalue;}
+\DoxyCodeLine{00089         \textcolor{keyword}{const} \textcolor{keywordtype}{char} *ident;}
+\DoxyCodeLine{00090         \mbox{\hyperlink{structs__expression__list}{t\_expression\_list}} exprs;}
+\DoxyCodeLine{00091         \textcolor{keyword}{struct }msg \{}
+\DoxyCodeLine{00092             \textcolor{keyword}{struct }\mbox{\hyperlink{structs__expression}{s\_expression}} *target;}
+\DoxyCodeLine{00093             \textcolor{keyword}{struct }\mbox{\hyperlink{structs__messages}{s\_messages}} *m;}
+\DoxyCodeLine{00094         \} msg;}
+\DoxyCodeLine{00095         \mbox{\hyperlink{structs__assignment}{t\_assignment}} assignment;}
+\DoxyCodeLine{00096         \mbox{\hyperlink{structs__block}{t\_block}} block;}
+\DoxyCodeLine{00097     \} u;}
+\DoxyCodeLine{00098 \} \mbox{\hyperlink{structs__expression}{t\_expression}};}
+\DoxyCodeLine{00099 }
+\DoxyCodeLine{\Hypertarget{lib_8h_source_l00100}\mbox{\hyperlink{structs__messages}{00100}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__messages}{s\_messages}} \{}
+\DoxyCodeLine{00101     \textcolor{keywordtype}{bool} cascaded;              \textcolor{comment}{// either it's cascaded or nested }}
+\DoxyCodeLine{00102 \textcolor{comment}{// nested means the result of the previous method invokation is used as the target for the next invokation}}
+\DoxyCodeLine{00103 \textcolor{comment}{// cascaded means that all methods are invoked on the same first target.}}
+\DoxyCodeLine{00104     \textcolor{keywordtype}{char} *sel;}
+\DoxyCodeLine{00105     \textcolor{keywordtype}{int} argc;}
+\DoxyCodeLine{00106     \mbox{\hyperlink{structs__expression}{t\_expression}} **args;}
+\DoxyCodeLine{00107     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__messages}{s\_messages}} *next;}
+\DoxyCodeLine{00108 \} \mbox{\hyperlink{structs__messages}{t\_messages}};}
+\DoxyCodeLine{00109 }
+\DoxyCodeLine{\Hypertarget{lib_8h_source_l00110}\mbox{\hyperlink{structs__message__cascade}{00110}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__message__cascade}{s\_message\_cascade}} \{}
+\DoxyCodeLine{00111     \mbox{\hyperlink{structs__messages}{t\_messages}} *msgs;}
+\DoxyCodeLine{00112     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__message__cascade}{s\_message\_cascade}} *next;}
+\DoxyCodeLine{00113 \} \mbox{\hyperlink{structs__message__cascade}{t\_message\_cascade}};}
+\DoxyCodeLine{00114 }
+\DoxyCodeLine{00115 }
+\DoxyCodeLine{00116 \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} *( *t\_message\_handler ) ( \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} *,}
+\DoxyCodeLine{00117                                                   \textcolor{keyword}{const} \textcolor{keywordtype}{char} *sel,}
+\DoxyCodeLine{00118                                                   \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} ** args );}
+\DoxyCodeLine{\Hypertarget{lib_8h_source_l00119}\mbox{\hyperlink{structs__object}{00119}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} \{}
+\DoxyCodeLine{00120     t\_message\_handler handler;}
+\DoxyCodeLine{00121     \textcolor{keyword}{union }\{}
+\DoxyCodeLine{00122         \textcolor{keywordtype}{void} *data;}
+\DoxyCodeLine{00123         \textcolor{keywordtype}{int} intval;}
+\DoxyCodeLine{00124         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{00125             \textcolor{keywordtype}{int} i[10];}
+\DoxyCodeLine{00126             \textcolor{keywordtype}{void} *p[10];}
+\DoxyCodeLine{00127         \} vals;}
+\DoxyCodeLine{00128         \textcolor{keyword}{struct }\{}
+\DoxyCodeLine{00129         \textcolor{keyword}{struct }\mbox{\hyperlink{structs__object}{s\_object}} **vs;}
+\DoxyCodeLine{00130         \textcolor{keywordtype}{int} cnt;}
+\DoxyCodeLine{00131         \} vars;}
+\DoxyCodeLine{00132     \} u;}
+\DoxyCodeLine{00133     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__env}{s\_env}} *env;}
+\DoxyCodeLine{00134 \} \mbox{\hyperlink{structs__object}{t\_object}};}
+\DoxyCodeLine{00135 }
+\DoxyCodeLine{\Hypertarget{lib_8h_source_l00136}\mbox{\hyperlink{structs__slot}{00136}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__slot}{s\_slot}} \{}
+\DoxyCodeLine{00137     \textcolor{keyword}{const} \textcolor{keywordtype}{char} *name;}
+\DoxyCodeLine{00138     \mbox{\hyperlink{structs__object}{t\_object}} *val;}
+\DoxyCodeLine{00139     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__slot}{s\_slot}} *next;}
+\DoxyCodeLine{00140 \} \mbox{\hyperlink{structs__slot}{t\_slot}};}
+\DoxyCodeLine{\Hypertarget{lib_8h_source_l00141}\mbox{\hyperlink{structs__env}{00141}} \textcolor{keyword}{typedef} \textcolor{keyword}{struct }\mbox{\hyperlink{structs__env}{s\_env}} \{}
+\DoxyCodeLine{00142     \mbox{\hyperlink{structs__slot}{t\_slot}} * slots;}
+\DoxyCodeLine{00143     \textcolor{keyword}{struct }\mbox{\hyperlink{structs__env}{s\_env}} * next;}
+\DoxyCodeLine{00144 \} \mbox{\hyperlink{structs__env}{t\_env}};}
 \DoxyCodeLine{00145 }
-\DoxyCodeLine{00148 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gaaff46ce87fa716bfd3c55495d26cef23}{src\_add}}( \textcolor{keyword}{const} \textcolor{keywordtype}{char} * );}
-\DoxyCodeLine{00151 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga84a9f5c743eb6a718086ec1a385ed8f7}{src\_read}}( \textcolor{keyword}{const} \textcolor{keywordtype}{char} * );}
-\DoxyCodeLine{00152 }
-\DoxyCodeLine{00153 \textcolor{comment}{/* @brief read a line from input and store it somewhere.}}
-\DoxyCodeLine{00154 \textcolor{comment}{   @return true if successful}}
-\DoxyCodeLine{00155 \textcolor{comment}{ */}}
-\DoxyCodeLine{00156 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga986d1e4dee1be06e31a781ce4b847fe0}{readLine}}( \textcolor{keywordtype}{void} );}
-\DoxyCodeLine{00157 }
-\DoxyCodeLine{00163 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \textcolor{keywordtype}{char} *t );}
-\DoxyCodeLine{00164 }
-\DoxyCodeLine{00168 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gaca69499fef7287dfec40541fe204f94c}{readStringToken}}( \textcolor{keywordtype}{void} );}
-\DoxyCodeLine{00169 }
-\DoxyCodeLine{00173 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}{nextToken}}( \textcolor{keywordtype}{void} );}
-\DoxyCodeLine{00174 }
-\DoxyCodeLine{00178 \textcolor{keywordtype}{void} ast\_dump( \textcolor{keywordtype}{int} level, \textcolor{keyword}{struct} \mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast}{ast}} );}
-\DoxyCodeLine{00179 \textcolor{keywordtype}{void} ast\_fill\_classes( \textcolor{keyword}{struct} \mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast}{ast}} );}
-\DoxyCodeLine{00180 \textcolor{keywordtype}{void} ast\_fill\_methods(  );}
-\DoxyCodeLine{00181 \textcolor{keywordtype}{void} ast\_generate\_methods(  );}
-\DoxyCodeLine{00182 }
-\DoxyCodeLine{00183 \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *ast\_new( \textcolor{keywordtype}{int} \mbox{\hyperlink{structast_a80c0bb9ad48afd7f459230031f0f1fae}{tag}} );}
-\DoxyCodeLine{00184 }
-\DoxyCodeLine{00185 \textcolor{comment}{//void class\_add\_def(const char* name, const char* super, struct ast * vars, struct ast* methods);}}
-\DoxyCodeLine{00186 \textcolor{comment}{//void class\_add\_meta(const char* name, const char* super, struct ast * vars, struct ast* methods);}}
-\DoxyCodeLine{00187 \textcolor{keywordtype}{void} class\_enter( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_a71451c114bf2387e3a3fd53da26e8540}{name}} );}
-\DoxyCodeLine{00188 \textcolor{keywordtype}{void} class\_dump\_all(  );}
-\DoxyCodeLine{00189 }
-\DoxyCodeLine{00190 \mbox{\hyperlink{structs__methoddef}{t\_methoddef}} *method\_read( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keyword}{class}, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *selector );}
-\DoxyCodeLine{00191 \textcolor{keywordtype}{void} method\_enter( \mbox{\hyperlink{structs__message__pattern}{t\_message\_pattern}} * );}
-\DoxyCodeLine{00192 \textcolor{keywordtype}{void} method\_stmts( \mbox{\hyperlink{structs__statements}{t\_statements}} * );}
-\DoxyCodeLine{00193 }
-\DoxyCodeLine{00194 \textcolor{keywordtype}{void} string\_register( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_a860f9139dd74c340bc89910d1ce383cf}{str}} );}
+\DoxyCodeLine{00157 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gac0bb8a0baa2e72a8039d67dce7e1f932}{is\_ident\_char}}( \textcolor{keywordtype}{int} c );}
+\DoxyCodeLine{00158 }
+\DoxyCodeLine{00165 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga4bf03a3ab8e415fcfac82f43bc854320}{src\_clear}}(  );}
+\DoxyCodeLine{00166 }
+\DoxyCodeLine{00170 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga9f6e95f5f532bca8482e2bd5d309df94}{src\_dump}}(  );}
+\DoxyCodeLine{00171 }
+\DoxyCodeLine{00174 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gaaff46ce87fa716bfd3c55495d26cef23}{src\_add}}( \textcolor{keyword}{const} \textcolor{keywordtype}{char} * );}
+\DoxyCodeLine{00177 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga84a9f5c743eb6a718086ec1a385ed8f7}{src\_read}}( \textcolor{keyword}{const} \textcolor{keywordtype}{char} * );}
+\DoxyCodeLine{00178 }
+\DoxyCodeLine{00179 \textcolor{comment}{/* @brief read a line from input and store it somewhere.}}
+\DoxyCodeLine{00180 \textcolor{comment}{   @return true if successful}}
+\DoxyCodeLine{00181 \textcolor{comment}{ */}}
+\DoxyCodeLine{00182 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga986d1e4dee1be06e31a781ce4b847fe0}{readLine}}( \textcolor{keywordtype}{void} );}
+\DoxyCodeLine{00183 }
+\DoxyCodeLine{00189 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_ga4f2be419c946530de61fcc5bd922b961}{readChar}}( \textcolor{keywordtype}{char} *t );}
+\DoxyCodeLine{00190 }
+\DoxyCodeLine{00194 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gaca69499fef7287dfec40541fe204f94c}{readStringToken}}( \textcolor{keywordtype}{void} );}
 \DoxyCodeLine{00195 }
-\DoxyCodeLine{00196 \textcolor{keywordtype}{void} c\_generate( FILE * );}
-\DoxyCodeLine{00197 }
-\DoxyCodeLine{00198 \textcolor{keywordtype}{void} method\_def( \mbox{\hyperlink{structs__pattern}{t\_pattern}} pattern, \textcolor{keywordtype}{void} *locals, \textcolor{keywordtype}{void} *directive,}
-\DoxyCodeLine{00199                  \textcolor{keywordtype}{void} *statements );}
-\DoxyCodeLine{00200 \textcolor{keywordtype}{void} method\_def\_verb( \mbox{\hyperlink{structs__pattern}{t\_pattern}} pattern, \textcolor{keywordtype}{void} *coding );}
-\DoxyCodeLine{00201 }
-\DoxyCodeLine{00202 \textcolor{keywordtype}{int} parser\_main( \textcolor{keywordtype}{int}, \textcolor{keywordtype}{char} ** );}
-\DoxyCodeLine{00203 }
-\DoxyCodeLine{00204 \textcolor{keywordtype}{void} namelist\_init( \mbox{\hyperlink{structs__namelist}{t\_namelist}} * );}
-\DoxyCodeLine{00205 \textcolor{keywordtype}{void} namelist\_add( \mbox{\hyperlink{structs__namelist}{t\_namelist}} *, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * );}
-\DoxyCodeLine{00206 \textcolor{keywordtype}{void} namelist\_copy( \mbox{\hyperlink{structs__namelist}{t\_namelist}} * to, \mbox{\hyperlink{structs__namelist}{t\_namelist}} * from );}
-\DoxyCodeLine{00207 }
+\DoxyCodeLine{00199 \textcolor{keywordtype}{bool} \mbox{\hyperlink{group__tokenizer_gacb8666cde3ece1af4829c28d0f7c5022}{nextToken}}( \textcolor{keywordtype}{void} );}
+\DoxyCodeLine{00200 }
+\DoxyCodeLine{00204 \textcolor{keywordtype}{void} ast\_dump( \textcolor{keywordtype}{int} level, \textcolor{keyword}{struct} \mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast}{ast}} );}
+\DoxyCodeLine{00205 \textcolor{keywordtype}{void} ast\_fill\_classes( \textcolor{keyword}{struct} \mbox{\hyperlink{structast}{ast}} *\mbox{\hyperlink{structast}{ast}} );}
+\DoxyCodeLine{00206 \textcolor{keywordtype}{void} ast\_fill\_methods(  );}
+\DoxyCodeLine{00207 \textcolor{keywordtype}{void} ast\_generate\_methods(  );}
 \DoxyCodeLine{00208 }
-\DoxyCodeLine{00209 \textcolor{keywordtype}{void} *itab\_read( \textcolor{keyword}{struct} \mbox{\hyperlink{structitab}{itab}} *, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * );}
+\DoxyCodeLine{00209 \textcolor{keyword}{struct }\mbox{\hyperlink{structast}{ast}} *ast\_new( \textcolor{keywordtype}{int} \mbox{\hyperlink{structast_a80c0bb9ad48afd7f459230031f0f1fae}{tag}} );}
 \DoxyCodeLine{00210 }
-\DoxyCodeLine{00211 \textcolor{keywordtype}{void} msg\_add( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *msg, ... );}
-\DoxyCodeLine{00212 \textcolor{keywordtype}{void} msg\_print\_last(  );}
-\DoxyCodeLine{00213 }
-\DoxyCodeLine{00214 \textcolor{keywordtype}{void} message\_add\_msg(\mbox{\hyperlink{structs__messages}{t\_messages}} *ms, \mbox{\hyperlink{structs__messages}{t\_messages}} *m);}
-\DoxyCodeLine{00215 \textcolor{keywordtype}{void} message\_add\_arg(\mbox{\hyperlink{structs__messages}{t\_messages}} *m, \mbox{\hyperlink{structs__expression}{t\_expression}} *x);}
-\DoxyCodeLine{00216 }
-\DoxyCodeLine{00217 \textcolor{preprocessor}{\#endif}}
+\DoxyCodeLine{00211 \textcolor{comment}{//void class\_add\_def(const char* name, const char* super, struct ast * vars, struct ast* methods);}}
+\DoxyCodeLine{00212 \textcolor{comment}{//void class\_add\_meta(const char* name, const char* super, struct ast * vars, struct ast* methods);}}
+\DoxyCodeLine{00213 \textcolor{keywordtype}{void} class\_enter( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_a71451c114bf2387e3a3fd53da26e8540}{name}} );}
+\DoxyCodeLine{00214 \textcolor{keywordtype}{void} class\_dump\_all(  );}
+\DoxyCodeLine{00215 }
+\DoxyCodeLine{00216 \mbox{\hyperlink{structs__methoddef}{t\_methoddef}} *method\_read( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\textcolor{keyword}{class}, \textcolor{keyword}{const} \textcolor{keywordtype}{char} *selector );}
+\DoxyCodeLine{00217 \textcolor{keywordtype}{void} method\_enter( \mbox{\hyperlink{structs__message__pattern}{t\_message\_pattern}} * );}
+\DoxyCodeLine{00218 \textcolor{keywordtype}{void} method\_stmts( \mbox{\hyperlink{structs__statements}{t\_statements}} * );}
+\DoxyCodeLine{00219 }
+\DoxyCodeLine{00220 \textcolor{keywordtype}{void} string\_register( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *\mbox{\hyperlink{structast_a860f9139dd74c340bc89910d1ce383cf}{str}} );}
+\DoxyCodeLine{00221 }
+\DoxyCodeLine{00222 \textcolor{keywordtype}{void} c\_generate( FILE * );}
+\DoxyCodeLine{00223 }
+\DoxyCodeLine{00224 \textcolor{keywordtype}{void} method\_def( \mbox{\hyperlink{structs__pattern}{t\_pattern}} pattern, \textcolor{keywordtype}{void} *locals, \textcolor{keywordtype}{void} *directive,}
+\DoxyCodeLine{00225                  \textcolor{keywordtype}{void} *statements );}
+\DoxyCodeLine{00226 \textcolor{keywordtype}{void} method\_def\_verb( \mbox{\hyperlink{structs__pattern}{t\_pattern}} pattern, \textcolor{keywordtype}{void} *coding );}
+\DoxyCodeLine{00227 }
+\DoxyCodeLine{00228 \textcolor{keywordtype}{int} parser\_main( \textcolor{keywordtype}{int}, \textcolor{keywordtype}{char} ** );}
+\DoxyCodeLine{00229 }
+\DoxyCodeLine{00230 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__namelist_ga04a7aa8c09b9a6de2e379068ea8610da}{namelist\_init}}( \mbox{\hyperlink{structs__namelist}{t\_namelist}} * );}
+\DoxyCodeLine{00231 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__namelist_ga329e5e8e74a3e0f0fcf8a85f57c08717}{namelist\_add}}( \mbox{\hyperlink{structs__namelist}{t\_namelist}} *, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * );}
+\DoxyCodeLine{00232 \textcolor{keywordtype}{void} \mbox{\hyperlink{group__namelist_ga30ab06c5ec95ab65f95e396c3490b9b0}{namelist\_copy}}( \mbox{\hyperlink{structs__namelist}{t\_namelist}} * to, \mbox{\hyperlink{structs__namelist}{t\_namelist}} * from );}
+\DoxyCodeLine{00233 }
+\DoxyCodeLine{00234 }
+\DoxyCodeLine{00235 \textcolor{keywordtype}{void} *itab\_read( \textcolor{keyword}{struct} \mbox{\hyperlink{structitab}{itab}} *, \textcolor{keyword}{const} \textcolor{keywordtype}{char} * );}
+\DoxyCodeLine{00236 }
+\DoxyCodeLine{00237 \textcolor{keywordtype}{void} msg\_add( \textcolor{keyword}{const} \textcolor{keywordtype}{char} *msg, ... );}
+\DoxyCodeLine{00238 \textcolor{keywordtype}{void} msg\_print\_last(  );}
+\DoxyCodeLine{00239 }
+\DoxyCodeLine{00240 \textcolor{keywordtype}{void} message\_add\_msg( \mbox{\hyperlink{structs__messages}{t\_messages}} * ms, \mbox{\hyperlink{structs__messages}{t\_messages}} * m );}
+\DoxyCodeLine{00241 \textcolor{keywordtype}{void} message\_add\_arg( \mbox{\hyperlink{structs__messages}{t\_messages}} * m, \mbox{\hyperlink{structs__expression}{t\_expression}} * x );}
+\DoxyCodeLine{00242 }
+\DoxyCodeLine{00243 \textcolor{preprocessor}{\#endif}}
 
 \end{DoxyCode}

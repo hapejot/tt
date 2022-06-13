@@ -73,31 +73,6 @@ struct stringinfo {
 };
 
 
-/**
-* @defgroup name list
-* @{
-*/
-
-void namelist_init( t_namelist * nl ) {
-    nl->count = 0;
-    nl->names = NULL;
-}
-
-void namelist_add( t_namelist * nl, const char *name ) {
-    nl->count++;
-    nl->names = talloc_realloc( NULL, nl->names, char *, nl->count );
-    nl->names[nl->count - 1] = talloc_strdup( nl->names, name );
-}
-
-void namelist_copy( t_namelist * to, t_namelist * from ) {
-    to->count = from->count;
-    to->names = talloc_array( NULL, char *, to->count );
-    for( int i = 0; i < to->count; i++ ) {
-        to->names[i] = talloc_strdup( to->names, from->names[i] );
-    }
-}
-
-/** @} */
 
 /**
 * @defgroup itab ITab

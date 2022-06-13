@@ -102,9 +102,9 @@ token ::= ASSIGN.
 
 method_defs ::=.
 method_defs ::= method_defs msg_pattern LBRACK statements(S) RBRACK.
-    { method_stmts(S); }
+    {   method_stmts(S); }
 method_defs ::= method_defs msg_pattern LBRACK var_list(L) statements(S) RBRACK.
-    { (void)L;
+    {   (void)L;
         (void)S; }
 method_defs ::= method_defs msg_pattern var_list(L) LBRACK statements(S) RBRACK.
     {   (void)L;
@@ -139,6 +139,8 @@ binary_pattern(mp) ::= binop(message) IDENT(name).
         namelist_init(&mp->names);
         namelist_add(&mp->parts, message);
         namelist_add(&mp->names, name);
+        talloc_steal(mp, mp->names.names);
+        talloc_steal(mp, mp->parts.names);
     }
 keyword_pattern(mp) ::= KEYWORD(message) IDENT(name).
     {   mp = talloc_zero(NULL, t_message_pattern);
@@ -146,6 +148,8 @@ keyword_pattern(mp) ::= KEYWORD(message) IDENT(name).
         namelist_init(&mp->names);
         namelist_add(&mp->parts, message);
         namelist_add(&mp->names, name);
+        talloc_steal(mp, mp->names.names);
+        talloc_steal(mp, mp->parts.names);
     }
 keyword_pattern(mp) ::= keyword_pattern(mp) KEYWORD(message) IDENT(name).
     {   
@@ -158,13 +162,15 @@ statements(S) ::= statement(S).
 statements(S) ::= statement(S) DOT.
 statements(S) ::= statement(S0) DOT statements(STMS).
     {   S = S0;
-        S->next = STMS; }
+        S->next = STMS;
+        talloc_steal(S, STMS);  }
 
 statement(S) ::= expression(E).
     {   S = talloc_zero(NULL, t_statements);
         S->next = NULL;
         S->type = stmt_message;
         S->expr = E;
+        talloc_steal(S, E);
     }
 statement ::= directive.
 statement ::= directive expression.
@@ -174,6 +180,7 @@ return_statement(S) ::= UARROW expression(E).
         S->next = NULL;
         S->type = stmt_return;
         S->expr = E;
+        talloc_steal(S, E);
     }
 
 return_statement(R) ::= directive return_statement(RS).
@@ -185,6 +192,7 @@ assignment_expression(E) ::= IDENT(S) LARROW expression(E0).
         E->tag = tag_assignment;
         E->u.assignment.target = talloc_strdup(E, S);
         E->u.assignment.value = E0; }
+
 assignment_expression(E) ::= IDENT(S) ASSIGN expression(E0).
     {   E = talloc_zero(NULL, t_expression);
         E->tag = tag_assignment;
@@ -192,29 +200,31 @@ assignment_expression(E) ::= IDENT(S) ASSIGN expression(E0).
         E->u.assignment.value = E0; }
 
 expression(E) ::= basic_expression(E).
-    {   talloc_get_type(E, t_expression);  }
+    {   assert(talloc_get_type(E, t_expression));  }
+
 expression(E) ::= assignment_expression(E).
-    {   talloc_get_type(E, t_expression);  }
+    {   assert(talloc_get_type(E, t_expression));  }
 
 /* expression structure */
 basic_expression(E) ::= primary(E).
-    {   talloc_get_type(E, t_expression);  }
+    {   assert(talloc_get_type(E, t_expression));  }
+
 basic_expression(E) ::= primary(P) messages(MS) cascaded_messages(CMS).
     {   E = talloc_zero(NULL, t_expression);
         E->tag = tag_message;
+        assert(talloc_get_type(P, t_expression));
         E->u.msg.target = P;
         E->u.msg.m = MS;
         MS->next = CMS;
-        for(t_messages *m = MS; m ; m = m->next )
-            printf("*** MSG: %s\n", m->sel);
     }
 /* basic_expression ::= primary cascaded_messages. */
 
-basic_expression(e) ::= primary(p) messages(msgs).
-    {   e = talloc_zero(NULL, t_expression);
-        e->tag = tag_message;
-        e->u.msg.target = p;
-        e->u.msg.m = msgs;
+basic_expression(E) ::= primary(P) messages(msgs).
+    {   E = talloc_zero(NULL, t_expression);
+        E->tag = tag_message;
+        assert(talloc_get_type(P, t_expression));
+        E->u.msg.target = P;
+        E->u.msg.m = msgs;
     }
 /* expression structure */
 primary(E) ::= IDENT(S).
@@ -222,10 +232,10 @@ primary(E) ::= IDENT(S).
         E->tag = tag_ident;
         E->u.ident = talloc_strdup(E, S);
     }
-primary(e) ::= STRING(s).
-    {   e = talloc_zero(NULL, t_expression);
-        e->tag = tag_string;
-        e->u.strvalue = talloc_strdup(e, s);
+primary(E) ::= STRING(S).
+    {   E = talloc_zero(NULL, t_expression);
+        E->tag = tag_string;
+        E->u.strvalue = talloc_strdup(E, S);
     }
 primary(E) ::= CHAR(S).
     {   E = talloc_zero(NULL, t_expression);
@@ -346,10 +356,9 @@ binary_argument(E) ::= primary(E0) unary_messages(M0).
         E->tag = tag_message;
         E->u.msg.target = E0;
         E->u.msg.m = M0; 
-        printf("TALLOC NAME: %s\n", talloc_get_name(E)); 
     }
 binary_argument(E) ::= primary(E).
-    {   printf("TALLOC NAME: %s\n", talloc_get_name(E)); } 
+    {   assert(talloc_get_type(E, t_expression)); } 
 
 /* message expression */
 keyword_message(M) ::= KEYWORD(S) keyword_argument(E).
@@ -362,7 +371,6 @@ keyword_message(M) ::= KEYWORD(S) keyword_argument(E).
 
 keyword_message(M) ::= keyword_message(M) KEYWORD(S) keyword_argument(E).
     {   
-        printf("TALLOC NAME: %s\n", talloc_get_name(E));
         M->sel = talloc_strdup_append(M->sel, S);
         M->argc++;
         M->args = talloc_realloc(M, M->args, t_expression*, M->argc);
@@ -372,7 +380,7 @@ keyword_message(M) ::= keyword_message(M) KEYWORD(S) keyword_argument(E).
 //     {   printf("TALLOC NAME: %s\n", talloc_get_name(E)); }
 
 keyword_argument(E) ::= binary_argument(E).
-    {   printf("TALLOC NAME: %s\n", talloc_get_name(E)); }
+    {   assert(talloc_get_type(E, t_expression)); }
     
 keyword_argument ::= primary unary_messages binary_messages.
     {   assert(false); }
@@ -381,7 +389,7 @@ keyword_argument ::= primary binary_messages.
 
 /* cascaded message expression */
 cascaded_messages(CMS) ::= SEMICOLON messages(MS).
-    { CMS = MS;
+    {   CMS = MS;
         printf("cascade %d: %s\n",__LINE__, MS->sel);
     }
 cascaded_messages(CMS) ::= SEMICOLON messages(MS) cascaded_messages(MSX).

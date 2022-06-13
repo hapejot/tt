@@ -90,6 +90,8 @@ Data Structures</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__message__pattern.html">s_message_pattern</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__assignment.html">s_assignment</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__block.html">s_block</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__expression.html">s_expression</a></td></tr>
@@ -99,6 +101,8 @@ Data Structures</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__message__cascade.html">s_message_cascade</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__object.html">s_object</a></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__slot.html">s_slot</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">struct &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structs__env.html">s_env</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -135,6 +139,9 @@ typedef struct <a class="el" href="structs__message__pattern.html">s_message_pat
 <tr class="memitem:ga400bf64990418eed137d2b49026a13ac"><td class="memItemLeft" align="right" valign="top"><a id="ga400bf64990418eed137d2b49026a13ac"></a>
 typedef enum e_expression_tag&#160;</td><td class="memItemRight" valign="bottom"><b>t_expression_tag</b></td></tr>
 <tr class="separator:ga400bf64990418eed137d2b49026a13ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga2d4196fd52b9a4956984c42aed6d0712"><td class="memItemLeft" align="right" valign="top"><a id="ga2d4196fd52b9a4956984c42aed6d0712"></a>
+typedef struct <a class="el" href="structs__assignment.html">s_assignment</a>&#160;</td><td class="memItemRight" valign="bottom"><b>t_assignment</b></td></tr>
+<tr class="separator:ga2d4196fd52b9a4956984c42aed6d0712"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga70ed1bd7b71e35b2384f0d91ac9fc112"><td class="memItemLeft" align="right" valign="top"><a id="ga70ed1bd7b71e35b2384f0d91ac9fc112"></a>
 typedef struct <a class="el" href="structs__block.html">s_block</a>&#160;</td><td class="memItemRight" valign="bottom"><b>t_block</b></td></tr>
 <tr class="separator:ga70ed1bd7b71e35b2384f0d91ac9fc112"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -153,6 +160,9 @@ typedef struct <a class="el" href="structs__object.html">s_object</a> *(*&#160;<
 <tr class="memitem:gac4d798ef67eace7eaadcc87ce5c471b8"><td class="memItemLeft" align="right" valign="top"><a id="gac4d798ef67eace7eaadcc87ce5c471b8"></a>
 typedef struct <a class="el" href="structs__object.html">s_object</a>&#160;</td><td class="memItemRight" valign="bottom"><b>t_object</b></td></tr>
 <tr class="separator:gac4d798ef67eace7eaadcc87ce5c471b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gae8ddccf0077669747fcd0c7da32e7de1"><td class="memItemLeft" align="right" valign="top"><a id="gae8ddccf0077669747fcd0c7da32e7de1"></a>
+typedef struct <a class="el" href="structs__slot.html">s_slot</a>&#160;</td><td class="memItemRight" valign="bottom"><b>t_slot</b></td></tr>
+<tr class="separator:gae8ddccf0077669747fcd0c7da32e7de1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaa3d21e1567b21e23ec928b1eb405fe4b"><td class="memItemLeft" align="right" valign="top"><a id="gaa3d21e1567b21e23ec928b1eb405fe4b"></a>
 typedef struct <a class="el" href="structs__env.html">s_env</a>&#160;</td><td class="memItemRight" valign="bottom"><b>t_env</b></td></tr>
 <tr class="separator:gaa3d21e1567b21e23ec928b1eb405fe4b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -166,12 +176,14 @@ Enumerations</h2></td></tr>
 <tr class="separator:ga9714334d5314b92c57f22e5273b33520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga483470fc733e625f119227f948dad913"><td class="memItemLeft" align="right" valign="top"><a id="ga483470fc733e625f119227f948dad913"></a>enum &#160;</td><td class="memItemRight" valign="bottom"><b>e_expression_tag</b> { <br />
 &#160;&#160;<b>tag_string</b>
+, <b>tag_char</b>
 , <b>tag_message</b>
 , <b>tag_number</b>
-, <b>tag_ident</b>
 , <br />
-&#160;&#160;<b>tag_block</b>
+&#160;&#160;<b>tag_ident</b>
+, <b>tag_block</b>
 , <b>tag_array</b>
+, <b>tag_assignment</b>
 <br />
  }</td></tr>
 <tr class="separator:ga483470fc733e625f119227f948dad913"><td class="memSeparator" colspan="2">&#160;</td></tr>

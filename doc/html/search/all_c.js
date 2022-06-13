@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['unary_55',['unary',['../structast.html#aa84bb1bc9643258bf7d01e26762e5161',1,'ast']]]
+  ['v_61',['v',['../structast.html#aa91a4fd8269fd6c1a7d5deeb292a3677',1,'ast::v()'],['../structast.html#a2ae9ea6c4e18fdedbb969e2d69ec7015',1,'ast::v()']]],
+  ['varinfo_62',['varinfo',['../structvarinfo.html',1,'']]]
 ];
