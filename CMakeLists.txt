@@ -8,6 +8,14 @@ find_package(Doxygen
              REQUIRED dot
              # OPTIONAL_COMPONENTS mscgen dia
              )
+file(   COPY 
+            doc/footer.html 
+            doc/head.tex 
+            doc/foot.tex 
+            doc/style.tex 
+        DESTINATION 
+            ${CMAKE_CURRENT_BINARY_DIR}/doc
+)
 include_directories(${PROJECT_SOURCE_DIR}
                     ${PROJECT_SOURCE_DIR}/talloc
                     ${CMAKE_CURRENT_BINARY_DIR})
@@ -40,20 +48,32 @@ add_custom_command( OUTPUT tt.c
 add_executable(tt_test tt_test.c)
 target_link_libraries(tt_test ttl)
 
-file(COPY doc/footer.html DESTINATION ${CMAKE_CURRENT_BINARY_DIR}/doc)
+
 #file(COPY mk-refman DESTINATION ${CMAKE_CURRENT_BINARY_DIR})
 configure_file(${PROJECT_SOURCE_DIR}/doxy.in doxy.cfg )
-file(GENERATE OUTPUT mk-refman
-     CONTENT 
+file(   GENERATE 
+        OUTPUT 
+            mk-refman
+        CONTENT 
 "cd ${CMAKE_CURRENT_BINARY_DIR}/doc/latex
 
 echo \"===== \$PWD\"
 pdflatex refman
 pdflatex refman"
-FILE_PERMISSIONS OWNER_READ OWNER_WRITE OWNER_EXECUTE
-            )
+        FILE_PERMISSIONS 
+            OWNER_READ 
+            OWNER_WRITE 
+            OWNER_EXECUTE
+)
+
 add_custom_target( refman 
-    doxygen doxy.cfg 
+    ${CMAKE} -E copy 
+                doc/footer.html 
+                doc/head.tex 
+                doc/foot.tex 
+                doc/style.tex 
+                ${CMAKE_CURRENT_BINARY_DIR}/doc
+    COMMAND doxygen doxy.cfg 
     COMMAND ./mk-refman "${CMAKE_CURRENT_BINARY_DIR}"
     )
 #doxygen_add_docs(refman)

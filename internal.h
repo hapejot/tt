@@ -13,9 +13,6 @@
 /* class_enter.c */
 void class_enter(const char *name);
 /* lib.c */
-void namelist_init(t_namelist *nl);
-void namelist_add(t_namelist *nl, const char *name);
-void namelist_copy(t_namelist *to, t_namelist *from);
 int itab_lines(struct itab *itab);
 struct itab *itab_new(void);
 int itab_entry_cmp(const void *aptr, const void *bptr);

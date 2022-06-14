@@ -20,9 +20,9 @@ void namelist_init( t_namelist * nl ) {
 * will be copied. The paramter can safely being freed after this call.
 * @param nl the modified list
 * @param name the string to be added */
-void namelist_add( t_namelist * nl, const char *name ) {
+void namelist_add( t_namelist * nl, const t_name name ) {
     nl->count++;
-    nl->names = talloc_realloc( NULL, nl->names, char *, nl->count );
+    nl->names = talloc_realloc( NULL, nl->names, t_name, nl->count );
     nl->names[nl->count - 1] = talloc_strdup( nl->names, name );
 }
 
@@ -31,12 +31,12 @@ void namelist_add( t_namelist * nl, const char *name ) {
 * @param from the source to be copied. */
 void namelist_copy( t_namelist * to, t_namelist * from ) {
     to->count = from->count;
-    to->names = talloc_array( NULL, char *, to->count );
-    assert(talloc_get_type(from->names, char *));
+    to->names = talloc_array( NULL, t_name, to->count );
+    assert(talloc_get_type(from->names, t_name));
     for( int i = 0; i < to->count; i++ ) {
         to->names[i] = talloc_strdup( to->names, from->names[i] );
     }
-    assert(talloc_get_type(to->names, char *));
+    assert(talloc_get_type(to->names, t_name));
 }
 
 /** @} */

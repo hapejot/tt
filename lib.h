@@ -5,6 +5,7 @@
 @addtogroup internal_structures
 @{ */
 
+typedef char * t_name;
 typedef struct s_namelist {
     int count;
     char **names;
@@ -228,7 +229,7 @@ void method_def_verb( t_pattern pattern, void *coding );
 int parser_main( int, char ** );
 
 void namelist_init( t_namelist * );
-void namelist_add( t_namelist *, const char * );
+void namelist_add( t_namelist *, const t_name );
 void namelist_copy( t_namelist * to, t_namelist * from );
 
 

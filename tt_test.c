@@ -49,10 +49,22 @@ struct s_globals {
 t_object *object_new( t_message_handler hdl ) {
     t_object *result = talloc_zero( NULL, t_object );
     result->handler = hdl;
+    return result;
+}
+t_object *object_send( t_object * o, const char *sel, t_object ** args ) {
+    return o->handler( o, sel, args );
+}
+void object_send_void( t_object * o, const char *sel, t_object ** args ) {
+    t_object *x = object_send( o, sel, args );
+    if( x != o ) {
+// fprintf( stderr, "send void %s leaves these parents:\n", sel );
+// talloc_show_parents( x, stderr );
+    }
+    talloc_unlink( NULL, x );
 }
 
 char *string_chars( t_object * str ) {
-    str->handler( str, "dump", NULL );
+    object_send_void( str, "dump", NULL );
     tt_assert( str->handler == string_handler );
     return ( char * )str->u.data;
 }
@@ -67,7 +79,7 @@ t_object *integer_meta_handler( t_object * self, const char *sel,
     if( cstr_equals( "readFrom:ifFail:", sel ) ) {
         long num = strtol( string_chars( args[0] ), NULL, 10 );
         if( errno )
-            result = args[1]->handler( args[1], "value", NULL );
+            result = object_send( args[1], "value", NULL );
         else {
             result = object_new( int_handler );
             result->u.intval = num;
@@ -82,16 +94,16 @@ t_object *integer_meta_handler( t_object * self, const char *sel,
 t_object *true_handler( t_object * self, const char *sel, t_object ** args ) {
     t_object *result = self;
     if( 0 == strcmp( "ifTrue:", sel ) ) {
-        result = args[0]->handler( args[0], "value", NULL );
+        result = object_send( args[0], "value", NULL );
     }
     else if( cstr_equals( "ifFalse:", sel ) ) {
 // all set
     }
     else if( 0 == strcmp( "ifTrue:ifFalse:", sel ) ) {
-        result = args[0]->handler( args[0], "value", NULL );
+        result = object_send( args[0], "value", NULL );
     }
     else if( 0 == strcmp( "ifFalse:ifTrue:", sel ) ) {
-        result = args[1]->handler( args[1], "value", NULL );
+        result = object_send( args[1], "value", NULL );
     }
     else
         result = method_exec( self, "True", sel, args );
@@ -101,13 +113,13 @@ t_object *true_handler( t_object * self, const char *sel, t_object ** args ) {
 t_object *false_handler( t_object * self, const char *sel, t_object ** args ) {
     t_object *result = self;
     if( 0 == strcmp( "ifFalse:", sel ) ) {
-        result = args[0]->handler( args[0], "value", NULL );
+        result = object_send( args[0], "value", NULL );
     }
     else if( 0 == strcmp( "ifTrue:ifFalse:", sel ) ) {
-        result = args[1]->handler( args[1], "value", NULL );
+        result = object_send( args[1], "value", NULL );
     }
     else if( 0 == strcmp( "ifFalse:ifTrue:", sel ) ) {
-        result = args[0]->handler( args[0], "value", NULL );
+        result = object_send( args[0], "value", NULL );
     }
     else
         result = method_exec( self, "False", sel, args );
@@ -210,9 +222,7 @@ t_object *int_handler( t_object * self, const char *sel, t_object ** args ) {
             t_object *par[1];
             par[0] = object_new( int_handler );
             par[0]->u.intval = i;
-
-            args[1]->handler( args[1], "value:", par );
-            talloc_free( par[0] );
+            object_send_void( args[1], "value:", par );
         }
     }
     else if( 0 == strcmp( sel, MSG_DUMP ) ) {
@@ -238,13 +248,12 @@ t_object *string_meta_handler( t_object * self, const char *sel,
         par[0]->u.vals.i[0] = 0;
         par[0]->u.vals.i[1] = size;
         par[0]->u.vals.p[0] = talloc_array( par[0], char, size + 1 );
-
-        args[1]->handler( args[1], "value:", par );
+        t_object *o = object_send( args[1], "value:", par );
+        object_send_void( o, "dump", NULL );
         msg_add( "move stream data to string data now." );
-        talloc_free( par[0] );
+// talloc_unlink(NULL, par[0] );
         result = object_new( string_handler );
         result->u.data = talloc_strdup( result, "<string from stream>" );
-
     }
     else
         result = method_exec( self, "StringMeta", sel, args );
@@ -290,8 +299,8 @@ t_object *string_handler( t_object * self, const char *sel, t_object ** args ) {
         for( int i = 0; i < n; i++ ) {
             t_object *r = object_new( char_handler );
             r->u.intval = self_data[i];
-            args[0]->handler( args[0], "value:", &r );
-            talloc_free( r );
+            object_send_void( args[0], "value:", &r );
+// talloc_unlink( r );
         }
     }
     else if( 0 == strcmp( sel, "readStream" ) ) {
@@ -328,7 +337,6 @@ t_env *env_add( t_env * env, const char *name, t_object * val ) {
     env->slots = n;
 
     talloc_reference( env, val );
-
     return env;
 }
 
@@ -349,13 +357,13 @@ t_object *block_handler( t_object * self, const char *sel, t_object ** args ) {
             tt_assert( env != NULL );
             env = env_add( env, b->params.names[i], args[i] );
         }
-        args[0]->handler( args[0], MSG_DUMP, NULL );
+        object_send_void( args[0], MSG_DUMP, NULL );
         result = simulate( env, b->statements );
     }
     else if( 0 == strcmp( "whileFalse:", sel ) ) {
         for( ;; ) {
             t_object *r = simulate( env, b->statements );
-            r->handler( r, "ifFalse:", args );
+            object_send_void( r, "ifFalse:", args );
             if( r->handler == true_handler )
                 break;
         }
@@ -380,7 +388,6 @@ t_object *eval_messages( t_env * env, t_expression * expr ) {
     for( t_messages * m = expr->u.msg.m; m != NULL; m = m->next ) {
         msg_add( "%d ... %p %s %s", n++, target, m->sel,
                  m->cascaded ? "cascaded" : "nested" );
-// target->handler(target, MSG_DUMP, NULL);
         if( m->argc ) {
             t_object **args = talloc_zero_array( NULL, t_object *,
                                                  m->argc );
@@ -388,15 +395,13 @@ t_object *eval_messages( t_env * env, t_expression * expr ) {
             for( int i = 0; i < m->argc; i++ ) {
                 args[i] = eval( env, m->args[i] );
                 assert( args[i] );
-// talloc_steal( args, args[i] );
                 msg_add( "..... arg %d evaluated.", i + 1 );
-// args[i]->handler( args[i], MSG_DUMP, NULL );
             }
-            result = target->handler( target, m->sel, args );
+            result = object_send( target, m->sel, args );
             talloc_free( args );
         }
         else
-            result = target->handler( target, m->sel, NULL );
+            result = object_send( target, m->sel, NULL );
         if( !m->cascaded )
             target = result;
     }
@@ -503,8 +508,6 @@ t_object *simulate( t_env * env, t_statements * stmts ) {
         switch ( stmts->type ) {
             case stmt_message:
                 msg_add( "message stmt" );
-                if( result )
-                    talloc_free( result );
                 result = eval( env, stmts->expr );
                 break;
             case stmt_return:
@@ -602,7 +605,7 @@ void test1(  ) {
     t_methoddef *m = method_read( "OrderedCollection", "main:" );
     assert( m );
     assert( m->args.count == 1 );
-    assert( talloc_get_type( m->args.names, char * ) );
+    assert( talloc_get_type( m->args.names, t_name ) );
     assert( 0 == strcmp( m->args.names[0], "args" ) );
     assert( m->statements != NULL );
     simulate( e, m->statements );
@@ -610,7 +613,7 @@ void test1(  ) {
     talloc_free( e );
     talloc_free( classes );
 
-    talloc_report_depth_file( methods, 0, 99, stderr );
+// talloc_report_depth_file( methods, 0, 99, stderr );
 
     talloc_free( methods );
     talloc_free( method_names );
@@ -619,7 +622,15 @@ void test1(  ) {
     src_clear(  );
 }
 
+void tt_abort( const char *reason ) {
+    fprintf( stderr, "talloc abort: %s\n", reason );
+    // exit( -1 );
+    abort();
+}
+
 int main( int argc, char **argv ) {
+    talloc_set_abort_fn( tt_abort );
+    talloc_set_log_stderr();
     talloc_enable_leak_report(  );
     test1(  );
     return 0;

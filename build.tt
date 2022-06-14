@@ -1,0 +1,4 @@
+all := Directory new.
+bin := all subDirectory: 'bin'.
+
+bin add: (Executable named: 'tt_test' from: { 'tt_test.c' }).

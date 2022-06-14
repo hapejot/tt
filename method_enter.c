@@ -2,6 +2,7 @@
 extern struct itab *methods;
 extern t_classdef *current_class;
 extern t_methoddef *current_method;
+
 void method_enter( t_message_pattern * mp ) {
     require_current_class(  );
     char *sel = talloc_strdup( NULL, mp->parts.names[0] );
@@ -17,10 +18,11 @@ void method_enter( t_message_pattern * mp ) {
         odef->sel = talloc_strdup( odef, sel );
         namelist_copy( &odef->args, &mp->names );
         talloc_steal( odef, odef->args.names );
-        assert( talloc_get_type( odef->args.names, char * ) );
+        assert( talloc_get_type( odef->args.names, t_name ) );
         itab_append( methods, nm, odef );
     }
     current_method = odef;
+    talloc_steal(odef, mp);
     talloc_free( nm );
     talloc_free( sel );
 }
