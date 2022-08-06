@@ -11,6 +11,8 @@ void class_enter( const char *name ) {
         odef = (t_classdef *)_talloc_zero(classes, sizeof(t_classdef), "t_classdef");
         odef->id = gd.classnum++;
         odef->name = talloc_strdup( odef, name );
+        odef->env = env_new(gd.env);
+        env_add(odef->env, "CLASSVAR");
         itab_append( classes, name, odef );
     }
     current_class = odef;

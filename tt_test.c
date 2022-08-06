@@ -1,12 +1,4 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
-#include <assert.h>
-#include <errno.h>
-#include "talloc.h"
-
-#include "global.h"
-#include "lib.h"
+#include "internal.h"
 
 extern struct itab *methods;
 extern struct itab *strings;
@@ -14,36 +6,9 @@ extern struct itab *variables;
 extern struct itab *method_names;
 extern struct itab *classes;
 
-#define MSG_DUMP "dump"
-
-#define tt_assert(x)                                                 \
-    if (!(x))                                                        \
-    {                                                                \
-        printf("assert failed: %s %s %d\n", #x, __FILE__, __LINE__); \
-        msg_print_last();                                            \
-        exit(-1);                                                    \
-    }
 
 extern struct gd gd;
-///////////////   Prototypes   //////////////
-extern char *method_name( const char *, const char * );
-
-t_object *simulate( t_env * env, t_statements * stmts );
-t_object *eval( t_env * env, t_expression * expr );
-t_env *env_add( t_env * env, const char *name, t_object * val );
-t_env *env_new( t_env * parent );
-t_object *string_handler( t_object * self, const char *sel,
-                          t_object ** args );
-t_object *int_handler( t_object * self, const char *sel, t_object ** args );
-t_object *method_exec( t_object * self, const char *clsname, const char *sel,
-                       t_object ** args );
-/////////////////////////////////////////////
-struct s_globals {
-    t_object *String;
-    t_object *Integer;
-    t_object *True;
-    t_object *False;
-} global;
+struct s_globals  global;
 
 
 t_object *object_new( t_message_handler hdl ) {
@@ -71,23 +36,6 @@ char *string_chars( t_object * str ) {
 
 bool cstr_equals( const char *a, const char *b ) {
     return ( 0 == strcmp( a, b ) );
-}
-
-t_object *integer_meta_handler( t_object * self, const char *sel,
-                                t_object ** args ) {
-    t_object *result = self;
-    if( cstr_equals( "readFrom:ifFail:", sel ) ) {
-        long num = strtol( string_chars( args[0] ), NULL, 10 );
-        if( errno )
-            result = object_send( args[1], "value", NULL );
-        else {
-            result = object_new( int_handler );
-            result->u.intval = num;
-        }
-    }
-    else
-        result = method_exec( self, "IntegerMeta", sel, args );
-    return result;
 }
 
 
@@ -180,7 +128,20 @@ t_object *stream_handler( t_object * self, const char *sel, t_object ** args ) {
     }
     else if( cstr_equals( "nextPut:", sel ) ) {
         tt_assert( args[0]->handler == char_handler );
-        fprintf( stderr, "<%c>\n", args[0]->u.intval );
+        int idx = self->u.vals.i[0];
+        int max = self->u.vals.i[1];
+        char *chars = ( char * )self->u.vals.p[0];
+        char c = args[0]->u.intval;
+        tt_assert(chars);
+        if( max <= idx ) {
+            max *= 2;
+            chars = talloc_realloc( self, chars, char, max + 1 );
+            tt_assert(chars);
+            self->u.vals.i[1] = max;
+            self->u.vals.p[0] = chars;
+        }
+        chars[idx] = args[0]->u.intval;
+        self->u.vals.i[0] = idx + 1;
     }
     else if( cstr_equals( "dump", sel ) ) {
         msg_add( "Stream len:%d pos:%d", self->u.vals.i[1],
@@ -204,148 +165,41 @@ t_object *array_handler( t_object * self, const char *sel, t_object ** args ) {
     return result;
 }
 
-t_object *transcript_handler( t_object * self, const char *sel,
-                              t_object ** args ) {
-    t_object *result = method_exec( self, "Array", sel, args );
-    return result;
-}
-t_object *int_handler( t_object * self, const char *sel, t_object ** args ) {
-    t_object *result = self;
-    assert( sel );
-    msg_add( "int handler: (%d) %s", self->u.intval, sel );
-    if( 0 == strcmp( sel, "to:do:" ) ) {
-        assert( args[0]->handler == int_handler );
-        int start = self->u.intval;
-        int finish = args[0]->u.intval;
-
-        for( int i = start; i <= finish; i++ ) {
-            t_object *par[1];
-            par[0] = object_new( int_handler );
-            par[0]->u.intval = i;
-            object_send_void( args[1], "value:", par );
-        }
-    }
-    else if( 0 == strcmp( sel, MSG_DUMP ) ) {
-        msg_add( "int: %d", self->u.intval );
-    }
-    else if( cstr_equals( "asString", sel ) ) {
-        result = object_new( string_handler );
-        result->u.data = talloc_asprintf( result, "%d", self->u.intval );
-    }
-    else
-        result = method_exec( self, "Integer", sel, args );
-    return result;
-}
-
-t_object *string_meta_handler( t_object * self, const char *sel,
-                               t_object ** args ) {
-    t_object *result = self;
-    if( 0 == strcmp( "new:streamContents:", sel ) ) {
-        int size = args[0]->u.intval;
-        msg_add( "new string with size: %d", size );
-        t_object *par[1];
-        par[0] = object_new( stream_handler );
-        par[0]->u.vals.i[0] = 0;
-        par[0]->u.vals.i[1] = size;
-        par[0]->u.vals.p[0] = talloc_array( par[0], char, size + 1 );
-        t_object *o = object_send( args[1], "value:", par );
-        object_send_void( o, "dump", NULL );
-        msg_add( "move stream data to string data now." );
-// talloc_unlink(NULL, par[0] );
-        result = object_new( string_handler );
-        result->u.data = talloc_strdup( result, "<string from stream>" );
-    }
-    else
-        result = method_exec( self, "StringMeta", sel, args );
-
-    return result;
-}
 
 t_object *method_exec( t_object * self, const char *clsname, const char *sel,
                        t_object ** args ) {
     t_object *result = self;
     t_methoddef *m = method_read( clsname, sel );
     if( m ) {
-        t_env *env = env_new( self->env );
+        t_env *env = m->env;
         tt_assert( env );
-        env_add( env, "self", self );
-        msg_add( "selector %s is defined on %s", sel, clsname );
+        msg_add( "selector %s is defined on %s (env:%p, self:%p, handler:%p)",
+                 sel, clsname, env, self, self->handler );
         for( int i = 0; i < m->args.count; i++ ) {
-            env_add( env, m->args.names[i], args[i] );
+            env_set_local( env, m->args.names[i], args[i] );
         }
+        env_set_local( env, "self", self );
+        // env_dump( env, "after self" );
         result = simulate( env, m->statements );
         msg_add( "done simulation of method %s", sel );
-        talloc_free( env );
     }
     else {
         msg_add( "%s %s not found.", clsname, sel );
-        msg_print_last(  );
-        exit( -1 );
+        // msg_print_last(  );
+        abort(  );
     }
     return result;
-}
-
-t_object *string_handler( t_object * self, const char *sel, t_object ** args ) {
-    t_object *result = self;
-    const char *self_data = ( const char * )self->u.data;
-    if( 0 == strcmp( sel, MSG_DUMP ) ) {
-        msg_add( "str: '%s'", self_data );
-    }
-    else if( cstr_equals( "asString", sel ) ) {
-// all set...
-    }
-    else if( cstr_equals( "do:", sel ) ) {
-        int n = strlen( self_data );
-        for( int i = 0; i < n; i++ ) {
-            t_object *r = object_new( char_handler );
-            r->u.intval = self_data[i];
-            object_send_void( args[0], "value:", &r );
-// talloc_unlink( r );
-        }
-    }
-    else if( 0 == strcmp( sel, "readStream" ) ) {
-        t_object *result = object_new( stream_handler );
-        result->u.vals.i[0] = 0;
-        result->u.vals.i[1] = strlen( self->u.data );
-        result->u.vals.p[0] = self->u.data;
-        return result;
-    }
-    else if( 0 == strcmp( sel, "species" ) ) {
-        return global.String;
-    }
-    else if( 0 == strcmp( sel, "size" ) ) {
-        result = object_new( int_handler );
-        result->u.intval = strlen( self->u.data );
-    }
-    else {
-        result = method_exec( self, "String", sel, args );
-    }
-    return result;
-}
-
-t_env *env_new( t_env * parent ) {
-    t_env *env = talloc_zero( parent, t_env );
-    env->next = parent;
-    return env;
-}
-t_env *env_add( t_env * env, const char *name, t_object * val ) {
-    tt_assert( env != NULL );
-    t_slot *n = talloc_zero( env, t_slot );
-    n->next = env->slots;
-    n->name = name;
-    n->val = val;
-    env->slots = n;
-
-    talloc_reference( env, val );
-    return env;
 }
 
 t_object *block_handler( t_object * self, const char *sel, t_object ** args ) {
     t_object *result = self;
     t_block *b = self->u.data;
-    t_env *env = env_new( self->env );
+    t_env *env = b->env;
     msg_add( "block handler" );
-    if( 0 == strcmp( "value", sel ) ) {
+    if( cstr_equals( "dump", sel ) ) {
+        msg_add( "dumping block.." );
+    }
+    else if( 0 == strcmp( "value", sel ) ) {
 
         result = simulate( env, b->statements );
     }
@@ -355,7 +209,7 @@ t_object *block_handler( t_object * self, const char *sel, t_object ** args ) {
         assert( args[0]->handler );
         for( int i = 0; i < b->params.count; i++ ) {
             tt_assert( env != NULL );
-            env = env_add( env, b->params.names[i], args[i] );
+            env_set_local( env, b->params.names[i], args[i] );
         }
         object_send_void( args[0], MSG_DUMP, NULL );
         result = simulate( env, b->statements );
@@ -370,14 +224,14 @@ t_object *block_handler( t_object * self, const char *sel, t_object ** args ) {
     }
     else
         result = method_exec( self, "Block", sel, args );
-    talloc_free( env );
     return result;
 }
 
 t_object *eval_messages( t_env * env, t_expression * expr ) {
     t_object *result = NULL;
-    msg_add( "eval message" );
+    msg_add( "eval message env:%p", env );
 // t <- eval target
+    // env_dump( env, "DEBUG" );
     t_object *target = result = eval( env, expr->u.msg.target );
 
     tt_assert( target );
@@ -416,7 +270,6 @@ t_object *eval( t_env * env, t_expression * expr ) {
             msg_add( "eval str %s", expr->u.strvalue );
             result = object_new( string_handler );
             result->u.data = talloc_strdup( result, expr->u.strvalue );
-            result->env = env;
             break;
 
         case tag_number:
@@ -438,34 +291,35 @@ t_object *eval( t_env * env, t_expression * expr ) {
         case tag_block:
             msg_add( "eval block" );
             result = object_new( block_handler );
+            expr->u.block.env = env_new( env );
             result->u.data = &expr->u.block;
-            result->env = env;
+            for( int i = 0; i < expr->u.block.params.count; i++ ) {
+                env_add( expr->u.block.env, expr->u.block.params.names[i] );
+            }
+            for( int i = 0; i < expr->u.block.locals.count; i++ ) {
+                env_add( expr->u.block.env, expr->u.block.locals.names[i] );
+            }
             break;
 
         case tag_ident:
-            msg_add( "eval ident %s", expr->u.ident );
             result = NULL;
-            while( !result ) {
-                for( t_slot * s = env->slots; s; s = s->next ) {
-                    if( 0 == strcmp( expr->u.ident, s->name ) ) {
-                        result = s->val;
-                        break;
-                    }
-                }
-                if( !result && env->next )
-                    env = env->next;
-            }
-            if( !result ) {
-                msg_add( "ident %s undefined", expr->u.ident );
+            t_slot *slot = env_get_all( env, expr->u.ident, NULL );
+            result = slot->val;
+            if( result )
+                msg_add( "eval ident %s -> %p(%p)", expr->u.ident, result,
+                         result->handler );
+            else {
+                // env_dump( env, "IDENT no RESULT" );
+                tt_assert( result );
             }
             break;
 
         case tag_assignment:
             msg_add( "eval assignment" );
             result = eval( env, expr->u.assignment.value );
-            msg_add( "assign result to %s", expr->u.assignment.target );
+            msg_add( "assign result[%p] to %s", result, expr->u.assignment.target );
             tt_assert( env );
-            env = env_add( env, expr->u.assignment.target, result );
+            env_set( env, ( t_name ) expr->u.assignment.target, result );
             break;
 
         case tag_array:
@@ -483,26 +337,18 @@ t_object *eval( t_env * env, t_expression * expr ) {
 
         default:
             msg_add( "error: unknown eval tag: %d", expr->tag );
-            msg_print_last(  );
-            exit( -1 );
+            // msg_print_last(  );
+            abort(  );
             break;
     }
     return result;
 }
+
 t_object *simulate( t_env * env, t_statements * stmts ) {
     t_object *result = NULL;
     assert( stmts );
 
     msg_add( "simulate" );
-    t_env *tenv = env;
-    int depth = 0;
-    while( tenv ) {
-        for( t_slot * s = tenv->slots; s; s = s->next ) {
-            msg_add( "..%d.. %s", depth, s->name );
-        }
-        tenv = tenv->next;
-        depth++;
-    }
 
     while( stmts ) {
         switch ( stmts->type ) {
@@ -514,14 +360,14 @@ t_object *simulate( t_env * env, t_statements * stmts ) {
                 msg_add( "return stmt" );
                 result = eval( env, stmts->expr );
                 msg_add( "returning value and leaving method...\n" );
-                msg_print_last(  );
+                //msg_print_last(  );
                 stmts = NULL;
                 break;
 
             default:
                 msg_add( "error: unkonwn stmt type: %d\n", stmts->type );
-                msg_print_last(  );
-                exit( -1 );
+                // msg_print_last(  );
+                abort(  );
                 break;
         }
         if( stmts )
@@ -534,6 +380,9 @@ t_object *simulate( t_env * env, t_statements * stmts ) {
 t_methoddef *method_read( const char *class, const char *selector ) {
     char *nm = method_name( class, selector );
     t_methoddef *result = itab_read( methods, nm );
+    if( result == NULL )
+        msg_add( "method %s not found in class %s", selector, class );
+    tt_assert( result );
     talloc_free( nm );
     return result;
 }
@@ -541,25 +390,25 @@ t_methoddef *method_read( const char *class, const char *selector ) {
 void test1(  ) {
     src_clear(  );
     src_add( "OrderedCollection class [" );
-    src_add( "    main: args [ '{1}/{2}' format: {10. 'Peter ist doof!'} ]" );
-    src_add( "    main2: args [ " );
+    src_add( "    main0: args [ Transcript show: ('- {1} -- {2} -' format: {10. 'Peter ist doof!'} ) ]" );
+    src_add( "    main: args [ " );
     src_add( "        1 to: 9 do: [ :i | " );
     src_add( "            1 to: i do: [ :j | " );
     src_add( "                Transcript " );
     src_add( "                    show: ('{1} * {2} = {3}' format: {j. i. j * i}); " );
     src_add( "                    show: ' ' " );
     src_add( "            ]. " );
-    src_add( "            Transcript show: ' '; cr. " );
+    src_add( "            Transcript show: '-'; cr. " );
     src_add( "        ]" );
     src_add( "    ]" );
     src_add( "]" );
     src_add( "String [" );
     src_add( "format: collection [" );
-    src_add( "	\"Format the receiver by interpolating elements from collection, as in the following examples:\" " );
-    src_add( "	\"('Five is {1}.' format: { 1 + 4}) >>> 'Five is 5.'\"" );
-    src_add( "	\"('Five is {five}.' format: (Dictionary with: #five -> 5)) >>>  'Five is 5.'\"" );
-    src_add( "	\"('In {1} you can escape \\{ by prefixing it with \\\\' format: {'strings'}) >>> 'In strings you can escape { by prefixing it with \\' \"" );
-    src_add( "	\"('In \\{1\\} you can escape \\{ by prefixing it with \\\\' format: {'strings'}) >>> 'In {1} you can escape { by prefixing it with \\' \"" );
+    src_add( "	\"Format the receiver by interpolating elements from collection, as in the following examples: " );
+    src_add( "	('Five is {1}.' format: { 1 + 4}) >>> 'Five is 5.'" );
+    src_add( "	('Five is {five}.' format: (Dictionary with: #five -> 5)) >>>  'Five is 5.'" );
+    src_add( "	('In {1} you can escape \\{ by prefixing it with \\\\' format: {'strings'}) >>> 'In strings you can escape { by prefixing it with \\'" );
+    src_add( "	('In \\{1\\} you can escape \\{ by prefixing it with \\\\' format: {'strings'}) >>> 'In {1} you can escape { by prefixing it with \\' \"" );
     src_add( "" );
     src_add( "	^ self species" );
     src_add( "		new: self size" );
@@ -586,21 +435,33 @@ void test1(  ) {
     src_add( "      newWithSize: n []" );
     src_add( "]" );
     src_dump(  );
+
+    t_env *e = env_new( NULL );
+    gd.env = e;
+
     parse(  );
     fflush( stdout );
 
 
-    t_env *e = env_new( NULL );
-    env_add( e, "Transcript", object_new( transcript_handler ) );
+
+    env_add( e, "Transcript" );
+    env_set_local( e, "Transcript", object_new( transcript_handler ) );
 
     global.String = object_new( string_meta_handler );
     global.True = object_new( true_handler );
     global.False = object_new( false_handler );
     global.Integer = object_new( integer_meta_handler );
-    env_add( e, "String", global.String );
-    env_add( e, "True", global.True );
-    env_add( e, "False", global.False );
-    env_add( e, "Integer", global.Integer );
+
+    env_add( e, "String" );
+    env_add( e, "True" );
+    env_add( e, "False" );
+    env_add( e, "Integer" );
+
+    env_set_local( e, "String", global.String );
+    env_set_local( e, "True", global.True );
+    env_set_local( e, "False", global.False );
+    env_set_local( e, "Integer", global.Integer );
+
 
     t_methoddef *m = method_read( "OrderedCollection", "main:" );
     assert( m );
@@ -609,7 +470,7 @@ void test1(  ) {
     assert( 0 == strcmp( m->args.names[0], "args" ) );
     assert( m->statements != NULL );
     simulate( e, m->statements );
-    msg_print_last(  );
+    // msg_print_last(  );
     talloc_free( e );
     talloc_free( classes );
 
@@ -624,14 +485,15 @@ void test1(  ) {
 
 void tt_abort( const char *reason ) {
     fprintf( stderr, "talloc abort: %s\n", reason );
-    // exit( -1 );
-    abort();
+// exit( -1 );
+    msg_print_last(  );
+    abort(  );
 }
 
 int main( int argc, char **argv ) {
     talloc_set_abort_fn( tt_abort );
-    talloc_set_log_stderr();
-    talloc_enable_leak_report(  );
+    talloc_set_log_stderr(  );
+    // talloc_enable_leak_report(  );
     test1(  );
     return 0;
 }

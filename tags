@@ -87,114 +87,1048 @@
       <anchor>a71451c114bf2387e3a3fd53da26e8540</anchor>
       <arglist></arglist>
     </member>
+    <member kind="variable">
+      <type>union ast::@0</type>
+      <name>u</name>
+      <anchorfile>structast.html</anchorfile>
+      <anchor>a3ed5bc71a976be32b56b7a36fcea69f2</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>classinfo</name>
     <filename>structclassinfo.html</filename>
+    <member kind="variable">
+      <type>bool</type>
+      <name>meta</name>
+      <anchorfile>structclassinfo.html</anchorfile>
+      <anchor>acf47d9b50c97c76b41a54126e70780d6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>name</name>
+      <anchorfile>structclassinfo.html</anchorfile>
+      <anchor>a030ef50f3e17f9032b16dddff0640515</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>super</name>
+      <anchorfile>structclassinfo.html</anchorfile>
+      <anchor>a2dd5685fcaafb0663bd2f161c42e1bc5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>num</name>
+      <anchorfile>structclassinfo.html</anchorfile>
+      <anchor>a0c558b58e6ef9a01ea93c7ca2874bee9</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>gd</name>
     <filename>structgd.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>state</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>ae5916cd8f44d4ed9a4f796bc19dbc75d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>paridx</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>a4971d5b3a3bd68a91e2523929eb89833</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>token</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>a8f719258896b709167e2bc2d8601d73d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>pos</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>a3fcdb7e48a784704a0c7011b1c5138bd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char</type>
+      <name>buf</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>acf2d8f66837c5c59285813d7a6549cb0</anchor>
+      <arglist>[50]</arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>line</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>ab9cd76d833b86f93902c345e68884f49</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>line_count</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>a41937f4e020514bb3cebf0aa04c2e78a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct ast *</type>
+      <name>ast</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>ac5d9f57b9975f633c9f32aa2f0b7600a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>classnum</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>afc83571b379a7e8ea0e367335cb83c4e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct itab *</type>
+      <name>src</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>a71674c2a5311e81cbf712bb0ebff17b9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct itab_iter *</type>
+      <name>src_iter</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>a33a9dc172f5f8e8e1e7c225604a16f1e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_env *</type>
+      <name>env</name>
+      <anchorfile>structgd.html</anchorfile>
+      <anchor>a0883569d6724027524f2b3da6f5e0724</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>itab</name>
     <filename>structitab.html</filename>
+    <member kind="variable">
+      <type>unsigned</type>
+      <name>total</name>
+      <anchorfile>structitab.html</anchorfile>
+      <anchor>a90c05296f2420e8079e637eb920fcd29</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned</type>
+      <name>used</name>
+      <anchorfile>structitab.html</anchorfile>
+      <anchor>acdf52e0793b798b608351cb79b75a8ef</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct itab_entry *</type>
+      <name>rows</name>
+      <anchorfile>structitab.html</anchorfile>
+      <anchor>a40ec1b9a808e1a643f4c7134f103cc0f</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>itab_entry</name>
     <filename>structitab__entry.html</filename>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>key</name>
+      <anchorfile>structitab__entry.html</anchorfile>
+      <anchor>ab9bd2f3812dbeb1e76763059ff824c8d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>void *</type>
+      <name>value</name>
+      <anchorfile>structitab__entry.html</anchorfile>
+      <anchor>a4ec5cea10051ae66025f37f705b90632</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>itab_iter</name>
     <filename>structitab__iter.html</filename>
+    <member kind="variable">
+      <type>struct itab *</type>
+      <name>tab</name>
+      <anchorfile>structitab__iter.html</anchorfile>
+      <anchor>a1ac040645faa1d3488d15dd9e3bc8bf7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>unsigned</type>
+      <name>pos</name>
+      <anchorfile>structitab__iter.html</anchorfile>
+      <anchor>a2f03e3011e9b680823c16dbbd61a7cd4</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>methodinfo</name>
     <filename>structmethodinfo.html</filename>
+    <member kind="variable">
+      <type>char *</type>
+      <name>classname</name>
+      <anchorfile>structmethodinfo.html</anchorfile>
+      <anchor>a60b3c71f3ac17dc88a762fe2c1eb8357</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>name</name>
+      <anchorfile>structmethodinfo.html</anchorfile>
+      <anchor>a86c9f58678f7dba8a19b73d5a9fba1cc</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_assignment</name>
     <filename>structs__assignment.html</filename>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>target</name>
+      <anchorfile>structs__assignment.html</anchorfile>
+      <anchor>aa3081783f490ede9aca2dee1ced11ac6</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_expression *</type>
+      <name>value</name>
+      <anchorfile>structs__assignment.html</anchorfile>
+      <anchor>a79b169de6c10f2374ae83c38ff29f0e6</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_block</name>
     <filename>structs__block.html</filename>
+    <member kind="variable">
+      <type>t_namelist</type>
+      <name>params</name>
+      <anchorfile>structs__block.html</anchorfile>
+      <anchor>a33b00ff692755d75277fe580e48f2184</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_namelist</type>
+      <name>locals</name>
+      <anchorfile>structs__block.html</anchorfile>
+      <anchor>a318fe184b031ed05aea3723c82e39603</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_statements *</type>
+      <name>statements</name>
+      <anchorfile>structs__block.html</anchorfile>
+      <anchor>a2ab8b1ebc18aacec98bcb829bc55bc82</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_env *</type>
+      <name>env</name>
+      <anchorfile>structs__block.html</anchorfile>
+      <anchor>a3329664e353dc2f2cf9d2b3f95eff14e</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_classdef</name>
     <filename>structs__classdef.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>id</name>
+      <anchorfile>structs__classdef.html</anchorfile>
+      <anchor>a2e5f72a5cc338af8b1f346f769877aeb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>name</name>
+      <anchorfile>structs__classdef.html</anchorfile>
+      <anchor>adea15ad881270da6463d4e793e7a8d99</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>meta</name>
+      <anchorfile>structs__classdef.html</anchorfile>
+      <anchor>acb4352c06595a49ba65ec38e9afa41e1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>super</name>
+      <anchorfile>structs__classdef.html</anchorfile>
+      <anchor>ae5141d541a5f63aabec582c54d9f2469</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_env *</type>
+      <name>env</name>
+      <anchorfile>structs__classdef.html</anchorfile>
+      <anchor>aa271eea5e1bfd1e7d214344eb39237be</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_env</name>
     <filename>structs__env.html</filename>
+    <member kind="variable">
+      <type>t_slot *</type>
+      <name>slots</name>
+      <anchorfile>structs__env.html</anchorfile>
+      <anchor>af8e1cab1a1f4f3ffc23ab5113f63fae4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_env *</type>
+      <name>next</name>
+      <anchorfile>structs__env.html</anchorfile>
+      <anchor>a3caf3df6eb72714ffcd4e22f9c94ecf2</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_expression</name>
     <filename>structs__expression.html</filename>
+    <member kind="variable">
+      <type>t_expression_tag</type>
+      <name>tag</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>a4fbdf198d265920d447cafb1a98c751a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>intvalue</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>a1ea1c1ce11ee1fd34d3c945ffd85d696</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>strvalue</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>a82ce7474040d734d73c7a18283f900a2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>ident</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>a05b9c607c0471fe4b09aff96c8dbe39a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_expression_list</type>
+      <name>exprs</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>a37e70a71c3974fc6fba1f168e47ea9d9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_expression *</type>
+      <name>target</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>ada65723ea7ed01a6d2d880fbfcd830a5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_messages *</type>
+      <name>m</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>a5a0ce65955c6b62f3dc28c8cb3b429bc</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_assignment</type>
+      <name>assignment</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>ac231317a0715b7d1cbbba870928743b4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_block</type>
+      <name>block</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>ab9168d7a5c63decae08070a479d67786</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>union s_expression::@10</type>
+      <name>u</name>
+      <anchorfile>structs__expression.html</anchorfile>
+      <anchor>adcf82c499998b5ae9a43d89572f1d65f</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_expression_list</name>
     <filename>structs__expression__list.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>count</name>
+      <anchorfile>structs__expression__list.html</anchorfile>
+      <anchor>a176fa2d093e3d75f2d3cc1c1658a4c9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_expression **</type>
+      <name>list</name>
+      <anchorfile>structs__expression__list.html</anchorfile>
+      <anchor>a1004174bcb819e9d94f41336b8544e48</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_globals</name>
     <filename>structs__globals.html</filename>
+    <member kind="variable">
+      <type>t_object *</type>
+      <name>String</name>
+      <anchorfile>structs__globals.html</anchorfile>
+      <anchor>a96abac5e3089b6ea01780034bcf33bb9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_object *</type>
+      <name>Integer</name>
+      <anchorfile>structs__globals.html</anchorfile>
+      <anchor>af9ffd9e3eaf75a618ab30ba624bc48d5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_object *</type>
+      <name>True</name>
+      <anchorfile>structs__globals.html</anchorfile>
+      <anchor>a231b337a8d4ec8de584c82a8a68b382d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_object *</type>
+      <name>False</name>
+      <anchorfile>structs__globals.html</anchorfile>
+      <anchor>a5318523f6536fbb30ad3d03b9150c593</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_message_cascade</name>
     <filename>structs__message__cascade.html</filename>
+    <member kind="variable">
+      <type>t_messages *</type>
+      <name>msgs</name>
+      <anchorfile>structs__message__cascade.html</anchorfile>
+      <anchor>a1568199306106fe11fcb1bac6726fb3e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_message_cascade *</type>
+      <name>next</name>
+      <anchorfile>structs__message__cascade.html</anchorfile>
+      <anchor>a8deb3cc811aa3b3298e9b6b9b92737e8</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_message_pattern</name>
     <filename>structs__message__pattern.html</filename>
+    <member kind="variable">
+      <type>t_namelist</type>
+      <name>parts</name>
+      <anchorfile>structs__message__pattern.html</anchorfile>
+      <anchor>a47fe67123d34de59fbdd4c69144cbae4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_namelist</type>
+      <name>names</name>
+      <anchorfile>structs__message__pattern.html</anchorfile>
+      <anchor>a0c25b0cb62363c9351731fbfee63a805</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_messages</name>
     <filename>structs__messages.html</filename>
+    <member kind="variable">
+      <type>bool</type>
+      <name>cascaded</name>
+      <anchorfile>structs__messages.html</anchorfile>
+      <anchor>a96ea051111cb13bf01f222f97a58f1cb</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>sel</name>
+      <anchorfile>structs__messages.html</anchorfile>
+      <anchor>a427a38c405a6de0fad6dca7611dc9691</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>argc</name>
+      <anchorfile>structs__messages.html</anchorfile>
+      <anchor>a35c69e0424e3738fbc6ad33a5b18aeb5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_expression **</type>
+      <name>args</name>
+      <anchorfile>structs__messages.html</anchorfile>
+      <anchor>a020056a32bcdeef961a201f29064d18e</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_messages *</type>
+      <name>next</name>
+      <anchorfile>structs__messages.html</anchorfile>
+      <anchor>accd7b0e4e470157ac993c193b1302c49</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_methoddef</name>
     <filename>structs__methoddef.html</filename>
+    <member kind="variable">
+      <type>char *</type>
+      <name>sel</name>
+      <anchorfile>structs__methoddef.html</anchorfile>
+      <anchor>a35da12609b42a49673007041d36b191a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_namelist</type>
+      <name>args</name>
+      <anchorfile>structs__methoddef.html</anchorfile>
+      <anchor>ad09cf87411a1e81a8e1d56e3847c14ba</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_namelist</type>
+      <name>locals</name>
+      <anchorfile>structs__methoddef.html</anchorfile>
+      <anchor>a2c5158a85d6ddb8b1e3b0bb5caad7b4f</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_statements *</type>
+      <name>statements</name>
+      <anchorfile>structs__methoddef.html</anchorfile>
+      <anchor>a19e71dd7c5fba533494bdb53d5c07067</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_env *</type>
+      <name>env</name>
+      <anchorfile>structs__methoddef.html</anchorfile>
+      <anchor>a77d76e8a452e588223719bd1661955db</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_namelist</name>
     <filename>structs__namelist.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>count</name>
+      <anchorfile>structs__namelist.html</anchorfile>
+      <anchor>a44e520533def80909799c237a4629bd2</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_name *</type>
+      <name>names</name>
+      <anchorfile>structs__namelist.html</anchorfile>
+      <anchor>a0e6d5d8bd810ca0966921349a0d06d6d</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_names</name>
     <filename>structs__names.html</filename>
+    <member kind="variable">
+      <type>char *</type>
+      <name>name</name>
+      <anchorfile>structs__names.html</anchorfile>
+      <anchor>a4cdc5da407ae797fd9e310d9e792c28d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_names</type>
+      <name>next</name>
+      <anchorfile>structs__names.html</anchorfile>
+      <anchor>a78fc51e5cbd2785a747b1933840ad642</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_object</name>
     <filename>structs__object.html</filename>
+    <member kind="variable">
+      <type>t_message_handler</type>
+      <name>handler</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>a2409422288af9aff67b13f0b2786a214</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>void *</type>
+      <name>data</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>aba477554fcde53805ea7286ae01e798b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>intval</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>a5ac3dc8749b7848a5df7a6d94ad234d4</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>i</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>a2a8a93ba14c852566586b8a459fbb051</anchor>
+      <arglist>[10]</arglist>
+    </member>
+    <member kind="variable">
+      <type>void *</type>
+      <name>p</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>abf65e2957aeacda971fde8e226b82ddc</anchor>
+      <arglist>[10]</arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_object::@11::@12</type>
+      <name>vals</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>af59cf0073541cb53be091642fb17d239</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_object **</type>
+      <name>vs</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>afbb3c52f7e9a0ad1632c87a824174df0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>int</type>
+      <name>cnt</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>a3d08461546b07b580add76baa37f4e43</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_object::@11::@13</type>
+      <name>vars</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>aa547fc9932dfcb9d3d26a5c35e1aa5e0</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>union s_object::@11</type>
+      <name>u</name>
+      <anchorfile>structs__object.html</anchorfile>
+      <anchor>a51c1da35f49c747c0ac7e1f3465d1ff7</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_pattern</name>
     <filename>structs__pattern.html</filename>
+    <member kind="variable">
+      <type>char *</type>
+      <name>selector</name>
+      <anchorfile>structs__pattern.html</anchorfile>
+      <anchor>a7a1a2aa1d5a6ddc0b93b20ffa5d83523</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_names</type>
+      <name>params</name>
+      <anchorfile>structs__pattern.html</anchorfile>
+      <anchor>a8ec5fef51bff50d04a427a125b5b6430</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_slot</name>
     <filename>structs__slot.html</filename>
+    <member kind="variable">
+      <type>const char *</type>
+      <name>name</name>
+      <anchorfile>structs__slot.html</anchorfile>
+      <anchor>a2714ffb79572f588c422960913860732</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>t_object *</type>
+      <name>val</name>
+      <anchorfile>structs__slot.html</anchorfile>
+      <anchor>a7bc84144fb56943b306d153d66bf5e8b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_slot *</type>
+      <name>next</name>
+      <anchorfile>structs__slot.html</anchorfile>
+      <anchor>aed49fa7cb20bd484208d06b42eec0fcb</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>s_statements</name>
     <filename>structs__statements.html</filename>
+    <member kind="variable">
+      <type>t_statement_type</type>
+      <name>type</name>
+      <anchorfile>structs__statements.html</anchorfile>
+      <anchor>a19547c1d5993114482778c5e696dbee9</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_expression *</type>
+      <name>expr</name>
+      <anchorfile>structs__statements.html</anchorfile>
+      <anchor>a128872f1bada92c73c1e3121c66f99e7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_statements *</type>
+      <name>next</name>
+      <anchorfile>structs__statements.html</anchorfile>
+      <anchor>a2819bfa94cc0b341a16ce0f869e67aed</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>stringinfo</name>
     <filename>structstringinfo.html</filename>
+    <member kind="variable">
+      <type>int</type>
+      <name>num</name>
+      <anchorfile>structstringinfo.html</anchorfile>
+      <anchor>a7add94dc0bd7bf790a6b4cdca9a32ada</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="struct">
     <name>varinfo</name>
     <filename>structvarinfo.html</filename>
+    <member kind="variable">
+      <type>char *</type>
+      <name>classname</name>
+      <anchorfile>structvarinfo.html</anchorfile>
+      <anchor>a481f89cdf92c1a3fb177adac31d41e59</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="variable">
+      <type>char *</type>
+      <name>name</name>
+      <anchorfile>structvarinfo.html</anchorfile>
+      <anchor>a58340798530db5d82a975b29f5b2d329</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
-  <compound kind="struct">
-    <name>yyParser</name>
-    <filename>structyyParser.html</filename>
+  <compound kind="group">
+    <name>env</name>
+    <title>Environment</title>
+    <filename>group__env.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>env_add</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga4a57d505050db3590afdb34c64b4ec05</anchor>
+      <arglist>(t_env *env, const t_name name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_clear</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaf0b749f87525ca0d08d70f03bb615639</anchor>
+      <arglist>(t_env *env)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_set</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga25aee7a661238fc2d8a04b5021d68ca7</anchor>
+      <arglist>(t_env *env, const t_name name, t_object *value)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_slot *</type>
+      <name>env_get</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaf83e7bb0e8de90b84e2b3f23a6e33d55</anchor>
+      <arglist>(t_env *env, const t_name name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_dump</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gab9800bfb3359611508a5bce333f49aff</anchor>
+      <arglist>(t_env *env, const char *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_set_local</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaca342d4f60649e33bf84260e70bbc1b2</anchor>
+      <arglist>(t_env *env, const t_name name, t_object *value)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_env *</type>
+      <name>env_new</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaf04177d97c283a8c9030c02da7cb2f3c</anchor>
+      <arglist>(t_env *parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_slot *</type>
+      <name>env_get_all</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga3b1bcfb1790c96921e36c242d80b6ee8</anchor>
+      <arglist>(t_env *env, const t_name name, t_env **env_found)</arglist>
+    </member>
   </compound>
-  <compound kind="struct">
-    <name>yyStackEntry</name>
-    <filename>structyyStackEntry.html</filename>
+  <compound kind="group">
+    <name>internal</name>
+    <title>Internal Functions</title>
+    <filename>group__internal.html</filename>
+    <class kind="struct">s_globals</class>
+    <member kind="define">
+      <type>#define</type>
+      <name>MSG_DUMP</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga7b6b11f9d19936fc4c520a8b98c9aeb7</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>class_enter</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga441ee37b94757b7cf8e8e22128a9cd46</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_ident_char</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gac0bb8a0baa2e72a8039d67dce7e1f932</anchor>
+      <arglist>(int c)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_binary_char</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gac14b69463fdf48ba3a5b30ee34da28c7</anchor>
+      <arglist>(int c)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>src_clear</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gaad2f4e124f8e968f36f072fcf42b17f2</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>src_add</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gaaff46ce87fa716bfd3c55495d26cef23</anchor>
+      <arglist>(const char *line)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>src_read</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga84a9f5c743eb6a718086ec1a385ed8f7</anchor>
+      <arglist>(const char *name)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>src_dump</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gae5d8eafaa909528df9876effb0a9ea8f</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>readLine</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga18e07039b29a9c1ab2b2f84bc84fd2f2</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>readChar</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga4f2be419c946530de61fcc5bd922b961</anchor>
+      <arglist>(char *t)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>readStringToken</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gaca69499fef7287dfec40541fe204f94c</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>parse_verbatim</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga3caa61bb0b2f9335f48d911a85bb493f</anchor>
+      <arglist>(char c)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>nextToken</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gacb8666cde3ece1af4829c28d0f7c5022</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>char *</type>
+      <name>method_name</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gaf573719c609adfff2da8719d43d02863</anchor>
+      <arglist>(const char *class, const char *sel)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>require_classes</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga51e69545ca37cbd4851e5557a7b8b07f</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>require_current_class</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga02923054716fd46d9135bae8b2b6e0ac</anchor>
+      <arglist>(void)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>method_enter</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga0d2d92bb7523c67472bfac6fb1d4ec37</anchor>
+      <arglist>(t_message_pattern *mp)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>cstr_equals</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gaa983f139158e63d688b0a2e2d94f10ac</anchor>
+      <arglist>(const char *, const char *)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>object_new</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga2d8ba25d20622e1133d86f384bf53976</anchor>
+      <arglist>(t_message_handler hdl)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>object_send</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gad0eeefa27091be5d969622e40e87c212</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>object_send_void</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga236c20e91c3d751b92c107b4274015c4</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>simulate</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gaf697c4f931074b40b0b83d920b3106e1</anchor>
+      <arglist>(t_env *env, t_statements *stmts)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>eval</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga917fff00514888becfa71639d74add1c</anchor>
+      <arglist>(t_env *env, t_expression *expr)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>string_handler</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gacad70773386fbd89271914816f356aef</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>string_meta_handler</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga746e9988936dfe006e4b8e49486a79fd</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>int_handler</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gafcef4a0e6423cdcef708c3c864f47064</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>char_handler</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gac8337629f59eeb748ac8b183bcf6706b</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>block_handler</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga3df1879a92dad5997e96f8796db87d83</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>stream_handler</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga588c3b85925ebc36a6e8d7855a00745c</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>method_exec</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga13aee7152018457cfa1abb6503597fee</anchor>
+      <arglist>(t_object *self, const char *clsname, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="variable">
+      <type>struct s_globals</type>
+      <name>global</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gab5a8ddf11e202d697b69e5d13f7fe3dd</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>itab</name>
@@ -207,14 +1141,14 @@
       <type>int</type>
       <name>itab_lines</name>
       <anchorfile>group__itab.html</anchorfile>
-      <anchor>ga174bc92d89b1242a5f1b572d75a8816b</anchor>
+      <anchor>ga158b3ab89fdb8fe2f17f4a457c734651</anchor>
       <arglist>(struct itab *itab)</arglist>
     </member>
     <member kind="function">
       <type>struct itab *</type>
       <name>itab_new</name>
       <anchorfile>group__itab.html</anchorfile>
-      <anchor>gad9917bb373045636deee31d01936f67d</anchor>
+      <anchor>gab456e24a9a347d8099bc01df8ef5f115</anchor>
       <arglist>()</arglist>
     </member>
     <member kind="function">
@@ -223,6 +1157,55 @@
       <anchorfile>group__itab.html</anchorfile>
       <anchor>gaa32bbe2ddff2b617359acf569723d908</anchor>
       <arglist>(const void *aptr, const void *bptr)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>itab_append</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>ga6e08d3097fed299b2f6ed15a8fbff427</anchor>
+      <arglist>(struct itab *itab, const char *key, void *value)</arglist>
+    </member>
+    <member kind="function">
+      <type>void *</type>
+      <name>itab_read</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>ga3af516e5708adec451d240d7f9ce1c0d</anchor>
+      <arglist>(struct itab *itab, const char *key)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>itab_dump</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>ga55760d926fc3e03e072c3ca892b8efb0</anchor>
+      <arglist>(struct itab *itab)</arglist>
+    </member>
+    <member kind="function">
+      <type>struct itab_iter *</type>
+      <name>itab_foreach</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>gad6a692faa54ac13f9da34432b5660620</anchor>
+      <arglist>(struct itab *tab)</arglist>
+    </member>
+    <member kind="function">
+      <type>struct itab_iter *</type>
+      <name>itab_next</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>ga15dea46be5b2c50273ca631b81e06c3a</anchor>
+      <arglist>(struct itab_iter *iter)</arglist>
+    </member>
+    <member kind="function">
+      <type>void *</type>
+      <name>itab_value</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>ga4c3676b5a88d3510e734449be8acc082</anchor>
+      <arglist>(struct itab_iter *iter)</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>itab_key</name>
+      <anchorfile>group__itab.html</anchorfile>
+      <anchor>ga54103269bfeb548f6ed30b4fdbbfa0e9</anchor>
+      <arglist>(struct itab_iter *iter)</arglist>
     </member>
   </compound>
   <compound kind="group">
@@ -234,6 +1217,13 @@
       <name>is_ident_char</name>
       <anchorfile>group__tokenizer.html</anchorfile>
       <anchor>gac0bb8a0baa2e72a8039d67dce7e1f932</anchor>
+      <arglist>(int c)</arglist>
+    </member>
+    <member kind="function">
+      <type>bool</type>
+      <name>is_binary_char</name>
+      <anchorfile>group__tokenizer.html</anchorfile>
+      <anchor>gac14b69463fdf48ba3a5b30ee34da28c7</anchor>
       <arglist>(int c)</arglist>
     </member>
     <member kind="function">
@@ -286,6 +1276,13 @@
       <arglist>(void)</arglist>
     </member>
     <member kind="function">
+      <type>void</type>
+      <name>parse_verbatim</name>
+      <anchorfile>group__tokenizer.html</anchorfile>
+      <anchor>ga3caa61bb0b2f9335f48d911a85bb493f</anchor>
+      <arglist>(char c)</arglist>
+    </member>
+    <member kind="function">
       <type>bool</type>
       <name>nextToken</name>
       <anchorfile>group__tokenizer.html</anchorfile>
@@ -297,16 +1294,81 @@
     <name>msg</name>
     <title>Messages</title>
     <filename>group__msg.html</filename>
+    <member kind="define">
+      <type>#define</type>
+      <name>MSG_LOG_LEN</name>
+      <anchorfile>group__msg.html</anchorfile>
+      <anchor>gabd5525e3a4f811058503fd1f0c121d69</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>char</type>
+      <name>t_msg</name>
+      <anchorfile>group__msg.html</anchorfile>
+      <anchor>gaf2ff8d9d4436a5c873f4168f13ecfcdf</anchor>
+      <arglist>[200]</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>msg_init</name>
+      <anchorfile>group__msg.html</anchorfile>
+      <anchor>ga37e492e15c595687b048d2cc29cdf358</anchor>
+      <arglist>()</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>msg_add</name>
+      <anchorfile>group__msg.html</anchorfile>
+      <anchor>gaccb8af95fd0cbf6c4dcea8ed344e3c9a</anchor>
+      <arglist>(const char *msg,...)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>msg_print_last</name>
+      <anchorfile>group__msg.html</anchorfile>
+      <anchor>ga66c12918af7e9502e63003ac2fb5a1b8</anchor>
+      <arglist>()</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>messages</name>
     <title>Syntax Messages</title>
     <filename>group__messages.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>message_add_msg</name>
+      <anchorfile>group__messages.html</anchorfile>
+      <anchor>ga7bb100d43df3c8a404ea1f3ebdeeb0c3</anchor>
+      <arglist>(t_messages *ms, t_messages *m)</arglist>
+    </member>
   </compound>
   <compound kind="group">
     <name>namelist</name>
     <title>Name List</title>
     <filename>group__namelist.html</filename>
+    <class kind="struct">s_namelist</class>
+    <class kind="struct">s_names</class>
+    <member kind="typedef">
+      <type>const char *</type>
+      <name>t_name</name>
+      <anchorfile>group__namelist.html</anchorfile>
+      <anchor>gaaafab5517fd8a38fcdc151b95ba9f20a</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_namelist</type>
+      <name>t_namelist</name>
+      <anchorfile>group__namelist.html</anchorfile>
+      <anchor>ga0d9a89d173e4a13b003369f5db308b89</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_names *</type>
+      <name>t_names</name>
+      <anchorfile>group__namelist.html</anchorfile>
+      <anchor>ga1d38929abd2544ae021e25b03b5c4a63</anchor>
+      <arglist></arglist>
+    </member>
     <member kind="function">
       <type>void</type>
       <name>namelist_init</name>
@@ -318,8 +1380,8 @@
       <type>void</type>
       <name>namelist_add</name>
       <anchorfile>group__namelist.html</anchorfile>
-      <anchor>ga329e5e8e74a3e0f0fcf8a85f57c08717</anchor>
-      <arglist>(t_namelist *nl, const char *name)</arglist>
+      <anchor>gaa59c9b970ec5fbfaf816fde4280b129c</anchor>
+      <arglist>(t_namelist *nl, const t_name name)</arglist>
     </member>
     <member kind="function">
       <type>void</type>
@@ -333,9 +1395,7 @@
     <name>internal_structures</name>
     <title>Internal_structures</title>
     <filename>group__internal__structures.html</filename>
-    <class kind="struct">s_namelist</class>
     <class kind="struct">s_expression_list</class>
-    <class kind="struct">s_names</class>
     <class kind="struct">s_pattern</class>
     <class kind="struct">s_classdef</class>
     <class kind="struct">s_statements</class>
@@ -349,6 +1409,139 @@
     <class kind="struct">s_object</class>
     <class kind="struct">s_slot</class>
     <class kind="struct">s_env</class>
+    <member kind="typedef">
+      <type>struct s_expression_list</type>
+      <name>t_expression_list</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga54afb7002a67b1e8f9a077103a89b064</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_pattern *</type>
+      <name>t_pattern</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga45f6337bd397fa7b072a6066bcae0b9d</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_classdef</type>
+      <name>t_classdef</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>gab6310e78956b0fb6551d5b1359251607</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>enum e_statement_type</type>
+      <name>t_statement_type</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>gac5e93e2e783e60840fd5f35129e6d12c</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_statements</type>
+      <name>t_statements</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga7e69b5ad3c7bd165aa98c2f081b79ccf</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_methoddef</type>
+      <name>t_methoddef</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga4924ef815b2802feb1b0f9e14fa0c91b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_message_pattern</type>
+      <name>t_message_pattern</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga43f5359d50c63be654c47b6541f3eb9b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>enum e_expression_tag</type>
+      <name>t_expression_tag</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga400bf64990418eed137d2b49026a13ac</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_assignment</type>
+      <name>t_assignment</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga2d4196fd52b9a4956984c42aed6d0712</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_block</type>
+      <name>t_block</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga70ed1bd7b71e35b2384f0d91ac9fc112</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_expression</type>
+      <name>t_expression</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga087664f14e887a566d35464a23d9f2b5</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_messages</type>
+      <name>t_messages</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga03f0a940b20336800ab163245516cdcd</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_message_cascade</type>
+      <name>t_message_cascade</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga832e30b3a41ae2fa11b2e8bc5a537180</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_object *(*</type>
+      <name>t_message_handler</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>gaa98e62c4ef16b85551d16212f439b234</anchor>
+      <arglist>)(struct s_object *, const char *sel, struct s_object **args)</arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_object</type>
+      <name>t_object</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>gac4d798ef67eace7eaadcc87ce5c471b8</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_slot</type>
+      <name>t_slot</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>gae8ddccf0077669747fcd0c7da32e7de1</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="typedef">
+      <type>struct s_env</type>
+      <name>t_env</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>gaa3d21e1567b21e23ec928b1eb405fe4b</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>e_statement_type</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga9714334d5314b92c57f22e5273b33520</anchor>
+      <arglist></arglist>
+    </member>
+    <member kind="enumeration">
+      <type></type>
+      <name>e_expression_tag</name>
+      <anchorfile>group__internal__structures.html</anchorfile>
+      <anchor>ga483470fc733e625f119227f948dad913</anchor>
+      <arglist></arglist>
+    </member>
   </compound>
   <compound kind="page">
     <name>tt_tech</name>

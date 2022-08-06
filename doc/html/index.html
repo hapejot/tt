@@ -69,8 +69,61 @@ $(function() {
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="intro"></a>
 Introduction</h1>
-<p><a class="el" href="tt_tech.html">TT Technical Details</a> </p>
-</div></div><!-- PageDoc -->
+<p><a class="el" href="tt_tech.html">TT Technical Details</a></p>
+<p>Sample definitions:</p>
+<pre class="fragment">    OrderedCollection class [
+        main: args [ '{1}/{2}' format: {10. 'Peter ist doof!'} ]
+        main2: args [ 
+            1 to: 9 do: [ :i | 
+                1 to: i do: [ :j | 
+                    Transcript 
+                        show: ('{1} * {2} = {3}' format: {j. i. j * i}); 
+                        show: ' ' 
+                ]. 
+                Transcript show: ' '; cr. 
+            ]
+        ]
+    ]
+    String [
+    format: collection [
+        "
+        Format the receiver by interpolating elements from collection,
+        as in the following examples:
+        ('Five is {1}.' format: { 1 + 4}) 
+                    &gt;&gt;&gt; 'Five is 5.'
+        ('Five is {five}.' format: (Dictionary with: #five -&gt; 5)) 
+                    &gt;&gt;&gt;  'Five is 5.'
+        ('In {1} you can escape \{ by prefixing it with \\' format: {'strings'}) 
+                    &gt;&gt;&gt; 'In strings you can escape { by prefixing it with \' 
+        ('In \{1\} you can escape \{ by prefixing it with \\' format: {'strings'}) 
+                    &gt;&gt;&gt; 'In {1} you can escape { by prefixing it with \' 
+        "
+
+        ^ self species
+            new: self size
+            streamContents: [ :result | 
+                | stream |
+                stream := self readStream.
+                [ stream atEnd ]
+                    whileFalse: [ | currentChar |
+                        (currentChar := stream next) == ${
+                            ifTrue: [ | expression index |
+                                expression := stream upTo: $}.
+                                index := Integer readFrom: expression ifFail: [ expression ].
+                                result nextPutAll: (collection at: index) asString ]
+                            ifFalse: [ 
+                                currentChar == $\
+                                    ifTrue: [ stream atEnd
+                                            ifFalse: [ result nextPut: stream next ] ]
+                                    ifFalse: [ result nextPut: currentChar ] ] ] ] ]
+    ]
+    Stream [
+      nextPutAll: aCollection [^ aCollection do: [:each | self nextPut: each]]
+    ]
+    ByteArray class [
+          newWithSize: n []
+    ]
+</pre> </div></div><!-- PageDoc -->
 </div><!-- contents -->
 <!-- HTML footer for doxygen 1.9.1-->
 <!-- start footer part -->

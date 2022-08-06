@@ -20,7 +20,7 @@ typedef struct _Assign *Assign;
 typedef struct _Assigns *Assigns;
 
 /** all classes */
-struct itab *classes = NULL;
+struct itab *classes;
 
 /** current class
 defined with *class_enter*. the next call of *class_enter* will
@@ -30,16 +30,16 @@ t_classdef *current_class;
 t_methoddef *current_method;
 
 /** all methods */
-struct itab *methods = NULL;
+struct itab *methods;
 
 /** all method names */
-struct itab *method_names = NULL;
+struct itab *method_names;
 
 /** all global variables */
-struct itab *variables = NULL;
+struct itab *variables;
 
 /** all strings */
-struct itab *strings = NULL;
+struct itab *strings;
 
 /** number of strins */
 int string_count = 0;
@@ -49,27 +49,27 @@ int string_class_num = 0;
 
 /** details of a class */
 struct classinfo {
-    bool meta;
-    char *name;
-    char *super;
-    int num;
+    bool meta; /**< is it a meta class */
+    char *name; /**< name */
+    char *super; /**< name of super class */
+    int num; /**< number for identification */
 };
 
 /** details of a method */
 struct methodinfo {
-    char *classname;
-    char *name;
+    char *classname;                ///< name of the class
+    char *name;                     ///< name of the method
 };
 
 /** details of a global variable */
-struct varinfo {
-    char *classname;
-    char *name;
+struct varinfo {                        
+    char *classname;                ///< name of the class
+    char *name;                     ///< name of the variable
 };
 
 /** details of a string */
 struct stringinfo {
-    int num;
+    int num;                        ///< number of the string
 };
 
 
@@ -83,22 +83,22 @@ struct stringinfo {
  @brief structure of an entry in the itab.
  */
 struct itab_entry {
-    const char *key;
-    void *value;
+    const char *key;            ///< key
+    void *value;                ///< binary value
 };
 /**
  @brief structure of itab
  */
 struct itab {
-    int total;
-    int used;
-    struct itab_entry *rows;
+    unsigned total;             ///< total number of available entries
+    unsigned used;              ///< actual used number of entries
+    struct itab_entry *rows;    ///< array of all entries
 };
 
 /** returns the number of lines in the table 
 */
-int itab_lines( struct itab *itab ) {
-    assert( itab );
+unsigned itab_lines( struct itab *itab ) {
+    assert( itab != NULL );
     return itab->used;
 }
 
@@ -107,8 +107,8 @@ int itab_lines( struct itab *itab ) {
  */
 
 struct itab_iter {
-    struct itab *tab;
-    int pos;
+    struct itab *tab;           ///< table to be used
+    unsigned pos;               ///< current position in the table
 };
 
 /** 
@@ -138,7 +138,7 @@ int itab_entry_cmp( const void *aptr, const void *bptr ) {
 }
 
 void itab_append( struct itab *itab, const char *key, void *value ) {
-    assert( itab );
+    assert( itab != NULL );
     if( itab->total == itab->used ) {
         itab->total *= 2;
         itab->rows =
@@ -150,9 +150,9 @@ void itab_append( struct itab *itab, const char *key, void *value ) {
     row->value = value;
     itab->used++;
 
-    qsort( itab->rows,                 // base
-           itab->used,                 // nmemb
-           sizeof( struct itab_entry ), // size
+    qsort( itab->rows,                           // base
+           itab->used,                           // nmemb
+           sizeof( struct itab_entry ),          // size
            itab_entry_cmp );
 }
 
@@ -241,7 +241,7 @@ bool is_binary_char( int c ) {
         case '@':
         case '\\':
         case '~':
-        case '|':                     // sollte laut Vorschlag ein Binary Operator sein. Kollidiert aber mit der temporary declaration.
+        case '|':                               // sollte laut Vorschlag ein Binary Operator sein. Kollidiert aber mit der temporary declaration.
 // das muss dann wohl auf der Syntaxebene geklärt werden.
         case '-':
             return true;
@@ -301,7 +301,7 @@ bool src_dump(  ) {
 
 /**
 @brief read one line from stdin
-stores the result into @c{gd.line}.
+stores the result into @c gd.line.
 
 trailing blanks are removed.
 */
@@ -440,7 +440,7 @@ bool nextToken(  ) {
         else if( isdigit( c ) ) {
             int idx = 0;
             while( isdigit( c ) ) {
-                printf("### digit %c\n", c);
+                printf( "### digit %c\n", c );
                 gd.buf[idx++] = c;
                 gd.buf[idx] = 0;
                 readChar( &c );
@@ -534,20 +534,29 @@ bool nextToken(  ) {
 /** @defgroup msg Messages 
 @{
 */
-typedef char t_msg[200];
+/** length of log */
 #define MSG_LOG_LEN 200
+/** contains a log line */
+typedef char t_msg[200];
+/**
+system output message log. with fixed length so 
+only the last messages are displayed.
+*/
 static struct s_msgs {
     int size;
     int pos;
     t_msg msgs[MSG_LOG_LEN];
 } msgs;
 
+/** initialize application messages */
 void msg_init(  ) {
     if( msgs.size != MSG_LOG_LEN ) {
         msgs.size = MSG_LOG_LEN;
         msgs.pos = 0;
     }
 }
+
+/** adding a message */
 void msg_add( const char *msg, ... ) {
     va_list ap;
     msg_init(  );
@@ -558,9 +567,10 @@ void msg_add( const char *msg, ... ) {
     va_end( ap );
 }
 
+/** print the last messages from the log */
 void msg_print_last(  ) {
-    printf("-------------------------------------\n");
-    const char*fmt = "%03d --- %s\n";
+    printf( "-------------------------------------\n" );
+    const char *fmt = "%03d --- %s\n";
     int n = 1;
     for( int i = msgs.pos; i < msgs.size; i++ ) {
         if( msgs.msgs[i][0] )
@@ -569,7 +579,7 @@ void msg_print_last(  ) {
     }
     for( int i = 0; i < msgs.pos; i++ ) {
         if( msgs.msgs[i][0] )
-            printf( fmt,n++, msgs.msgs[i] );
+            printf( fmt, n++, msgs.msgs[i] );
         msgs.msgs[i][0] = 0;
     }
 }
@@ -581,9 +591,12 @@ void msg_print_last(  ) {
 /** @defgroup messages Syntax Messages 
 @{
 */
-void message_add_msg(t_messages *ms, t_messages *m){
-    while(ms->next) ms = ms->next;
+
+/** add a message */
+void message_add_msg( t_messages * ms, t_messages * m ) {
+    while( ms->next )
+        ms = ms->next;
     ms->next = m;
 }
 
-/** |} */
+/** @} */

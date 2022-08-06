@@ -1,6 +1,10 @@
 var searchData=
 [
-  ['readchar_85',['readChar',['../group__tokenizer.html#ga4f2be419c946530de61fcc5bd922b961',1,'lib.c']]],
-  ['readline_86',['readLine',['../group__tokenizer.html#ga986d1e4dee1be06e31a781ce4b847fe0',1,'lib.c']]],
-  ['readstringtoken_87',['readStringToken',['../group__tokenizer.html#gaca69499fef7287dfec40541fe204f94c',1,'lib.c']]]
+  ['message_5fadd_5fmsg_240',['message_add_msg',['../group__messages.html#ga7bb100d43df3c8a404ea1f3ebdeeb0c3',1,'message_add_msg(t_messages *ms, t_messages *m):&#160;lib.c'],['../group__messages.html#ga7bb100d43df3c8a404ea1f3ebdeeb0c3',1,'message_add_msg(t_messages *ms, t_messages *m):&#160;lib.c']]],
+  ['method_5fenter_241',['method_enter',['../group__internal.html#ga0d2d92bb7523c67472bfac6fb1d4ec37',1,'method_enter(t_message_pattern *mp):&#160;method_enter.c'],['../group__internal.html#ga0d2d92bb7523c67472bfac6fb1d4ec37',1,'method_enter(t_message_pattern *):&#160;method_enter.c'],['../group__internal.html#ga0d2d92bb7523c67472bfac6fb1d4ec37',1,'method_enter(t_message_pattern *mp):&#160;method_enter.c'],['../group__internal.html#ga0d2d92bb7523c67472bfac6fb1d4ec37',1,'method_enter(t_message_pattern *mp):&#160;method_enter.c']]],
+  ['method_5fexec_242',['method_exec',['../group__internal.html#ga13aee7152018457cfa1abb6503597fee',1,'method_exec(t_object *self, const char *clsname, const char *sel, t_object **args):&#160;tt_test.c'],['../group__internal.html#ga13aee7152018457cfa1abb6503597fee',1,'method_exec(t_object *self, const char *clsname, const char *sel, t_object **args):&#160;tt_test.c']]],
+  ['method_5fname_243',['method_name',['../group__internal.html#gaf573719c609adfff2da8719d43d02863',1,'method_name(const char *class, const char *sel):&#160;method_name.c'],['../group__internal.html#gaf573719c609adfff2da8719d43d02863',1,'method_name(const char *class, const char *sel):&#160;method_name.c'],['../group__internal.html#gaf573719c609adfff2da8719d43d02863',1,'method_name(const char *class, const char *sel):&#160;method_name.c']]],
+  ['msg_5fadd_244',['msg_add',['../group__msg.html#gaccb8af95fd0cbf6c4dcea8ed344e3c9a',1,'msg_add(const char *msg,...):&#160;lib.c'],['../group__msg.html#gaccb8af95fd0cbf6c4dcea8ed344e3c9a',1,'msg_add(const char *msg,...):&#160;lib.c']]],
+  ['msg_5finit_245',['msg_init',['../group__msg.html#ga37e492e15c595687b048d2cc29cdf358',1,'lib.c']]],
+  ['msg_5fprint_5flast_246',['msg_print_last',['../group__msg.html#ga66c12918af7e9502e63003ac2fb5a1b8',1,'msg_print_last():&#160;lib.c'],['../group__msg.html#ga66c12918af7e9502e63003ac2fb5a1b8',1,'msg_print_last():&#160;lib.c']]]
 ];

@@ -2,6 +2,10 @@
 \label{structast}\index{ast@{ast}}
 
 
+{\ttfamily \#include $<$global.\+h$>$}
+
+
+
 Collaboration diagram for ast\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -15,7 +19,6 @@ Collaboration diagram for ast\+:\nopagebreak
 \mbox{\Hypertarget{structast_a80c0bb9ad48afd7f459230031f0f1fae}\label{structast_a80c0bb9ad48afd7f459230031f0f1fae}} 
 int \mbox{\hyperlink{structast_a80c0bb9ad48afd7f459230031f0f1fae}{tag}}
 \begin{DoxyCompactList}\small\item\em descriminator for the union, tags start with AST\+\_\+ \end{DoxyCompactList}\item 
-\mbox{\Hypertarget{structast_a3ed5bc71a976be32b56b7a36fcea69f2}\label{structast_a3ed5bc71a976be32b56b7a36fcea69f2}} 
 \begin{tabbing}
 xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=xx\=\kill
 union \{\\
@@ -78,10 +81,13 @@ union \{\\
 \>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries body}\\
 \>\>struct \mbox{\hyperlink{structast}{ast}} $\ast$ {\bfseries next}\\
 \>\} {\bfseries methods}\\
-\} {\bfseries u}\\
+\} \mbox{\hyperlink{structast_a3ed5bc71a976be32b56b7a36fcea69f2}{u}}\\
 
 \end{tabbing}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+old structure for the abstract syntax tree. shouldn\textquotesingle{}t be used anymore. 
 
 \doxysubsection{Field Documentation}
 \mbox{\Hypertarget{structast_ad81da7b17e74012ad629cf28d0e02664}\label{structast_ad81da7b17e74012ad629cf28d0e02664}} 
@@ -100,7 +106,13 @@ Keyword including the colon at the end if it is no keyword then the plain unary 
 
 next argument 
 
-next keyword in the list \mbox{\Hypertarget{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}\label{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}} 
+next keyword in the list \mbox{\Hypertarget{structast_a3ed5bc71a976be32b56b7a36fcea69f2}\label{structast_a3ed5bc71a976be32b56b7a36fcea69f2}} 
+\index{ast@{ast}!u@{u}}
+\index{u@{u}!ast@{ast}}
+\doxysubsubsection{\texorpdfstring{}{}}
+{\footnotesize\ttfamily union \{ ... \}  ast\+::u}
+
+union \mbox{\Hypertarget{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}\label{structast_aa91a4fd8269fd6c1a7d5deeb292a3677}} 
 \index{ast@{ast}!v@{v}}
 \index{v@{v}!ast@{ast}}
 \doxysubsubsection{\texorpdfstring{v}{v}}

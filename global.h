@@ -14,6 +14,9 @@ bool nextToken(  );
 #define AST_ARG             11
 #define AST_ARGDEF          12
 
+/** old structure for the abstract syntax tree. 
+ shouldn't be used anymore.
+ */
 struct ast {
     int tag;                    //!< descriminator for the union, tags start with AST_
     union {
@@ -65,7 +68,7 @@ struct ast {
             struct ast *body;
             struct ast *next;
         } methods;
-    } u;
+    } u; /**< union */
 };
 
 #define meth_name   u.methods.name
@@ -73,18 +76,22 @@ struct ast {
 #define meth_body   u.methods.body
 #define meth_next   u.methods.next
 
+/**
+* structure containing global data 
+*/
 struct gd {
-    int state;                  // 0 - init, 1 - running, 2 - end
-    int paridx;
-    int token;
-    int pos;
-    char buf[50];
-    char *line;
-    int line_count;
-    struct ast *ast;
-    int classnum;
-    struct itab *src;
-    struct itab_iter *src_iter;
+    int state;                  ///< 0 - init, 1 - running, 2 - end
+    int paridx;                 ///< ...
+    int token;                  ///< ...
+    int pos;                    ///< ...
+    char buf[50];               ///< ...
+    char *line;                 ///< ...
+    int line_count;             ///< ...
+    struct ast *ast;            ///< ...
+    int classnum;               ///< ...
+    struct itab *src;           ///< ...
+    struct itab_iter *src_iter; ///< ...
+    struct s_env * env;         ///< ...
 };
 
 extern struct gd gd;

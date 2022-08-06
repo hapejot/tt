@@ -3,11 +3,7 @@
 \doxysubsection*{Data Structures}
 \begin{DoxyCompactItemize}
 \item 
-struct \mbox{\hyperlink{structs__namelist}{s\+\_\+namelist}}
-\item 
 struct \mbox{\hyperlink{structs__expression__list}{s\+\_\+expression\+\_\+list}}
-\item 
-struct \mbox{\hyperlink{structs__names}{s\+\_\+names}}
 \item 
 struct \mbox{\hyperlink{structs__pattern}{s\+\_\+pattern}}
 \item 
@@ -38,74 +34,49 @@ struct \mbox{\hyperlink{structs__env}{s\+\_\+env}}
 \doxysubsection*{Typedefs}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga0d9a89d173e4a13b003369f5db308b89}\label{group__internal__structures_ga0d9a89d173e4a13b003369f5db308b89}} 
-typedef struct \mbox{\hyperlink{structs__namelist}{s\+\_\+namelist}} {\bfseries t\+\_\+namelist}
+typedef struct \mbox{\hyperlink{structs__expression__list}{s\+\_\+expression\+\_\+list}} \mbox{\hyperlink{group__internal__structures_ga54afb7002a67b1e8f9a077103a89b064}{t\+\_\+expression\+\_\+list}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga1d38929abd2544ae021e25b03b5c4a63}\label{group__internal__structures_ga1d38929abd2544ae021e25b03b5c4a63}} 
-typedef struct \mbox{\hyperlink{structs__names}{s\+\_\+names}} $\ast$ {\bfseries t\+\_\+names}
+typedef struct \mbox{\hyperlink{structs__pattern}{s\+\_\+pattern}} $\ast$ \mbox{\hyperlink{group__internal__structures_ga45f6337bd397fa7b072a6066bcae0b9d}{t\+\_\+pattern}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga54afb7002a67b1e8f9a077103a89b064}\label{group__internal__structures_ga54afb7002a67b1e8f9a077103a89b064}} 
-typedef struct \mbox{\hyperlink{structs__expression__list}{s\+\_\+expression\+\_\+list}} {\bfseries t\+\_\+expression\+\_\+list}
+typedef struct \mbox{\hyperlink{structs__classdef}{s\+\_\+classdef}} \mbox{\hyperlink{group__internal__structures_gab6310e78956b0fb6551d5b1359251607}{t\+\_\+classdef}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga45f6337bd397fa7b072a6066bcae0b9d}\label{group__internal__structures_ga45f6337bd397fa7b072a6066bcae0b9d}} 
-typedef struct \mbox{\hyperlink{structs__pattern}{s\+\_\+pattern}} $\ast$ {\bfseries t\+\_\+pattern}
+typedef enum \mbox{\hyperlink{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}{e\+\_\+statement\+\_\+type}} \mbox{\hyperlink{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}{t\+\_\+statement\+\_\+type}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_gab6310e78956b0fb6551d5b1359251607}\label{group__internal__structures_gab6310e78956b0fb6551d5b1359251607}} 
-typedef struct \mbox{\hyperlink{structs__classdef}{s\+\_\+classdef}} {\bfseries t\+\_\+classdef}
+typedef struct \mbox{\hyperlink{structs__statements}{s\+\_\+statements}} \mbox{\hyperlink{group__internal__structures_ga7e69b5ad3c7bd165aa98c2f081b79ccf}{t\+\_\+statements}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}\label{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}} 
-typedef enum e\+\_\+statement\+\_\+type {\bfseries t\+\_\+statement\+\_\+type}
+typedef struct \mbox{\hyperlink{structs__methoddef}{s\+\_\+methoddef}} \mbox{\hyperlink{group__internal__structures_ga4924ef815b2802feb1b0f9e14fa0c91b}{t\+\_\+methoddef}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga7e69b5ad3c7bd165aa98c2f081b79ccf}\label{group__internal__structures_ga7e69b5ad3c7bd165aa98c2f081b79ccf}} 
-typedef struct \mbox{\hyperlink{structs__statements}{s\+\_\+statements}} {\bfseries t\+\_\+statements}
+typedef struct \mbox{\hyperlink{structs__message__pattern}{s\+\_\+message\+\_\+pattern}} \mbox{\hyperlink{group__internal__structures_ga43f5359d50c63be654c47b6541f3eb9b}{t\+\_\+message\+\_\+pattern}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga4924ef815b2802feb1b0f9e14fa0c91b}\label{group__internal__structures_ga4924ef815b2802feb1b0f9e14fa0c91b}} 
-typedef struct \mbox{\hyperlink{structs__methoddef}{s\+\_\+methoddef}} {\bfseries t\+\_\+methoddef}
+typedef enum \mbox{\hyperlink{group__internal__structures_ga483470fc733e625f119227f948dad913}{e\+\_\+expression\+\_\+tag}} \mbox{\hyperlink{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}{t\+\_\+expression\+\_\+tag}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga43f5359d50c63be654c47b6541f3eb9b}\label{group__internal__structures_ga43f5359d50c63be654c47b6541f3eb9b}} 
-typedef struct \mbox{\hyperlink{structs__message__pattern}{s\+\_\+message\+\_\+pattern}} {\bfseries t\+\_\+message\+\_\+pattern}
+typedef struct \mbox{\hyperlink{structs__assignment}{s\+\_\+assignment}} \mbox{\hyperlink{group__internal__structures_ga2d4196fd52b9a4956984c42aed6d0712}{t\+\_\+assignment}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}\label{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}} 
-typedef enum e\+\_\+expression\+\_\+tag {\bfseries t\+\_\+expression\+\_\+tag}
+typedef struct \mbox{\hyperlink{structs__block}{s\+\_\+block}} \mbox{\hyperlink{group__internal__structures_ga70ed1bd7b71e35b2384f0d91ac9fc112}{t\+\_\+block}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga2d4196fd52b9a4956984c42aed6d0712}\label{group__internal__structures_ga2d4196fd52b9a4956984c42aed6d0712}} 
-typedef struct \mbox{\hyperlink{structs__assignment}{s\+\_\+assignment}} {\bfseries t\+\_\+assignment}
+typedef struct \mbox{\hyperlink{structs__expression}{s\+\_\+expression}} \mbox{\hyperlink{group__internal__structures_ga087664f14e887a566d35464a23d9f2b5}{t\+\_\+expression}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga70ed1bd7b71e35b2384f0d91ac9fc112}\label{group__internal__structures_ga70ed1bd7b71e35b2384f0d91ac9fc112}} 
-typedef struct \mbox{\hyperlink{structs__block}{s\+\_\+block}} {\bfseries t\+\_\+block}
+typedef struct \mbox{\hyperlink{structs__messages}{s\+\_\+messages}} \mbox{\hyperlink{group__internal__structures_ga03f0a940b20336800ab163245516cdcd}{t\+\_\+messages}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga087664f14e887a566d35464a23d9f2b5}\label{group__internal__structures_ga087664f14e887a566d35464a23d9f2b5}} 
-typedef struct \mbox{\hyperlink{structs__expression}{s\+\_\+expression}} {\bfseries t\+\_\+expression}
+typedef struct \mbox{\hyperlink{structs__message__cascade}{s\+\_\+message\+\_\+cascade}} \mbox{\hyperlink{group__internal__structures_ga832e30b3a41ae2fa11b2e8bc5a537180}{t\+\_\+message\+\_\+cascade}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga03f0a940b20336800ab163245516cdcd}\label{group__internal__structures_ga03f0a940b20336800ab163245516cdcd}} 
-typedef struct \mbox{\hyperlink{structs__messages}{s\+\_\+messages}} {\bfseries t\+\_\+messages}
+typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$($\ast$ \mbox{\hyperlink{group__internal__structures_gaa98e62c4ef16b85551d16212f439b234}{t\+\_\+message\+\_\+handler}}) (struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$, const char $\ast$sel, struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$$\ast$args)
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga832e30b3a41ae2fa11b2e8bc5a537180}\label{group__internal__structures_ga832e30b3a41ae2fa11b2e8bc5a537180}} 
-typedef struct \mbox{\hyperlink{structs__message__cascade}{s\+\_\+message\+\_\+cascade}} {\bfseries t\+\_\+message\+\_\+cascade}
+typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} \mbox{\hyperlink{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}{t\+\_\+object}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_gaa98e62c4ef16b85551d16212f439b234}\label{group__internal__structures_gaa98e62c4ef16b85551d16212f439b234}} 
-typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$($\ast$ {\bfseries t\+\_\+message\+\_\+handler}) (struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$, const char $\ast$sel, struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$$\ast$args)
+typedef struct \mbox{\hyperlink{structs__slot}{s\+\_\+slot}} \mbox{\hyperlink{group__internal__structures_gae8ddccf0077669747fcd0c7da32e7de1}{t\+\_\+slot}}
 \item 
-\mbox{\Hypertarget{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}\label{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}} 
-typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} {\bfseries t\+\_\+object}
-\item 
-\mbox{\Hypertarget{group__internal__structures_gae8ddccf0077669747fcd0c7da32e7de1}\label{group__internal__structures_gae8ddccf0077669747fcd0c7da32e7de1}} 
-typedef struct \mbox{\hyperlink{structs__slot}{s\+\_\+slot}} {\bfseries t\+\_\+slot}
-\item 
-\mbox{\Hypertarget{group__internal__structures_gaa3d21e1567b21e23ec928b1eb405fe4b}\label{group__internal__structures_gaa3d21e1567b21e23ec928b1eb405fe4b}} 
-typedef struct \mbox{\hyperlink{structs__env}{s\+\_\+env}} {\bfseries t\+\_\+env}
+typedef struct \mbox{\hyperlink{structs__env}{s\+\_\+env}} \mbox{\hyperlink{group__internal__structures_gaa3d21e1567b21e23ec928b1eb405fe4b}{t\+\_\+env}}
 \end{DoxyCompactItemize}
 \doxysubsection*{Enumerations}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}\label{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}} 
-enum {\bfseries e\+\_\+statement\+\_\+type} \{ {\bfseries stmt\+\_\+return} = 100
+enum \mbox{\hyperlink{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}{e\+\_\+statement\+\_\+type}} \{ {\bfseries stmt\+\_\+return} = 100
 , {\bfseries stmt\+\_\+assign}
 , {\bfseries stmt\+\_\+message}
  \}
 \item 
-\mbox{\Hypertarget{group__internal__structures_ga483470fc733e625f119227f948dad913}\label{group__internal__structures_ga483470fc733e625f119227f948dad913}} 
-enum {\bfseries e\+\_\+expression\+\_\+tag} \{ \newline
+enum \mbox{\hyperlink{group__internal__structures_ga483470fc733e625f119227f948dad913}{e\+\_\+expression\+\_\+tag}} \{ \newline
 {\bfseries tag\+\_\+string}
 , {\bfseries tag\+\_\+char}
 , {\bfseries tag\+\_\+message}
@@ -120,3 +91,146 @@ enum {\bfseries e\+\_\+expression\+\_\+tag} \{ \newline
 
 
 \doxysubsection{Detailed Description}
+
+
+\doxysubsection{Typedef Documentation}
+\mbox{\Hypertarget{group__internal__structures_ga2d4196fd52b9a4956984c42aed6d0712}\label{group__internal__structures_ga2d4196fd52b9a4956984c42aed6d0712}} 
+\index{Internal\_structures@{Internal\_structures}!t\_assignment@{t\_assignment}}
+\index{t\_assignment@{t\_assignment}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_assignment}{t\_assignment}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__assignment}{s\+\_\+assignment}} \mbox{\hyperlink{group__internal__structures_ga2d4196fd52b9a4956984c42aed6d0712}{t\+\_\+assignment}}}
+
+an assignment consists of a target name and an expression \mbox{\Hypertarget{group__internal__structures_ga70ed1bd7b71e35b2384f0d91ac9fc112}\label{group__internal__structures_ga70ed1bd7b71e35b2384f0d91ac9fc112}} 
+\index{Internal\_structures@{Internal\_structures}!t\_block@{t\_block}}
+\index{t\_block@{t\_block}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_block}{t\_block}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__block}{s\+\_\+block}} \mbox{\hyperlink{group__internal__structures_ga70ed1bd7b71e35b2384f0d91ac9fc112}{t\+\_\+block}}}
+
+a block has parameters, locals and statments the environment should not be used anymore. \mbox{\Hypertarget{group__internal__structures_gab6310e78956b0fb6551d5b1359251607}\label{group__internal__structures_gab6310e78956b0fb6551d5b1359251607}} 
+\index{Internal\_structures@{Internal\_structures}!t\_classdef@{t\_classdef}}
+\index{t\_classdef@{t\_classdef}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_classdef}{t\_classdef}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__classdef}{s\+\_\+classdef}} \mbox{\hyperlink{group__internal__structures_gab6310e78956b0fb6551d5b1359251607}{t\+\_\+classdef}}}
+
+a class has an id (not pouplated right now) also consists of a name, the name of the metaclass and the name of the super class. the environment should not be used anymore. \mbox{\Hypertarget{group__internal__structures_gaa3d21e1567b21e23ec928b1eb405fe4b}\label{group__internal__structures_gaa3d21e1567b21e23ec928b1eb405fe4b}} 
+\index{Internal\_structures@{Internal\_structures}!t\_env@{t\_env}}
+\index{t\_env@{t\_env}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_env}{t\_env}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__env}{s\+\_\+env}} \mbox{\hyperlink{group__internal__structures_gaa3d21e1567b21e23ec928b1eb405fe4b}{t\+\_\+env}}}
+
+an environment is a list of slots. and also points to a lower environment. The names in this environment supersede the ones in the lower environments. \mbox{\Hypertarget{group__internal__structures_ga087664f14e887a566d35464a23d9f2b5}\label{group__internal__structures_ga087664f14e887a566d35464a23d9f2b5}} 
+\index{Internal\_structures@{Internal\_structures}!t\_expression@{t\_expression}}
+\index{t\_expression@{t\_expression}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_expression}{t\_expression}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__expression}{s\+\_\+expression}} \mbox{\hyperlink{group__internal__structures_ga087664f14e887a566d35464a23d9f2b5}{t\+\_\+expression}}}
+
+an expression is either an integer, a string, a symbol, an assignment, a block, or a message call \mbox{\Hypertarget{group__internal__structures_ga54afb7002a67b1e8f9a077103a89b064}\label{group__internal__structures_ga54afb7002a67b1e8f9a077103a89b064}} 
+\index{Internal\_structures@{Internal\_structures}!t\_expression\_list@{t\_expression\_list}}
+\index{t\_expression\_list@{t\_expression\_list}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_expression\_list}{t\_expression\_list}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__expression__list}{s\+\_\+expression\+\_\+list}} \mbox{\hyperlink{group__internal__structures_ga54afb7002a67b1e8f9a077103a89b064}{t\+\_\+expression\+\_\+list}}}
+
+a list of expressions \mbox{\Hypertarget{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}\label{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}} 
+\index{Internal\_structures@{Internal\_structures}!t\_expression\_tag@{t\_expression\_tag}}
+\index{t\_expression\_tag@{t\_expression\_tag}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_expression\_tag}{t\_expression\_tag}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group__internal__structures_ga483470fc733e625f119227f948dad913}{e\+\_\+expression\+\_\+tag}} \mbox{\hyperlink{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}{t\+\_\+expression\+\_\+tag}}}
+
+expression type \mbox{\Hypertarget{group__internal__structures_ga832e30b3a41ae2fa11b2e8bc5a537180}\label{group__internal__structures_ga832e30b3a41ae2fa11b2e8bc5a537180}} 
+\index{Internal\_structures@{Internal\_structures}!t\_message\_cascade@{t\_message\_cascade}}
+\index{t\_message\_cascade@{t\_message\_cascade}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_message\_cascade}{t\_message\_cascade}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__message__cascade}{s\+\_\+message\+\_\+cascade}} \mbox{\hyperlink{group__internal__structures_ga832e30b3a41ae2fa11b2e8bc5a537180}{t\+\_\+message\+\_\+cascade}}}
+
+a cascade of messages to the same target. is it still used somewhere? \mbox{\Hypertarget{group__internal__structures_gaa98e62c4ef16b85551d16212f439b234}\label{group__internal__structures_gaa98e62c4ef16b85551d16212f439b234}} 
+\index{Internal\_structures@{Internal\_structures}!t\_message\_handler@{t\_message\_handler}}
+\index{t\_message\_handler@{t\_message\_handler}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_message\_handler}{t\_message\_handler}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}}$\ast$( $\ast$ t\+\_\+message\+\_\+handler) (struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$, const char $\ast$sel, struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$$\ast$args)}
+
+message handler \mbox{\Hypertarget{group__internal__structures_ga43f5359d50c63be654c47b6541f3eb9b}\label{group__internal__structures_ga43f5359d50c63be654c47b6541f3eb9b}} 
+\index{Internal\_structures@{Internal\_structures}!t\_message\_pattern@{t\_message\_pattern}}
+\index{t\_message\_pattern@{t\_message\_pattern}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_message\_pattern}{t\_message\_pattern}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__message__pattern}{s\+\_\+message\+\_\+pattern}} \mbox{\hyperlink{group__internal__structures_ga43f5359d50c63be654c47b6541f3eb9b}{t\+\_\+message\+\_\+pattern}}}
+
+message pattern as it is parsed. \mbox{\Hypertarget{group__internal__structures_ga03f0a940b20336800ab163245516cdcd}\label{group__internal__structures_ga03f0a940b20336800ab163245516cdcd}} 
+\index{Internal\_structures@{Internal\_structures}!t\_messages@{t\_messages}}
+\index{t\_messages@{t\_messages}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_messages}{t\_messages}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__messages}{s\+\_\+messages}} \mbox{\hyperlink{group__internal__structures_ga03f0a940b20336800ab163245516cdcd}{t\+\_\+messages}}}
+
+message calling structure \mbox{\Hypertarget{group__internal__structures_ga4924ef815b2802feb1b0f9e14fa0c91b}\label{group__internal__structures_ga4924ef815b2802feb1b0f9e14fa0c91b}} 
+\index{Internal\_structures@{Internal\_structures}!t\_methoddef@{t\_methoddef}}
+\index{t\_methoddef@{t\_methoddef}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_methoddef}{t\_methoddef}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__methoddef}{s\+\_\+methoddef}} \mbox{\hyperlink{group__internal__structures_ga4924ef815b2802feb1b0f9e14fa0c91b}{t\+\_\+methoddef}}}
+
+method definition \mbox{\Hypertarget{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}\label{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}} 
+\index{Internal\_structures@{Internal\_structures}!t\_object@{t\_object}}
+\index{t\_object@{t\_object}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_object}{t\_object}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} \mbox{\hyperlink{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}{t\+\_\+object}}}
+
+an object contains mainly of the handler function and some data area. broken down into some specific alternatives for convenience. (but are not so convenient) \mbox{\Hypertarget{group__internal__structures_ga45f6337bd397fa7b072a6066bcae0b9d}\label{group__internal__structures_ga45f6337bd397fa7b072a6066bcae0b9d}} 
+\index{Internal\_structures@{Internal\_structures}!t\_pattern@{t\_pattern}}
+\index{t\_pattern@{t\_pattern}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_pattern}{t\_pattern}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__pattern}{s\+\_\+pattern}}$\ast$ \mbox{\hyperlink{group__internal__structures_ga45f6337bd397fa7b072a6066bcae0b9d}{t\+\_\+pattern}}}
+
+patterns \mbox{\Hypertarget{group__internal__structures_gae8ddccf0077669747fcd0c7da32e7de1}\label{group__internal__structures_gae8ddccf0077669747fcd0c7da32e7de1}} 
+\index{Internal\_structures@{Internal\_structures}!t\_slot@{t\_slot}}
+\index{t\_slot@{t\_slot}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_slot}{t\_slot}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__slot}{s\+\_\+slot}} \mbox{\hyperlink{group__internal__structures_gae8ddccf0077669747fcd0c7da32e7de1}{t\+\_\+slot}}}
+
+one slot of the environment. A linked list of name and value pairs. Values are expressed as objects. Names have to be cstrings. \mbox{\Hypertarget{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}\label{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}} 
+\index{Internal\_structures@{Internal\_structures}!t\_statement\_type@{t\_statement\_type}}
+\index{t\_statement\_type@{t\_statement\_type}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_statement\_type}{t\_statement\_type}}
+{\footnotesize\ttfamily typedef enum \mbox{\hyperlink{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}{e\+\_\+statement\+\_\+type}} \mbox{\hyperlink{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}{t\+\_\+statement\+\_\+type}}}
+
+statement type \mbox{\Hypertarget{group__internal__structures_ga7e69b5ad3c7bd165aa98c2f081b79ccf}\label{group__internal__structures_ga7e69b5ad3c7bd165aa98c2f081b79ccf}} 
+\index{Internal\_structures@{Internal\_structures}!t\_statements@{t\_statements}}
+\index{t\_statements@{t\_statements}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{t\_statements}{t\_statements}}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__statements}{s\+\_\+statements}} \mbox{\hyperlink{group__internal__structures_ga7e69b5ad3c7bd165aa98c2f081b79ccf}{t\+\_\+statements}}}
+
+linked list of statements. The type, expression and the next statments. 
+
+\doxysubsection{Enumeration Type Documentation}
+\mbox{\Hypertarget{group__internal__structures_ga483470fc733e625f119227f948dad913}\label{group__internal__structures_ga483470fc733e625f119227f948dad913}} 
+\index{Internal\_structures@{Internal\_structures}!e\_expression\_tag@{e\_expression\_tag}}
+\index{e\_expression\_tag@{e\_expression\_tag}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{e\_expression\_tag}{e\_expression\_tag}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__internal__structures_ga483470fc733e625f119227f948dad913}{e\+\_\+expression\+\_\+tag}}}
+
+expression type 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00109                               \{}
+\DoxyCodeLine{00110     tag\_string,}
+\DoxyCodeLine{00111     tag\_char,}
+\DoxyCodeLine{00112     tag\_message,}
+\DoxyCodeLine{00113     tag\_number,}
+\DoxyCodeLine{00114     tag\_ident,}
+\DoxyCodeLine{00115     tag\_block,}
+\DoxyCodeLine{00116     tag\_array,}
+\DoxyCodeLine{00117     tag\_assignment}
+\DoxyCodeLine{00118 \} \mbox{\hyperlink{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}{t\_expression\_tag}};}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}\label{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}} 
+\index{Internal\_structures@{Internal\_structures}!e\_statement\_type@{e\_statement\_type}}
+\index{e\_statement\_type@{e\_statement\_type}!Internal\_structures@{Internal\_structures}}
+\doxysubsubsection{\texorpdfstring{e\_statement\_type}{e\_statement\_type}}
+{\footnotesize\ttfamily enum \mbox{\hyperlink{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}{e\+\_\+statement\+\_\+type}}}
+
+statement type 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00073                               \{}
+\DoxyCodeLine{00074     stmt\_return = 100,}
+\DoxyCodeLine{00075     stmt\_assign,}
+\DoxyCodeLine{00076     stmt\_message}
+\DoxyCodeLine{00077 \} \mbox{\hyperlink{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}{t\_statement\_type}};}
+
+\end{DoxyCode}

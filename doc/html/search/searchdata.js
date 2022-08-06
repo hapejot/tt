@@ -1,11 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "acgikmnorstuvy",
-  1: "acgimsvy",
-  2: "inrs",
-  3: "aiknostuv",
-  4: "imnst",
-  5: "cst"
+  0: "abcdefghiklmnoprstuv",
+  1: "acgimsv",
+  2: "bceimnoprs",
+  3: "abcdefghiklmnoprstuv",
+  4: "t",
+  5: "e",
+  6: "eimnst",
+  7: "cst"
 };
 
 var indexSectionNames =
@@ -14,8 +16,10 @@ var indexSectionNames =
   1: "classes",
   2: "functions",
   3: "variables",
-  4: "groups",
-  5: "pages"
+  4: "typedefs",
+  5: "enums",
+  6: "groups",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -24,7 +28,9 @@ var indexSectionLabels =
   1: "Data Structures",
   2: "Functions",
   3: "Variables",
-  4: "Modules",
-  5: "Pages"
+  4: "Typedefs",
+  5: "Enumerations",
+  6: "Modules",
+  7: "Pages"
 };
 

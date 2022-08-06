@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.22 (TeX Live 2022/dev/Debian) (preloaded format=pdflatex 2022.5.8)  12 JUN 2022 09:56
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.6.17)  20 JUN 2022 08:59
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **refman
 (./refman.tex
 LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-01-21>
+L3 programming layer <2022-02-24>
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
@@ -275,7 +275,7 @@ Package: hanging 2009/09/02 v1.2b hanging paragraphs and punctuation
 Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
 
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/iftex.sty
-Package: iftex 2020/03/06 v1.0d TeX engine tests
+Package: iftex 2022/02/03 v1.0f TeX engine tests
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/adjustbox/adjustbox.sty
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
@@ -537,7 +537,7 @@ Package newunicodechar Warning: Redefining Unicode character on input line 116.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2021-06-07 v7.00m Hypertext links for LaTeX
+Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
@@ -579,13 +579,9 @@ Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
 \Hy@pagecounter=\count307
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2021-06-07 v7.00m Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref-langpatches.def
-File: hyperref-langpatches.def 2021-06-07 v7.00m Hyperref: patches for babel la
-nguages
 )
 (/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
 Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
@@ -596,17 +592,17 @@ Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 \Hy@SavedSpaceFactor=\count308
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2021-06-07 v7.00m Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4192.
-Package hyperref Info: Link nesting OFF on input line 4197.
-Package hyperref Info: Hyper index ON on input line 4200.
-Package hyperref Info: Plain pages OFF on input line 4207.
-Package hyperref Info: Backreferencing ON on input line 4210.
+Package hyperref Info: Hyper figures OFF on input line 4137.
+Package hyperref Info: Link nesting OFF on input line 4142.
+Package hyperref Info: Hyper index ON on input line 4145.
+Package hyperref Info: Plain pages OFF on input line 4152.
+Package hyperref Info: Backreferencing ON on input line 4155.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4445.
+Package hyperref Info: Bookmarks ON on input line 4390.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
 Package: backref 2021/02/04 v1.41 Bibliographical back referencing
@@ -635,7 +631,7 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4804.
+LaTeX Info: Redefining \url on input line 4749.
 \XeTeXLinkMargin=\dimen196
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
@@ -644,15 +640,15 @@ Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 \Fld@menulength=\count310
 \Field@Width=\dimen197
 \Fld@charsize=\dimen198
-Package hyperref Info: Hyper figures OFF on input line 6076.
-Package hyperref Info: Link nesting OFF on input line 6081.
-Package hyperref Info: Hyper index ON on input line 6084.
-Package hyperref Info: backreferencing ON on input line 6089.
-Package hyperref Info: Link coloring OFF on input line 6096.
-Package hyperref Info: Link coloring with OCG OFF on input line 6101.
-Package hyperref Info: PDF/A mode OFF on input line 6106.
-LaTeX Info: Redefining \ref on input line 6146.
-LaTeX Info: Redefining \pageref on input line 6150.
+Package hyperref Info: Hyper figures OFF on input line 6027.
+Package hyperref Info: Link nesting OFF on input line 6032.
+Package hyperref Info: Hyper index ON on input line 6035.
+Package hyperref Info: backreferencing ON on input line 6040.
+Package hyperref Info: Link coloring OFF on input line 6047.
+Package hyperref Info: Link coloring with OCG OFF on input line 6052.
+Package hyperref Info: PDF/A mode OFF on input line 6057.
+LaTeX Info: Redefining \ref on input line 6097.
+LaTeX Info: Redefining \pageref on input line 6101.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
@@ -669,7 +665,7 @@ LaTeX Warning: Command \LT@p@ftntext  has changed.
 )
 Package hyperref Info: Driver: hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2021-06-07 v7.00m Hyperref driver for pdfTeX
+File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
 \Fld@listcount=\count314
 \c@bookmark@seq@number=\count315
 \Hy@SectionHShift=\skip126
@@ -678,17 +674,18 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 134.
 Package hyperref Info: Option `unicode' set `true' on input line 134.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
-Package: caption 2020/10/26 v3.5g Customizing captions (AR)
+Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
-Package: caption3 2020/10/21 v2.2e caption3 kernel (AR)
-\captionmargin=\dimen199
-\captionmargin@=\dimen256
-\captionwidth=\dimen257
-\caption@tempdima=\dimen258
-\caption@indent=\dimen259
-\caption@parindent=\dimen260
-\caption@hangindent=\dimen261
+Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
+\caption@tempdima=\dimen199
+\captionmargin=\dimen256
+\caption@leftmargin=\dimen257
+\caption@rightmargin=\dimen258
+\caption@width=\dimen259
+\caption@indent=\dimen260
+\caption@parindent=\dimen261
+\caption@hangindent=\dimen262
 Package caption Info: Standard document class detected.
 )
 \c@caption@flags=\count316
@@ -698,7 +695,7 @@ Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/ltcaption.sty
-Package: ltcaption 2020/05/30 v1.4b longtable captions (AR)
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/etoc/etoc.sty
 Package: etoc 2021/09/23 v1.09e Completely customisable TOCs (JFB)
@@ -718,7 +715,7 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 149.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-01-12 L3 backend support: PDF output (pdfTeX)
+File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count320
 \l__pdf_internal_box=\box120
 )
@@ -747,13 +744,13 @@ LaTeX Font Info:    ... okay on input line 149.
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count321
-\scratchdimen=\dimen262
+\scratchdimen=\dimen263
 \scratchbox=\box121
 \nofMPsegments=\count322
 \nofMParguments=\count323
 \everyMPshowfont=\toks35
 \MPscratchCnt=\count324
-\MPscratchDim=\dimen263
+\MPscratchDim=\dimen264
 \MPnumerator=\count325
 \makeMPintoPDFobject=\count326
 \everyMPtoPDFconversion=\toks36
@@ -800,6 +797,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
+Package backref Info: ** backref set up for natbib ** on input line 149.
 Package hyperref Info: Link coloring ON on input line 149.
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
@@ -820,7 +818,6 @@ LaTeX Info: Redefining \nameref on input line 149.
 \@outlinefile=\write5
 \openout5 = `refman.out'.
 
-Package backref Info: ** backref set up for natbib ** on input line 149.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \Etoc@tf=\read4
@@ -865,7 +862,9 @@ LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 8.99994pt on input line 169.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 6.29996pt on input line 169.
- [1] [2]
+ [1] [2] [3] [4] [5] [6
+
+]
 Package hyperref Info: Option `pageanchor' set `true' on input line 171.
 
 Chapter 1.
@@ -884,29 +883,22 @@ LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
 (./index.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
-) [1
-
-
-] [2
-
-]
-Chapter 2.
-(./tt_tech.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 7.19995pt on input line 9.
-LaTeX Font Info:    Trying to load font information for T1+pcr on input line 9.
+(Font)              scaled to size 7.19995pt on input line 6.
+LaTeX Font Info:    Trying to load font information for T1+pcr on input line 6.
 
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
-[3]) [4]
+) [1
+
+])
+[2]
+Chapter 2.
+(./tt_tech.tex [3
+
+]) [4]
 Chapter 3.
-(./modules.tex
-
-LaTeX Warning: Reference `group__namelist' on page 5 undefined on input line 7.
-
-
-) [5
+(./modules.tex) [5
 
 ] [6
 
@@ -916,7 +908,7 @@ Chapter 4.
 
 ]
 Chapter 5.
-(./group__itab.tex
+(./group__env.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 3.
 LaTeX Font Info:    Trying to load font information for TS1+phv on input line 6
@@ -926,310 +918,412 @@ File: ts1phv.fd 2020/03/25 scalable font definitions for TS1/phv.
 )
 LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 (Font)              scaled to size 8.99994pt on input line 6.
-LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.09995pt on input line 7.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 7.
-LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 8.09995pt on input line 7.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 52.
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 32.
 
 [9]
-LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 8.99994pt on input line 58.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 68.
 
-Underfull \hbox (badness 10000) detected at line 58
-[][][]
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
+
  []
 
-
-Underfull \hbox (badness 10000) detected at line 100
-[][][]
- []
-
-) (./group__tokenizer.tex [10]
-LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 20.
-LaTeX Font Info:    Font shape `T1/phv/m/it' in size <7> not available
-(Font)              Font shape `T1/phv/m/sl' tried instead on input line 20.
+[10]) (./group__internal.tex
+LaTeX Font Info:    Font shape `T1/phv/m/n' will be
+(Font)              scaled to size 8.09995pt on input line 19.
+LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
+(Font)              Font shape `T1/phv/m/sl' tried instead on input line 19.
 LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
-(Font)              scaled to size 6.29996pt on input line 20.
+(Font)              scaled to size 8.09995pt on input line 19.
+LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 31.
+ [11] [12]
+Overfull \hbox (20.83997pt too wide) in paragraph at lines 141--142
+[]\T1/phv/m/n/10 , [], [], [], [], [], and []. 
+ []
 
-Underfull \hbox (badness 10000) detected at line 33
+[13] [14] [15] [16]
+Underfull \hbox (badness 10000) detected at line 413
 [][][]
  []
 
 
-Underfull \hbox (badness 10000) detected at line 54
-[][][]
+Overfull \hbox (56.55981pt too wide) in paragraph at lines 462--463
+[]\T1/phv/m/n/10 , [], [], [], [], [], [],
  []
 
-[11]
-Underfull \hbox (badness 10000) detected at line 80
-[][][]
- []
-
-[12] [13]
-Underfull \hbox (badness 10000) detected at line 257
-[][][]
- []
-
-[14]
-Underfull \hbox (badness 10000) detected at line 340
-[][][]
- []
-
-[15]) (./group__msg.tex [16]) (./group__messages.tex) (./group__namelist.tex
 [17]
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 5.3 on input line 30.
-
-
-Package longtable Warning: Column widths have changed
-(longtable)                in table 5.4 on input line 52.
-
-
-Overfull \vbox (15.0057pt too high) has occurred while \output is active []
-
+Underfull \hbox (badness 7613) in paragraph at lines 503--504
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], and
+ []
 
 [18]
+Underfull \hbox (badness 10000) detected at line 539
+[][][]
+ []
 
-Package longtable Warning: Column widths have changed
-(longtable)                in table 5.5 on input line 80.
+[19] [20]
+Underfull \hbox (badness 10000) in paragraph at lines 769--770
 
-) (./group__internal__structures.tex [19]) [20]
+ []
+
+[21]
+Underfull \hbox (badness 10000) detected at line 806
+[][][]
+ []
+
+[22]
+Underfull \hbox (badness 10000) detected at line 889
+[][][]
+ []
+
+[23] [24] [25] [26] [27] [28]) (./group__itab.tex [29] [30]
+Underfull \hbox (badness 10000) detected at line 109
+[][][]
+ []
+
+[31]
+Underfull \hbox (badness 10000) detected at line 216
+[][][]
+ []
+
+[32]) (./group__tokenizer.tex [33]
+Underfull \hbox (badness 10000) detected at line 31
+[][][]
+ []
+
+[34]
+Underfull \hbox (badness 10000) detected at line 90
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 116
+[][][]
+ []
+
+[35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 284--285
+
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 319
+[][][]
+ []
+
+[37]
+Underfull \hbox (badness 10000) detected at line 406
+[][][]
+ []
+
+[38] [39]) (./group__msg.tex [40]
+Underfull \hbox (badness 1308) in paragraph at lines 76--77
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], [],
+ []
+
+[41]) (./group__messages.tex) (./group__namelist.tex [42] [43]
+Overfull \vbox (18.3043pt too high) has occurred while \output is active []
+
+
+[44]) (./group__internal__structures.tex [45] [46]
+Underfull \hbox (badness 10000) in paragraph at lines 149--150
+\T1/pcr/m/n/8 typedef struct []$\OMS/cmsy/m/n/8 ^^C$\T1/pcr/m/n/8 ( $\OMS/cmsy/
+m/n/8 ^^C$ \T1/pcr/m/n/8 t[]_[]message[]_[]handler) (struct [] $\OMS/cmsy/m/n/8
+ ^^C$\T1/pcr/m/n/8 , const char $\OMS/cmsy/m/n/8 ^^C$\T1/pcr/m/n/8 sel, struct
+ []
+
+[47] [48]) [49] [50
+
+]
 Chapter 6.
 (./structast.tex <./structast__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./structast__coll__graph.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >
-<structast__coll__graph.pdf, id=925, 155.58125pt x 168.63pt>
+<structast__coll__graph.pdf, id=3077, 155.58125pt x 168.63pt>
 File: structast__coll__graph.pdf Graphic file (type pdf)
 <use structast__coll__graph.pdf>
-Package pdftex.def Info: structast__coll__graph.pdf  used on input line 9.
+Package pdftex.def Info: structast__coll__graph.pdf  used on input line 13.
 (pdftex.def)             Requested size: 155.0pt x 168.00174pt.
- [21
-
-] [22]) (./structclassinfo.tex) (./structgd.tex <./structgd__coll__graph.pdf
+ [51] [52]) (./structclassinfo.tex [53]) (./structgd.tex <./structgd__coll__gra
+ph.pdf
 
 pdfTeX warning: pdflatex (file ./structgd__coll__graph.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
 >
-<structgd__coll__graph.pdf, id=987, 285.065pt x 370.38374pt>
+<structgd__coll__graph.pdf, id=3153, 380.42125pt x 372.39125pt>
 File: structgd__coll__graph.pdf Graphic file (type pdf)
 <use structgd__coll__graph.pdf>
-Package pdftex.def Info: structgd__coll__graph.pdf  used on input line 9.
-(pdftex.def)             Requested size: 284.0pt x 368.99818pt.
- [23]) (./structitab.tex [24] <./structitab__coll__graph.pdf>
-<structitab__coll__graph.pdf, id=1022, 146.5475pt x 167.62625pt>
+Package pdftex.def Info: structgd__coll__graph.pdf  used on input line 13.
+(pdftex.def)             Requested size: 350.0pt x 342.62115pt.
+ [54] [55]) (./structitab.tex <./structitab__coll__graph.pdf>
+<structitab__coll__graph.pdf, id=3191, 146.5475pt x 167.62625pt>
 File: structitab__coll__graph.pdf Graphic file (type pdf)
 <use structitab__coll__graph.pdf>
 Package pdftex.def Info: structitab__coll__graph.pdf  used on input line 14.
 (pdftex.def)             Requested size: 146.0pt x 166.99916pt.
 )
-(./structitab__entry.tex) (./structitab__iter.tex <./structitab__iter__coll__gr
-aph.pdf
-
-pdfTeX warning: pdflatex (file ./structitab__iter__coll__graph.pdf): PDF inclus
-ion: multiple pdfs with page group included in a single page
->
-<structitab__iter__coll__graph.pdf, id=1031, 146.5475pt x 234.8775pt>
+(./structitab__entry.tex [56]) (./structitab__iter.tex <./structitab__iter__col
+l__graph.pdf>
+<structitab__iter__coll__graph.pdf, id=3212, 146.5475pt x 234.8775pt>
 File: structitab__iter__coll__graph.pdf Graphic file (type pdf)
 <use structitab__iter__coll__graph.pdf>
 Package pdftex.def Info: structitab__iter__coll__graph.pdf  used on input line 
 14.
 (pdftex.def)             Requested size: 146.0pt x 233.99886pt.
- [25]) (./structmethodinfo.tex [26]) (./structs__assignment.tex <./structs__ass
-ignment__coll__graph.pdf>
-<structs__assignment__coll__graph.pdf, id=1055, 620.3175pt x 313.17pt>
+ [57]) (./structmethodinfo.tex) (./structs__assignment.tex <./structs__assignme
+nt__coll__graph.pdf>
+<structs__assignment__coll__graph.pdf, id=3232, 747.79375pt x 315.1775pt>
 File: structs__assignment__coll__graph.pdf Graphic file (type pdf)
 <use structs__assignment__coll__graph.pdf>
 Package pdftex.def Info: structs__assignment__coll__graph.pdf  used on input li
-ne 9.
-(pdftex.def)             Requested size: 350.0pt x 176.69766pt.
-) (./structs__block.tex <./structs__block__coll__graph.pdf
-
-pdfTeX warning: pdflatex (file ./structs__block__coll__graph.pdf): PDF inclusio
-n: multiple pdfs with page group included in a single page
->
-<structs__block__coll__graph.pdf, id=1064, 568.1225pt x 313.17pt>
+ne 13.
+(pdftex.def)             Requested size: 350.0pt x 147.51785pt.
+ [58]) (./structs__block.tex <./structs__block__coll__graph.pdf>
+<structs__block__coll__graph.pdf, id=3254, 568.1225pt x 449.68pt>
 File: structs__block__coll__graph.pdf Graphic file (type pdf)
 <use structs__block__coll__graph.pdf>
-Package pdftex.def Info: structs__block__coll__graph.pdf  used on input line 9.
-
-(pdftex.def)             Requested size: 350.0pt x 192.94006pt.
- [27]) (./structs__classdef.tex) (./structs__env.tex <./structs__env__coll__gra
-ph.pdf>
-<structs__env__coll__graph.pdf, id=1086, 236.885pt x 236.885pt>
+Package pdftex.def Info: structs__block__coll__graph.pdf  used on input line 13
+.
+(pdftex.def)             Requested size: 350.0pt x 277.04216pt.
+ [59]) (./structs__classdef.tex <./structs__classdef__coll__graph.pdf>
+<structs__classdef__coll__graph.pdf, id=3279, 201.75375pt x 304.13625pt>
+File: structs__classdef__coll__graph.pdf Graphic file (type pdf)
+<use structs__classdef__coll__graph.pdf>
+Package pdftex.def Info: structs__classdef__coll__graph.pdf  used on input line
+ 13.
+(pdftex.def)             Requested size: 201.0pt x 303.00314pt.
+ [60]) (./structs__env.tex <./structs__env__coll__graph.pdf>
+<structs__env__coll__graph.pdf, id=3302, 195.73125pt x 236.885pt>
 File: structs__env__coll__graph.pdf Graphic file (type pdf)
 <use structs__env__coll__graph.pdf>
-Package pdftex.def Info: structs__env__coll__graph.pdf  used on input line 9.
-(pdftex.def)             Requested size: 236.0pt x 236.00607pt.
- [28]) (./structs__expression.tex <./structs__expression__coll__graph.pdf>
-<structs__expression__coll__graph.pdf, id=1112, 723.70375pt x 245.91875pt>
+Package pdftex.def Info: structs__env__coll__graph.pdf  used on input line 13.
+(pdftex.def)             Requested size: 195.0pt x 236.01329pt.
+)
+(./structs__expression.tex <./structs__expression__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./structs__expression__coll__graph.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>
+<structs__expression__coll__graph.pdf, id=3314, 851.18pt x 315.1775pt>
 File: structs__expression__coll__graph.pdf Graphic file (type pdf)
 <use structs__expression__coll__graph.pdf>
 Package pdftex.def Info: structs__expression__coll__graph.pdf  used on input li
-ne 9.
-(pdftex.def)             Requested size: 350.0pt x 118.93272pt.
- [29]) (./structs__expression__list.tex <./structs__expression__list__coll__gra
-ph.pdf>
-<structs__expression__list__coll__graph.pdf, id=1135, 604.2575pt x 313.17pt>
+ne 13.
+(pdftex.def)             Requested size: 350.0pt x 129.59872pt.
+ [61]) (./structs__expression__list.tex [62] <./structs__expression__list__coll
+__graph.pdf>
+<structs__expression__list__coll__graph.pdf, id=3356, 731.73375pt x 315.1775pt>
+
 File: structs__expression__list__coll__graph.pdf Graphic file (type pdf)
 <use structs__expression__list__coll__graph.pdf>
 Package pdftex.def Info: structs__expression__list__coll__graph.pdf  used on in
-put line 9.
-(pdftex.def)             Requested size: 350.0pt x 181.395pt.
+put line 13.
+(pdftex.def)             Requested size: 350.0pt x 150.75446pt.
 ) (./structs__globals.tex <./structs__globals__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./structs__globals__coll__graph.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<structs__globals__coll__graph.pdf, id=1144, 301.125pt x 270.00874pt>
+<structs__globals__coll__graph.pdf, id=3367, 198.7425pt x 202.7575pt>
 File: structs__globals__coll__graph.pdf Graphic file (type pdf)
 <use structs__globals__coll__graph.pdf>
 Package pdftex.def Info: structs__globals__coll__graph.pdf  used on input line 
-9.
-(pdftex.def)             Requested size: 300.0pt x 269.02339pt.
- [30]) (./structs__message__cascade.tex <./structs__message__cascade__coll__gra
+13.
+(pdftex.def)             Requested size: 198.0pt x 202.0052pt.
+ [63]) (./structs__message__cascade.tex <./structs__message__cascade__coll__gra
 ph.pdf>
-<structs__message__cascade__coll__graph.pdf, id=1168, 623.32875pt x 313.17pt>
+<structs__message__cascade__coll__graph.pdf, id=3390, 751.80875pt x 315.1775pt>
+
 File: structs__message__cascade__coll__graph.pdf Graphic file (type pdf)
 <use structs__message__cascade__coll__graph.pdf>
 Package pdftex.def Info: structs__message__cascade__coll__graph.pdf  used on in
-put line 9.
-(pdftex.def)             Requested size: 350.0pt x 175.84708pt.
- [31]) (./structs__message__pattern.tex <./structs__message__pattern__coll__gra
+put line 13.
+(pdftex.def)             Requested size: 350.0pt x 146.73396pt.
+ [64]) (./structs__message__pattern.tex <./structs__message__pattern__coll__gra
 ph.pdf>
-<structs__message__pattern__coll__graph.pdf, id=1189, 192.72pt x 178.6675pt>
+<structs__message__pattern__coll__graph.pdf, id=3410, 192.72pt x 178.6675pt>
 File: structs__message__pattern__coll__graph.pdf Graphic file (type pdf)
 <use structs__message__pattern__coll__graph.pdf>
 Package pdftex.def Info: structs__message__pattern__coll__graph.pdf  used on in
-put line 9.
+put line 13.
 (pdftex.def)             Requested size: 192.0pt x 177.99911pt.
- [32]) (./structs__messages.tex <./structs__messages__coll__graph.pdf>
-<structs__messages__coll__graph.pdf, id=1209, 590.205pt x 313.17pt>
+ [65]) (./structs__messages.tex <./structs__messages__coll__graph.pdf>
+<structs__messages__coll__graph.pdf, id=3433, 718.685pt x 315.1775pt>
 File: structs__messages__coll__graph.pdf Graphic file (type pdf)
 <use structs__messages__coll__graph.pdf>
 Package pdftex.def Info: structs__messages__coll__graph.pdf  used on input line
- 9.
-(pdftex.def)             Requested size: 350.0pt x 185.71484pt.
-) (./structs__methoddef.tex <./structs__methoddef__coll__graph.pdf
-
-pdfTeX warning: pdflatex (file ./structs__methoddef__coll__graph.pdf): PDF incl
-usion: multiple pdfs with page group included in a single page
->
-<structs__methoddef__coll__graph.pdf, id=1219, 626.34pt x 382.42876pt>
+ 13.
+(pdftex.def)             Requested size: 350.0pt x 153.49571pt.
+LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
+(Font)              Font shape `TS1/phv/m/sl' tried instead on input line 21.
+LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
+(Font)              scaled to size 8.09995pt on input line 21.
+) (./structs__methoddef.tex [66] <./structs__methoddef__coll__graph.pdf>
+<structs__methoddef__coll__graph.pdf, id=3461, 647.41875pt x 518.93875pt>
 File: structs__methoddef__coll__graph.pdf Graphic file (type pdf)
 <use structs__methoddef__coll__graph.pdf>
 Package pdftex.def Info: structs__methoddef__coll__graph.pdf  used on input lin
-e 9.
-(pdftex.def)             Requested size: 350.0pt x 213.7093pt.
- [33]) (./structs__namelist.tex) (./structs__names.tex <./structs__names__coll_
-_graph.pdf>
-<structs__names__coll__graph.pdf, id=1247, 183.68625pt x 100.375pt>
+e 13.
+(pdftex.def)             Requested size: 350.0pt x 280.53949pt.
+
+[67]) (./structs__namelist.tex) (./structs__names.tex <./structs__names__coll__
+graph.pdf>
+<structs__names__coll__graph.pdf, id=3489, 183.68625pt x 100.375pt>
 File: structs__names__coll__graph.pdf Graphic file (type pdf)
 <use structs__names__coll__graph.pdf>
-Package pdftex.def Info: structs__names__coll__graph.pdf  used on input line 9.
-
+Package pdftex.def Info: structs__names__coll__graph.pdf  used on input line 13
+.
 (pdftex.def)             Requested size: 183.0pt x 100.00716pt.
- [34]) (./structs__object.tex <./structs__object__coll__graph.pdf>
-<structs__object__coll__graph.pdf, id=1270, 240.9pt x 236.885pt>
+) (./structs__object.tex [68] <./structs__object__coll__graph.pdf>
+<structs__object__coll__graph.pdf, id=3507, 195.73125pt x 102.3825pt>
 File: structs__object__coll__graph.pdf Graphic file (type pdf)
 <use structs__object__coll__graph.pdf>
-Package pdftex.def Info: structs__object__coll__graph.pdf  used on input line 9
-.
-(pdftex.def)             Requested size: 240.0pt x 236.00607pt.
+Package pdftex.def Info: structs__object__coll__graph.pdf  used on input line 1
+3.
+(pdftex.def)             Requested size: 195.0pt x 102.00574pt.
 
-[35]) (./structs__pattern.tex <./structs__pattern__coll__graph.pdf>
-<structs__pattern__coll__graph.pdf, id=1290, 184.69pt x 167.62625pt>
+[69]) (./structs__pattern.tex <./structs__pattern__coll__graph.pdf>
+<structs__pattern__coll__graph.pdf, id=3541, 184.69pt x 167.62625pt>
 File: structs__pattern__coll__graph.pdf Graphic file (type pdf)
 <use structs__pattern__coll__graph.pdf>
 Package pdftex.def Info: structs__pattern__coll__graph.pdf  used on input line 
-9.
+13.
 (pdftex.def)             Requested size: 184.0pt x 167.00172pt.
 )
-(./structs__slot.tex <./structs__slot__coll__graph.pdf
-
-pdfTeX warning: pdflatex (file ./structs__slot__coll__graph.pdf): PDF inclusion
-: multiple pdfs with page group included in a single page
->
-<structs__slot__coll__graph.pdf, id=1299, 240.9pt x 236.885pt>
+(./structs__slot.tex [70] <./structs__slot__coll__graph.pdf>
+<structs__slot__coll__graph.pdf, id=3562, 195.73125pt x 169.63374pt>
 File: structs__slot__coll__graph.pdf Graphic file (type pdf)
 <use structs__slot__coll__graph.pdf>
-Package pdftex.def Info: structs__slot__coll__graph.pdf  used on input line 9.
-(pdftex.def)             Requested size: 240.0pt x 236.00607pt.
- [36]) (./structs__statements.tex <./structs__statements__coll__graph.pdf>
-<structs__statements__coll__graph.pdf, id=1322, 429.605pt x 313.17pt>
+Package pdftex.def Info: structs__slot__coll__graph.pdf  used on input line 13.
+
+(pdftex.def)             Requested size: 195.0pt x 169.0095pt.
+)
+(./structs__statements.tex <./structs__statements__coll__graph.pdf
+
+pdfTeX warning: pdflatex (file ./structs__statements__coll__graph.pdf): PDF inc
+lusion: multiple pdfs with page group included in a single page
+>
+<structs__statements__coll__graph.pdf, id=3575, 512.91624pt x 449.68pt>
 File: structs__statements__coll__graph.pdf Graphic file (type pdf)
 <use structs__statements__coll__graph.pdf>
 Package pdftex.def Info: structs__statements__coll__graph.pdf  used on input li
-ne 9.
-(pdftex.def)             Requested size: 350.0pt x 255.14288pt.
+ne 13.
+(pdftex.def)             Requested size: 350.0pt x 306.84875pt.
+ [71]) (./structstringinfo.tex [72]) (./structvarinfo.tex) [73] [74
 
-[37]) (./structstringinfo.tex) (./structvarinfo.tex [38]) (./structyyParser.tex
- <./structyyParser__coll__graph.pdf>
-<structyyParser__coll__graph.pdf, id=1354, 163.61125pt x 189.70876pt>
-File: structyyParser__coll__graph.pdf Graphic file (type pdf)
-<use structyyParser__coll__graph.pdf>
-Package pdftex.def Info: structyyParser__coll__graph.pdf  used on input line 9.
-
-(pdftex.def)             Requested size: 163.0pt x 188.99907pt.
-) (./structyyStackEntry.tex [39]) [40]
+]
 No file refman.ind.
-
-Package longtable Warning: Table widths have changed. Rerun LaTeX.
-
 (./refman.aux)
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `refman.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `refman.out':
-(rerunfilecheck)             Before: 4D7EF84F5FA398A426E392D5EB4C0961;15297
-(rerunfilecheck)             After:  293B5938CB4F5CE150D935840AE7CEF7;15718.
+Package rerunfilecheck Info: File `refman.out' has not changed.
+(rerunfilecheck)             Checksum: 2014C7A718E2EDD6B44F7BE4624E578B;37338.
  ) 
 Here is how much of TeX's memory you used:
- 18211 strings out of 480129
- 305666 string characters out of 5893410
- 624795 words of memory out of 5000000
- 35390 multiletter control sequences out of 15000+600000
- 526871 words of font info for 97 fonts, out of 8000000 for 9000
+ 18585 strings out of 480110
+ 314856 string characters out of 5893006
+ 653758 words of memory out of 5000000
+ 35572 multiletter control sequences out of 15000+600000
+ 527959 words of font info for 100 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 99i,15n,117p,448b,594s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{structast_a71451c114bf2387e3a3fd53da26e8540} has 
-been referenced but does not exist, replaced by a fixed one
+ 99i,16n,117p,1612b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{structs__object_a3d08461546b07b580add76baa37f4e43} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_afbb3c52f7e9a0ad1632c87a824174df0} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_abf65e2957aeacda971fde8e226b82ddc} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_a2a8a93ba14c852566586b8a459fbb051} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__expression_a5a0ce65955c6b62f3dc28c8cb3b429
+bc} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__expression_ada65723ea7ed01a6d2d880fbfcd830
+a5} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structast_a71451c114bf2387e3a3fd53da26e8540} has be
+en referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{structast_a2ae9ea6c4e18fdedbb969e2d69ec7015} has be
 en referenced but does not exist, replaced by a fixed one
 
+
 pdfTeX warning (dest): name{structast_aa84bb1bc9643258bf7d01e26762e5161} has be
 en referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{structast_a3eae750c61cd4c78503beda75fc331c5} has be
 en referenced but does not exist, replaced by a fixed one
 
+
 pdfTeX warning (dest): name{structast_ae399b59f6d2853f7fa4b2f437ff4b766} has be
 en referenced but does not exist, replaced by a fixed one
+
 
 pdfTeX warning (dest): name{structast_a45ff45dd7e8be23c04b27934fa021837} has be
 en referenced but does not exist, replaced by a fixed one
 
+
 pdfTeX warning (dest): name{structast_a5a3ad4d2372352140895945e4873d783} has be
 en referenced but does not exist, replaced by a fixed one
 
+
 pdfTeX warning (dest): name{structast_a860f9139dd74c340bc89910d1ce383cf} has be
 en referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_af59cf0073541cb53be091642fb17d239} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_aa547fc9932dfcb9d3d26a5c35e1aa5e0} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__expression_a37e70a71c3974fc6fba1f168e47ea9
+d9} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__expression_ac231317a0715b7d1cbbba870928743
+b4} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__expression_a05b9c607c0471fe4b09aff96c8dbe3
+9a} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__expression_ab9168d7a5c63decae08070a479d677
+86} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__expression_a1ea1c1ce11ee1fd34d3c945ffd85d6
+96} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_aba477554fcde53805ea7286ae01e798b} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__expression_a82ce7474040d734d73c7a18283f900
+a2} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_a5ac3dc8749b7848a5df7a6d94ad234d4} 
+has been referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
@@ -1241,10 +1335,10 @@ o8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (44 pages, 307825 bytes).
+Output written on refman.pdf (82 pages, 444755 bytes).
 PDF statistics:
- 1515 PDF objects out of 1728 (max. 8388607)
- 1371 compressed objects within 14 object streams
- 382 named destinations out of 1000 (max. 500000)
- 749 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 3793 PDF objects out of 4296 (max. 8388607)
+ 3589 compressed objects within 36 object streams
+ 585 named destinations out of 1000 (max. 500000)
+ 1677 words of extra memory for PDF output out of 10000 (max. 10000000)
 

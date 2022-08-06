@@ -28,6 +28,8 @@
 %type inline_array              {t_expression*}
 
 %type block_arguments           {t_namelist}
+%type idents                    {t_namelist}
+%type var_list                  {t_namelist}
 
 %type expression_sequence       {t_expression_list}
 
@@ -63,11 +65,15 @@ class_ident ::= IDENT(SUPER) KEYWORD(KW) IDENT(ARG).
     {   printf("object %s: %s %s\n", SUPER, KW, ARG); }
 
 /* returns a list of identifiers */
-var_list ::= BAR idents BAR.
+var_list(A) ::= BAR idents(AS) BAR.
+    {   A = AS; }
 
 /* returns list of identifiers */
-idents ::= IDENT.  {  }
-idents ::= idents IDENT.
+idents(A) ::= IDENT(S). 
+    {   namelist_init(&A);
+        namelist_add(&A, S); }
+idents(A) ::= idents(A) IDENT(S).
+    {   namelist_add(&A, S); }
 
 optional_directive ::= directive.
 optional_directive ::= .
@@ -292,11 +298,12 @@ expression_sequence(E) ::= expression_sequence(XS) DOT expression(X).
     }
 
 /* block */
-block_body(E) ::= block_arguments(ARGS) BAR var_list statements(S).
+block_body(E) ::= block_arguments(ARGS) BAR var_list(V) statements(S).
     {   E = talloc_zero(NULL, t_expression);
         E->tag = tag_block;
         E->u.block.statements = S;
         E->u.block.params = ARGS;
+        E->u.block.locals = V;
         talloc_steal(E, S);
         talloc_steal(E, ARGS.names);
         }
@@ -307,10 +314,11 @@ block_body(E) ::= block_arguments(ARGS) BAR statements(S).
         E->u.block.params = ARGS; 
         talloc_steal(E, ARGS.names);
         talloc_steal(E, S); }
-block_body(E) ::= var_list statements(S).
+block_body(E) ::= var_list(V) statements(S).
     {   E = talloc_zero(NULL, t_expression);
         E->tag = tag_block; 
         E->u.block.statements = S;
+        E->u.block.locals = V;
         talloc_steal(E, S); }
 block_body(E) ::= statements(S).
     {   E = talloc_zero(NULL, t_expression);

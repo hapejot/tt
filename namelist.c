@@ -1,6 +1,10 @@
 #include "internal.h"
 /**
 * @defgroup namelist Name List
+* list of names are very common. Basically they are a counter for the list length
+* and an array of const char pointers. These functions help to build up these structures
+* the pointer array and the counter are held in a structure that is not allocated here but
+* is a reglar part of another structure.
 * @{
 */
 

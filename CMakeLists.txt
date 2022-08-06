@@ -29,13 +29,18 @@ add_compile_options( -g -save-temps )
 add_library(ttl     class_enter.c
                     lib.c
                     tt.c
+                    env.c
+                    integer_handler.c
                     talloc/talloc.c
                     namelist.c
                     method_enter.c
                     method_name.c
                     method_stmts.c
+                    string_handler.c
                     require_classes.c
-                    require_current_class.c )
+                    require_current_class.c 
+                    transcript_handler.c
+                    )
 
 add_executable(ttc  ttc.c)
 target_link_libraries(ttc ttl)
@@ -76,4 +81,11 @@ add_custom_target( refman
     COMMAND doxygen doxy.cfg 
     COMMAND ./mk-refman "${CMAKE_CURRENT_BINARY_DIR}"
     )
+
+
+add_custom_target( lint
+    COMMAND splint -nullpass "-I$<JOIN:$<TARGET_PROPERTY:ttl,INCLUDE_DIRECTORIES>,;-I>" ${PROJECT_SOURCE_DIR}/lib.c 
+    COMMAND_EXPAND_LISTS
+    )
+
 #doxygen_add_docs(refman)

@@ -12,73 +12,187 @@
 \contentsline {chapter}{\numberline {4}Data Structure Index}{7}{chapter.4}%
 \contentsline {section}{\numberline {4.1}Data Structures}{7}{section.4.1}%
 \contentsline {chapter}{\numberline {5}Module Documentation}{9}{chapter.5}%
-\contentsline {section}{\numberline {5.1}ITab}{9}{section.5.1}%
+\contentsline {section}{\numberline {5.1}Environment}{9}{section.5.1}%
 \contentsline {subsection}{\numberline {5.1.1}Detailed Description}{9}{subsection.5.1.1}%
 \contentsline {subsection}{\numberline {5.1.2}Function Documentation}{9}{subsection.5.1.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.1}itab\_entry\_cmp()}{10}{subsubsection.5.1.2.1}%
-\contentsline {subsubsection}{\numberline {5.1.2.2}itab\_lines()}{10}{subsubsection.5.1.2.2}%
-\contentsline {subsubsection}{\numberline {5.1.2.3}itab\_new()}{10}{subsubsection.5.1.2.3}%
-\contentsline {section}{\numberline {5.2}Tokenizer}{11}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{11}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Function Documentation}{11}{subsection.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.1}is\_ident\_char()}{11}{subsubsection.5.2.2.1}%
-\contentsline {subsubsection}{\numberline {5.2.2.2}nextToken()}{12}{subsubsection.5.2.2.2}%
-\contentsline {subsubsection}{\numberline {5.2.2.3}readChar()}{14}{subsubsection.5.2.2.3}%
-\contentsline {subsubsection}{\numberline {5.2.2.4}readLine()}{14}{subsubsection.5.2.2.4}%
-\contentsline {subsubsection}{\numberline {5.2.2.5}readStringToken()}{15}{subsubsection.5.2.2.5}%
-\contentsline {subsubsection}{\numberline {5.2.2.6}src\_add()}{15}{subsubsection.5.2.2.6}%
-\contentsline {subsubsection}{\numberline {5.2.2.7}src\_clear()}{16}{subsubsection.5.2.2.7}%
-\contentsline {subsubsection}{\numberline {5.2.2.8}src\_dump()}{16}{subsubsection.5.2.2.8}%
-\contentsline {subsubsection}{\numberline {5.2.2.9}src\_read()}{16}{subsubsection.5.2.2.9}%
-\contentsline {section}{\numberline {5.3}Messages}{17}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{17}{subsection.5.3.1}%
-\contentsline {section}{\numberline {5.4}Syntax Messages}{17}{section.5.4}%
-\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{18}{subsection.5.4.1}%
-\contentsline {section}{\numberline {5.5}Name List}{18}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{18}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Function Documentation}{18}{subsection.5.5.2}%
-\contentsline {subsubsection}{\numberline {5.5.2.1}namelist\_add()}{18}{subsubsection.5.5.2.1}%
-\contentsline {subsubsection}{\numberline {5.5.2.2}namelist\_copy()}{18}{subsubsection.5.5.2.2}%
-\contentsline {subsubsection}{\numberline {5.5.2.3}namelist\_init()}{19}{subsubsection.5.5.2.3}%
-\contentsline {section}{\numberline {5.6}Internal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}structures}{19}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{20}{subsection.5.6.1}%
-\contentsline {chapter}{\numberline {6}Data Structure Documentation}{21}{chapter.6}%
-\contentsline {section}{\numberline {6.1}ast Struct Reference}{21}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Field Documentation}{22}{subsection.6.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.1.1}key}{23}{subsubsection.6.1.1.1}%
-\contentsline {subsubsection}{\numberline {6.1.1.2}next}{23}{subsubsection.6.1.1.2}%
-\contentsline {subsubsection}{\numberline {6.1.1.3}v}{23}{subsubsection.6.1.1.3}%
-\contentsline {section}{\numberline {6.2}classinfo Struct Reference}{23}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{23}{subsection.6.2.1}%
-\contentsline {section}{\numberline {6.3}gd Struct Reference}{24}{section.6.3}%
-\contentsline {section}{\numberline {6.4}itab Struct Reference}{25}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{25}{subsection.6.4.1}%
-\contentsline {section}{\numberline {6.5}itab\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entry Struct Reference}{25}{section.6.5}%
-\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{26}{subsection.6.5.1}%
-\contentsline {section}{\numberline {6.6}itab\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}iter Struct Reference}{26}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{26}{subsection.6.6.1}%
-\contentsline {section}{\numberline {6.7}methodinfo Struct Reference}{27}{section.6.7}%
-\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{27}{subsection.6.7.1}%
-\contentsline {section}{\numberline {6.8}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}assignment Struct Reference}{27}{section.6.8}%
-\contentsline {section}{\numberline {6.9}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}block Struct Reference}{28}{section.6.9}%
-\contentsline {section}{\numberline {6.10}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}classdef Struct Reference}{28}{section.6.10}%
-\contentsline {section}{\numberline {6.11}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}env Struct Reference}{29}{section.6.11}%
-\contentsline {section}{\numberline {6.12}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}expression Struct Reference}{29}{section.6.12}%
-\contentsline {section}{\numberline {6.13}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list Struct Reference}{30}{section.6.13}%
-\contentsline {section}{\numberline {6.14}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}globals Struct Reference}{31}{section.6.14}%
-\contentsline {section}{\numberline {6.15}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}message\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cascade Struct Reference}{32}{section.6.15}%
-\contentsline {section}{\numberline {6.16}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}message\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pattern Struct Reference}{32}{section.6.16}%
-\contentsline {section}{\numberline {6.17}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}messages Struct Reference}{33}{section.6.17}%
-\contentsline {section}{\numberline {6.18}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}methoddef Struct Reference}{34}{section.6.18}%
-\contentsline {section}{\numberline {6.19}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}namelist Struct Reference}{34}{section.6.19}%
-\contentsline {section}{\numberline {6.20}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}names Struct Reference}{35}{section.6.20}%
-\contentsline {section}{\numberline {6.21}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object Struct Reference}{35}{section.6.21}%
-\contentsline {section}{\numberline {6.22}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pattern Struct Reference}{36}{section.6.22}%
-\contentsline {section}{\numberline {6.23}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}slot Struct Reference}{37}{section.6.23}%
-\contentsline {section}{\numberline {6.24}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}statements Struct Reference}{38}{section.6.24}%
-\contentsline {section}{\numberline {6.25}stringinfo Struct Reference}{38}{section.6.25}%
-\contentsline {subsection}{\numberline {6.25.1}Detailed Description}{38}{subsection.6.25.1}%
-\contentsline {section}{\numberline {6.26}varinfo Struct Reference}{39}{section.6.26}%
-\contentsline {subsection}{\numberline {6.26.1}Detailed Description}{39}{subsection.6.26.1}%
-\contentsline {section}{\numberline {6.27}yy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Parser Struct Reference}{39}{section.6.27}%
-\contentsline {section}{\numberline {6.28}yy\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Stack\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Entry Struct Reference}{40}{section.6.28}%
+\contentsline {subsubsection}{\numberline {5.1.2.1}env\_add()}{9}{subsubsection.5.1.2.1}%
+\contentsline {subsubsection}{\numberline {5.1.2.2}env\_clear()}{10}{subsubsection.5.1.2.2}%
+\contentsline {subsubsection}{\numberline {5.1.2.3}env\_dump()}{10}{subsubsection.5.1.2.3}%
+\contentsline {subsubsection}{\numberline {5.1.2.4}env\_get()}{10}{subsubsection.5.1.2.4}%
+\contentsline {subsubsection}{\numberline {5.1.2.5}env\_get\_all()}{10}{subsubsection.5.1.2.5}%
+\contentsline {subsubsection}{\numberline {5.1.2.6}env\_new()}{10}{subsubsection.5.1.2.6}%
+\contentsline {subsubsection}{\numberline {5.1.2.7}env\_set()}{11}{subsubsection.5.1.2.7}%
+\contentsline {subsubsection}{\numberline {5.1.2.8}env\_set\_local()}{11}{subsubsection.5.1.2.8}%
+\contentsline {section}{\numberline {5.2}Internal Functions}{11}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Detailed Description}{12}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Macro Definition Documentation}{12}{subsection.5.2.2}%
+\contentsline {subsubsection}{\numberline {5.2.2.1}MSG\_DUMP}{12}{subsubsection.5.2.2.1}%
+\contentsline {subsection}{\numberline {5.2.3}Function Documentation}{13}{subsection.5.2.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.1}block\_handler()}{13}{subsubsection.5.2.3.1}%
+\contentsline {subsubsection}{\numberline {5.2.3.2}char\_handler()}{13}{subsubsection.5.2.3.2}%
+\contentsline {subsubsection}{\numberline {5.2.3.3}class\_enter()}{14}{subsubsection.5.2.3.3}%
+\contentsline {subsubsection}{\numberline {5.2.3.4}cstr\_equals()}{14}{subsubsection.5.2.3.4}%
+\contentsline {subsubsection}{\numberline {5.2.3.5}eval()}{15}{subsubsection.5.2.3.5}%
+\contentsline {subsubsection}{\numberline {5.2.3.6}int\_handler()}{16}{subsubsection.5.2.3.6}%
+\contentsline {subsubsection}{\numberline {5.2.3.7}is\_binary\_char()}{16}{subsubsection.5.2.3.7}%
+\contentsline {subsubsection}{\numberline {5.2.3.8}is\_ident\_char()}{17}{subsubsection.5.2.3.8}%
+\contentsline {subsubsection}{\numberline {5.2.3.9}method\_enter()}{17}{subsubsection.5.2.3.9}%
+\contentsline {subsubsection}{\numberline {5.2.3.10}method\_exec()}{18}{subsubsection.5.2.3.10}%
+\contentsline {subsubsection}{\numberline {5.2.3.11}method\_name()}{18}{subsubsection.5.2.3.11}%
+\contentsline {subsubsection}{\numberline {5.2.3.12}nextToken()}{19}{subsubsection.5.2.3.12}%
+\contentsline {subsubsection}{\numberline {5.2.3.13}object\_new()}{21}{subsubsection.5.2.3.13}%
+\contentsline {subsubsection}{\numberline {5.2.3.14}object\_send()}{21}{subsubsection.5.2.3.14}%
+\contentsline {subsubsection}{\numberline {5.2.3.15}object\_send\_void()}{21}{subsubsection.5.2.3.15}%
+\contentsline {subsubsection}{\numberline {5.2.3.16}parse\_verbatim()}{22}{subsubsection.5.2.3.16}%
+\contentsline {subsubsection}{\numberline {5.2.3.17}readChar()}{22}{subsubsection.5.2.3.17}%
+\contentsline {subsubsection}{\numberline {5.2.3.18}readLine()}{23}{subsubsection.5.2.3.18}%
+\contentsline {subsubsection}{\numberline {5.2.3.19}readStringToken()}{23}{subsubsection.5.2.3.19}%
+\contentsline {subsubsection}{\numberline {5.2.3.20}require\_classes()}{24}{subsubsection.5.2.3.20}%
+\contentsline {subsubsection}{\numberline {5.2.3.21}require\_current\_class()}{24}{subsubsection.5.2.3.21}%
+\contentsline {subsubsection}{\numberline {5.2.3.22}simulate()}{24}{subsubsection.5.2.3.22}%
+\contentsline {subsubsection}{\numberline {5.2.3.23}src\_add()}{25}{subsubsection.5.2.3.23}%
+\contentsline {subsubsection}{\numberline {5.2.3.24}src\_clear()}{25}{subsubsection.5.2.3.24}%
+\contentsline {subsubsection}{\numberline {5.2.3.25}src\_dump()}{26}{subsubsection.5.2.3.25}%
+\contentsline {subsubsection}{\numberline {5.2.3.26}src\_read()}{26}{subsubsection.5.2.3.26}%
+\contentsline {subsubsection}{\numberline {5.2.3.27}stream\_handler()}{27}{subsubsection.5.2.3.27}%
+\contentsline {subsubsection}{\numberline {5.2.3.28}string\_handler()}{28}{subsubsection.5.2.3.28}%
+\contentsline {subsubsection}{\numberline {5.2.3.29}string\_meta\_handler()}{28}{subsubsection.5.2.3.29}%
+\contentsline {subsection}{\numberline {5.2.4}Variable Documentation}{29}{subsection.5.2.4}%
+\contentsline {subsubsection}{\numberline {5.2.4.1}global}{29}{subsubsection.5.2.4.1}%
+\contentsline {section}{\numberline {5.3}ITab}{29}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Detailed Description}{30}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Function Documentation}{30}{subsection.5.3.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.1}itab\_append()}{30}{subsubsection.5.3.2.1}%
+\contentsline {subsubsection}{\numberline {5.3.2.2}itab\_dump()}{30}{subsubsection.5.3.2.2}%
+\contentsline {subsubsection}{\numberline {5.3.2.3}itab\_entry\_cmp()}{31}{subsubsection.5.3.2.3}%
+\contentsline {subsubsection}{\numberline {5.3.2.4}itab\_foreach()}{31}{subsubsection.5.3.2.4}%
+\contentsline {subsubsection}{\numberline {5.3.2.5}itab\_key()}{31}{subsubsection.5.3.2.5}%
+\contentsline {subsubsection}{\numberline {5.3.2.6}itab\_lines()}{32}{subsubsection.5.3.2.6}%
+\contentsline {subsubsection}{\numberline {5.3.2.7}itab\_new()}{32}{subsubsection.5.3.2.7}%
+\contentsline {subsubsection}{\numberline {5.3.2.8}itab\_next()}{32}{subsubsection.5.3.2.8}%
+\contentsline {subsubsection}{\numberline {5.3.2.9}itab\_read()}{33}{subsubsection.5.3.2.9}%
+\contentsline {subsubsection}{\numberline {5.3.2.10}itab\_value()}{33}{subsubsection.5.3.2.10}%
+\contentsline {section}{\numberline {5.4}Tokenizer}{33}{section.5.4}%
+\contentsline {subsection}{\numberline {5.4.1}Detailed Description}{34}{subsection.5.4.1}%
+\contentsline {subsection}{\numberline {5.4.2}Function Documentation}{34}{subsection.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.1}is\_binary\_char()}{34}{subsubsection.5.4.2.1}%
+\contentsline {subsubsection}{\numberline {5.4.2.2}is\_ident\_char()}{34}{subsubsection.5.4.2.2}%
+\contentsline {subsubsection}{\numberline {5.4.2.3}nextToken()}{35}{subsubsection.5.4.2.3}%
+\contentsline {subsubsection}{\numberline {5.4.2.4}parse\_verbatim()}{37}{subsubsection.5.4.2.4}%
+\contentsline {subsubsection}{\numberline {5.4.2.5}readChar()}{37}{subsubsection.5.4.2.5}%
+\contentsline {subsubsection}{\numberline {5.4.2.6}readLine()}{38}{subsubsection.5.4.2.6}%
+\contentsline {subsubsection}{\numberline {5.4.2.7}readStringToken()}{38}{subsubsection.5.4.2.7}%
+\contentsline {subsubsection}{\numberline {5.4.2.8}src\_add()}{39}{subsubsection.5.4.2.8}%
+\contentsline {subsubsection}{\numberline {5.4.2.9}src\_clear()}{39}{subsubsection.5.4.2.9}%
+\contentsline {subsubsection}{\numberline {5.4.2.10}src\_dump()}{40}{subsubsection.5.4.2.10}%
+\contentsline {subsubsection}{\numberline {5.4.2.11}src\_read()}{40}{subsubsection.5.4.2.11}%
+\contentsline {section}{\numberline {5.5}Messages}{40}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Detailed Description}{41}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Macro Definition Documentation}{41}{subsection.5.5.2}%
+\contentsline {subsubsection}{\numberline {5.5.2.1}MSG\_LOG\_LEN}{41}{subsubsection.5.5.2.1}%
+\contentsline {subsection}{\numberline {5.5.3}Typedef Documentation}{41}{subsection.5.5.3}%
+\contentsline {subsubsection}{\numberline {5.5.3.1}t\_msg}{41}{subsubsection.5.5.3.1}%
+\contentsline {subsection}{\numberline {5.5.4}Function Documentation}{41}{subsection.5.5.4}%
+\contentsline {subsubsection}{\numberline {5.5.4.1}msg\_add()}{41}{subsubsection.5.5.4.1}%
+\contentsline {subsubsection}{\numberline {5.5.4.2}msg\_init()}{42}{subsubsection.5.5.4.2}%
+\contentsline {subsubsection}{\numberline {5.5.4.3}msg\_print\_last()}{42}{subsubsection.5.5.4.3}%
+\contentsline {section}{\numberline {5.6}Syntax Messages}{42}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Detailed Description}{42}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Function Documentation}{42}{subsection.5.6.2}%
+\contentsline {subsubsection}{\numberline {5.6.2.1}message\_add\_msg()}{43}{subsubsection.5.6.2.1}%
+\contentsline {section}{\numberline {5.7}Name List}{43}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Detailed Description}{43}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Typedef Documentation}{43}{subsection.5.7.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.1}t\_name}{43}{subsubsection.5.7.2.1}%
+\contentsline {subsubsection}{\numberline {5.7.2.2}t\_namelist}{44}{subsubsection.5.7.2.2}%
+\contentsline {subsubsection}{\numberline {5.7.2.3}t\_names}{44}{subsubsection.5.7.2.3}%
+\contentsline {subsection}{\numberline {5.7.3}Function Documentation}{44}{subsection.5.7.3}%
+\contentsline {subsubsection}{\numberline {5.7.3.1}namelist\_add()}{44}{subsubsection.5.7.3.1}%
+\contentsline {subsubsection}{\numberline {5.7.3.2}namelist\_copy()}{44}{subsubsection.5.7.3.2}%
+\contentsline {subsubsection}{\numberline {5.7.3.3}namelist\_init()}{45}{subsubsection.5.7.3.3}%
+\contentsline {section}{\numberline {5.8}Internal\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}structures}{45}{section.5.8}%
+\contentsline {subsection}{\numberline {5.8.1}Detailed Description}{46}{subsection.5.8.1}%
+\contentsline {subsection}{\numberline {5.8.2}Typedef Documentation}{46}{subsection.5.8.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.1}t\_assignment}{46}{subsubsection.5.8.2.1}%
+\contentsline {subsubsection}{\numberline {5.8.2.2}t\_block}{46}{subsubsection.5.8.2.2}%
+\contentsline {subsubsection}{\numberline {5.8.2.3}t\_classdef}{47}{subsubsection.5.8.2.3}%
+\contentsline {subsubsection}{\numberline {5.8.2.4}t\_env}{47}{subsubsection.5.8.2.4}%
+\contentsline {subsubsection}{\numberline {5.8.2.5}t\_expression}{47}{subsubsection.5.8.2.5}%
+\contentsline {subsubsection}{\numberline {5.8.2.6}t\_expression\_list}{47}{subsubsection.5.8.2.6}%
+\contentsline {subsubsection}{\numberline {5.8.2.7}t\_expression\_tag}{47}{subsubsection.5.8.2.7}%
+\contentsline {subsubsection}{\numberline {5.8.2.8}t\_message\_cascade}{47}{subsubsection.5.8.2.8}%
+\contentsline {subsubsection}{\numberline {5.8.2.9}t\_message\_handler}{47}{subsubsection.5.8.2.9}%
+\contentsline {subsubsection}{\numberline {5.8.2.10}t\_message\_pattern}{48}{subsubsection.5.8.2.10}%
+\contentsline {subsubsection}{\numberline {5.8.2.11}t\_messages}{48}{subsubsection.5.8.2.11}%
+\contentsline {subsubsection}{\numberline {5.8.2.12}t\_methoddef}{48}{subsubsection.5.8.2.12}%
+\contentsline {subsubsection}{\numberline {5.8.2.13}t\_object}{48}{subsubsection.5.8.2.13}%
+\contentsline {subsubsection}{\numberline {5.8.2.14}t\_pattern}{48}{subsubsection.5.8.2.14}%
+\contentsline {subsubsection}{\numberline {5.8.2.15}t\_slot}{48}{subsubsection.5.8.2.15}%
+\contentsline {subsubsection}{\numberline {5.8.2.16}t\_statement\_type}{48}{subsubsection.5.8.2.16}%
+\contentsline {subsubsection}{\numberline {5.8.2.17}t\_statements}{49}{subsubsection.5.8.2.17}%
+\contentsline {subsection}{\numberline {5.8.3}Enumeration Type Documentation}{49}{subsection.5.8.3}%
+\contentsline {subsubsection}{\numberline {5.8.3.1}e\_expression\_tag}{49}{subsubsection.5.8.3.1}%
+\contentsline {subsubsection}{\numberline {5.8.3.2}e\_statement\_type}{49}{subsubsection.5.8.3.2}%
+\contentsline {chapter}{\numberline {6}Data Structure Documentation}{51}{chapter.6}%
+\contentsline {section}{\numberline {6.1}ast Struct Reference}{51}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Detailed Description}{52}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Field Documentation}{53}{subsection.6.1.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.1}key}{53}{subsubsection.6.1.2.1}%
+\contentsline {subsubsection}{\numberline {6.1.2.2}next}{53}{subsubsection.6.1.2.2}%
+\contentsline {subsubsection}{\numberline {6.1.2.3}}{53}{subsubsection.6.1.2.3}%
+\contentsline {subsubsection}{\numberline {6.1.2.4}v}{53}{subsubsection.6.1.2.4}%
+\contentsline {section}{\numberline {6.2}classinfo Struct Reference}{53}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Detailed Description}{54}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Field Documentation}{54}{subsection.6.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.1}meta}{54}{subsubsection.6.2.2.1}%
+\contentsline {subsubsection}{\numberline {6.2.2.2}name}{54}{subsubsection.6.2.2.2}%
+\contentsline {subsubsection}{\numberline {6.2.2.3}num}{54}{subsubsection.6.2.2.3}%
+\contentsline {subsubsection}{\numberline {6.2.2.4}super}{54}{subsubsection.6.2.2.4}%
+\contentsline {section}{\numberline {6.3}gd Struct Reference}{55}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Detailed Description}{56}{subsection.6.3.1}%
+\contentsline {section}{\numberline {6.4}itab Struct Reference}{56}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Detailed Description}{57}{subsection.6.4.1}%
+\contentsline {section}{\numberline {6.5}itab\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}entry Struct Reference}{57}{section.6.5}%
+\contentsline {subsection}{\numberline {6.5.1}Detailed Description}{57}{subsection.6.5.1}%
+\contentsline {section}{\numberline {6.6}itab\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}iter Struct Reference}{57}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Detailed Description}{58}{subsection.6.6.1}%
+\contentsline {section}{\numberline {6.7}methodinfo Struct Reference}{58}{section.6.7}%
+\contentsline {subsection}{\numberline {6.7.1}Detailed Description}{58}{subsection.6.7.1}%
+\contentsline {section}{\numberline {6.8}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}assignment Struct Reference}{58}{section.6.8}%
+\contentsline {subsection}{\numberline {6.8.1}Detailed Description}{59}{subsection.6.8.1}%
+\contentsline {section}{\numberline {6.9}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}block Struct Reference}{59}{section.6.9}%
+\contentsline {subsection}{\numberline {6.9.1}Detailed Description}{60}{subsection.6.9.1}%
+\contentsline {section}{\numberline {6.10}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}classdef Struct Reference}{60}{section.6.10}%
+\contentsline {subsection}{\numberline {6.10.1}Detailed Description}{61}{subsection.6.10.1}%
+\contentsline {section}{\numberline {6.11}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}env Struct Reference}{61}{section.6.11}%
+\contentsline {subsection}{\numberline {6.11.1}Detailed Description}{61}{subsection.6.11.1}%
+\contentsline {section}{\numberline {6.12}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}expression Struct Reference}{62}{section.6.12}%
+\contentsline {subsection}{\numberline {6.12.1}Detailed Description}{62}{subsection.6.12.1}%
+\contentsline {section}{\numberline {6.13}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}expression\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}list Struct Reference}{63}{section.6.13}%
+\contentsline {subsection}{\numberline {6.13.1}Detailed Description}{63}{subsection.6.13.1}%
+\contentsline {section}{\numberline {6.14}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}globals Struct Reference}{63}{section.6.14}%
+\contentsline {subsection}{\numberline {6.14.1}Detailed Description}{64}{subsection.6.14.1}%
+\contentsline {section}{\numberline {6.15}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}message\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}cascade Struct Reference}{64}{section.6.15}%
+\contentsline {subsection}{\numberline {6.15.1}Detailed Description}{65}{subsection.6.15.1}%
+\contentsline {section}{\numberline {6.16}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}message\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pattern Struct Reference}{65}{section.6.16}%
+\contentsline {subsection}{\numberline {6.16.1}Detailed Description}{66}{subsection.6.16.1}%
+\contentsline {section}{\numberline {6.17}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}messages Struct Reference}{66}{section.6.17}%
+\contentsline {subsection}{\numberline {6.17.1}Detailed Description}{67}{subsection.6.17.1}%
+\contentsline {section}{\numberline {6.18}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}methoddef Struct Reference}{67}{section.6.18}%
+\contentsline {subsection}{\numberline {6.18.1}Detailed Description}{68}{subsection.6.18.1}%
+\contentsline {section}{\numberline {6.19}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}namelist Struct Reference}{68}{section.6.19}%
+\contentsline {subsection}{\numberline {6.19.1}Detailed Description}{68}{subsection.6.19.1}%
+\contentsline {section}{\numberline {6.20}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}names Struct Reference}{68}{section.6.20}%
+\contentsline {subsection}{\numberline {6.20.1}Detailed Description}{69}{subsection.6.20.1}%
+\contentsline {section}{\numberline {6.21}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}object Struct Reference}{69}{section.6.21}%
+\contentsline {subsection}{\numberline {6.21.1}Detailed Description}{70}{subsection.6.21.1}%
+\contentsline {section}{\numberline {6.22}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}pattern Struct Reference}{70}{section.6.22}%
+\contentsline {subsection}{\numberline {6.22.1}Detailed Description}{71}{subsection.6.22.1}%
+\contentsline {section}{\numberline {6.23}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}slot Struct Reference}{71}{section.6.23}%
+\contentsline {subsection}{\numberline {6.23.1}Detailed Description}{71}{subsection.6.23.1}%
+\contentsline {section}{\numberline {6.24}s\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}\_\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}statements Struct Reference}{72}{section.6.24}%
+\contentsline {subsection}{\numberline {6.24.1}Detailed Description}{72}{subsection.6.24.1}%
+\contentsline {section}{\numberline {6.25}stringinfo Struct Reference}{73}{section.6.25}%
+\contentsline {subsection}{\numberline {6.25.1}Detailed Description}{73}{subsection.6.25.1}%
+\contentsline {section}{\numberline {6.26}varinfo Struct Reference}{73}{section.6.26}%
+\contentsline {subsection}{\numberline {6.26.1}Detailed Description}{73}{subsection.6.26.1}%
