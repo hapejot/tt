@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['classinfo_189',['classinfo',['../structclassinfo.html',1,'']]]
+  ['classinfo_0',['classinfo',['../structclassinfo.html',1,'']]]
 ];

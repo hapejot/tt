@@ -1,5 +1,120 @@
 <?xml version='1.0' encoding='UTF-8' standalone='yes' ?>
-<tagfile doxygen_version="1.9.1">
+<tagfile doxygen_version="1.9.4">
+  <compound kind="file">
+    <name>env.c</name>
+    <path>/media/nfs/work/tt/</path>
+    <filename>env_8c.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>env_dump</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gab9800bfb3359611508a5bce333f49aff</anchor>
+      <arglist>(t_env *env, const char *reason)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_env *</type>
+      <name>env_new</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaae0970ac7574823bcd923246d5f2c7bc</anchor>
+      <arglist>(t_env *parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_slot *</type>
+      <name>env_get</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga0f786d65b5f27c8c9bc28d9919083e71</anchor>
+      <arglist>(t_env *env, const t_name name)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_slot *</type>
+      <name>env_get_all</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gac6746cad868b52d07607bb6c336c0e45</anchor>
+      <arglist>(t_env *env, const t_name name, t_env **env_found)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_add</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga4a57d505050db3590afdb34c64b4ec05</anchor>
+      <arglist>(t_env *env, const t_name name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_set_local</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaca342d4f60649e33bf84260e70bbc1b2</anchor>
+      <arglist>(t_env *env, const t_name name, t_object *val)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_set</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga25aee7a661238fc2d8a04b5021d68ca7</anchor>
+      <arglist>(t_env *env, const t_name name, t_object *val)</arglist>
+    </member>
+  </compound>
+  <compound kind="file">
+    <name>env.h</name>
+    <path>/media/nfs/work/tt/</path>
+    <filename>env_8h.html</filename>
+    <member kind="function">
+      <type>void</type>
+      <name>env_add</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga4a57d505050db3590afdb34c64b4ec05</anchor>
+      <arglist>(t_env *env, const t_name name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_clear</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaf0b749f87525ca0d08d70f03bb615639</anchor>
+      <arglist>(t_env *env)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_set</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga25aee7a661238fc2d8a04b5021d68ca7</anchor>
+      <arglist>(t_env *env, const t_name name, t_object *value)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_slot *</type>
+      <name>env_get</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>ga0f786d65b5f27c8c9bc28d9919083e71</anchor>
+      <arglist>(t_env *env, const t_name name)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_dump</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gab9800bfb3359611508a5bce333f49aff</anchor>
+      <arglist>(t_env *env, const char *)</arglist>
+    </member>
+    <member kind="function">
+      <type>void</type>
+      <name>env_set_local</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaca342d4f60649e33bf84260e70bbc1b2</anchor>
+      <arglist>(t_env *env, const t_name name, t_object *value)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_env *</type>
+      <name>env_new</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gaae0970ac7574823bcd923246d5f2c7bc</anchor>
+      <arglist>(t_env *parent)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_slot *</type>
+      <name>env_get_all</name>
+      <anchorfile>group__env.html</anchorfile>
+      <anchor>gac6746cad868b52d07607bb6c336c0e45</anchor>
+      <arglist>(t_env *env, const t_name name, t_env **env_found)</arglist>
+    </member>
+  </compound>
   <compound kind="struct">
     <name>ast</name>
     <filename>structast.html</filename>
@@ -875,7 +990,7 @@
       <type>t_slot *</type>
       <name>env_get</name>
       <anchorfile>group__env.html</anchorfile>
-      <anchor>gaf83e7bb0e8de90b84e2b3f23a6e33d55</anchor>
+      <anchor>ga0f786d65b5f27c8c9bc28d9919083e71</anchor>
       <arglist>(t_env *env, const t_name name)</arglist>
     </member>
     <member kind="function">
@@ -896,14 +1011,14 @@
       <type>t_env *</type>
       <name>env_new</name>
       <anchorfile>group__env.html</anchorfile>
-      <anchor>gaf04177d97c283a8c9030c02da7cb2f3c</anchor>
+      <anchor>gaae0970ac7574823bcd923246d5f2c7bc</anchor>
       <arglist>(t_env *parent)</arglist>
     </member>
     <member kind="function">
       <type>t_slot *</type>
       <name>env_get_all</name>
       <anchorfile>group__env.html</anchorfile>
-      <anchor>ga3b1bcfb1790c96921e36c242d80b6ee8</anchor>
+      <anchor>gac6746cad868b52d07607bb6c336c0e45</anchor>
       <arglist>(t_env *env, const t_name name, t_env **env_found)</arglist>
     </member>
   </compound>
@@ -1042,14 +1157,14 @@
       <type>t_object *</type>
       <name>object_new</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>ga2d8ba25d20622e1133d86f384bf53976</anchor>
+      <anchor>ga14fc7b8230cea2f576272c904aa87029</anchor>
       <arglist>(t_message_handler hdl)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>object_send</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>gad0eeefa27091be5d969622e40e87c212</anchor>
+      <anchor>gaf39c9eb19a01d55b8732306ecac12374</anchor>
       <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
     </member>
     <member kind="function">
@@ -1063,63 +1178,84 @@
       <type>t_object *</type>
       <name>simulate</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>gaf697c4f931074b40b0b83d920b3106e1</anchor>
+      <anchor>ga038c01595750479eba4e7fefbe69b801</anchor>
       <arglist>(t_env *env, t_statements *stmts)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>eval</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>ga917fff00514888becfa71639d74add1c</anchor>
+      <anchor>ga91a940b08b950cde456d71419050a224</anchor>
       <arglist>(t_env *env, t_expression *expr)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>string_handler</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>gacad70773386fbd89271914816f356aef</anchor>
+      <anchor>ga7dad9180dc207eb32e12f0f19ebbbc2b</anchor>
       <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>string_meta_handler</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>ga746e9988936dfe006e4b8e49486a79fd</anchor>
+      <anchor>ga83c682f1146959368519793bef7b3aff</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>const char *</type>
+      <name>string_cstr</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga7f3a2d5f6d5babd88c1bfb5978ce6dc4</anchor>
+      <arglist>(t_object *self)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>integer_meta_handler</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>gaf907a1216a0945a0c583e2442d7ab751</anchor>
       <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>int_handler</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>gafcef4a0e6423cdcef708c3c864f47064</anchor>
+      <anchor>gaaaae5ab8389cad4fa2de609b6697f4ac</anchor>
       <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>char_handler</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>gac8337629f59eeb748ac8b183bcf6706b</anchor>
+      <anchor>ga73e29520a47e58a4376ebc5758e86b6f</anchor>
       <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>block_handler</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>ga3df1879a92dad5997e96f8796db87d83</anchor>
+      <anchor>gaf389ada8106ff527a6c61048735ba433</anchor>
       <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>stream_handler</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>ga588c3b85925ebc36a6e8d7855a00745c</anchor>
+      <anchor>gaff1463c3cbbb4a32e3980224e3abbe9c</anchor>
+      <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
+    </member>
+    <member kind="function">
+      <type>t_object *</type>
+      <name>transcript_handler</name>
+      <anchorfile>group__internal.html</anchorfile>
+      <anchor>ga0c0593d6faed2b1148dd5393be435419</anchor>
       <arglist>(t_object *self, const char *sel, t_object **args)</arglist>
     </member>
     <member kind="function">
       <type>t_object *</type>
       <name>method_exec</name>
       <anchorfile>group__internal.html</anchorfile>
-      <anchor>ga13aee7152018457cfa1abb6503597fee</anchor>
+      <anchor>ga13edebbb949a824aa965cac97c7fe487</anchor>
       <arglist>(t_object *self, const char *clsname, const char *sel, t_object **args)</arglist>
     </member>
     <member kind="variable">
@@ -1504,7 +1640,7 @@
       <type>struct s_object *(*</type>
       <name>t_message_handler</name>
       <anchorfile>group__internal__structures.html</anchorfile>
-      <anchor>gaa98e62c4ef16b85551d16212f439b234</anchor>
+      <anchor>ga888838692fe4a8efd087863b6d7f5fa0</anchor>
       <arglist>)(struct s_object *, const char *sel, struct s_object **args)</arglist>
     </member>
     <member kind="typedef">

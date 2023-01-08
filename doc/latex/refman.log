@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.6.17)  20 JUN 2022 08:59
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022/Debian) (preloaded format=pdflatex 2022.8.5)  9 AUG 2022 15:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **refman
 (./refman.tex
-LaTeX2e <2021-11-15> patch level 1
-L3 programming layer <2022-02-24>
+LaTeX2e <2022-06-01> patch level 5
+L3 programming layer <2022-07-15>
 (/usr/share/texlive/texmf-dist/tex/latex/base/book.cls
 Document Class: book 2021/10/04 v1.4n Standard LaTeX document class
 (/usr/share/texlive/texmf-dist/tex/latex/base/bk10.clo
@@ -25,7 +25,7 @@ File: bk10.clo 2021/10/04 v1.4n Standard LaTeX file (size option)
 \bibindent=\dimen138
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
-Package: ifthen 2020/11/24 v1.1c Standard LaTeX ifthen package (DPC)
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
 Rollback for package 'array' requested -> date 2016-10-06.
@@ -71,9 +71,9 @@ LaTeX Info: Redefining \addtolength on input line 81.
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count197
 \float@exts=\toks17
-\float@box=\box50
+\float@box=\box51
 \@float@everytoks=\toks18
-\@floatcapt=\box51
+\@floatcapt=\box52
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
 Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
@@ -82,7 +82,7 @@ Package: verbatim 2020-07-07 v1.5u LaTeX2e package for verbatim enhancements
 \verbatim@in@stream=\read2
 )
 (/usr/share/texlive/texmf-dist/tex/latex/xcolor/xcolor.sty
-Package: xcolor 2021/10/31 v2.13 LaTeX color extensions (UK)
+Package: xcolor 2022/06/12 v2.14 LaTeX color extensions (UK)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
 File: color.cfg 2016/01/02 v1.6 sample color configuration
@@ -97,16 +97,17 @@ Package: colortbl 2020/01/04 v1.0e Color table columns (DPC)
 \everycr=\toks21
 \minrowclearance=\skip54
 )
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/mathcolor.ltx)
 \rownum=\count198
-Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1352.
-Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1356.
-Package xcolor Info: Model `RGB' extended on input line 1368.
-Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1370.
-Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1371.
-Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1372.
-Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1373.
-Package xcolor Info: Model `Gray' substituted by `gray' on input line 1374.
-Package xcolor Info: Model `wave' substituted by `hsb' on input line 1375.
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1353.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1357.
+Package xcolor Info: Model `RGB' extended on input line 1369.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1371.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1372.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1373.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1374.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1375.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1376.
 )
 (./longtable_doxygen.sty
 Package: longtable_doxygen 2014/10/28 v4.11 Multi-page Table package (DPC) - fr
@@ -117,10 +118,10 @@ ozen version for doxygen
 \LTpost=\skip58
 \LTchunksize=\count199
 \LTcapwidth=\dimen143
-\LT@head=\box52
-\LT@firsthead=\box53
-\LT@foot=\box54
-\LT@lastfoot=\box55
+\LT@head=\box53
+\LT@firsthead=\box54
+\LT@foot=\box55
+\LT@lastfoot=\box56
 \LT@cols=\count266
 \LT@rows=\count267
 \c@LT@tables=\count268
@@ -132,7 +133,7 @@ rsion for doxygen
 
 (/usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
 Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
-\@vwid@box=\box56
+\@vwid@box=\box57
 \sift@deathcycles=\count270
 \@vwid@loff=\dimen144
 \@vwid@roff=\dimen145
@@ -154,22 +155,22 @@ Package: varwidth 2009/03/30 ver 0.92;  Variable-width minipages
 \tabustrutrule=\dimen154
 \tabu@thebody=\toks23
 \tabu@footnotes=\toks24
-\tabu@box=\box57
-\tabu@arstrutbox=\box58
-\tabu@hleads=\box59
-\tabu@vleads=\box60
+\tabu@box=\box58
+\tabu@arstrutbox=\box59
+\tabu@hleads=\box60
+\tabu@vleads=\box61
 \tabu@cellskip=\skip59
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyvrb/fancyvrb.sty
-Package: fancyvrb 2021/12/21 4.1b verbatim text (tvz,hv)
+Package: fancyvrb 2022/06/06 4.5 verbatim text (tvz,hv)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
 \KV@toks@=\toks25
 )
 \FV@CodeLineNo=\count277
 \FV@InFile=\read3
-\FV@TabBox=\box61
+\FV@TabBox=\box62
 \c@FancyVerbLine=\count278
 \FV@StepNumber=\count279
 \FV@OutFile=\write3
@@ -185,9 +186,9 @@ Package: tabularx 2020/01/15 v2.11c `tabularx' package (DPC)
 \TX@ftn=\toks26
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tools/multicol.sty
-Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
+Package: multicol 2021/11/30 v1.9d multicolumn formatting (FMi)
 \c@tracingmulticols=\count281
-\mult@box=\box62
+\mult@box=\box63
 \multicol@leftmargin=\dimen160
 \c@unbalance=\count282
 \c@collectmore=\count283
@@ -200,14 +201,13 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \postmulticols=\dimen164
 \multicolsep=\skip60
 \multicolbaselineskip=\skip61
-\partial@page=\box63
-\last@line=\box64
+\partial@page=\box64
+\last@line=\box65
 \maxbalancingoverflow=\dimen165
-\mult@rightbox=\box65
-\mult@grightbox=\box66
-\mult@firstbox=\box67
-\mult@gfirstbox=\box68
-\@tempa=\box69
+\mult@rightbox=\box66
+\mult@grightbox=\box67
+\mult@firstbox=\box68
+\mult@gfirstbox=\box69
 \@tempa=\box70
 \@tempa=\box71
 \@tempa=\box72
@@ -243,14 +243,15 @@ Package: multicol 2021/10/28 v1.9b multicolumn formatting (FMi)
 \@tempa=\box102
 \@tempa=\box103
 \@tempa=\box104
+\@tempa=\box105
 \c@minrows=\count287
 \c@columnbadness=\count288
 \c@finalcolumnbadness=\count289
 \last@try=\dimen166
 \multicolovershoot=\dimen167
 \multicolundershoot=\dimen168
-\mult@nat@firstbox=\box105
-\colbreak@box=\box106
+\mult@nat@firstbox=\box106
+\colbreak@box=\box107
 \mc@col@check@num=\count290
 )
 (/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
@@ -281,7 +282,7 @@ Package: iftex 2022/02/03 v1.0f TeX engine tests
 Package: adjustbox 2020/08/19 v1.3 Adjusting TeX boxes (trim, clip, ...)
 
 (/usr/share/texlive/texmf-dist/tex/latex/xkeyval/xkeyval.sty
-Package: xkeyval 2020/11/20 v2.8 package option processing (HA)
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
 
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkeyval.tex
 (/usr/share/texlive/texmf-dist/tex/generic/xkeyval/xkvutils.tex
@@ -302,7 +303,7 @@ Package: trimclip 2020/08/19 v1.2 Trim and clip general TeX material
 Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/graphics.sty
-Package: graphics 2021/03/04 v1.4d Standard LaTeX Graphics (DPC,SPQR)
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/graphics/trig.sty
 Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
@@ -317,7 +318,7 @@ Package graphics Info: Driver file: pdftex.def on input line 107.
 )
 (/usr/share/texlive/texmf-dist/tex/latex/collectbox/collectbox.sty
 Package: collectbox 2012/05/17 v0.4b Collect macro arguments as boxes
-\collectedbox=\box107
+\collectedbox=\box108
 )
 \tc@llx=\dimen172
 \tc@lly=\dimen173
@@ -374,36 +375,68 @@ sep char (CT)
 \stack@tmplength=\skip73
 \temp@stkl=\skip74
 \@stackedboxwidth=\skip75
-\@addedbox=\box108
-\@anchorbox=\box109
-\@insetbox=\box110
-\se@backgroundbox=\box111
-\stackedbox=\box112
-\@centerbox=\box113
+\@addedbox=\box109
+\@anchorbox=\box110
+\@insetbox=\box111
+\se@backgroundbox=\box112
+\stackedbox=\box113
+\@centerbox=\box114
 \c@ROWcellindex@=\count298
 )
-(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
-\UL@box=\box114
-\UL@hyphenbox=\box115
-\UL@skip=\skip76
-\UL@hook=\toks30
-\UL@height=\dimen184
-\UL@pe=\count299
-\UL@pixel=\dimen185
-\ULC@box=\box116
-Package: ulem 2019/11/18
-\ULdepth=\dimen186
+(/usr/share/texlive/texmf-dist/tex/latex/enumitem/enumitem.sty
+Package: enumitem 2019/06/20 v3.9 Customized lists
+\labelindent=\skip76
+\enit@outerparindent=\dimen184
+\enit@toks=\toks30
+\enit@inbox=\box115
+\enit@count@id=\count299
+\enitdp@description=\count300
 )
-\xrefbox=\box117
-\xreflength=\skip77
-\CodeWidthChar=\skip78
-\CodeHeightChar=\skip79
-\DoxyCodeWidth=\skip80
+(/usr/share/texlive/texmf-dist/tex/generic/alphalph/alphalph.sty
+Package: alphalph 2019/12/09 v2.6 Convert numbers to letters (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+))
+(/usr/share/texlive/texmf-dist/tex/generic/ulem/ulem.sty
+\UL@box=\box116
+\UL@hyphenbox=\box117
+\UL@skip=\skip77
+\UL@hook=\toks31
+\UL@height=\dimen185
+\UL@pe=\count301
+\UL@pixel=\dimen186
+\ULC@box=\box118
+Package: ulem 2019/11/18
+\ULdepth=\dimen187
+)
+\xrefbox=\box119
+\xreflength=\skip78
+\CodeWidthChar=\skip79
+\CodeHeightChar=\skip80
+\DoxyCodeWidth=\skip81
+\c@DoxyEnumeratei=\count302
+\c@DoxyEnumerateii=\count303
+\c@DoxyEnumerateiii=\count304
+\c@DoxyEnumerateiv=\count305
+\c@DoxyEnumeratev=\count306
+\c@DoxyEnumeratevi=\count307
+\c@DoxyEnumeratevii=\count308
+\c@DoxyEnumerateviii=\count309
+\c@DoxyEnumerateix=\count310
+\c@DoxyEnumeratex=\count311
+\c@DoxyEnumeratexi=\count312
+\c@DoxyEnumeratexii=\count313
+\enitdp@DoxyEnumerate=\count314
+\enitdp@DoxyItemize=\count315
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/inputenc.sty
 Package: inputenc 2021/02/14 v1.3d Input encoding file
-\inpenc@prehook=\toks31
-\inpenc@posthook=\toks32
+\inpenc@prehook=\toks32
+\inpenc@posthook=\toks33
 )
 (/usr/share/texlive/texmf-dist/tex/latex/base/makeidx.sty
 Package: makeidx 2021/10/04 v1.0m Standard LaTeX package
@@ -447,78 +480,78 @@ Package: geometry 2020/01/02 v5.9 Page Geometry
 (/usr/share/texlive/texmf-dist/tex/generic/iftex/ifvtex.sty
 Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
 )
-\Gm@cnth=\count300
-\Gm@cntv=\count301
-\c@Gm@tempcnt=\count302
-\Gm@bindingoffset=\dimen187
-\Gm@wd@mp=\dimen188
-\Gm@odd@mp=\dimen189
-\Gm@even@mp=\dimen190
-\Gm@layoutwidth=\dimen191
-\Gm@layoutheight=\dimen192
-\Gm@layouthoffset=\dimen193
-\Gm@layoutvoffset=\dimen194
-\Gm@dimlist=\toks33
+\Gm@cnth=\count316
+\Gm@cntv=\count317
+\c@Gm@tempcnt=\count318
+\Gm@bindingoffset=\dimen188
+\Gm@wd@mp=\dimen189
+\Gm@odd@mp=\dimen190
+\Gm@even@mp=\dimen191
+\Gm@layoutwidth=\dimen192
+\Gm@layoutheight=\dimen193
+\Gm@layouthoffset=\dimen194
+\Gm@layoutvoffset=\dimen195
+\Gm@dimlist=\toks34
 )
 (/usr/share/texlive/texmf-dist/tex/latex/fancyhdr/fancyhdr.sty
-Package: fancyhdr 2021/01/28 v4.0.1 Extensive control of page headers and foote
+Package: fancyhdr 2022/05/18 v4.0.3 Extensive control of page headers and foote
 rs
-\f@nch@headwidth=\skip81
-\f@nch@O@elh=\skip82
-\f@nch@O@erh=\skip83
-\f@nch@O@olh=\skip84
-\f@nch@O@orh=\skip85
-\f@nch@O@elf=\skip86
-\f@nch@O@erf=\skip87
-\f@nch@O@olf=\skip88
-\f@nch@O@orf=\skip89
+\f@nch@headwidth=\skip82
+\f@nch@O@elh=\skip83
+\f@nch@O@erh=\skip84
+\f@nch@O@olh=\skip85
+\f@nch@O@orh=\skip86
+\f@nch@O@elf=\skip87
+\f@nch@O@erf=\skip88
+\f@nch@O@olf=\skip89
+\f@nch@O@orf=\skip90
 )
 (/usr/share/texlive/texmf-dist/tex/latex/natbib/natbib.sty
 Package: natbib 2010/09/13 8.31b (PWD, AO)
-\bibhang=\skip90
-\bibsep=\skip91
+\bibhang=\skip91
+\bibsep=\skip92
 LaTeX Info: Redefining \cite on input line 694.
-\c@NAT@ctr=\count303
+\c@NAT@ctr=\count319
 )
 (/usr/share/texlive/texmf-dist/tex/latex/tocloft/tocloft.sty
 Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
 Package tocloft Info: The document has chapter divisions on input line 51.
-\cftparskip=\skip92
-\cftbeforetoctitleskip=\skip93
-\cftaftertoctitleskip=\skip94
-\cftbeforepartskip=\skip95
-\cftpartnumwidth=\skip96
-\cftpartindent=\skip97
-\cftbeforechapskip=\skip98
-\cftchapindent=\skip99
-\cftchapnumwidth=\skip100
-\cftbeforesecskip=\skip101
-\cftsecindent=\skip102
-\cftsecnumwidth=\skip103
-\cftbeforesubsecskip=\skip104
-\cftsubsecindent=\skip105
-\cftsubsecnumwidth=\skip106
-\cftbeforesubsubsecskip=\skip107
-\cftsubsubsecindent=\skip108
-\cftsubsubsecnumwidth=\skip109
-\cftbeforeparaskip=\skip110
-\cftparaindent=\skip111
-\cftparanumwidth=\skip112
-\cftbeforesubparaskip=\skip113
-\cftsubparaindent=\skip114
-\cftsubparanumwidth=\skip115
-\cftbeforeloftitleskip=\skip116
-\cftafterloftitleskip=\skip117
-\cftbeforefigskip=\skip118
-\cftfigindent=\skip119
-\cftfignumwidth=\skip120
-\c@lofdepth=\count304
-\c@lotdepth=\count305
-\cftbeforelottitleskip=\skip121
-\cftafterlottitleskip=\skip122
-\cftbeforetabskip=\skip123
-\cfttabindent=\skip124
-\cfttabnumwidth=\skip125
+\cftparskip=\skip93
+\cftbeforetoctitleskip=\skip94
+\cftaftertoctitleskip=\skip95
+\cftbeforepartskip=\skip96
+\cftpartnumwidth=\skip97
+\cftpartindent=\skip98
+\cftbeforechapskip=\skip99
+\cftchapindent=\skip100
+\cftchapnumwidth=\skip101
+\cftbeforesecskip=\skip102
+\cftsecindent=\skip103
+\cftsecnumwidth=\skip104
+\cftbeforesubsecskip=\skip105
+\cftsubsecindent=\skip106
+\cftsubsecnumwidth=\skip107
+\cftbeforesubsubsecskip=\skip108
+\cftsubsubsecindent=\skip109
+\cftsubsubsecnumwidth=\skip110
+\cftbeforeparaskip=\skip111
+\cftparaindent=\skip112
+\cftparanumwidth=\skip113
+\cftbeforesubparaskip=\skip114
+\cftsubparaindent=\skip115
+\cftsubparanumwidth=\skip116
+\cftbeforeloftitleskip=\skip117
+\cftafterloftitleskip=\skip118
+\cftbeforefigskip=\skip119
+\cftfigindent=\skip120
+\cftfignumwidth=\skip121
+\c@lofdepth=\count320
+\c@lotdepth=\count321
+\cftbeforelottitleskip=\skip122
+\cftafterlottitleskip=\skip123
+\cftbeforetabskip=\skip124
+\cfttabindent=\skip125
+\cfttabnumwidth=\skip126
 )
 \@indexfile=\write4
 \openout4 = `refman.idx'.
@@ -529,25 +562,21 @@ Writing index file refman.idx
 Package: newunicodechar 2018/04/08 v1.2 Defining Unicode characters
 )
 
-Package newunicodechar Warning: Redefining Unicode character on input line 115.
-
-
-
 Package newunicodechar Warning: Redefining Unicode character on input line 116.
 
 
+
+Package newunicodechar Warning: Redefining Unicode character on input line 117.
+
+
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
-Package: hyperref 2022-02-21 v7.00n Hypertext links for LaTeX
+Package: hyperref 2022-06-20 v7.00s Hypertext links for LaTeX
 
 (/usr/share/texlive/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
 Package: ltxcmds 2020-05-10 v1.25 LaTeX kernel commands for general use (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
 Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
-)
-
-(/usr/share/texlive/texmf-dist/tex/generic/infwarerr/infwarerr.sty
-Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
 )
 Package pdftexcmds Info: \pdf@primitive is available.
 Package pdftexcmds Info: \pdf@ifprimitive is available.
@@ -571,44 +600,52 @@ Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
 (/usr/share/texlive/texmf-dist/tex/latex/auxhook/auxhook.sty
 Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
 )
-(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
-Package: kvoptions 2020-10-07 v3.14 Key value format for package options (HO)
+(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
+Package: nameref 2022-05-17 v2.50 Cross-referencing by name of section
+
+(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 )
-\@linkdim=\dimen195
-\Hy@linkcounter=\count306
-\Hy@pagecounter=\count307
+(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+
+(/usr/share/texlive/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+))
+\c@section@level=\count322
+)
+\@linkdim=\dimen196
+\Hy@linkcounter=\count323
+\Hy@pagecounter=\count324
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/pd1enc.def
-File: pd1enc.def 2022-02-21 v7.00n Hyperref: PDFDocEncoding definition (HO)
+File: pd1enc.def 2022-06-20 v7.00s Hyperref: PDFDocEncoding definition (HO)
 Now handling font encoding PD1 ...
 ... no UTF-8 mapping file for font encoding PD1
-)
-(/usr/share/texlive/texmf-dist/tex/generic/intcalc/intcalc.sty
-Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
 )
 (/usr/share/texlive/texmf-dist/tex/generic/etexcmds/etexcmds.sty
 Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
 )
-\Hy@SavedSpaceFactor=\count308
+\Hy@SavedSpaceFactor=\count325
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/puenc.def
-File: puenc.def 2022-02-21 v7.00n Hyperref: PDF Unicode definition (HO)
+File: puenc.def 2022-06-20 v7.00s Hyperref: PDF Unicode definition (HO)
 Now handling font encoding PU ...
 ... no UTF-8 mapping file for font encoding PU
 )
-Package hyperref Info: Hyper figures OFF on input line 4137.
-Package hyperref Info: Link nesting OFF on input line 4142.
-Package hyperref Info: Hyper index ON on input line 4145.
-Package hyperref Info: Plain pages OFF on input line 4152.
-Package hyperref Info: Backreferencing ON on input line 4155.
+Package hyperref Info: Hyper figures OFF on input line 4162.
+Package hyperref Info: Link nesting OFF on input line 4167.
+Package hyperref Info: Hyper index ON on input line 4170.
+Package hyperref Info: Plain pages OFF on input line 4177.
+Package hyperref Info: Backreferencing ON on input line 4180.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
-Package hyperref Info: Bookmarks ON on input line 4390.
+Package hyperref Info: Bookmarks ON on input line 4408.
 
 (/usr/share/texlive/texmf-dist/tex/latex/hyperref/backref.sty
 Package: backref 2021/02/04 v1.41 Bibliographical back referencing
 
 (/usr/share/texlive/texmf-dist/tex/latex/rerunfilecheck/rerunfilecheck.sty
-Package: rerunfilecheck 2019/12/05 v1.9 Rerun checks for auxiliary files (HO)
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/atveryend-ltx.sty
 Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
@@ -623,40 +660,38 @@ Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
 )
 ))
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
-86.
+85.
 ))
-\c@Hy@tempcnt=\count309
+\c@Hy@tempcnt=\count326
 
 (/usr/share/texlive/texmf-dist/tex/latex/url/url.sty
 \Urlmuskip=\muskip16
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
-LaTeX Info: Redefining \url on input line 4749.
-\XeTeXLinkMargin=\dimen196
+LaTeX Info: Redefining \url on input line 4746.
+\XeTeXLinkMargin=\dimen197
 
 (/usr/share/texlive/texmf-dist/tex/generic/bitset/bitset.sty
 Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
 )
-\Fld@menulength=\count310
-\Field@Width=\dimen197
-\Fld@charsize=\dimen198
-Package hyperref Info: Hyper figures OFF on input line 6027.
-Package hyperref Info: Link nesting OFF on input line 6032.
-Package hyperref Info: Hyper index ON on input line 6035.
-Package hyperref Info: backreferencing ON on input line 6040.
-Package hyperref Info: Link coloring OFF on input line 6047.
-Package hyperref Info: Link coloring with OCG OFF on input line 6052.
-Package hyperref Info: PDF/A mode OFF on input line 6057.
-LaTeX Info: Redefining \ref on input line 6097.
-LaTeX Info: Redefining \pageref on input line 6101.
+\Fld@menulength=\count327
+\Field@Width=\dimen198
+\Fld@charsize=\dimen199
+Package hyperref Info: Hyper figures OFF on input line 6024.
+Package hyperref Info: Link nesting OFF on input line 6029.
+Package hyperref Info: Hyper index ON on input line 6032.
+Package hyperref Info: backreferencing ON on input line 6037.
+Package hyperref Info: Link coloring OFF on input line 6044.
+Package hyperref Info: Link coloring with OCG OFF on input line 6049.
+Package hyperref Info: PDF/A mode OFF on input line 6054.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/atbegshi-ltx.sty
 Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
 package with kernel methods
 )
-\Hy@abspage=\count311
-\c@Item=\count312
-\c@Hfootnote=\count313
+\Hy@abspage=\count328
+\c@Item=\count329
+\c@Hfootnote=\count330
 
 
 LaTeX Warning: Command \LT@p@ftntext  has changed.
@@ -665,31 +700,31 @@ LaTeX Warning: Command \LT@p@ftntext  has changed.
 )
 Package hyperref Info: Driver: hpdftex.
  (/usr/share/texlive/texmf-dist/tex/latex/hyperref/hpdftex.def
-File: hpdftex.def 2022-02-21 v7.00n Hyperref driver for pdfTeX
-\Fld@listcount=\count314
-\c@bookmark@seq@number=\count315
-\Hy@SectionHShift=\skip126
+File: hpdftex.def 2022-06-20 v7.00s Hyperref driver for pdfTeX
+\Fld@listcount=\count331
+\c@bookmark@seq@number=\count332
+\Hy@SectionHShift=\skip127
 )
-Package hyperref Info: Option `colorlinks' set `true' on input line 134.
-Package hyperref Info: Option `unicode' set `true' on input line 134.
+Package hyperref Info: Option `colorlinks' set `true' on input line 136.
+Package hyperref Info: Option `unicode' set `true' on input line 136.
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption.sty
 Package: caption 2022/03/01 v3.6b Customizing captions (AR)
 
 (/usr/share/texlive/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2022/03/17 v2.3b caption3 kernel (AR)
-\caption@tempdima=\dimen199
-\captionmargin=\dimen256
-\caption@leftmargin=\dimen257
-\caption@rightmargin=\dimen258
-\caption@width=\dimen259
-\caption@indent=\dimen260
-\caption@parindent=\dimen261
-\caption@hangindent=\dimen262
+\caption@tempdima=\dimen256
+\captionmargin=\dimen257
+\caption@leftmargin=\dimen258
+\caption@rightmargin=\dimen259
+\caption@width=\dimen260
+\caption@indent=\dimen261
+\caption@parindent=\dimen262
+\caption@hangindent=\dimen263
 Package caption Info: Standard document class detected.
 )
-\c@caption@flags=\count316
-\c@continuedfloat=\count317
+\c@caption@flags=\count333
+\c@continuedfloat=\count334
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 Package caption Info: longtable package is loaded.
@@ -699,61 +734,61 @@ Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 ))
 (/usr/share/texlive/texmf-dist/tex/latex/etoc/etoc.sty
 Package: etoc 2021/09/23 v1.09e Completely customisable TOCs (JFB)
-\Etoc@toctoks=\toks34
-\c@etoc@tocid=\count318
-\c@etoc@tocdepth=\count319
-\etoc@framed@titlebox=\box118
-\etoc@framed@contentsbox=\box119
+\Etoc@toctoks=\toks35
+\c@etoc@tocid=\count335
+\c@etoc@tocdepth=\count336
+\etoc@framed@titlebox=\box120
+\etoc@framed@contentsbox=\box121
 )
-LaTeX Font Info:    Trying to load font information for T1+phv on input line 14
-9.
+LaTeX Font Info:    Trying to load font information for T1+phv on input line 15
+2.
 
 (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1phv.fd
 File: t1phv.fd 2020/03/25 scalable font definitions for T1/phv.
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 8.99994pt on input line 149.
+(Font)              scaled to size 8.99994pt on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count320
-\l__pdf_internal_box=\box120
+File: l3backend-pdftex.def 2022-07-01 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count337
+\l__pdf_internal_box=\box122
 )
 (./refman.aux)
 \openout1 = `refman.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 149.
-LaTeX Font Info:    ... okay on input line 149.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 152.
+LaTeX Font Info:    ... okay on input line 152.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count321
-\scratchdimen=\dimen263
-\scratchbox=\box121
-\nofMPsegments=\count322
-\nofMParguments=\count323
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count324
-\MPscratchDim=\dimen264
-\MPnumerator=\count325
-\makeMPintoPDFobject=\count326
-\everyMPtoPDFconversion=\toks36
+\scratchcounter=\count338
+\scratchdimen=\dimen264
+\scratchbox=\box123
+\nofMPsegments=\count339
+\nofMParguments=\count340
+\everyMPshowfont=\toks36
+\MPscratchCnt=\count341
+\MPscratchDim=\dimen265
+\MPnumerator=\count342
+\makeMPintoPDFobject=\count343
+\everyMPtoPDFconversion=\toks37
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -797,23 +832,8 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package backref Info: ** backref set up for natbib ** on input line 149.
-Package hyperref Info: Link coloring ON on input line 149.
-(/usr/share/texlive/texmf-dist/tex/latex/hyperref/nameref.sty
-Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
-
-(/usr/share/texlive/texmf-dist/tex/latex/refcount/refcount.sty
-Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
-)
-(/usr/share/texlive/texmf-dist/tex/generic/gettitlestring/gettitlestring.sty
-Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
-)
-\c@section@level=\count327
-)
-LaTeX Info: Redefining \ref on input line 149.
-LaTeX Info: Redefining \pageref on input line 149.
-LaTeX Info: Redefining \nameref on input line 149.
-
+Package backref Info: ** backref set up for natbib ** on input line 152.
+Package hyperref Info: Link coloring ON on input line 152.
 (./refman.out) (./refman.out)
 \@outlinefile=\write5
 \openout5 = `refman.out'.
@@ -821,34 +841,34 @@ LaTeX Info: Redefining \nameref on input line 149.
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
 \Etoc@tf=\read4
-Package hyperref Info: Option `pageanchor' set `false' on input line 156.
-Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 156.
+Package hyperref Info: Option `pageanchor' set `false' on input line 160.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 160.
 
-Package hyperref Info: Option `unicode' set `true' on input line 156.
+Package hyperref Info: Option `unicode' set `true' on input line 160.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 12.9599pt on input line 161.
+(Font)              scaled to size 12.9599pt on input line 165.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 6.29996pt on input line 161.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 161
+(Font)              scaled to size 6.29996pt on input line 165.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 165
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 161
+LaTeX Font Info:    Trying to load font information for U+msb on input line 165
 .
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for U+wasy on input line 16
-1.
+5.
 
 (/usr/share/texlive/texmf-dist/tex/latex/wasysym/uwasy.fd
 File: uwasy.fd 2020/01/19 v2.4 Wasy-2 symbol font definitions
 )
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 10.79993pt on input line 161.
+(Font)              scaled to size 10.79993pt on input line 167.
  [1
 
 
@@ -859,27 +879,25 @@ LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 \openout6 = `refman.toc'.
 
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 8.99994pt on input line 169.
+(Font)              scaled to size 8.99994pt on input line 173.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 6.29996pt on input line 169.
- [1] [2] [3] [4] [5] [6
-
-]
-Package hyperref Info: Option `pageanchor' set `true' on input line 171.
+(Font)              scaled to size 6.29996pt on input line 173.
+ [1] [2] [3] [4] [5] [6]
+Package hyperref Info: Option `pageanchor' set `true' on input line 176.
 
 Chapter 1.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 18.66588pt on input line 174.
+(Font)              scaled to size 18.66588pt on input line 178.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 18.66588pt on input line 174.
+(Font)              scaled to size 18.66588pt on input line 178.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 18.66588pt on input line 174.
+(Font)              scaled to size 18.66588pt on input line 178.
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
-(Font)              scaled to size 22.39185pt on input line 174.
+(Font)              scaled to size 22.39185pt on input line 178.
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
-(Font)              scaled to size 22.39185pt on input line 174.
+(Font)              scaled to size 22.39185pt on input line 178.
 LaTeX Font Info:    Font shape `T1/phv/bc/n' will be
-(Font)              scaled to size 22.39185pt on input line 174.
+(Font)              scaled to size 22.39185pt on input line 178.
 (./index.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 12.9599pt on input line 1.
@@ -890,6 +908,7 @@ LaTeX Font Info:    Trying to load font information for T1+pcr on input line 6.
  (/usr/share/texlive/texmf-dist/tex/latex/psnfss/t1pcr.fd
 File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
 ) [1
+
 
 ])
 [2]
@@ -908,6 +927,30 @@ Chapter 4.
 
 ]
 Chapter 5.
+(./files.tex
+
+LaTeX Warning: Reference `global_8h_source' on page 9 undefined on input line 5
+.
+
+
+LaTeX Warning: Reference `internal_8h_source' on page 9 undefined on input line
+ 6.
+
+
+LaTeX Warning: Reference `lib_8h_source' on page 9 undefined on input line 7.
+
+
+LaTeX Warning: Reference `proto_8h_source' on page 9 undefined on input line 8.
+
+
+
+LaTeX Warning: Reference `replace_8h_source' on page 9 undefined on input line 
+9.
+
+) [9] [10
+
+]
+Chapter 6.
 (./group__env.tex
 LaTeX Font Info:    Font shape `T1/phv/b/n' will be
 (Font)              scaled to size 10.79993pt on input line 3.
@@ -921,15 +964,15 @@ LaTeX Font Info:    Font shape `TS1/phv/m/n' will be
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <8> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 32.
 
-[9]
+[11]
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <7> not available
-(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 68.
-
-Underfull \hbox (badness 10000) in paragraph at lines 85--86
+(Font)              Font shape `T1/pcr/m/sl' tried instead on input line 124.
+ [12]
+Underfull \hbox (badness 10000) in paragraph at lines 165--166
 
  []
 
-[10]) (./group__internal.tex
+[13]) (./group__internal.tex
 LaTeX Font Info:    Font shape `T1/phv/m/n' will be
 (Font)              scaled to size 8.09995pt on input line 19.
 LaTeX Font Info:    Font shape `T1/phv/m/it' in size <9> not available
@@ -938,62 +981,87 @@ LaTeX Font Info:    Font shape `T1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 19.
 LaTeX Font Info:    Font shape `T1/pcr/m/it' in size <9> not available
 (Font)              Font shape `T1/pcr/m/sl' tried instead on input line 31.
- [11] [12]
-Overfull \hbox (20.83997pt too wide) in paragraph at lines 141--142
-[]\T1/phv/m/n/10 , [], [], [], [], [], and []. 
+ [14] [15]
+Underfull \hbox (badness 900) in paragraph at lines 147--148
+[]\T1/phv/m/n/10 References [], [], [], [], [], [],
  []
 
-[13] [14] [15] [16]
-Underfull \hbox (badness 10000) detected at line 413
+[16]
+Underfull \hbox (badness 5345) in paragraph at lines 227--228
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [],
+ []
+
+[17] [18] [19] [20]
+Underfull \hbox (badness 10000) detected at line 453
 [][][]
  []
 
 
-Overfull \hbox (56.55981pt too wide) in paragraph at lines 462--463
+Overfull \hbox (56.55981pt too wide) in paragraph at lines 514--515
 []\T1/phv/m/n/10 , [], [], [], [], [], [],
  []
 
-[17]
-Underfull \hbox (badness 7613) in paragraph at lines 503--504
-[]\T1/phv/m/n/10 Referenced by [], [], [], [], [], and
- []
-
-[18]
-Underfull \hbox (badness 10000) detected at line 539
-[][][]
- []
-
-[19] [20]
-Underfull \hbox (badness 10000) in paragraph at lines 769--770
-
- []
-
 [21]
-Underfull \hbox (badness 10000) detected at line 806
+Underfull \hbox (badness 10000) in paragraph at lines 551--552
+[]\T1/phv/m/n/10 References [], [], [], [], [],
+ []
+
+
+Underfull \hbox (badness 5345) in paragraph at lines 555--556
+[]\T1/phv/m/n/10 Referenced by [], [], [], [], [],
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 591
 [][][]
  []
 
-[22]
-Underfull \hbox (badness 10000) detected at line 889
+[22] [23] [24]
+Underfull \hbox (badness 10000) in paragraph at lines 821--822
+
+ []
+
+[25]
+Underfull \hbox (badness 10000) detected at line 858
 [][][]
  []
 
-[23] [24] [25] [26] [27] [28]) (./group__itab.tex [29] [30]
+[26]
+Underfull \hbox (badness 10000) detected at line 941
+[][][]
+ []
+
+[27] [28] [29]
+Underfull \hbox (badness 2990) in paragraph at lines 1247--1248
+[]\T1/phv/m/n/10 , [], [], [], [], [], [], and
+ []
+
+[30] [31]
+Underfull \hbox (badness 1845) in paragraph at lines 1331--1332
+[]\T1/phv/m/n/10 References [], [], [], [], [], [], [],
+ []
+
+
+Underfull \hbox (badness 1742) in paragraph at lines 1331--1332
+[]\T1/phv/m/n/10 , [], [], [], [], [], [],
+ []
+
+[32]) (./group__itab.tex [33] [34]
 Underfull \hbox (badness 10000) detected at line 109
 [][][]
  []
 
-[31]
+[35]
 Underfull \hbox (badness 10000) detected at line 216
 [][][]
  []
 
-[32]) (./group__tokenizer.tex [33]
+[36]) (./group__tokenizer.tex [37]
 Underfull \hbox (badness 10000) detected at line 31
 [][][]
  []
 
-[34]
+[38]
 Underfull \hbox (badness 10000) detected at line 90
 [][][]
  []
@@ -1003,7 +1071,7 @@ Underfull \hbox (badness 10000) detected at line 116
 [][][]
  []
 
-[35] [36]
+[39] [40]
 Underfull \hbox (badness 10000) in paragraph at lines 284--285
 
  []
@@ -1013,91 +1081,88 @@ Underfull \hbox (badness 10000) detected at line 319
 [][][]
  []
 
-[37]
+[41]
 Underfull \hbox (badness 10000) detected at line 406
 [][][]
  []
 
-[38] [39]) (./group__msg.tex [40]
+[42] [43]) (./group__msg.tex [44]
 Underfull \hbox (badness 1308) in paragraph at lines 76--77
 []\T1/phv/m/n/10 Referenced by [], [], [], [], [], [],
  []
 
-[41]) (./group__messages.tex) (./group__namelist.tex [42] [43]
-Overfull \vbox (18.3043pt too high) has occurred while \output is active []
-
-
-[44]) (./group__internal__structures.tex [45] [46]
+[45]) (./group__messages.tex) (./group__namelist.tex [46] [47] [48])
+(./group__internal__structures.tex [49] [50]
 Underfull \hbox (badness 10000) in paragraph at lines 149--150
-\T1/pcr/m/n/8 typedef struct []$\OMS/cmsy/m/n/8 ^^C$\T1/pcr/m/n/8 ( $\OMS/cmsy/
+\T1/pcr/m/n/8 typedef struct [] $\OMS/cmsy/m/n/8 ^^C$\T1/pcr/m/n/8 ($\OMS/cmsy/
 m/n/8 ^^C$ \T1/pcr/m/n/8 t[]_[]message[]_[]handler) (struct [] $\OMS/cmsy/m/n/8
  ^^C$\T1/pcr/m/n/8 , const char $\OMS/cmsy/m/n/8 ^^C$\T1/pcr/m/n/8 sel, struct
  []
 
-[47] [48]) [49] [50
-
-]
-Chapter 6.
+[51]) [52]
+Chapter 7.
 (./structast.tex <./structast__coll__graph.pdf
 
 pdfTeX warning: pdflatex (file ./structast__coll__graph.pdf): PDF inclusion: mu
 ltiple pdfs with page group included in a single page
 >
-<structast__coll__graph.pdf, id=3077, 155.58125pt x 168.63pt>
+<structast__coll__graph.pdf, id=3365, 155.58125pt x 168.63pt>
 File: structast__coll__graph.pdf Graphic file (type pdf)
 <use structast__coll__graph.pdf>
 Package pdftex.def Info: structast__coll__graph.pdf  used on input line 13.
 (pdftex.def)             Requested size: 155.0pt x 168.00174pt.
- [51] [52]) (./structclassinfo.tex [53]) (./structgd.tex <./structgd__coll__gra
-ph.pdf
+ [53
+
+] [54]) (./structclassinfo.tex [55]) (./structgd.tex <./structgd__coll__graph.p
+df
 
 pdfTeX warning: pdflatex (file ./structgd__coll__graph.pdf): PDF inclusion: mul
 tiple pdfs with page group included in a single page
 >
-<structgd__coll__graph.pdf, id=3153, 380.42125pt x 372.39125pt>
+<structgd__coll__graph.pdf, id=3421, 413.545pt x 372.39125pt>
 File: structgd__coll__graph.pdf Graphic file (type pdf)
 <use structgd__coll__graph.pdf>
 Package pdftex.def Info: structgd__coll__graph.pdf  used on input line 13.
-(pdftex.def)             Requested size: 350.0pt x 342.62115pt.
- [54] [55]) (./structitab.tex <./structitab__coll__graph.pdf>
-<structitab__coll__graph.pdf, id=3191, 146.5475pt x 167.62625pt>
+(pdftex.def)             Requested size: 350.0pt x 315.176pt.
+ [56] [57]) (./structitab.tex <./structitab__coll__graph.pdf>
+<structitab__coll__graph.pdf, id=3446, 146.5475pt x 167.62625pt>
 File: structitab__coll__graph.pdf Graphic file (type pdf)
 <use structitab__coll__graph.pdf>
 Package pdftex.def Info: structitab__coll__graph.pdf  used on input line 14.
 (pdftex.def)             Requested size: 146.0pt x 166.99916pt.
 )
-(./structitab__entry.tex [56]) (./structitab__iter.tex <./structitab__iter__col
+(./structitab__entry.tex [58]) (./structitab__iter.tex <./structitab__iter__col
 l__graph.pdf>
-<structitab__iter__coll__graph.pdf, id=3212, 146.5475pt x 234.8775pt>
+<structitab__iter__coll__graph.pdf, id=3462, 146.5475pt x 234.8775pt>
 File: structitab__iter__coll__graph.pdf Graphic file (type pdf)
 <use structitab__iter__coll__graph.pdf>
 Package pdftex.def Info: structitab__iter__coll__graph.pdf  used on input line 
 14.
 (pdftex.def)             Requested size: 146.0pt x 233.99886pt.
- [57]) (./structmethodinfo.tex) (./structs__assignment.tex <./structs__assignme
+ [59]) (./structmethodinfo.tex) (./structs__assignment.tex <./structs__assignme
 nt__coll__graph.pdf>
-<structs__assignment__coll__graph.pdf, id=3232, 747.79375pt x 315.1775pt>
+<structs__assignment__coll__graph.pdf, id=3480, 747.79375pt x 315.1775pt>
 File: structs__assignment__coll__graph.pdf Graphic file (type pdf)
 <use structs__assignment__coll__graph.pdf>
 Package pdftex.def Info: structs__assignment__coll__graph.pdf  used on input li
 ne 13.
 (pdftex.def)             Requested size: 350.0pt x 147.51785pt.
- [58]) (./structs__block.tex <./structs__block__coll__graph.pdf>
-<structs__block__coll__graph.pdf, id=3254, 568.1225pt x 449.68pt>
+ [60]) (./structs__block.tex <./structs__block__coll__graph.pdf>
+<structs__block__coll__graph.pdf, id=3499, 574.145pt x 449.68pt>
 File: structs__block__coll__graph.pdf Graphic file (type pdf)
 <use structs__block__coll__graph.pdf>
 Package pdftex.def Info: structs__block__coll__graph.pdf  used on input line 13
 .
-(pdftex.def)             Requested size: 350.0pt x 277.04216pt.
- [59]) (./structs__classdef.tex <./structs__classdef__coll__graph.pdf>
-<structs__classdef__coll__graph.pdf, id=3279, 201.75375pt x 304.13625pt>
+(pdftex.def)             Requested size: 350.0pt x 274.13286pt.
+ [61]) (./structs__classdef.tex <./structs__classdef__coll__graph.pdf>
+<structs__classdef__coll__graph.pdf, id=3519, 201.75375pt x 304.13625pt>
 File: structs__classdef__coll__graph.pdf Graphic file (type pdf)
 <use structs__classdef__coll__graph.pdf>
 Package pdftex.def Info: structs__classdef__coll__graph.pdf  used on input line
  13.
 (pdftex.def)             Requested size: 201.0pt x 303.00314pt.
- [60]) (./structs__env.tex <./structs__env__coll__graph.pdf>
-<structs__env__coll__graph.pdf, id=3302, 195.73125pt x 236.885pt>
+ [62]) (./structs__env.tex <./structs__env__coll__graph.pdf>
+<structs__env__coll__graph.pdf, id=3537, 195.73125pt x 236.885pt>
 File: structs__env__coll__graph.pdf Graphic file (type pdf)
 <use structs__env__coll__graph.pdf>
 Package pdftex.def Info: structs__env__coll__graph.pdf  used on input line 13.
@@ -1108,15 +1173,15 @@ Package pdftex.def Info: structs__env__coll__graph.pdf  used on input line 13.
 pdfTeX warning: pdflatex (file ./structs__expression__coll__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<structs__expression__coll__graph.pdf, id=3314, 851.18pt x 315.1775pt>
+<structs__expression__coll__graph.pdf, id=3547, 851.18pt x 315.1775pt>
 File: structs__expression__coll__graph.pdf Graphic file (type pdf)
 <use structs__expression__coll__graph.pdf>
 Package pdftex.def Info: structs__expression__coll__graph.pdf  used on input li
 ne 13.
 (pdftex.def)             Requested size: 350.0pt x 129.59872pt.
- [61]) (./structs__expression__list.tex [62] <./structs__expression__list__coll
+ [63]) (./structs__expression__list.tex [64] <./structs__expression__list__coll
 __graph.pdf>
-<structs__expression__list__coll__graph.pdf, id=3356, 731.73375pt x 315.1775pt>
+<structs__expression__list__coll__graph.pdf, id=3576, 731.73375pt x 315.1775pt>
 
 File: structs__expression__list__coll__graph.pdf Graphic file (type pdf)
 <use structs__expression__list__coll__graph.pdf>
@@ -1128,74 +1193,73 @@ put line 13.
 pdfTeX warning: pdflatex (file ./structs__globals__coll__graph.pdf): PDF inclus
 ion: multiple pdfs with page group included in a single page
 >
-<structs__globals__coll__graph.pdf, id=3367, 198.7425pt x 202.7575pt>
+<structs__globals__coll__graph.pdf, id=3585, 198.7425pt x 202.7575pt>
 File: structs__globals__coll__graph.pdf Graphic file (type pdf)
 <use structs__globals__coll__graph.pdf>
 Package pdftex.def Info: structs__globals__coll__graph.pdf  used on input line 
 13.
 (pdftex.def)             Requested size: 198.0pt x 202.0052pt.
- [63]) (./structs__message__cascade.tex <./structs__message__cascade__coll__gra
+ [65]) (./structs__message__cascade.tex <./structs__message__cascade__coll__gra
 ph.pdf>
-<structs__message__cascade__coll__graph.pdf, id=3390, 751.80875pt x 315.1775pt>
-
+<structs__message__cascade__coll__graph.pdf, id=3605, 774.895pt x 315.1775pt>
 File: structs__message__cascade__coll__graph.pdf Graphic file (type pdf)
 <use structs__message__cascade__coll__graph.pdf>
 Package pdftex.def Info: structs__message__cascade__coll__graph.pdf  used on in
 put line 13.
-(pdftex.def)             Requested size: 350.0pt x 146.73396pt.
- [64]) (./structs__message__pattern.tex <./structs__message__pattern__coll__gra
+(pdftex.def)             Requested size: 350.0pt x 142.35757pt.
+ [66]) (./structs__message__pattern.tex <./structs__message__pattern__coll__gra
 ph.pdf>
-<structs__message__pattern__coll__graph.pdf, id=3410, 192.72pt x 178.6675pt>
+<structs__message__pattern__coll__graph.pdf, id=3623, 192.72pt x 178.6675pt>
 File: structs__message__pattern__coll__graph.pdf Graphic file (type pdf)
 <use structs__message__pattern__coll__graph.pdf>
 Package pdftex.def Info: structs__message__pattern__coll__graph.pdf  used on in
 put line 13.
 (pdftex.def)             Requested size: 192.0pt x 177.99911pt.
- [65]) (./structs__messages.tex <./structs__messages__coll__graph.pdf>
-<structs__messages__coll__graph.pdf, id=3433, 718.685pt x 315.1775pt>
+ [67]) (./structs__messages.tex <./structs__messages__coll__graph.pdf>
+<structs__messages__coll__graph.pdf, id=3643, 720.6925pt x 315.1775pt>
 File: structs__messages__coll__graph.pdf Graphic file (type pdf)
 <use structs__messages__coll__graph.pdf>
 Package pdftex.def Info: structs__messages__coll__graph.pdf  used on input line
  13.
-(pdftex.def)             Requested size: 350.0pt x 153.49571pt.
+(pdftex.def)             Requested size: 350.0pt x 153.06288pt.
 LaTeX Font Info:    Font shape `TS1/phv/m/it' in size <9> not available
 (Font)              Font shape `TS1/phv/m/sl' tried instead on input line 21.
 LaTeX Font Info:    Font shape `TS1/phv/m/sl' will be
 (Font)              scaled to size 8.09995pt on input line 21.
-) (./structs__methoddef.tex [66] <./structs__methoddef__coll__graph.pdf>
-<structs__methoddef__coll__graph.pdf, id=3461, 647.41875pt x 518.93875pt>
+) (./structs__methoddef.tex [68] <./structs__methoddef__coll__graph.pdf>
+<structs__methoddef__coll__graph.pdf, id=3666, 646.415pt x 518.93875pt>
 File: structs__methoddef__coll__graph.pdf Graphic file (type pdf)
 <use structs__methoddef__coll__graph.pdf>
 Package pdftex.def Info: structs__methoddef__coll__graph.pdf  used on input lin
 e 13.
-(pdftex.def)             Requested size: 350.0pt x 280.53949pt.
+(pdftex.def)             Requested size: 350.0pt x 280.97499pt.
 
-[67]) (./structs__namelist.tex) (./structs__names.tex <./structs__names__coll__
+[69]) (./structs__namelist.tex) (./structs__names.tex <./structs__names__coll__
 graph.pdf>
-<structs__names__coll__graph.pdf, id=3489, 183.68625pt x 100.375pt>
+<structs__names__coll__graph.pdf, id=3687, 183.68625pt x 100.375pt>
 File: structs__names__coll__graph.pdf Graphic file (type pdf)
 <use structs__names__coll__graph.pdf>
 Package pdftex.def Info: structs__names__coll__graph.pdf  used on input line 13
 .
 (pdftex.def)             Requested size: 183.0pt x 100.00716pt.
-) (./structs__object.tex [68] <./structs__object__coll__graph.pdf>
-<structs__object__coll__graph.pdf, id=3507, 195.73125pt x 102.3825pt>
+) (./structs__object.tex [70] <./structs__object__coll__graph.pdf>
+<structs__object__coll__graph.pdf, id=3703, 195.73125pt x 102.3825pt>
 File: structs__object__coll__graph.pdf Graphic file (type pdf)
 <use structs__object__coll__graph.pdf>
 Package pdftex.def Info: structs__object__coll__graph.pdf  used on input line 1
 3.
 (pdftex.def)             Requested size: 195.0pt x 102.00574pt.
 
-[69]) (./structs__pattern.tex <./structs__pattern__coll__graph.pdf>
-<structs__pattern__coll__graph.pdf, id=3541, 184.69pt x 167.62625pt>
+[71]) (./structs__pattern.tex <./structs__pattern__coll__graph.pdf>
+<structs__pattern__coll__graph.pdf, id=3724, 184.69pt x 167.62625pt>
 File: structs__pattern__coll__graph.pdf Graphic file (type pdf)
 <use structs__pattern__coll__graph.pdf>
 Package pdftex.def Info: structs__pattern__coll__graph.pdf  used on input line 
 13.
 (pdftex.def)             Requested size: 184.0pt x 167.00172pt.
 )
-(./structs__slot.tex [70] <./structs__slot__coll__graph.pdf>
-<structs__slot__coll__graph.pdf, id=3562, 195.73125pt x 169.63374pt>
+(./structs__slot.tex [72] <./structs__slot__coll__graph.pdf>
+<structs__slot__coll__graph.pdf, id=3742, 195.73125pt x 169.63374pt>
 File: structs__slot__coll__graph.pdf Graphic file (type pdf)
 <use structs__slot__coll__graph.pdf>
 Package pdftex.def Info: structs__slot__coll__graph.pdf  used on input line 13.
@@ -1207,44 +1271,93 @@ Package pdftex.def Info: structs__slot__coll__graph.pdf  used on input line 13.
 pdfTeX warning: pdflatex (file ./structs__statements__coll__graph.pdf): PDF inc
 lusion: multiple pdfs with page group included in a single page
 >
-<structs__statements__coll__graph.pdf, id=3575, 512.91624pt x 449.68pt>
+<structs__statements__coll__graph.pdf, id=3752, 540.0175pt x 449.68pt>
 File: structs__statements__coll__graph.pdf Graphic file (type pdf)
 <use structs__statements__coll__graph.pdf>
 Package pdftex.def Info: structs__statements__coll__graph.pdf  used on input li
 ne 13.
-(pdftex.def)             Requested size: 350.0pt x 306.84875pt.
- [71]) (./structstringinfo.tex [72]) (./structvarinfo.tex) [73] [74
+(pdftex.def)             Requested size: 350.0pt x 291.45828pt.
+ [73]) (./structstringinfo.tex [74]) (./structvarinfo.tex) [75] [76
+
+]
+Chapter 8.
+(./env_8c.tex <./env_8c__incl.pdf
+
+pdfTeX warning: pdflatex (file ./env_8c__incl.pdf): PDF inclusion: multiple pdf
+s with page group included in a single page
+>
+<env_8c__incl.pdf, id=3791, 807.015pt x 269.005pt>
+File: env_8c__incl.pdf Graphic file (type pdf)
+<use env_8c__incl.pdf>
+Package pdftex.def Info: env_8c__incl.pdf  used on input line 13.
+(pdftex.def)             Requested size: 350.0pt x 116.66733pt.
+
+Underfull \hbox (badness 10000) detected at line 38
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 41
+[][][]
+ []
+
+[77]
+Underfull \hbox (badness 10000) detected at line 44
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 47
+[][][]
+ []
+
+) (./env_8h.tex <./env_8h__dep__incl.pdf>
+<env_8h__dep__incl.pdf, id=3833, 143.53625pt x 212.795pt>
+File: env_8h__dep__incl.pdf Graphic file (type pdf)
+<use env_8h__dep__incl.pdf>
+Package pdftex.def Info: env_8h__dep__incl.pdf  used on input line 12.
+(pdftex.def)             Requested size: 143.0pt x 212.00543pt.
+
+Underfull \hbox (badness 10000) detected at line 39
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 42
+[][][]
+ []
+
+[78]
+Underfull \hbox (badness 10000) detected at line 45
+[][][]
+ []
+
+
+Underfull \hbox (badness 10000) detected at line 48
+[][][]
+ []
+
+) (./env_8h_source.tex) (./global_8h_source.tex [79]) (./internal_8h_source.tex
+[80]) (./lib_8h_source.tex [81] [82] [83]) (./proto_8h_source.tex)
+(./replace_8h_source.tex [84]) [85] [86
 
 ]
 No file refman.ind.
 (./refman.aux)
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `refman.out' has not changed.
-(rerunfilecheck)             Checksum: 2014C7A718E2EDD6B44F7BE4624E578B;37338.
+(rerunfilecheck)             Checksum: 5BA48E113337983D5BCA7A3EE5978D58;39860.
  ) 
 Here is how much of TeX's memory you used:
- 18585 strings out of 480110
- 314856 string characters out of 5893006
- 653758 words of memory out of 5000000
- 35572 multiletter control sequences out of 15000+600000
+ 19260 strings out of 479816
+ 327932 string characters out of 5883065
+ 661116 words of memory out of 5000000
+ 36430 multiletter control sequences out of 15000+600000
  527959 words of font info for 100 fonts, out of 8000000 for 9000
  81 hyphenation exceptions out of 8191
- 99i,16n,117p,1612b,602s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{structs__object_a3d08461546b07b580add76baa37f4e43} 
-has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{structs__object_afbb3c52f7e9a0ad1632c87a824174df0} 
-has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{structs__object_abf65e2957aeacda971fde8e226b82ddc} 
-has been referenced but does not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{structs__object_a2a8a93ba14c852566586b8a459fbb051} 
-has been referenced but does not exist, replaced by a fixed one
-
+ 99i,16n,117p,1706b,738s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
 pdfTeX warning (dest): name{structs__expression_a5a0ce65955c6b62f3dc28c8cb3b429
 bc} has been referenced but does not exist, replaced by a fixed one
@@ -1286,7 +1399,23 @@ pdfTeX warning (dest): name{structast_a860f9139dd74c340bc89910d1ce383cf} has be
 en referenced but does not exist, replaced by a fixed one
 
 
+pdfTeX warning (dest): name{structs__object_abf65e2957aeacda971fde8e226b82ddc} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_a2a8a93ba14c852566586b8a459fbb051} 
+has been referenced but does not exist, replaced by a fixed one
+
+
 pdfTeX warning (dest): name{structs__object_af59cf0073541cb53be091642fb17d239} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_afbb3c52f7e9a0ad1632c87a824174df0} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_a3d08461546b07b580add76baa37f4e43} 
 has been referenced but does not exist, replaced by a fixed one
 
 
@@ -1314,15 +1443,15 @@ pdfTeX warning (dest): name{structs__expression_a1ea1c1ce11ee1fd34d3c945ffd85d6
 96} has been referenced but does not exist, replaced by a fixed one
 
 
-pdfTeX warning (dest): name{structs__object_aba477554fcde53805ea7286ae01e798b} 
-has been referenced but does not exist, replaced by a fixed one
-
-
 pdfTeX warning (dest): name{structs__expression_a82ce7474040d734d73c7a18283f900
 a2} has been referenced but does not exist, replaced by a fixed one
 
 
 pdfTeX warning (dest): name{structs__object_a5ac3dc8749b7848a5df7a6d94ad234d4} 
+has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{structs__object_aba477554fcde53805ea7286ae01e798b} 
 has been referenced but does not exist, replaced by a fixed one
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc}</usr/share/texlive/
@@ -1335,10 +1464,10 @@ o8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8a.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvb8ac.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/urw/helvetic/uhvro8a.pfb>
-Output written on refman.pdf (82 pages, 444755 bytes).
+Output written on refman.pdf (94 pages, 501143 bytes).
 PDF statistics:
- 3793 PDF objects out of 4296 (max. 8388607)
- 3589 compressed objects within 36 object streams
- 585 named destinations out of 1000 (max. 500000)
- 1677 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4536 PDF objects out of 5155 (max. 8388607)
+ 4305 compressed objects within 44 object streams
+ 629 named destinations out of 1000 (max. 500000)
+ 1815 words of extra memory for PDF output out of 10000 (max. 10000000)
 

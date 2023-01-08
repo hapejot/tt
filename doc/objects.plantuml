@@ -1,0 +1,17 @@
+@startuml
+
+class MemoryManagement {
+    void init()
+    void alloc()
+    void free()
+    void link()
+    void unlink()
+}
+
+class Main {
+    void startup()
+    void shutdown()
+    void use_console()
+}
+
+@enduml

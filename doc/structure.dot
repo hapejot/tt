@@ -1,0 +1,37 @@
+graph GRAPH_0 {
+  edge [ arrowhead=open ];
+#  graph [ rankdir=TB ];
+  node [
+    fillcolor=white,
+    shape=plaintext,
+    style=filled ];
+  compound=true;
+
+subgraph cluster_mm {
+      mm  [label = "Memory Management"];
+      gc  [fillcolor=lightgray]
+      mm -- talloc 
+      mm -- gc }
+
+    saprfc [label = "SAP RFC Server"];
+    par   [label = "Parser"];
+    omem  [label = "Object Memory"];
+    cmd [label = "Command"];
+    src [label = "Source"];
+    main [label = "Main"];
+    env [label = "Environment"];
+    inter [label = "Interaction"];
+
+    console [label="Transcript"];
+
+    inter -- start;
+    inter -- inspect;
+    inter -- console;
+
+    main -- inter;
+    main -- src --par;
+    omem -- mm [lhead=cluster_mm]
+    main -- mm [lhead=cluster_mm, label="init"];
+    main -- env;
+}
+

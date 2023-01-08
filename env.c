@@ -1,3 +1,15 @@
+/**
+ * @file env.c
+ * @author your name (you@domain.com)
+ * @brief Environment 
+ * @version 0.1
+ * @date 2022-08-09
+ * 
+ * @copyright Copyright (c) 2022
+ * 
+ */
+
+
 #include "internal.h"
 
 void env_dump( t_env * env, const char *reason ) {

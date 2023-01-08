@@ -60,7 +60,7 @@ typedef struct \mbox{\hyperlink{structs__messages}{s\+\_\+messages}} \mbox{\hype
 \item 
 typedef struct \mbox{\hyperlink{structs__message__cascade}{s\+\_\+message\+\_\+cascade}} \mbox{\hyperlink{group__internal__structures_ga832e30b3a41ae2fa11b2e8bc5a537180}{t\+\_\+message\+\_\+cascade}}
 \item 
-typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$($\ast$ \mbox{\hyperlink{group__internal__structures_gaa98e62c4ef16b85551d16212f439b234}{t\+\_\+message\+\_\+handler}}) (struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$, const char $\ast$sel, struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$$\ast$args)
+typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$($\ast$ \mbox{\hyperlink{group__internal__structures_ga888838692fe4a8efd087863b6d7f5fa0}{t\+\_\+message\+\_\+handler}}) (struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$, const char $\ast$sel, struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$$\ast$args)
 \item 
 typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} \mbox{\hyperlink{group__internal__structures_gac4d798ef67eace7eaadcc87ce5c471b8}{t\+\_\+object}}
 \item 
@@ -142,11 +142,11 @@ expression type \mbox{\Hypertarget{group__internal__structures_ga832e30b3a41ae2f
 \doxysubsubsection{\texorpdfstring{t\_message\_cascade}{t\_message\_cascade}}
 {\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__message__cascade}{s\+\_\+message\+\_\+cascade}} \mbox{\hyperlink{group__internal__structures_ga832e30b3a41ae2fa11b2e8bc5a537180}{t\+\_\+message\+\_\+cascade}}}
 
-a cascade of messages to the same target. is it still used somewhere? \mbox{\Hypertarget{group__internal__structures_gaa98e62c4ef16b85551d16212f439b234}\label{group__internal__structures_gaa98e62c4ef16b85551d16212f439b234}} 
+a cascade of messages to the same target. is it still used somewhere? \mbox{\Hypertarget{group__internal__structures_ga888838692fe4a8efd087863b6d7f5fa0}\label{group__internal__structures_ga888838692fe4a8efd087863b6d7f5fa0}} 
 \index{Internal\_structures@{Internal\_structures}!t\_message\_handler@{t\_message\_handler}}
 \index{t\_message\_handler@{t\_message\_handler}!Internal\_structures@{Internal\_structures}}
 \doxysubsubsection{\texorpdfstring{t\_message\_handler}{t\_message\_handler}}
-{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}}$\ast$( $\ast$ t\+\_\+message\+\_\+handler) (struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$, const char $\ast$sel, struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$$\ast$args)}
+{\footnotesize\ttfamily typedef struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$($\ast$ t\+\_\+message\+\_\+handler) (struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$, const char $\ast$sel, struct \mbox{\hyperlink{structs__object}{s\+\_\+object}} $\ast$$\ast$args)}
 
 message handler \mbox{\Hypertarget{group__internal__structures_ga43f5359d50c63be654c47b6541f3eb9b}\label{group__internal__structures_ga43f5359d50c63be654c47b6541f3eb9b}} 
 \index{Internal\_structures@{Internal\_structures}!t\_message\_pattern@{t\_message\_pattern}}
@@ -207,16 +207,16 @@ linked list of statements. The type, expression and the next statments.
 
 expression type 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00109                               \{}
-\DoxyCodeLine{00110     tag\_string,}
-\DoxyCodeLine{00111     tag\_char,}
-\DoxyCodeLine{00112     tag\_message,}
-\DoxyCodeLine{00113     tag\_number,}
-\DoxyCodeLine{00114     tag\_ident,}
-\DoxyCodeLine{00115     tag\_block,}
-\DoxyCodeLine{00116     tag\_array,}
-\DoxyCodeLine{00117     tag\_assignment}
-\DoxyCodeLine{00118 \} \mbox{\hyperlink{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}{t\_expression\_tag}};}
+\DoxyCodeLine{109                               \{}
+\DoxyCodeLine{110     tag\_string,}
+\DoxyCodeLine{111     tag\_char,}
+\DoxyCodeLine{112     tag\_message,}
+\DoxyCodeLine{113     tag\_number,}
+\DoxyCodeLine{114     tag\_ident,}
+\DoxyCodeLine{115     tag\_block,}
+\DoxyCodeLine{116     tag\_array,}
+\DoxyCodeLine{117     tag\_assignment}
+\DoxyCodeLine{118 \} \mbox{\hyperlink{group__internal__structures_ga400bf64990418eed137d2b49026a13ac}{t\_expression\_tag}};}
 
 \end{DoxyCode}
 \mbox{\Hypertarget{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}\label{group__internal__structures_ga9714334d5314b92c57f22e5273b33520}} 
@@ -227,10 +227,10 @@ expression type
 
 statement type 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00073                               \{}
-\DoxyCodeLine{00074     stmt\_return = 100,}
-\DoxyCodeLine{00075     stmt\_assign,}
-\DoxyCodeLine{00076     stmt\_message}
-\DoxyCodeLine{00077 \} \mbox{\hyperlink{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}{t\_statement\_type}};}
+\DoxyCodeLine{73                               \{}
+\DoxyCodeLine{74     stmt\_return = 100,}
+\DoxyCodeLine{75     stmt\_assign,}
+\DoxyCodeLine{76     stmt\_message}
+\DoxyCodeLine{77 \} \mbox{\hyperlink{group__internal__structures_gac5e93e2e783e60840fd5f35129e6d12c}{t\_statement\_type}};}
 
 \end{DoxyCode}

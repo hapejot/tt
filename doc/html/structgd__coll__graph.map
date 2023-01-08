@@ -1,10 +1,10 @@
 <map id="gd" name="gd">
-<area shape="rect" id="node1" title=" " alt="" coords="123,367,162,393"/>
-<area shape="rect" id="node2" href="$structitab__iter.html" title="iterator over elements of an itab." alt="" coords="62,232,138,259"/>
-<area shape="rect" id="node3" href="$structitab.html" title="structure of itab" alt="" coords="26,97,73,124"/>
-<area shape="rect" id="node4" href="$structitab__entry.html" title="structure of an entry in the itab." alt="" coords="5,7,93,33"/>
-<area shape="rect" id="node5" href="$structs__env.html" title=" " alt="" coords="162,232,222,259"/>
-<area shape="rect" id="node6" href="$structs__slot.html" title=" " alt="" coords="162,97,222,124"/>
-<area shape="rect" id="node7" href="$structs__object.html" title=" " alt="" coords="154,7,230,33"/>
-<area shape="rect" id="node8" href="$structast.html" title=" " alt="" coords="304,232,347,259"/>
+<area shape="rect" id="node1" title=" " alt="" coords="166,367,205,393"/>
+<area shape="rect" id="node2" href="$structast.html" title=" " alt="" coords="5,232,48,259"/>
+<area shape="rect" id="node3" href="$structitab.html" title="structure of itab" alt="" coords="162,97,209,124"/>
+<area shape="rect" id="node5" href="$structitab__iter.html" title="iterator over elements of an itab." alt="" coords="202,232,278,259"/>
+<area shape="rect" id="node4" href="$structitab__entry.html" title="structure of an entry in the itab." alt="" coords="141,7,229,33"/>
+<area shape="rect" id="node6" href="$structs__env.html" title=" " alt="" coords="302,232,362,259"/>
+<area shape="rect" id="node7" href="$structs__slot.html" title=" " alt="" coords="302,97,362,124"/>
+<area shape="rect" id="node8" href="$structs__object.html" title=" " alt="" coords="294,7,370,33"/>
 </map>

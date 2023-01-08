@@ -35,7 +35,7 @@ const char $\ast$ \mbox{\hyperlink{group__itab_ga54103269bfeb548f6ed30b4fdbbfa0e
 
 
 \doxysubsection{Detailed Description}
-sorted list of structures -\/$>$ tables with primary index 
+sorted list of structures -\/\texorpdfstring{$>$}{>} tables with primary index 
 
 \doxysubsection{Function Documentation}
 \mbox{\Hypertarget{group__itab_ga6e08d3097fed299b2f6ed15a8fbff427}\label{group__itab_ga6e08d3097fed299b2f6ed15a8fbff427}} 
@@ -46,24 +46,24 @@ sorted list of structures -\/$>$ tables with primary index
 
 append new line 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00140                                                                     \{}
-\DoxyCodeLine{00141     assert( \mbox{\hyperlink{structitab}{itab}} != NULL );}
-\DoxyCodeLine{00142     \textcolor{keywordflow}{if}( \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} == \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}} ) \{}
-\DoxyCodeLine{00143         \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} *= 2;}
-\DoxyCodeLine{00144         \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}} =}
-\DoxyCodeLine{00145                 talloc\_realloc( \mbox{\hyperlink{structitab}{itab}}, \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}},}
-\DoxyCodeLine{00146                                 \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} );}
-\DoxyCodeLine{00147     \}}
-\DoxyCodeLine{00148     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *row = \&\mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[\mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}}];}
-\DoxyCodeLine{00149     row-\/>\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}} = talloc\_strdup( \mbox{\hyperlink{structitab}{itab}}, \mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}} );}
-\DoxyCodeLine{00150     row-\/>\mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}} = \mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}};}
-\DoxyCodeLine{00151     \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}}++;}
-\DoxyCodeLine{00152 }
-\DoxyCodeLine{00153     qsort( \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}},                           \textcolor{comment}{// base}}
-\DoxyCodeLine{00154            \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}},                           \textcolor{comment}{// nmemb}}
-\DoxyCodeLine{00155            \textcolor{keyword}{sizeof}( \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}} ),          \textcolor{comment}{// size}}
-\DoxyCodeLine{00156            \mbox{\hyperlink{group__itab_gaa32bbe2ddff2b617359acf569723d908}{itab\_entry\_cmp}} );}
-\DoxyCodeLine{00157 \}}
+\DoxyCodeLine{140                                                                     \{}
+\DoxyCodeLine{141     assert( \mbox{\hyperlink{structitab}{itab}} != NULL );}
+\DoxyCodeLine{142     \textcolor{keywordflow}{if}( \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} == \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}} ) \{}
+\DoxyCodeLine{143         \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} *= 2;}
+\DoxyCodeLine{144         \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}} =}
+\DoxyCodeLine{145                 talloc\_realloc( \mbox{\hyperlink{structitab}{itab}}, \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}},}
+\DoxyCodeLine{146                                 \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} );}
+\DoxyCodeLine{147     \}}
+\DoxyCodeLine{148     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *row = \&\mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[\mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}}];}
+\DoxyCodeLine{149     row-\/>\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}} = talloc\_strdup( \mbox{\hyperlink{structitab}{itab}}, \mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}} );}
+\DoxyCodeLine{150     row-\/>\mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}} = \mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}};}
+\DoxyCodeLine{151     \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}}++;}
+\DoxyCodeLine{152 }
+\DoxyCodeLine{153     qsort( \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}},                           \textcolor{comment}{// base}}
+\DoxyCodeLine{154            \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}},                           \textcolor{comment}{// nmemb}}
+\DoxyCodeLine{155            \textcolor{keyword}{sizeof}( \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}} ),          \textcolor{comment}{// size}}
+\DoxyCodeLine{156            \mbox{\hyperlink{group__itab_gaa32bbe2ddff2b617359acf569723d908}{itab\_entry\_cmp}} );}
+\DoxyCodeLine{157 \}}
 
 \end{DoxyCode}
 
@@ -82,12 +82,12 @@ Referenced by \mbox{\hyperlink{group__internal_ga441ee37b94757b7cf8e8e22128a9cd4
 
 dump content to output 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00174                                     \{}
-\DoxyCodeLine{00175     assert( \mbox{\hyperlink{structitab}{itab}} );}
-\DoxyCodeLine{00176     \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}}; i++ ) \{}
-\DoxyCodeLine{00177         fprintf( stderr, \textcolor{stringliteral}{"{}\%s: \%p\(\backslash\)n"{}}, \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[i].\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}}, \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[i].\mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}} );}
-\DoxyCodeLine{00178     \}}
-\DoxyCodeLine{00179 \}}
+\DoxyCodeLine{174                                     \{}
+\DoxyCodeLine{175     assert( \mbox{\hyperlink{structitab}{itab}} );}
+\DoxyCodeLine{176     \textcolor{keywordflow}{for}( \textcolor{keywordtype}{int} i = 0; i < \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}}; i++ ) \{}
+\DoxyCodeLine{177         fprintf( stderr, \textcolor{stringliteral}{"{}\%s: \%p\(\backslash\)n"{}}, \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[i].\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}}, \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[i].\mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}} );}
+\DoxyCodeLine{178     \}}
+\DoxyCodeLine{179 \}}
 
 \end{DoxyCode}
 
@@ -108,16 +108,16 @@ compare entries
 
 \begin{DoxyReturn}{Returns}
 \begin{DoxyItemize}
-\item $<$ 0, when first key is lower \item == 0, when both keys are equal \item $>$ 0, when second key is lower \end{DoxyItemize}
+\item \texorpdfstring{$<$}{<} 0, when first key is lower \item == 0, when both keys are equal \item \texorpdfstring{$>$}{>} 0, when second key is lower \end{DoxyItemize}
 
 \end{DoxyReturn}
 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00134                                                          \{}
-\DoxyCodeLine{00135     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *a = aptr;}
-\DoxyCodeLine{00136     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *b = bptr;}
-\DoxyCodeLine{00137     \textcolor{keywordflow}{return} strcmp( a-\/>\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}}, b-\/>\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}} );}
-\DoxyCodeLine{00138 \}}
+\DoxyCodeLine{134                                                          \{}
+\DoxyCodeLine{135     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *a = aptr;}
+\DoxyCodeLine{136     \textcolor{keyword}{const} \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *b = bptr;}
+\DoxyCodeLine{137     \textcolor{keywordflow}{return} strcmp( a-\/>\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}}, b-\/>\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}} );}
+\DoxyCodeLine{138 \}}
 
 \end{DoxyCode}
 
@@ -136,16 +136,16 @@ Referenced by \mbox{\hyperlink{group__itab_ga6e08d3097fed299b2f6ed15a8fbff427}{i
 
 start iteration 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00181                                                    \{}
-\DoxyCodeLine{00182     \textcolor{keywordflow}{if}( tab-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}} > 0 ) \{}
-\DoxyCodeLine{00183         \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__iter}{itab\_iter}} *r = talloc\_zero( NULL, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__iter}{itab\_iter}} );}
-\DoxyCodeLine{00184         r-\/>\mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}} = \mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}};}
-\DoxyCodeLine{00185         r-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}} = 0;}
-\DoxyCodeLine{00186         \textcolor{keywordflow}{return} r;}
-\DoxyCodeLine{00187     \}}
-\DoxyCodeLine{00188     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00189         \textcolor{keywordflow}{return} NULL;}
-\DoxyCodeLine{00190 \}}
+\DoxyCodeLine{181                                                    \{}
+\DoxyCodeLine{182     \textcolor{keywordflow}{if}( tab-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}} > 0 ) \{}
+\DoxyCodeLine{183         \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__iter}{itab\_iter}} *r = talloc\_zero( NULL, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__iter}{itab\_iter}} );}
+\DoxyCodeLine{184         r-\/>\mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}} = \mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}};}
+\DoxyCodeLine{185         r-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}} = 0;}
+\DoxyCodeLine{186         \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{187     \}}
+\DoxyCodeLine{188     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{189         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{190 \}}
 
 \end{DoxyCode}
 
@@ -164,9 +164,9 @@ Referenced by \mbox{\hyperlink{group__internal_ga18e07039b29a9c1ab2b2f84bc84fd2f
 
 key of current iterator 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00207                                                \{}
-\DoxyCodeLine{00208     \textcolor{keywordflow}{return} iter-\/>\mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[iter-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}}].\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}};}
-\DoxyCodeLine{00209 \}}
+\DoxyCodeLine{207                                                \{}
+\DoxyCodeLine{208     \textcolor{keywordflow}{return} iter-\/>\mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[iter-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}}].\mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}};}
+\DoxyCodeLine{209 \}}
 
 \end{DoxyCode}
 
@@ -187,10 +187,10 @@ how many lines?
 
 returns the number of lines in the table 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00100                                          \{}
-\DoxyCodeLine{00101     assert( \mbox{\hyperlink{structitab}{itab}} != NULL );}
-\DoxyCodeLine{00102     \textcolor{keywordflow}{return} \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}};}
-\DoxyCodeLine{00103 \}}
+\DoxyCodeLine{100                                          \{}
+\DoxyCodeLine{101     assert( \mbox{\hyperlink{structitab}{itab}} != NULL );}
+\DoxyCodeLine{102     \textcolor{keywordflow}{return} \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}};}
+\DoxyCodeLine{103 \}}
 
 \end{DoxyCode}
 
@@ -218,13 +218,13 @@ reference to an itab structure.
 \end{DoxyReturn}
 Detailed description follows here. 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00120                           \{}
-\DoxyCodeLine{00121     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab}{itab}} *r = talloc\_zero( NULL, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab}{itab}} );}
-\DoxyCodeLine{00122     r-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} = 10;}
-\DoxyCodeLine{00123     r-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}} = 0;}
-\DoxyCodeLine{00124     r-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}} = talloc\_array( r, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}}, r-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} );}
-\DoxyCodeLine{00125     \textcolor{keywordflow}{return} r;}
-\DoxyCodeLine{00126 \}}
+\DoxyCodeLine{120                           \{}
+\DoxyCodeLine{121     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab}{itab}} *r = talloc\_zero( NULL, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab}{itab}} );}
+\DoxyCodeLine{122     r-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} = 10;}
+\DoxyCodeLine{123     r-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}} = 0;}
+\DoxyCodeLine{124     r-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}} = talloc\_array( r, \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}}, r-\/>\mbox{\hyperlink{structitab_a90c05296f2420e8079e637eb920fcd29}{total}} );}
+\DoxyCodeLine{125     \textcolor{keywordflow}{return} r;}
+\DoxyCodeLine{126 \}}
 
 \end{DoxyCode}
 
@@ -243,16 +243,16 @@ Referenced by \mbox{\hyperlink{group__internal_ga51e69545ca37cbd4851e5557a7b8b07
 
 cycle through iterator 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00192                                                       \{}
-\DoxyCodeLine{00193     iter-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}}++;}
-\DoxyCodeLine{00194     \textcolor{keywordflow}{if}( iter-\/>\mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}} > iter-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}} ) \{}
-\DoxyCodeLine{00195         \textcolor{keywordflow}{return} iter;}
-\DoxyCodeLine{00196     \}}
-\DoxyCodeLine{00197     \textcolor{keywordflow}{else} \{}
-\DoxyCodeLine{00198         talloc\_free( iter );}
-\DoxyCodeLine{00199         \textcolor{keywordflow}{return} NULL;}
-\DoxyCodeLine{00200     \}}
-\DoxyCodeLine{00201 \}}
+\DoxyCodeLine{192                                                       \{}
+\DoxyCodeLine{193     iter-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}}++;}
+\DoxyCodeLine{194     \textcolor{keywordflow}{if}( iter-\/>\mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}} > iter-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}} ) \{}
+\DoxyCodeLine{195         \textcolor{keywordflow}{return} iter;}
+\DoxyCodeLine{196     \}}
+\DoxyCodeLine{197     \textcolor{keywordflow}{else} \{}
+\DoxyCodeLine{198         talloc\_free( iter );}
+\DoxyCodeLine{199         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{200     \}}
+\DoxyCodeLine{201 \}}
 
 \end{DoxyCode}
 
@@ -271,20 +271,20 @@ Referenced by \mbox{\hyperlink{group__internal_ga18e07039b29a9c1ab2b2f84bc84fd2f
 
 find a line by key 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00159                                                       \{}
-\DoxyCodeLine{00160     assert( \mbox{\hyperlink{structitab}{itab}} );}
-\DoxyCodeLine{00161     assert( key );}
-\DoxyCodeLine{00162     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} dummy = \{ \mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}}, NULL \};}
-\DoxyCodeLine{00163     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *r = bsearch( \&dummy,}
-\DoxyCodeLine{00164                                     \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}},}
-\DoxyCodeLine{00165                                     \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}},}
-\DoxyCodeLine{00166                                     \textcolor{keyword}{sizeof}( \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}} ),}
-\DoxyCodeLine{00167                                     \mbox{\hyperlink{group__itab_gaa32bbe2ddff2b617359acf569723d908}{itab\_entry\_cmp}} );}
-\DoxyCodeLine{00168     \textcolor{keywordflow}{if}( r )}
-\DoxyCodeLine{00169         \textcolor{keywordflow}{return} r-\/>\mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}};}
-\DoxyCodeLine{00170     \textcolor{keywordflow}{else}}
-\DoxyCodeLine{00171         \textcolor{keywordflow}{return} NULL;}
-\DoxyCodeLine{00172 \}}
+\DoxyCodeLine{159                                                       \{}
+\DoxyCodeLine{160     assert( \mbox{\hyperlink{structitab}{itab}} );}
+\DoxyCodeLine{161     assert( key );}
+\DoxyCodeLine{162     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} dummy = \{ \mbox{\hyperlink{structitab__entry_ab9bd2f3812dbeb1e76763059ff824c8d}{key}}, NULL \};}
+\DoxyCodeLine{163     \textcolor{keyword}{struct }\mbox{\hyperlink{structitab__entry}{itab\_entry}} *r = bsearch( \&dummy,}
+\DoxyCodeLine{164                                     \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}},}
+\DoxyCodeLine{165                                     \mbox{\hyperlink{structitab}{itab}}-\/>\mbox{\hyperlink{structitab_acdf52e0793b798b608351cb79b75a8ef}{used}},}
+\DoxyCodeLine{166                                     \textcolor{keyword}{sizeof}( \textcolor{keyword}{struct} \mbox{\hyperlink{structitab__entry}{itab\_entry}} ),}
+\DoxyCodeLine{167                                     \mbox{\hyperlink{group__itab_gaa32bbe2ddff2b617359acf569723d908}{itab\_entry\_cmp}} );}
+\DoxyCodeLine{168     \textcolor{keywordflow}{if}( r )}
+\DoxyCodeLine{169         \textcolor{keywordflow}{return} r-\/>\mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}};}
+\DoxyCodeLine{170     \textcolor{keywordflow}{else}}
+\DoxyCodeLine{171         \textcolor{keywordflow}{return} NULL;}
+\DoxyCodeLine{172 \}}
 
 \end{DoxyCode}
 
@@ -303,9 +303,9 @@ Referenced by \mbox{\hyperlink{group__internal_ga441ee37b94757b7cf8e8e22128a9cd4
 
 value of current iterator 
 \begin{DoxyCode}{0}
-\DoxyCodeLine{00203                                            \{}
-\DoxyCodeLine{00204     \textcolor{keywordflow}{return} iter-\/>\mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[iter-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}}].\mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}};}
-\DoxyCodeLine{00205 \}}
+\DoxyCodeLine{203                                            \{}
+\DoxyCodeLine{204     \textcolor{keywordflow}{return} iter-\/>\mbox{\hyperlink{structitab__iter_a1ac040645faa1d3488d15dd9e3bc8bf7}{tab}}-\/>\mbox{\hyperlink{structitab_a40ec1b9a808e1a643f4c7134f103cc0f}{rows}}[iter-\/>\mbox{\hyperlink{structitab__iter_a2f03e3011e9b680823c16dbbd61a7cd4}{pos}}].\mbox{\hyperlink{structitab__entry_a4ec5cea10051ae66025f37f705b90632}{value}};}
+\DoxyCodeLine{205 \}}
 
 \end{DoxyCode}
 
